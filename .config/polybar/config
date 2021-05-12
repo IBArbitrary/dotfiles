@@ -1,0 +1,347 @@
+[colors]
+background = #282828
+background2 = #3c3836
+background3 = #504945
+background4 = #665c54
+background5 = #928374
+foreground0 = #fbf1c7
+foreground1 = #ebdbb2
+foreground2 = #d5c4a1
+foreground3 = #bdae93
+foreground4 = #a89984
+red = #fb4934
+yellow = #fabd2f
+green = #b8bb26
+blue = #83a598
+purple = #d3869b
+aqua = #8ec07c
+orange = #fe8019
+
+[bar/base]
+enable-ipc = false
+
+font-0=Source Code Pro:style=Medium:pixelsize=10;2
+font-1=FontAwesome5Free:style=Solid:pixelsize=9:antialias=true;2
+font-2=Pavanam:style=Regular:pixelsize=14:antialias=true;2
+font-3=Source Code Pro:style=Semibold:pixelsize=10;2
+font-4=Source Code Pro:style=ExtraLight:pixelsize=10;2
+font-5=Source Code Pro:style=Medium:pixelsize=13;2
+
+padding = 0
+border-size = 0
+border-color = ${colors.foreground4}
+height = 24
+width = 100%
+padding-right = 0
+separator =""
+line-size = 4
+background = ${colors.background}
+foreground = ${colors.foreground4}
+override-redirect = false
+wm-restack = bspwm
+
+[bar/top]
+inherit = bar/base
+fix-center = true
+modules-left = arch bspwm net-speed uptime decoration-left
+modules-right = decoration-right date time pulseaudio backlight wifi
+modules-center = title
+tray-position = right
+tray-detached = false
+tray-maxsize = 9
+
+[bar/bottom]
+inherit = bar/base
+fix-center = false
+bottom = true
+modules-left = battery apps
+modules-right = cpu memory filesystem filesystem2 temperature
+
+;===============================================
+;==                 Modules                   ==
+;===============================================
+
+[module/bspwm]
+type = internal/bspwm
+reverse-scroll = true
+label-focused = %name%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground1}
+label-focused-padding = 1
+label-occupied = %name%
+label-occupied-foreground = ${colors.background2}
+label-occupied-background = ${colors.foreground3}
+label-occupied-padding = 1
+label-empty = %name%
+label-empty-foreground = ${colors.background4}
+label-empty-background = ${colors.background5}
+label-empty-padding = 1
+
+
+[module/date]
+type = internal/date
+format-background = ${colors.background2}
+format-foreground = ${colors.foreground4}
+format-padding = 2
+interval = 100
+date = "%a, %b %d %Y"
+label = %date%
+
+[module/time]
+type = internal/date
+format-background = ${colors.background3}
+format-foreground = ${colors.foreground2}
+format-padding = 2
+interval = 1
+time = "%I:%M:%S %p"
+label = %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+format-volume-background = ${colors.background4} 
+format-volume-foreground = ${colors.foreground2}
+format-volume-padding = 2
+format-muted-background = ${colors.red}
+format-muted-foreground = ${colors.background}
+format-muted-padding = 2
+label-volume = "%{T4}Џ%{T-} %percentage:3:3%%"
+use-ui-max = true
+interval = 5
+label-muted   = "muted."
+click-right = pavucontrol
+click-middle = playerctl --all-players stop
+
+[module/backlight]
+type = custom/script
+interval = 0.2
+exec = ~/.config/polybar/scripts/backlight.sh
+scroll-up = exec xbacklight +5
+scroll-down = exec xbacklight -5
+click-left = exec xbacklight -set 100
+click-middle = exec xbacklight -set 50
+click-right = exec xbacklight -set 0
+label = "%{T4}Λ%{T-} %output:3:3%%"
+label-background = ${colors.background5}
+label-foreground = ${colors.background}
+label-padding = 2
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 75
+label = " %title%"
+label-empty = "..."
+label-empty-foreground = ${colors.background3}
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+format-prefix = "%{T4}Ш%{T-} "
+format-background = ${colors.background2}
+format-foreground = ${colors.background5}
+format-padding = 2
+label = %percentage:3:3%%
+
+[module/apps]
+type = custom/menu
+expand-right = true
+menu-0-0 = " wallpaper "
+menu-0-0-exec = #apps.open.1
+menu-0-1 = " screenshot "
+menu-0-1-exec = #apps.open.2
+menu-0-2 = " files "
+menu-0-2-exec = #apps.open.3
+menu-0-3 = " monitors "
+menu-0-3-exec = #apps.open.4
+
+menu-1-0 = " < "
+menu-1-0-exec = bgctl prev
+menu-1-1 = " > "
+menu-1-1-exec = bgctl next
+menu-1-2 = " × "
+menu-1-2-exec = bgctl pause
+menu-1-3 = " ~ "
+menu-1-3-exec = bgctl play
+
+menu-2-0 = " gui "
+menu-2-0-exec = flameshot gui -p ~/Pictures/screenshots
+menu-2-1 = " full "
+menu-2-1-exec = flameshot full -c -p ~/Pictures/screenshots
+
+menu-3-0 = " pictures "
+menu-3-0-exec = pcmanfm ~/Pictures/
+menu-3-1 = " downloads "
+menu-3-1-exec = pcmanfm ~/Downloads/
+menu-3-2 = " books "
+menu-3-2-exec = pcmanfm /media/storage/books/
+
+menu-4-0 = " top "
+menu-4-0-exec = kitty top
+menu-4-1 = " htop "
+menu-4-1-exec = kitty htop
+menu-4-2 = " bashtop "
+menu-4-2-exec = kitty bashtop
+menu-4-3 = " glances "
+menu-4-3-exec = kitty glances
+menu-4-4 = " vtop "
+menu-4-4-exec = kitty vtop -t gruvbox
+
+label-open = " • "
+label-close = " ◦ "
+label-separator = "%{T5}|%{T-}"
+format-padding = 1
+format-background = ${colors.background3}
+format-foreground = ${colors.foreground2}
+
+[module/memory]
+type = internal/memory
+label = %{A2:#apps.open.4:}%{T4}Μ%{T-} %percentage_used:3:3%% (%gb_used%)%{A}
+format-background = ${colors.background3}
+format-foreground = ${colors.foreground3}
+interval = 1
+format-padding = 2
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+label-mounted = %{A2:kitty ncdu / --exclude storage:}%{T4}Α%{T-} %percentage_used:3:3%% (%used%) of %total%%{A}
+format-mounted-background = ${colors.background4}
+format-mounted-foreground = ${colors.foreground2}
+format-mounted-padding = 2
+fixed-values = true
+interval = 30
+
+[module/filesystem2]
+type = internal/fs
+label-mounted = %{A2:kitty ncdu /media/storage:}%{T4}Σ%{T-} %percentage_used:3:3%% (%used%) of %total%%{A}
+format-mounted-background = ${colors.background5}
+format-mounted-foreground = ${colors.background2}
+format-mounted-padding = 2
+fixed-values = true
+interval = 30
+mount-0 = /media/storage
+
+[module/temperature]
+type = internal/temperature
+label = "%{T4}Θ%{T-} %temperature-c:3:3%C"
+warn-temperature = 70
+label-warn = "%{T4}Θ%{T-} %temperature-c:3:3%C"
+format-background = ${colors.foreground3}
+format-foreground = ${colors.background}
+format-padding = 2
+label-warn-background = ${colors.red}
+label-warn-foreground = ${colors.background}
+label-warn-padding = 2
+thermal-zone = 0
+units = true
+interval = 0.5
+
+[module/wifi]
+type = internal/network
+format-connected = ▕<ramp-signal>▏ <label-connected>
+format-connected-background = ${colors.foreground2} 
+format-connected-foreground = ${colors.background}
+format-connected-padding = 2
+format-disconnected-background = ${colors.red}
+format-disconnected-foreground = ${colors.background}
+format-disconnected-padding = 2
+label-connected = "%{A3:notify-send %local_ip%:}%{A2:kitty nmtui:}%essid:4:12:...%%{A}%{A}"
+label-disconnected = "%{T4}Ξ%{T-} OFF"
+interface = wlo1
+interval = 1.0
+ramp-signal-0 = ▁
+ramp-signal-1 = ▂
+ramp-signal-2 = ▃
+ramp-signal-3 = ▄
+ramp-signal-4 = ▅
+ramp-signal-5 = ▆
+ramp-signal-6 = ▇
+ramp-signal-7 = █
+
+[module/net-speed]
+type = internal/network
+format-connected = <label-connected>
+format-connected-background = ${colors.background4}
+format-connected-foreground = ${colors.foreground3}
+format-connected-padding = 1
+label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
+label-disconnected = ""
+interface = wlo1
+interval = 0.5
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ACAD
+poll-interval = 2
+time-format = "%Hh-%Mm"
+
+format-discharging =▕<animation-discharging>▏<label-discharging>
+format-discharging-background = ${colors.foreground1}
+format-discharging-foreground = ${colors.background}
+format-discharging-padding = 2
+label-discharging = "%percentage:3:3%% %{T5}|%{T-} %time%"
+animation-discharging-0 =█
+animation-discharging-1 =▇
+animation-discharging-2 =▆
+animation-discharging-3 =▅
+animation-discharging-4 =▄
+animation-discharging-5 =▃
+animation-discharging-6 =▂
+animation-discharging-7 =▁
+animation-discharging-framerate = 500
+
+format-charging = ▕<animation-charging>▏ <label-charging>
+format-charging-background = ${colors.foreground1}
+format-charging-foreground = ${colors.background}
+format-charging-padding = 2
+label-charging = "%percentage:3:3%% %{T5}|%{T-} %time%"
+animation-charging-0 =▁
+animation-charging-1 =▂
+animation-charging-2 =▃
+animation-charging-3 =▄
+animation-charging-4 =▅
+animation-charging-5 =▆
+animation-charging-6 =▇
+animation-charging-7 =█
+animation-charging-framerate = 500
+
+format-full-background = ${colors.foreground0}
+format-full-foreground = ${colors.background}
+format-full-padding = 2
+label-full = "▕█▏FULL"
+
+[module/arch]
+type = custom/text
+content = "ஃ"
+content-background = ${colors.foreground0}
+content-foreground = ${colors.background}
+click-middle = rofi -show p -modi p:rofi-power-menu -width 20 -lines 6
+content-padding = 1
+
+[module/decoration-left]
+type = custom/text
+content = "▓▒░ "
+content-padding = 0
+content-font = 6
+content-background = ${colors.background}
+content-foreground = ${colors.background3}
+
+[module/decoration-right]
+type = custom/text
+content = " ░▒▓"
+content-padding = 0
+content-font = 6
+content-background = ${colors.background}
+content-foreground = ${colors.background2}
+
+[module/uptime]
+type = custom/script
+format = <label>
+exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/'
+label = %{T4}ζ%{T-} %output%
+interval = 30
+format-padding = 2
+format-background = ${colors.background3}
+format-foreground = ${colors.background5}
