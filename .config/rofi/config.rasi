@@ -1,0 +1,5 @@
+configuration {
+	font:"Source Code Pro 12";
+	theme:"~/.config/rofi/themes/gruvbox-dark.rasi";
+	show-icons: true;
+}
