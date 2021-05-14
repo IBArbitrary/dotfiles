@@ -48,3 +48,6 @@ alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # x-server + prime-switch
 alias x 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
+
+# doom-emacs
+alias doom "~/.doom-emacs/bin/doom"
