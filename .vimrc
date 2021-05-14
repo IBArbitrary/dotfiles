@@ -56,6 +56,7 @@ call plug#end()
 	nnoremap <SPACE> <Nop>
 	let mapleader = " "
 	inoremap jk <Esc>
+	nnoremap <Esc> :noh<CR>
 
 	" Startify
 	nnoremap <C-\> :Startify<CR>
