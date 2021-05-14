@@ -33,7 +33,7 @@ border-color = ${colors.foreground4}
 height = 24
 width = 100%
 padding-right = 0
-separator =""
+separator = ""
 line-size = 4
 background = ${colors.background}
 foreground = ${colors.foreground4}
@@ -69,12 +69,12 @@ label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.foreground1}
 label-focused-padding = 1
 label-occupied = %name%
-label-occupied-foreground = ${colors.background2}
-label-occupied-background = ${colors.foreground3}
+label-occupied-foreground = ${colors.background3}
+label-occupied-background = ${colors.foreground4}
 label-occupied-padding = 1
 label-empty = %name%
-label-empty-foreground = ${colors.background4}
-label-empty-background = ${colors.background5}
+label-empty-foreground = ${colors.background3}
+label-empty-background = ${colors.background4}
 label-empty-padding = 1
 
 
@@ -262,8 +262,8 @@ ramp-signal-7 = █
 [module/net-speed]
 type = internal/network
 format-connected = <label-connected>
-format-connected-background = ${colors.background4}
-format-connected-foreground = ${colors.foreground3}
+format-connected-background = ${colors.background3}
+format-connected-foreground = ${colors.foreground4}
 format-connected-padding = 1
 label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
 label-disconnected = ""
@@ -326,7 +326,7 @@ content = "▓▒░ "
 content-padding = 0
 content-font = 6
 content-background = ${colors.background}
-content-foreground = ${colors.background3}
+content-foreground = ${colors.background2}
 
 [module/decoration-right]
 type = custom/text
@@ -343,5 +343,5 @@ exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\
 label = %{T4}ζ%{T-} %output%
 interval = 30
 format-padding = 2
-format-background = ${colors.background3}
-format-foreground = ${colors.background5}
+format-background = ${colors.background2}
+format-foreground = ${colors.background4}
