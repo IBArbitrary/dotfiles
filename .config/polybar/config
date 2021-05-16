@@ -55,7 +55,7 @@ inherit = bar/base
 fix-center = false
 bottom = true
 modules-left = battery apps
-modules-right = cpu memory filesystem filesystem2 temperature
+modules-right = updates cpu memory filesystem filesystem2 temperature
 
 ;===============================================
 ;==                 Modules                   ==
@@ -79,13 +79,13 @@ label-empty-padding = 1
 
 
 [module/date]
-type = internal/date
+type = custom/script
 format-background = ${colors.background2}
 format-foreground = ${colors.foreground4}
 format-padding = 2
-interval = 100
-date = "%a, %b %d %Y"
-label = %date%
+interval = 5
+exec = ~/.config/polybar/scripts/popup-calendar.sh
+click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
 
 [module/time]
 type = internal/date
@@ -111,6 +111,7 @@ interval = 5
 label-muted   = "muted."
 click-right = pavucontrol
 click-middle = playerctl --all-players stop
+;click-right = kitty pacmixer
 
 [module/backlight]
 type = custom/script
@@ -128,10 +129,16 @@ label-padding = 2
 
 [module/title]
 type = internal/xwindow
-label-maxlen = 75
+label-maxlen = 70
 label = " %title%"
 label-empty = "..."
 label-empty-foreground = ${colors.background3}
+
+[module/updates]
+type = custom/script
+interval = 600
+exec = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
+format-padding = 2
 
 [module/cpu]
 type = internal/cpu
@@ -186,6 +193,8 @@ menu-4-3 = " glances "
 menu-4-3-exec = kitty glances
 menu-4-4 = " vtop "
 menu-4-4-exec = kitty vtop -t gruvbox
+menu-4-5 = " bottom "
+menu-4-5-exec = kitty btm
 
 label-open = " • "
 label-close = " ◦ "

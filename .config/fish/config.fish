@@ -1,7 +1,17 @@
+function splash
+	set -l splash (find ~/.config/fish/scripts/color-scripts/ -type f | shuf -n 1)
+	$splash
+	set -e splash
+end
+
 # reloading fish config
 function reload
+	clear
 	source ~/.config/fish/config.fish
+	splash
 end
+
+abbr -a r reload
 
 #========== FZF ================================= 
 
@@ -20,6 +30,8 @@ export FZF_CTRL_R_OPTS="--height=50% --black --header='Choose command from histo
 function cls
 	command clear
 end
+
+abbr -a c clear
 
 # vtop gruvbox theme
 function vtop
@@ -51,3 +63,31 @@ alias x 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
 alias doom "~/.doom-emacs/bin/doom"
+abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
+abbr -a mine 'padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
+
+function pacs
+	pacman -Slq | fzf --prompt 'pacman> ' \
+	   --header 'Install packages.
+<c-p>: pacman, <c-a>: aur' \
+	   --bind 'ctrl-p:change-prompt(Pacman> )+reload(pacman -Slq)' \
+	   --bind 'ctrl-a:change-prompt(Aur> )+reload(yay -Slq)' \
+	   --multi --black --height=80% --preview 'yay -Si {1}' | xargs -ro yay -S
+end
+	
+function pacr
+	pacman -Qq | fzf --prompt 'all> ' \
+	   --header='Remove packages.
+<c-a>: all, <c-e>: explicit, <c-y>: aur-explicit' \
+	   --bind 'ctrl-a:change-prompt(all> )+reload(pacman -Qq)' \
+	   --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe)' \
+	   --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
+	   --multi --black --height=80% --preview 'yay -Si {1}' | xargs -ro sudo pacman -Rsn
+end
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
+
+# file-opener function. might come in handy.
+function fzfr
+	fzf -m | xargs -d'\n' -r $argv;
+end
