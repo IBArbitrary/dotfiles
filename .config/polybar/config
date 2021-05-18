@@ -1,5 +1,5 @@
 [colors]
-background 	= #282828
+background  = #282828
 background2 = #3c3836
 background3 = #504945
 background4 = #665c54
@@ -9,28 +9,29 @@ foreground1 = #ebdbb2
 foreground2 = #d5c4a1
 foreground3 = #bdae93
 foreground4 = #a89984
-red 		= #fb4934
-yellow 		= #fabd2f
-green 		= #b8bb26
-blue 		= #83a598
-purple 		= #d3869b
-aqua 		= #8ec07c
-orange 		= #fe8019
+red         = #fb4934
+yellow      = #fabd2f
+green       = #b8bb26
+blue        = #83a598
+purple      = #d3869b
+aqua        = #8ec07c
+orange      = #fe8019
 
 [bar/base]
 enable-ipc = false
 
-font-0=Source Code Pro:style=Medium:pixelsize=10;2
-font-1=FontAwesome5Free:style=Solid:pixelsize=9:antialias=true;2
-font-2=Pavanam:style=Regular:pixelsize=14:antialias=true;2
+font-0=Source Code Pro:style=Medium:pixelsize=9.5;2
+font-1=SauceCodePro Nerd Font Mono:style=Regular:pixelsize=12:antialias=true;4
+font-2=Pavanam:style=Regular:pixelsize=13:antialias=true;2
 font-3=Source Code Pro:style=Semibold:pixelsize=10;2
 font-4=Source Code Pro:style=ExtraLight:pixelsize=10;2
 font-5=Source Code Pro:style=Medium:pixelsize=13;2
+font-6=Font Awesome 5 Free:style=Solid:pixelsize=16;2
 
 padding = 0
 border-size = 0
 border-color = ${colors.foreground4}
-height = 24
+height = 20
 width = 100%
 padding-right = 0
 separator = ""
@@ -54,8 +55,8 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps
-modules-right = updates cpu memory filesystem filesystem2 temperature
+modules-left = battery apps cava-viz
+modules-right = updates gpu cpu memory filesystem filesystem2 temperature
 
 ;===============================================
 ;==                 Modules                   ==
@@ -98,34 +99,54 @@ label = %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume>
-format-volume-background = ${colors.background4} 
+format-volume = ▕<ramp-volume>▏<label-volume>
+format-volume-background = ${colors.background4}
 format-volume-foreground = ${colors.foreground2}
+label-volume-foreground = ${colors.foreground2}
 format-volume-padding = 2
 format-muted-background = ${colors.red}
 format-muted-foreground = ${colors.background}
 format-muted-padding = 2
-label-volume = "%{T4}Џ%{T-} %percentage:3:3%%"
+label-volume = "%percentage:3:3%%"
 use-ui-max = true
 interval = 5
-label-muted   = "muted."
+label-muted   = "(muted)"
 click-right = pavucontrol
 click-middle = playerctl --all-players stop
-;click-right = kitty pacmixer
+ramp-volume-font = 1
+ramp-volume-0 = " "
+ramp-volume-1 = "▎"
+ramp-volume-2 = "▍"
+ramp-volume-3 = "▋"
+ramp-volume-4 = "▊"
+ramp-volume-5 = "▉"
+ramp-volume-6 = "█"
 
 [module/backlight]
-type = custom/script
-interval = 0.2
-exec = ~/.config/polybar/scripts/backlight.sh
-scroll-up = exec xbacklight +5
-scroll-down = exec xbacklight -5
-click-left = exec xbacklight -set 100
-click-middle = exec xbacklight -set 50
-click-right = exec xbacklight -set 0
-label = "%{T4}Λ%{T-} %output:3:3%%"
-label-background = ${colors.background5}
-label-foreground = ${colors.background}
-label-padding = 2
+;type = custom/script
+type = internal/backlight
+format =%{A3:xbacklight -set 0:}%{A2:xbacklight -set 50:}%{A1:xbacklight -set 100:}▕<ramp>▏<label>%{A}%{A}%{A}
+;interval = 0.2
+;label-font = 1
+;exec = ~/.config/polybar/scripts/backlight.sh
+;scroll-up = exec xbacklight +5
+;scroll-down = exec xbacklight -5
+;label = "%output%%"
+card = amdgpu_bl0
+label = %percentage:3:3%%
+enable-scroll = true
+format-background = ${colors.background5}
+format-foreground = ${colors.background}
+format-padding = 2
+ramp-font = 1
+ramp-0 = " "
+ramp-1 = "░"
+ramp-2 = "▒"
+ramp-3 = "▓"
+ramp-4 = "█"
+click-left = xbacklight -set 100
+click-middle = xbacklight -set 50
+click-right = xbacklight -set 0
 
 [module/title]
 type = internal/xwindow
@@ -138,6 +159,13 @@ label-empty-foreground = ${colors.background3}
 type = custom/script
 interval = 600
 exec = ~/.config/polybar/scripts/updates-pacman-aurhelper.sh
+format-padding = 2
+
+[module/gpu]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/gpu.sh
+label = GPU %output%
 format-padding = 2
 
 [module/cpu]
@@ -274,6 +302,7 @@ format-connected = <label-connected>
 format-connected-background = ${colors.background3}
 format-connected-foreground = ${colors.foreground4}
 format-connected-padding = 1
+format-connected-font = 1
 label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
 label-disconnected = ""
 interface = wlo1
@@ -286,22 +315,21 @@ adapter = ACAD
 poll-interval = 2
 time-format = "%Hh-%Mm"
 
-format-discharging =▕<animation-discharging>▏<label-discharging>
+format-discharging =▕<ramp-capacity>▏<label-discharging>
 format-discharging-background = ${colors.foreground1}
 format-discharging-foreground = ${colors.background}
 format-discharging-padding = 2
 label-discharging = "%percentage:3:3%% %{T5}|%{T-} %time%"
-animation-discharging-0 =█
-animation-discharging-1 =▇
-animation-discharging-2 =▆
-animation-discharging-3 =▅
-animation-discharging-4 =▄
-animation-discharging-5 =▃
-animation-discharging-6 =▂
-animation-discharging-7 =▁
-animation-discharging-framerate = 500
+ramp-capacity-0 =▁
+ramp-capacity-1 =▂
+ramp-capacity-2 =▃
+ramp-capacity-3 =▄
+ramp-capacity-4 =▅
+ramp-capacity-5 =▆
+ramp-capacity-6 =▇
+ramp-capacity-7 =█
 
-format-charging = ▕<animation-charging>▏ <label-charging>
+format-charging = ▕<animation-charging>▏<label-charging>
 format-charging-background = ${colors.foreground1}
 format-charging-foreground = ${colors.background}
 format-charging-padding = 2
@@ -320,6 +348,24 @@ format-full-background = ${colors.foreground0}
 format-full-foreground = ${colors.background}
 format-full-padding = 2
 label-full = "▕█▏FULL"
+
+[module/cava-viz]
+type = custom/script
+exec = ~/.config/polybar/scripts/cava-viz.py -f 24 -b 24 -e fbf1c7,ebdbb2,d5c4a1,bdae93 -c average
+tail = true
+label-foreground = ${colors.background5}
+format-background = ${colors.background2}
+format-padding = 2
+
+[module/wallpaper]
+type = custom/text
+content = "wp"
+content-padding = 2
+scroll-up = bgctl next
+scroll-down = bgctl prev
+click-middle = bgctl pause
+double-click-left = bgctl play
+
 
 [module/arch]
 type = custom/text

@@ -41,6 +41,9 @@ fi
 # Setting mouse pointer to left arrow
 xsetroot -cursor_name left_ptr &
 
+# for uniform style across qt and gtk
+export QT_QPA_PLATFORMTHEME=gtk2
+
 # Keyboard Layout
 setxkbmap en &
 
