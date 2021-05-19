@@ -91,3 +91,12 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 function fzfr
 	fzf -m | xargs -d'\n' -r $argv;
 end
+
+# checking install history of pacman
+abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
+
+# check updates
+abbr -a cu "checkupdates"
+
+# quit vim syntax
+abbr -a :q "exit"

@@ -55,7 +55,7 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps cava-viz
+modules-left = battery apps cava-viz sct
 modules-right = updates gpu cpu memory filesystem filesystem2 temperature
 
 ;===============================================
@@ -355,6 +355,15 @@ exec = ~/.config/polybar/scripts/cava-viz.py -f 24 -b 24 -e fbf1c7,ebdbb2,d5c4a1
 tail = true
 label-foreground = ${colors.background5}
 format-background = ${colors.background2}
+format-padding = 2
+
+[module/sct]
+type = custom/script
+exec = ~/.config/polybar/scripts/sct
+interval = 0.5
+click-middle = xsct 6500
+scroll-up = xsct -d 500
+scroll-down = xsct -d -500
 format-padding = 2
 
 [module/wallpaper]
