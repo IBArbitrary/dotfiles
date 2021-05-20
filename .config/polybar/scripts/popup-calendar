@@ -9,7 +9,7 @@ ALT_DATE="$(date +"%D")"
 
 case "$1" in
 --popup)
-    if [ "$(xdotool getwindowfocus getwindowname)" = "yad-calendar" ]; then
+    if [ "$(xdotool getwindowfocus getwindowname)" = "calendar" ]; then
         exit 0
     fi
 

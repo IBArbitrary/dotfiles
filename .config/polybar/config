@@ -97,7 +97,7 @@ format-foreground = ${colors.foreground4}
 format-padding = 2
 interval = 5
 exec = ~/.config/polybar/scripts/popup-calendar
-click-right = ~/.config/polybar/scripts/popup-calendar --popup &
+click-left = ~/.config/polybar/scripts/popup-calendar --popup &
 
 [module/time]
 type = internal/date
@@ -173,6 +173,7 @@ tail = true
 exec = ~/.config/polybar/scripts/gpu
 format-prefix = %{T4}Gᵖ %{T-}
 format-padding = 2
+click-left = ~/.config/polybar/scripts/optimus
 
 [module/cpu]
 type = internal/cpu
