@@ -100,3 +100,5 @@ abbr -a cu "checkupdates"
 
 # quit vim syntax
 abbr -a :q "exit"
+
+export EDITOR='emacsclient --create-frame --alternate-editor=""'

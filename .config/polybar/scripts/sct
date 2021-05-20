@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+value=$(xsct | grep -Po "~\K(\s\d+)")
+printf "%4dK" $value

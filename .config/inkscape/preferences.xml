@@ -592,11 +592,12 @@
     <group
        id="import"
        enable_preview="1"
-       path=""
+       path="/home/rajeshkumar/"
        ask="1"
        ask_svg="1"
-       link="link"
-       scale="optimizeSpeed" />
+       link="embed"
+       scale="auto"
+       forcexdpi="0" />
     <group
        id="debug"
        redirect="0" />
@@ -645,7 +646,8 @@
        add-label-comments="0" />
   </group>
   <group
-     id="options">
+     id="options"
+     onimport="0">
     <group
        id="renderingcache"
        size="512" />
@@ -921,9 +923,9 @@
      style="">
     <group
        width="1892"
-       height="1004"
+       height="1012"
        x="10"
-       y="34"
+       y="30"
        fullscreen="0"
        id="geometry"
        maximized="0" />

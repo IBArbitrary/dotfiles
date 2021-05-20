@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+mode=$(optimus-manager --print-mode | cut -d " " -f5)
+
+case $mode in
+    integrated)
+        mode="int"
+        ;;
+    hybrid)
+        mode="hyb"
+        ;;
+    nvidia)
+        mode="nvi"
+        ;;
+esac
+
+test=$(glxinfo | grep -oP "video memory: \K(\d+)(?=\sMB)")
+totM=$(echo $test | cut -d " " -f1)
+freM=$(echo $test | cut -d " " -f2)
+useM=`expr $totM - $freM`
+((perc= useM * 100 / totM))
+useM=$(echo $useM | numfmt --to si --from-unit=M --format "%f")
+totM=$(echo $totM | numfmt --to si --from-unit=M --format "%f")
+printf "%s%% (%sB) of %sB" $perc $useM $totM |
+    zscroll -l 15 -d 0.15 -p " ∙ " -b "[$mode] "

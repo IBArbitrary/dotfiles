@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+details=$(df $1 -h --output='used','size','pcent' | sed -n '2p')
+usd=$(echo $details | cut -d " " -f1)
+tot=$(echo $details | cut -d " " -f2)
+pct=$(echo $details | cut -d " " -f3)
+printf "%s (%s) of %s" $pct $usd $tot | zscroll -l 10 -d 0.15 -p " ∙ " -b "$2 "
