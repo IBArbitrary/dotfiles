@@ -56,7 +56,7 @@ wm-restack = bspwm
 inherit = bar/base
 fix-center = true
 modules-left = arch bspwm net-speed net-usage decoration-left
-modules-right = decoration-right date time pulseaudio backlight wifi
+modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status
 modules-center = title
 tray-position = right
 tray-detached = false
@@ -66,7 +66,7 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps cava-viz sct uptime
+modules-left = battery apps cava-viz sct uptime bluetooth-status
 modules-right = updates gpu cpu memory disk-root disk-storage temperature
 
 ;===============================================
@@ -115,13 +115,14 @@ format-volume-background = ${colors.background4}
 format-volume-foreground = ${colors.foreground2}
 label-volume-foreground = ${colors.foreground2}
 format-volume-padding = 2
+format-muted = %{T4}Vᵒ%{T-}▕╳▏<label-muted>
 format-muted-background = ${colors.red}
 format-muted-foreground = ${colors.background}
 format-muted-padding = 2
 label-volume = "%percentage:3:3%%"
 use-ui-max = true
 interval = 5
-label-muted   = "(muted)"
+label-muted   = "mute"
 click-right = pavucontrol
 click-middle = playerctl --all-players stop
 ramp-volume-font = 1
@@ -136,7 +137,7 @@ ramp-volume-6 = "█"
 [module/backlight]
 ;type = custom/script
 type = internal/backlight
-format =%{A3:xbacklight -set 0:}%{A2:xbacklight -set 50:}%{A1:xbacklight -set 100:}%{T4}Bᵃ%{T-}▕<ramp>▏<label>%{A}%{A}%{A}
+format =%{A3:xbacklight -set 0:}%{A2:xbacklight -set 50:}%{A1:xbacklight -set 100:}%{T4}Bʳ%{T-}▕<ramp>▏<label>%{A}%{A}%{A}
 card = amdgpu_bl0
 label = %percentage:3:3%%
 enable-scroll = true
@@ -281,7 +282,7 @@ thermal-zone = 0
 units = true
 interval = 0.5
 
-[module/wifi]
+[module/wifi-connection]
 type = internal/network
 format-connected = ▕<ramp-signal>▏ <label-connected>
 format-connected-background = ${colors.foreground2} 
@@ -302,6 +303,16 @@ ramp-signal-4 = ▅
 ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
+
+[module/wifi-status]
+type = custom/script
+interval = 1
+format-padding = 1
+format-background = ${colors.red}
+format-foreground = ${colors.background}
+format-font = 4
+exec = ~/.config/polybar/scripts/wifi
+click-left = ~/.config/polybar/scripts/wifi --toggle
 
 [module/net-speed]
 type = internal/network
@@ -363,7 +374,7 @@ tail = true
 label-foreground = ${colors.background5}
 format-background = ${colors.background2}
 format-padding = 2
-
+;W₁ W₀ B₁ B₀ Aʳ
 [module/sct]
 type = custom/script
 exec = ~/.config/polybar/scripts/sct
@@ -372,7 +383,7 @@ click-middle = xsct 6500
 scroll-up = xsct -d 250
 scroll-down = xsct -d -250
 format-padding = 2
-format-prefix = %{T4}Sᶜ %{T-}
+format-prefix = %{T4}Cᵗ %{T-}
 format-background = ${colors.background3}
 format-foreground = ${colors.foreground4}
 
@@ -418,3 +429,13 @@ interval = 30
 format-padding = 2
 format-background = ${colors.background2}
 format-foreground = ${colors.background5}
+
+[module/bluetooth-status]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth
+format-padding = 1
+format-font = 4
+format-background = ${colors.red}
+format-foreground = ${colors.background}
+interval = 1
+click-left = ~/.config/polybar/scripts/bluetooth --toggle

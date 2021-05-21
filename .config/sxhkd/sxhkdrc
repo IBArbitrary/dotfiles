@@ -119,3 +119,19 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# mpc hotkeys
+XF86AudioPrev
+	mpc prev
+
+XF86AudioPlay
+	mpc toggle
+
+XF86AudioNext
+	mpc next
+
+super + shift + f
+	firefox
+
+super + shift + p
+	firefox --private-window

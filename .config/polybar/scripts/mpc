@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+current=$(mpc current)
+volume=$(mpc volume | grep -Po "volume:\K\d+(?=%)")
+
+echo "$current" | zscroll -l 10 -d 0.15 -b "V:$volume% "

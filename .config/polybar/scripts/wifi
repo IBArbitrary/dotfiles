@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+if [ "$(rfkill list wlan | grep 'Soft blocked: no')" ]; then
+    status="on"
+else
+    status="off"
+fi
+
+
+case "$1" in
+    --toggle)
+        if [ "$status" = "off" ]; then
+            sudo rfkill unblock wlan
+            notify-send "Turned on WiFi."
+        else
+            sudo rfkill block wlan
+            notify-send "Turned off WiFi."
+        fi
+        ;;
+    *)
+        if [ "$status" = "off" ]; then
+            echo "W₀"
+        elif [ "$status" = "on" ]; then
+            echo "W₁"
+        fi
+        ;;
+esac

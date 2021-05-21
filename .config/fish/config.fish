@@ -43,18 +43,6 @@ function wp-ss
 	bgchd -dir ~/Pictures/wallpapers/ -bcknd feh -intv 10m -rpl
 end
 
-# book opening script
-function book --description 'Book opener with fzf'
-	set CD (pwd)
-	cd /media/storage/books/ 
-	set books (find * -type f| fzf --header="Choose books." -m)
-	if test $books
-		zathura $books &
-	end
-	cd $CD
-	set -e CD
-end
-
 # dotfiles alias for bare git repo
 alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -97,8 +85,12 @@ abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
 
 # check updates
 abbr -a cu "checkupdates"
-
+abbr -a syu "sudo pacman -Syu"
 # quit vim syntax
 abbr -a :q "exit"
 
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
+
+# editing fish config
+abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
+abbr -a nu "vnstat -d"
