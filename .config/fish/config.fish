@@ -106,5 +106,6 @@ abbr -a gs "git status"
 abbr -a pi "sudo pip3 install"
 abbr -a pu "sudo pip3 uninstall"
 abbr -a pi2 "sudo pip install"
+abbr -a q "exit"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'

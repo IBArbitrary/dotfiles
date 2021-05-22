@@ -4,7 +4,7 @@ BAR_HEIGHT=20
 
 case "$1" in
     --left)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "daily internet stats" ];
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
         then
             exit 0
         fi
@@ -41,11 +41,11 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="daily internet stats" >/dev/null ;
+            --title="internet-stats" >/dev/null ;
         rm $tempfile
         ;;
     --middle)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "daily internet stats" ];
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
         then
             exit 0
         fi
@@ -82,11 +82,11 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="daily internet stats" >/dev/null ;
+            --title="internet-stats" >/dev/null ;
         rm $tempfile
         ;;
     --right)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "daily internet stats" ];
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
         then
             exit 0
         fi
@@ -123,7 +123,7 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="daily internet stats" >/dev/null ;
+            --title="internet-stats" >/dev/null ;
         rm $tempfile
         ;;
     *)
