@@ -390,7 +390,9 @@ format-foreground = ${colors.foreground4}
 [module/net-usage]
 type = custom/script
 exec = ~/.config/polybar/scripts/net-usage
-click-left = ~/.config/polybar/scripts/net-usage --img
+click-left = ~/.config/polybar/scripts/net-usage --left
+click-middle = ~/.config/polybar/scripts/net-usage --middle
+click-right = ~/.config/polybar/scripts/net-usage --right
 interval = 1
 format-padding = 2
 format-prefix = %{T4}Nᵘ %{T-}

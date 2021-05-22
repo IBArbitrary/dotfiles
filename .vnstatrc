@@ -11,9 +11,9 @@ DatabaseDir "/var/lib/vnstat"
 Locale "-"
 
 # date output formats for -d, -m, -t and -w
-DayFormat    "%Y-%m-%d"
-MonthFormat  "%Y-%m"
-TopFormat    "%Y-%m-%d"
+DayFormat    "%d-%m-%Y"
+MonthFormat  "%b %Y"
+TopFormat    "%d-%m-%Y"
 
 # characters used for visuals
 RXCharacter       "%"
@@ -161,7 +161,7 @@ DatabaseSynchronous -1
 ##
 
 # title timestamp format
-HeaderFormat "%Y-%m-%d %H:%M"
+HeaderFormat "%a, %b %d %Y - %I:%M %p"
 
 # show hours with rate (1 = enabled, 0 = disabled)
 HourlyRate 1
@@ -190,7 +190,7 @@ EstimateStyle 1
 
 # bar column in list outputs shows rate if OutputStyle is 3
 # (1 = enabled, 0 = disabled)
-BarColumnShowsRate 0
+BarColumnShowsRate 1
 
 # image colors
 CBackground     "282828"
@@ -200,7 +200,7 @@ CHeaderTitle    "EBDBB2"
 CHeaderDate     "D5C4A1"
 CText           "EBDBB2"
 CLine           "A89984"
-CLineL          "-"
+CLineL          "928374"
 CRx             "FB4934"
 CTx             "EBDBB2"
 CRxD            "CC241D"
