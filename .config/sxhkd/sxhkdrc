@@ -135,3 +135,6 @@ super + shift + f
 
 super + shift + p
 	firefox --private-window
+
+super + shift + b
+	book
