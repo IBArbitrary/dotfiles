@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
 stats=$(vnstat -i wlo1 --json)
-down=$(echo $stats | jq ".interfaces[0].traffic.day[2].rx" | numfmt --to iec --format "%.2f")
-up=$(echo $stats | jq ".interfaces[0].traffic.day[2].tx" | numfmt --to iec --format "%.2f")
+down=$(echo $stats | jq ".interfaces[0].traffic.day[-1].rx" | numfmt --to iec --format "%.2f")
+up=$(echo $stats | jq ".interfaces[0].traffic.day[-1].tx" | numfmt --to iec --format "%.2f")
 echo "$down ↕ $up"
