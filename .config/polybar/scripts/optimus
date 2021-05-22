@@ -5,7 +5,7 @@ BORDER_SIZE=8  # border size from your wm settings
 YAD_WIDTH=100  # 222 is minimum possible value
 YAD_HEIGHT=130 # 193 is minimum possible value
 
-if [ "$(xdotool getwindowfocus getwindowname)" = "calendar" ]; then
+if [ "$(xdotool getwindowfocus getwindowname)" = "optimus switcher" ]; then
     exit 0
 fi
 

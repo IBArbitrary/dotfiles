@@ -3,7 +3,7 @@ set default-bg                  "#282828" #00
 set default-fg                  "#ebdbb2" #01
 
 set statusbar-fg                "#282828" #04
-set statusbar-bg                "#928374" #01
+set statusbar-bg                "#d5c4a1" #01
 
 set inputbar-bg                 "#282828" #00 currently not used
 set inputbar-fg                 "#ebdbb2" #02
@@ -14,7 +14,7 @@ set notification-error-fg       "#cc241d" #00
 set notification-warning-bg     "#282828" #08
 set notification-warning-fg     "#d79921" #00
 
-set highlight-color             "#fb4934" #0A
+set highlight-color             "#d5c4a1" #0A
 set highlight-active-color      "#ebdbb2" #0D
 
 set completion-highlight-fg     "#4e4e4e" #02

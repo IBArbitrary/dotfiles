@@ -97,6 +97,7 @@ abbr -a nu "vnstat -d"
 abbr -a g "git"
 abbr -a da "dots add -u"
 abbr -a dc "dots commit -m"
+abbr -a dp "dots push origin master"
 abbr -a ga "git add ."
 abbr -a gc "git commit -m"
 abbr -a gp "git push origin master"
@@ -104,3 +105,5 @@ abbr -a pi "sudo pip3 install"
 abbr -a pu "sudo pip3 uninstall"
 abbr -a pi2 "sudo pip install"
 abbr -a pu2 "sudo pip uninstall"
+
+alias zathurat 'tabbed -c -r 2 zathura -e id'

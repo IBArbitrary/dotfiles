@@ -21,4 +21,4 @@ useM=`expr $totM - $freM`
 useM=$(echo $useM | numfmt --to si --from-unit=M --format "%f")
 totM=$(echo $totM | numfmt --to si --from-unit=M --format "%f")
 printf "%s%% (%sB) of %sB" $perc $useM $totM |
-    zscroll -l 15 -d 0.15 -p " ∙ " -b "[$mode] "
+    zscroll -l 15 -d 0.15 -p " ∙ " -a " [$mode]"

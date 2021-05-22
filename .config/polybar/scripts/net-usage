@@ -1,5 +1,60 @@
-#! /usr/bin/env bash
-stats=$(vnstat -i wlo1 --json)
-down=$(echo $stats | jq ".interfaces[0].traffic.day[-1].rx" | numfmt --to iec --format "%.2f")
-up=$(echo $stats | jq ".interfaces[0].traffic.day[-1].tx" | numfmt --to iec --format "%.2f")
-echo "$down ↕ $up"
+#!/bin/sh
+BORDER_SIZE=0
+BAR_HEIGHT=20
+
+case "$1" in
+    --img)
+        if [ "$(xdotool getwindowfocus getwindowname)" = "daily internet stats" ];
+        then
+            exit 0
+        fi
+
+        imgdim=$(identify /tmp/vn.png | grep -Po 'PNG\s\K(\d+x\d+)')
+        FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
+        #FEH_WIDTH=700
+        FEH_HEIGHT=$(echo $imgdim | cut -d "x" -f2)
+        #FEH_HEIGHT=500
+
+        eval "$(xdotool getmouselocation --shell)"
+        eval "$(xdotool getdisplaygeometry --shell)"
+
+        # X
+        if [ "$((X + FEH_WIDTH / 2 + BORDER_SIZE))" -gt "$WIDTH" ]; then #Right side
+            : $((pos_x = WIDTH - FEH_WIDTH - BORDER_SIZE))
+        elif [ "$((X - FEH_WIDTH / 2 - BORDER_SIZE))" -lt 0 ]; then #Left side
+            : $((pos_x = BORDER_SIZE))
+        else #Center
+            : $((pos_x = X - FEH_WIDTH / 2))
+        fi
+
+        # Y
+        if [ "$Y" -gt "$((HEIGHT / 2))" ]; then #Bottom
+            : $((pos_y = HEIGHT - FEH_HEIGHT - BAR_HEIGHT - BORDER_SIZE))
+        else #Top
+            : $((pos_y = BAR_HEIGHT + BORDER_SIZE))
+        fi
+
+        echo "posx $pos_x posy $pos_y"
+        echo "h $FEH_HEIGHT w $FEH_WIDTH"
+
+        tempfile="/tmp/polybar.vnstat.png"
+        vnstati -vs -i wlo1 -nh -ne -L -o $tempfile
+        yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
+            --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
+            --posx="$pos_x" --posy="$pos_y" \
+            --title="daily internet stats" >/dev/null ;
+        rm $tempfile
+        ;;
+    *)
+        stats=$(vnstat -i wlo1 --json)
+        down=$(echo $stats |
+                   jq ".interfaces[0].traffic.day[-1].rx" |
+                   numfmt --to iec --format "%.2f")
+        up=$(echo $stats |
+                 jq ".interfaces[0].traffic.day[-1].tx" |
+                 numfmt --to iec --format "%.2f")
+        down+="B"
+        up+="B"
+        echo "$down ↕ $up"
+        ;;
+esac

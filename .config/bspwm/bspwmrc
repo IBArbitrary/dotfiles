@@ -19,11 +19,14 @@ bspc rule -a Blender desktop='^7' state=tiled follow=on
 bspc rule -a Inkscape desktop='^9' state=tiled follow=on
 bspc rule -a krita desktop='^10' state=tiled follow=on
 # bspc rule -a firefox desktop='^2' follow=on
-bspc rule -a Zathura desktop='^3' state=tiled follow=on
+bspc rule -a Zathura state=tiled follow=on
 bspc rule -a Nitrogen state=floating
 bspc rule -a Emacs state=tiled
 bspc rule -a Yad state=floating
 bspc rule -a Pavucontrol state=floating
+bspc rule -a Display state=floating
+bspc rule -a feh state=floating
+
 
 bspc config focus_follows_pointer true
 

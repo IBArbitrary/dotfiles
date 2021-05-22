@@ -11,10 +11,10 @@ status=$(systemctl is-active 'bluetooth.service')
 case "$1" in
     --toggle)
         if [ "$status" = "inactive" ]; then
-            sudo systemctl start bluetooth.service
+            sudo systemctl start bluetooth.service;
             notify-send "Turned on Bluetooth service."
         elif [ "$status" = "active" ]; then
-            sudo systemctl stop bluetooth.service
+            sudo systemctl stop bluetooth.service;
             notify-send "Turned off Bluetooth service."
         fi
         ;;
