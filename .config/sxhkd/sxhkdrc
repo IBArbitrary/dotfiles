@@ -149,3 +149,6 @@ super + shift + p
 
 super + shift + z
 	zotero
+
+super + shift + s
+	flameshot gui
