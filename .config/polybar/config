@@ -38,6 +38,7 @@ font-2=Pavanam:style=Regular:pixelsize=13:antialias=true;2
 font-3=Source Code Pro:style=Semibold:pixelsize=10;2
 font-4=Source Code Pro:style=ExtraLight:pixelsize=10;2
 font-5=Source Code Pro:style=Medium:pixelsize=13;2
+font-7=Source Code Pro:style=Medium:pixelsize=9.5;3
 
 padding = 0
 border-size = 0
@@ -66,8 +67,9 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps cava-viz sct uptime bluetooth-status
-modules-right = updates gpu cpu memory disk-root disk-storage temperature
+modules-left = battery apps cava-viz sct uptime updates bluetooth-status
+modules-center = mpd
+modules-right = gpu cpu memory disk-root disk-storage temperature
 
 ;===============================================
 ;==                 Modules                   ==
@@ -94,7 +96,7 @@ label-empty-padding = 1
 type = custom/script
 format-background = ${colors.background2}
 format-foreground = ${colors.foreground4}
-format-padding = 2
+format-padding = 1
 interval = 5
 exec = ~/.config/polybar/scripts/popup-calendar
 click-left = ~/.config/polybar/scripts/popup-calendar --popup &
@@ -103,7 +105,7 @@ click-left = ~/.config/polybar/scripts/popup-calendar --popup &
 type = internal/date
 format-background = ${colors.background3}
 format-foreground = ${colors.foreground2}
-format-padding = 2
+format-padding = 1
 interval = 1
 time = "%I:%M:%S %p"
 label = %time%
@@ -114,11 +116,11 @@ format-volume = %{T4}Vᵒ%{T-}▕<ramp-volume>▏<label-volume>
 format-volume-background = ${colors.background4}
 format-volume-foreground = ${colors.foreground2}
 label-volume-foreground = ${colors.foreground2}
-format-volume-padding = 2
+format-volume-padding = 1
 format-muted = %{T4}Vᵒ%{T-}▕╳▏<label-muted>
 format-muted-background = ${colors.red}
 format-muted-foreground = ${colors.background}
-format-muted-padding = 2
+format-muted-padding = 1
 label-volume = "%percentage:3:3%%"
 use-ui-max = true
 interval = 5
@@ -143,7 +145,7 @@ label = %percentage:3:3%%
 enable-scroll = true
 format-background = ${colors.background5}
 format-foreground = ${colors.background}
-format-padding = 2
+format-padding = 1
 ramp-font = 1
 ramp-0 = " "
 ramp-1 = "░"
@@ -165,15 +167,19 @@ label-empty-foreground = ${colors.background3}
 type = custom/script
 interval = 600
 exec = ~/.config/polybar/scripts/updates
-format-padding = 2
+format-padding = 1
 format-prefix = %{T4}Uᵖ %{T-}
+format-background = ${colors.yellow}
+format-foreground = ${colors.background}
 
 [module/gpu]
 type = custom/script
 tail = true
 exec = ~/.config/polybar/scripts/gpu
 format-prefix = %{T4}Gᵖ %{T-}
-format-padding = 2
+format-padding = 1
+format-background = ${colors.orange}
+format-foreground = ${colors.background}
 click-left = ~/.config/polybar/scripts/optimus
 
 [module/cpu]
@@ -183,7 +189,7 @@ format = <label>
 format-prefix = "%{T4}Cᵖ%{T-} "
 format-background = ${colors.background2}
 format-foreground = ${colors.background5}
-format-padding = 2
+format-padding = 1
 label = %percentage:3:3%%
 
 [module/apps]
@@ -232,8 +238,8 @@ menu-4-4-exec = kitty vtop -t gruvbox
 menu-4-5 = " bottom "
 menu-4-5-exec = kitty btm
 
-label-open = " • "
-label-close = " ◦ "
+label-open = "•"
+label-close = "◦"
 label-separator = "%{T5}|%{T-}"
 format-padding = 1
 format-background = ${colors.background3}
@@ -245,39 +251,37 @@ label = %{A2:#apps.open.4:}%{T4}Mᵉ%{T-} %percentage_used:3:3%% (%gb_used%)%{A}
 format-background = ${colors.background3}
 format-foreground = ${colors.foreground3}
 interval = 1
-format-padding = 2
+format-padding = 1
 
 [module/disk-root]
 type = custom/script
 exec = ~/.config/polybar/scripts/disk-usage / ""
-format-padding = 2
+format-padding = 1
 format-prefix = "%{T4}Rᵒ%{T-}"
 format-background = ${colors.background4}
 format-foreground = ${colors.foreground2}
 tail = true
-interval = 0
 
 [module/disk-storage]
 type = custom/script
 exec = ~/.config/polybar/scripts/disk-usage /media/storage ""
-format-padding = 2
+format-padding = 1
 format-prefix = "%{T4}Sᵗ%{T-}"
 format-background = ${colors.background5}
 format-foreground = ${colors.background2}
 tail = true
-interval = 0
 
 [module/temperature]
 type = internal/temperature
 label = "%{T4}Tᵉ%{T-} %temperature-c:3:3%C"
 warn-temperature = 70
-label-warn = "%{T4}Θ%{T-} %temperature-c:3:3%C"
+label-warn = ${self.label}
 format-background = ${colors.foreground3}
 format-foreground = ${colors.background}
-format-padding = 2
+format-padding = 1
 label-warn-background = ${colors.red}
 label-warn-foreground = ${colors.background}
-label-warn-padding = 2
+label-warn-padding = 1
 thermal-zone = 0
 units = true
 interval = 0.5
@@ -287,10 +291,10 @@ type = internal/network
 format-connected = ▕<ramp-signal>▏ <label-connected>
 format-connected-background = ${colors.foreground2} 
 format-connected-foreground = ${colors.background}
-format-connected-padding = 2
+format-connected-padding = 1
 format-disconnected-background = ${colors.red}
 format-disconnected-foreground = ${colors.background}
-format-disconnected-padding = 2
+format-disconnected-padding = 1
 label-connected = "%{A3:notify-send %local_ip%:}%{A2:kitty nmtui:}%essid:4:12:...%%{A}%{A}"
 label-disconnected = "%{T4}Ξ%{T-} OFF"
 interface = wlo1
@@ -319,7 +323,7 @@ type = internal/network
 format-connected = <label-connected>
 format-connected-background = ${colors.background3}
 format-connected-foreground = ${colors.foreground4}
-format-connected-padding = 2
+format-connected-padding = 1
 format-connected-font = 1
 label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
 label-disconnected = ""
@@ -336,7 +340,7 @@ time-format = "%Hh-%Mm"
 format-discharging =▕<ramp-capacity>▏<label-discharging>
 format-discharging-background = ${colors.foreground1}
 format-discharging-foreground = ${colors.background}
-format-discharging-padding = 2
+format-discharging-padding = 1
 label-discharging = "%percentage:3:3%% %{T5}|%{T-} %time%"
 ramp-capacity-0 =▁
 ramp-capacity-1 =▂
@@ -350,7 +354,7 @@ ramp-capacity-7 =█
 format-charging = ▕<animation-charging>▏<label-charging>
 format-charging-background = ${colors.foreground1}
 format-charging-foreground = ${colors.background}
-format-charging-padding = 2
+format-charging-padding = 1
 label-charging = "%percentage:3:3%% %{T5}|%{T-} %time%"
 animation-charging-0 =▁
 animation-charging-1 =▂
@@ -364,16 +368,16 @@ animation-charging-framerate = 500
 
 format-full-background = ${colors.foreground0}
 format-full-foreground = ${colors.background}
-format-full-padding = 2
+format-full-padding = 1
 label-full = "▕█▏FULL"
 
 [module/cava-viz]
 type = custom/script
-exec = ~/.config/polybar/scripts/cava-viz -f 24 -b 12 -e fbf1c7,ebdbb2,d5c4a1,bdae93 -c average
+exec = ~/.config/polybar/scripts/cava-viz -f 24 -b 12 -e fbf1c7,ebdbb2,d5c4a1,bdae93 -c stereo
 tail = true
 label-foreground = ${colors.background5}
 format-background = ${colors.background2}
-format-padding = 2
+format-padding = 1
 ;W₁ W₀ B₁ B₀ Aʳ
 [module/sct]
 type = custom/script
@@ -382,7 +386,7 @@ interval = 0.5
 click-middle = xsct 6500
 scroll-up = xsct -d 250
 scroll-down = xsct -d -250
-format-padding = 2
+format-padding = 1
 format-prefix = %{T4}Cᵗ %{T-}
 format-background = ${colors.background3}
 format-foreground = ${colors.foreground4}
@@ -394,7 +398,7 @@ click-left = ~/.config/polybar/scripts/net-usage --left
 click-middle = ~/.config/polybar/scripts/net-usage --middle
 click-right = ~/.config/polybar/scripts/net-usage --right
 interval = 1
-format-padding = 2
+format-padding = 1
 format-prefix = %{T4}Nᵘ %{T-}
 format-background = ${colors.background2}
 format-foreground = ${colors.background5}
@@ -429,7 +433,7 @@ format = <label>
 exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\?,/w/' | sed 's/\ days\?,/d/' | sed 's/\ hours\?,\?/h/' | sed 's/\ minutes\?/m/'
 label = %{T4}Uᵗ%{T-} %output%
 interval = 30
-format-padding = 2
+format-padding = 1
 format-background = ${colors.background2}
 format-foreground = ${colors.background5}
 
@@ -442,3 +446,34 @@ format-background = ${colors.red}
 format-foreground = ${colors.background}
 interval = 1
 click-left = ~/.config/polybar/scripts/bluetooth --toggle
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 2
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat><icon-repeatone><icon-random><icon-consume> <bar-progress> <label-time> <label-song>
+format-online-background = ${colors.background2}
+format-online-foreground = ${colors.foreground2}
+label-song = %artist:1:12:...% - %title:1:18:...%
+label-offline = 🎜 mpd is offline
+icon-play = %{T8}P₁%{T-}
+icon-pause = %{T8}P₀%{T-}
+icon-stop = %{T8}S%{T-}
+icon-prev = %{T6}←%{T-}
+icon-next = %{T6}→%{T-}
+icon-seekb = %{T6}≤%{T-}
+icon-seekf = %{T6}≥%{T-}
+icon-random = %{T8}Rᵃ%{T-}
+icon-repeat = %{T8}Rᵉ%{T-}
+icon-repeatone = %{T8}R₁%{T-}
+icon-single = %{T8}Sⁱ%{T-}
+icon-consume = %{T8}Cᵒ%{T-}
+toggle-on-foreground = ${colors.foreground2}
+toggle-off-foreground = ${colors.background3}
+bar-progress-width = 8
+bar-progress-indicator = %{T4}╡%{T-}
+bar-progress-fill = %{T4}═%{T-}
+bar-progress-empty = %{T4}─%{T-}
+format-online-padding = 1
+format-offline-padding = 1

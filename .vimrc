@@ -8,7 +8,7 @@ set go-=r " disable scroll bar
 set go-=L " disable left scroll bar
 
 " color for terminal
-" set t_Co=256
+set t_Co=256
 set cursorline
 syntax on
 set colorcolumn=80

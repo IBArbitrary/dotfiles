@@ -89,7 +89,12 @@ abbr -a syu "sudo pacman -Syu"
 # quit vim syntax
 abbr -a :q "exit"
 
+function zt
+    tabbed -c -r 2 zathura -e id & disown
+end
+
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
+export TERM='xterm-256color'
 
 # editing fish config
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
@@ -107,5 +112,10 @@ abbr -a pi "sudo pip3 install"
 abbr -a pu "sudo pip3 uninstall"
 abbr -a pi2 "sudo pip install"
 abbr -a q "exit"
+abbr -a st "cd /media/storage/"
+abbr -a pc "sudo pacman -Sc"
+abbr -a yc "yay -Sc"
+abbr -a rd "sudo pacman -Rcns"
+
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
