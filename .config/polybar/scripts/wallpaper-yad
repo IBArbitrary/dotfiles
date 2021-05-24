@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+dialog () {
+    yad --button="Next":"bgctl next" \
+        --button="Prev":"bgctl prev" \
+        --button="Pause":"bgctl pause" \
+        --button="Play":"bgctl play" \
+        --close-on-unfocus
+}
+
+dialog
