@@ -152,3 +152,9 @@ super + shift + z
 
 super + shift + s
 	flameshot gui
+
+super + shift + q
+	qalculate-gtk
+
+super + Print
+	flameshot full -p ~/Pictures/screenshots/ -c

@@ -36,7 +36,7 @@ bspc rule -a Yad state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Display state=floating
 bspc rule -a feh state=floating
-
+bspc rule -a Qalculate-gtk state=floating
 
 bspc config focus_follows_pointer true
 

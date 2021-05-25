@@ -32,18 +32,19 @@ orange      = #fe8019
 [bar/base]
 enable-ipc = false
 
-font-0=Source Code Pro:style=Medium:pixelsize=9;2
+font-0=Source Code Pro:style=Medium:pixelsize=8.5;2
 font-1=SauceCodePro Nerd Font Mono:style=Regular:pixelsize=12:antialias=true;4
 font-2=Pavanam:style=Regular:pixelsize=13:antialias=true;2
 font-3=Source Code Pro:style=Semibold:pixelsize=9;2
 font-4=Source Code Pro:style=ExtraLight:pixelsize=10;2
-font-5=Source Code Pro:style=Medium:pixelsize=13;2
-font-7=Source Code Pro:style=Medium:pixelsize=9;3
+font-5=Source Code Pro:style=Light:pixelsize=14;2
+font-6=Source Code Pro:style=Medium:pixelsize=8;2
+font-7=Source Code Pro:style=Regular:pixelsize=9;2
 
 padding = 0
 border-size = 0
 border-color = ${colors.foreground4}
-height = 20
+height = 18
 width = 100%
 padding-right = 0
 separator = ""
@@ -67,8 +68,7 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps cava-viz sct uptime updates
-modules-center = mpd
+modules-left = battery apps cava-viz sct uptime updates mpd
 modules-right = gpu cpu memory disk-root disk-storage temperature
 
 ;===============================================
@@ -256,7 +256,7 @@ format-padding = 1
 [module/disk-root]
 type = internal/fs
 mount-0 = /
-label-mounted = %{A2:kitty ncdu / --exclude storage:}%{T4}Α%{T-} %percentage_used:3:3%% (%used%) of %total%%{A}
+label-mounted = %{A2:kitty ncdu / --exclude storage:}%{A1:notify-send "root\: %used% of %total%" :}%{T4}Rᵒ%{T-} %percentage_used:3:3%%%{A}%{A}
 format-mounted-background = ${colors.background4}
 format-mounted-foreground = ${colors.foreground2}
 format-mounted-padding = 2
@@ -265,7 +265,7 @@ interval = 30
 
 [module/disk-storage]
 type = internal/fs
-label-mounted = %{A2:kitty ncdu /media/storage:}%{T4}Σ%{T-} %percentage_used:3:3%% (%used%) of %total%%{A}
+label-mounted = %{A2:kitty ncdu /media/storage:}%{A1:notify-send "storage\: %used% of %total%" :}%{T4}Sᵗ%{T-} %percentage_used:3:3%%%{A}%{A}
 format-mounted-background = ${colors.background5}
 format-mounted-foreground = ${colors.background2}
 format-mounted-padding = 2
@@ -377,6 +377,7 @@ label-full = "▕█▏FULL"
 type = custom/script
 exec = ~/.config/polybar/scripts/cava-viz -f 24 -b 12 -e fbf1c7,ebdbb2,d5c4a1,bdae93 -c stereo
 tail = true
+label-font = 7
 label-foreground = ${colors.background5}
 format-background = ${colors.background2}
 format-padding = 1
@@ -454,10 +455,10 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 interval = 2
-format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat><icon-repeatone><icon-random><icon-consume> <bar-progress> <label-time>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat><icon-repeatone><icon-random><icon-consume> <bar-progress> <label-time> <label-song>
 format-online-background = ${colors.background2}
 format-online-foreground = ${colors.foreground2}
-label-song = %artist:15:15:…% - %title:18:18:…%
+label-song = %artist:1:20:…% - %title:1:20:…%
 label-offline = 🎜 mpd is offline
 icon-play = %{T8}P₀%{T-}
 icon-pause = %{T8}P₁%{T-}
@@ -473,7 +474,7 @@ icon-single = %{T8}Sⁱ%{T-}
 icon-consume = %{T8}Cᵒ%{T-}
 toggle-on-foreground = ${colors.foreground2}
 toggle-off-foreground = ${colors.background3}
-bar-progress-width = 8
+bar-progress-width = 20
 bar-progress-indicator = %{T4}╡%{T-}
 bar-progress-fill = %{T4}═%{T-}
 bar-progress-empty = %{T4}─%{T-}

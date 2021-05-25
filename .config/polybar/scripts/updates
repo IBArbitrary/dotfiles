@@ -16,7 +16,7 @@ fi
 updates=$(("$updates_arch" + "$updates_aur"))
 
 if [ "$updates" -gt 0 ]; then
-    echo "$updates_archᵖ · $updates_aurᵃ"
+    echo "$updates_archᵖ·$updates_aurᵃ"
 else
     echo "(0 ‿ 0)"
 fi

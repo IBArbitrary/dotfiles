@@ -58,9 +58,10 @@ function pacs
 	pacman -Slq | fzf --prompt 'pacman> ' \
 	   --header 'Install packages.
 <c-p>: pacman, <c-a>: aur' \
-	   --bind 'ctrl-p:change-prompt(Pacman> )+reload(pacman -Slq)' \
-	   --bind 'ctrl-a:change-prompt(Aur> )+reload(yay -Slq)' \
-	   --multi --black --height=80% --preview 'yay -Si {1}' | xargs -ro yay -S
+	   --bind 'ctrl-p:change-prompt(pacman> )+reload(pacman -Slq)' \
+	   --bind 'ctrl-a:change-prompt(aur> )+reload(yay -Slq)' \
+	   --multi --black --height=80% --preview 'yay -Si {1}' \
+       --preview-window bottom | xargs -ro yay -S
 end
 	
 function pacr
@@ -70,7 +71,8 @@ function pacr
 	   --bind 'ctrl-a:change-prompt(all> )+reload(pacman -Qq)' \
 	   --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe)' \
 	   --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
-	   --multi --black --height=80% --preview 'yay -Si {1}' | xargs -ro sudo pacman -Rsn
+	   --multi --black --height=80% --preview 'yay -Si {1}' \
+       --preview-window bottom | xargs -ro sudo pacman -Rsn
 end
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
@@ -116,6 +118,5 @@ abbr -a st "cd /media/storage/"
 abbr -a pc "sudo pacman -Sc"
 abbr -a yc "yay -Sc"
 abbr -a rd "sudo pacman -Rcns"
-
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
