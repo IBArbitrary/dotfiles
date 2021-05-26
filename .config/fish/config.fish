@@ -118,5 +118,7 @@ abbr -a st "cd /media/storage/"
 abbr -a pc "sudo pacman -Sc"
 abbr -a yc "yay -Sc"
 abbr -a rd "sudo pacman -Rcns"
+abbr -a di "dict -d gcide"
+abbr -a th "dict -d moby-thesaurus"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
