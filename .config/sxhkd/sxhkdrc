@@ -158,3 +158,18 @@ super + shift + q
 
 super + Print
 	flameshot full -p ~/Pictures/screenshots/ -c
+
+XF86MonBrightnessDown
+	xbacklight -10
+
+XF86MonBrightnessUp
+	xbacklight +10
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -10%	
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +10%	
