@@ -4,6 +4,11 @@ function splash
 	set -e splash
 end
 
+function fish_greeting
+    chucky
+end
+
+
 # reloading fish config
 function reload
 	clear
