@@ -97,7 +97,7 @@ abbr -a syu "sudo pacman -Syu"
 abbr -a :q "exit"
 
 function zt
-    tabbed -c -r 2 zathura -e id & disown
+    tabbed -c -r 2 zathura -e id $argv & disown
 end
 
 export EDITOR='emacsclient --create-frame --alternate-editor=""'

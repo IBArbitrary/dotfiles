@@ -141,11 +141,14 @@ XF86AudioPlay
 XF86AudioNext
 	mpc next
 
-super + shift + f
+super + shift + b
 	firefox
 
 super + shift + p
 	firefox --private-window
+
+super + shift + f
+	pcmanfm
 
 super + shift + z
 	zotero
@@ -155,6 +158,9 @@ super + shift + s
 
 super + shift + q
 	qalculate-gtk
+
+super + shift + e
+	emacs
 
 super + Print
 	flameshot full -p ~/Pictures/screenshots/ -c
