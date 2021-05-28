@@ -1,5 +1,5 @@
 #!/bin/sh
-BORDER_SIZE=0
+BORDER_SIZE=8
 BAR_HEIGHT=20
 
 case "$1" in

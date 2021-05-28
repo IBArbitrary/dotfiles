@@ -125,5 +125,11 @@ abbr -a yc "yay -Sc"
 abbr -a rd "sudo pacman -Rcns"
 abbr -a di "dict -d gcide"
 abbr -a th "dict -d moby-thesaurus"
+abbr -a sstar "sudo systemctl start"
+abbr -a sstop "sudo systemctl stop"
+abbr -a sstat "sudo systemctl status"
+abbr -a senab "sudo systemctl enable"
+abbr -a sdesb "sudo systemctl disable"
+abbr -a nf "neofetch"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
