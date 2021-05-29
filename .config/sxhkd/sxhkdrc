@@ -162,6 +162,9 @@ super + shift + q
 super + shift + e
 	emacs
 
+super + alt + p
+	rofi-rbw
+
 super + Print
 	flameshot full -p ~/Pictures/screenshots/ -c
 
