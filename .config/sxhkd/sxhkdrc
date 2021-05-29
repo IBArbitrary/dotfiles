@@ -12,6 +12,7 @@
 ################################################################################
 # wm independent hotkeys
 
+
 # terminal emulator
 super + Return
 	kitty
