@@ -41,7 +41,7 @@ bspc rule -a Qalculate-gtk state=floating
 bspc config focus_follows_pointer true
 
 bspc config active_border_color \#282828
-bspc config normal_border_color \#504945
+bspc config normal_border_color \#3c3836
 bspc config focused_border_color \#d5c4a1
 
 # wallpaper slideshow

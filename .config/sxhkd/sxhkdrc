@@ -166,7 +166,7 @@ super + alt + p
 	rofi-rbw
 
 super + Print
-	flameshot full -p ~/Pictures/screenshots/ -c
+	flameshot full -p ~/pictures/screenshots/ -c
 
 XF86MonBrightnessDown
 	xbacklight -10
@@ -182,3 +182,6 @@ XF86AudioLowerVolume
 
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%	
+
+super + shift {Prior, Next, Pause, Insert}
+	bgctl {prev, next, pause, play}
