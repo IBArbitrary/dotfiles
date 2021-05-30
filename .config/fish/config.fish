@@ -101,7 +101,8 @@ function zt
 end
 
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
-export TERM='xterm-256color'
+export TERM='xterm-kitty'
+
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
