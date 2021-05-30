@@ -131,5 +131,7 @@ abbr -a sstat "sudo systemctl status"
 abbr -a senab "sudo systemctl enable"
 abbr -a sdesb "sudo systemctl disable"
 abbr -a nf "neofetch"
+abbr -a ytf "youtube-dl -F"
+abbr -a ytd "youtube-dl"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
