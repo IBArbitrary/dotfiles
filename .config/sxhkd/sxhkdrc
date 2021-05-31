@@ -160,7 +160,10 @@ super + shift + q
 	qalculate-gtk
 
 super + shift + e
-	emacs
+	emacsclient --create-frame --alternate-editor=""
+
+super + alt + e
+	rofimoji
 
 super + alt + p
 	rofi-rbw
