@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <inkscape
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   version="1"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1">
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
   <group
      id="window">
     <group
        id="task"
-       taskset="2" />
+       taskset="0" />
     <group
        id="menu"
        state="1" />
@@ -105,11 +105,14 @@
     <sodipodi:namedview
        id="base"
        pagecolor="#ffffff"
+       pageopacity="0.0"
+       pagecheckerboard="0"
        bordercolor="#666666"
        borderopacity="1.0"
        objecttolerance="10.0"
        gridtolerance="10.0"
        guidetolerance="10.0"
+       pageshadow="2"
        inkscape:pageopacity="0.0"
        inkscape:pageshadow="2"
        inkscape:window-width="640"
@@ -206,7 +209,9 @@
        tracebackground="0"
        usepressure="1"
        usetilt="0"
-       keep_selected="1">
+       keep_selected="1"
+       abs_width="1"
+       unit="mm">
       <group
          id="preset">
         <group
@@ -311,7 +316,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -544,7 +549,9 @@
     <group
        id="align" />
     <group
-       id="xml" />
+       id="xml"
+       h="500"
+       w="300" />
     <group
        id="find" />
     <group
@@ -557,7 +564,8 @@
        state="1" />
     <group
        id="preferences"
-       state="1" />
+       state="1"
+       page="2" />
     <group
        id="gradienteditor" />
     <group
@@ -622,7 +630,9 @@
        id="treeeditor" />
     <group
        id="layers"
-       maxDepth="20" />
+       maxDepth="20"
+       w="200"
+       h="300" />
     <group
        id="extensioneditor" />
     <group
@@ -915,6 +925,9 @@
        partialdynamic="0" />
     <group
        id="rendering" />
+    <group
+       id="defaultwindowsize"
+       value="2" />
   </group>
   <group
      id="extensions" />
@@ -926,9 +939,9 @@
        height="1012"
        x="10"
        y="30"
+       maximized="1"
        fullscreen="0"
-       id="geometry"
-       maximized="0" />
+       id="geometry" />
     <group
        id="XYfront" />
     <group
@@ -1029,9 +1042,19 @@
      id="theme"
      defaultTheme="gruvbox-dark-gtk"
      defaultIconTheme="gruvbox-dark-icons-gtk"
-     gtkTheme="gruvbox-dark-gtk"
-     iconTheme="gruvbox-dark-icons-gtk"
      menuIcons_canvas="0"
      menuIcons_layers="0"
-     menuIcons_objects="0" />
+     menuIcons_objects="0"
+     defaultPreferDarkTheme="0"
+     defaultGtkTheme="gruvbox-dark-gtk"
+     darkTheme="1"
+     preferDarkTheme="1"
+     symbolicIcons="1">
+    <group
+       id="gruvbox-dark-icons-gtk"
+       symbolicBaseColor="3182334975"
+       symbolicSuccessColor="3420488447"
+       symbolicWarningColor="4222649087"
+       symbolicErrorColor="4220560127" />
+  </group>
 </inkscape>

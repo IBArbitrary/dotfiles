@@ -162,6 +162,12 @@ super + shift + q
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
+super + alt + c
+	pick-colour-picker
+
+super + ctrl + c
+	xboard
+
 super + alt + e
 	rofimoji
 

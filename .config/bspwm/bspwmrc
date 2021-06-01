@@ -37,6 +37,8 @@ bspc rule -a Pavucontrol state=floating
 bspc rule -a Display state=floating
 bspc rule -a feh state=floating
 bspc rule -a Qalculate-gtk state=floating
+bspc rule -a Pick-colour-picker state=floating
+bspc rule -a Xboard state=floating
 
 bspc config focus_follows_pointer true
 
