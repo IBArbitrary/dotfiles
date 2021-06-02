@@ -67,6 +67,7 @@ function pacs
 	   --bind 'ctrl-a:change-prompt(aur> )+reload(yay -Slq)' \
 	   --multi --black --height=80% --preview 'yay -Si {1}' \
        --preview-window bottom | xargs -ro yay -S
+    pacman -Qqe > ~/.config/pac-kages.txt
 end
 	
 function pacr
@@ -78,6 +79,7 @@ function pacr
 	   --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
 	   --multi --black --height=80% --preview 'yay -Si {1}' \
        --preview-window bottom | xargs -ro sudo pacman -Rsn
+    pacman -Qqe > ~/.config/pac-kages.txt
 end
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
@@ -102,7 +104,8 @@ end
 
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
 export TERM='xterm-kitty'
-
+export BORG_REPO='/media/storage/backup/arch/'
+export BORG_PASSCOMMAND="gpg --decrypt $HOME/borg-passphrase.gpg"
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
