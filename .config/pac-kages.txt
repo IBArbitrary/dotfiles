@@ -40,6 +40,7 @@ chntpw
 cmake
 code
 cowsay
+cronie
 dconf-editor
 dfhack
 dict-gcide
@@ -89,6 +90,7 @@ imagemagick-doc
 imlib2
 iniparser
 inkscape
+inxi
 ipython
 java8-openjfx
 jq
@@ -148,6 +150,7 @@ perl-image-exiftool
 picard
 pick-colour-picker
 picom-tryone-git
+pipes.sh
 pkgconf
 playerctl
 polybar
@@ -181,6 +184,7 @@ rust
 ryzenadj-git
 sbcl
 scientifica-bdf
+screenkey
 scrot
 sed
 smartmontools

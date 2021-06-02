@@ -105,7 +105,7 @@ end
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
 export TERM='xterm-kitty'
 export BORG_REPO='/media/storage/backup/arch/'
-export BORG_PASSCOMMAND="gpg --decrypt $HOME/borg-passphrase.gpg"
+export BORG_PASSCOMMAND="gpg --decrypt $HOME/.borg-passphrase.gpg"
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
@@ -136,5 +136,6 @@ abbr -a sdesb "sudo systemctl disable"
 abbr -a nf "neofetch"
 abbr -a ytf "youtube-dl -F"
 abbr -a ytd "youtube-dl"
+abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis-shift -M -t 0.5"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
