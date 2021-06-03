@@ -13,10 +13,24 @@ if ! updates_aur=$(yay -Qum 2> /dev/null | wc -l); then
     updates_aur=0
 fi
 
-updates=$(("$updates_arch" + "$updates_aur"))
+nupdates=$(("$updates_arch" + "$updates_aur"))
+updates=$(checkupdates | grep -Po '^\K([^0-9\.]+)(?=\s\d+.*)')
 
-if [ "$updates" -gt 0 ]; then
-    echo "$updates_archᵖ·$updates_aurᵃ"
-else
-    echo "(0 ‿ 0)"
-fi
+case "$1" in
+    --show-updates)
+        if [ $nupdates != "0" ];
+        then
+            notify-send "$updates"
+        else
+            notify-send "No updates! (for now)"
+        fi
+        ;;
+    *)
+        if [ "$nupdates" -gt 0 ];
+        then
+            echo "$updates_archᵖ·$updates_aurᵃ"
+        else
+            echo "(0 ‿ 0)"
+        fi
+        ;;
+esac
