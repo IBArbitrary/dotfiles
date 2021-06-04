@@ -71,7 +71,6 @@ gcc
 gettext
 gimp
 git
-gitui
 gnuchess
 go
 gotop

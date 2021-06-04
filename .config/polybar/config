@@ -58,7 +58,7 @@ wm-restack = bspwm
 inherit = bar/base
 fix-center = true
 modules-left = arch bspwm net-speed net-usage decoration-left
-modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status bluetooth-status
+modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status bluetooth-connection bluetooth-status
 modules-center = title
 tray-position = right
 tray-detached = false
@@ -68,7 +68,7 @@ tray-maxsize = 9
 inherit = bar/base
 fix-center = false
 bottom = true
-modules-left = battery apps cava-viz sct uptime updates mpd
+modules-left = battery cava-viz sct uptime updates mpd
 modules-right = gpu cpu memory disk-root disk-storage temperature
 
 ;===============================================
@@ -172,8 +172,8 @@ click-middle = "kitty sudo pacman -Syu"
 click-right = "kitty yay"
 format-padding = 1
 format-prefix = %{T4}Uᵖ %{T-}
-format-background = ${colors.yellow}
-format-foreground = ${colors.background}
+format-background = ${colors.background3}
+format-foreground = ${colors.foreground3}
 
 [module/gpu]
 type = custom/script
@@ -194,59 +194,6 @@ format-background = ${colors.background3}
 format-foreground = ${colors.foreground3}
 format-padding = 1
 label = %percentage:3:3%%
-
-[module/apps]
-type = custom/menu
-expand-right = true
-menu-0-0 = " wallpaper "
-menu-0-0-exec = #apps.open.1
-menu-0-1 = " screenshot "
-menu-0-1-exec = #apps.open.2
-menu-0-2 = " files "
-menu-0-2-exec = #apps.open.3
-menu-0-3 = " monitors "
-menu-0-3-exec = #apps.open.4
-
-menu-1-0 = " < "
-menu-1-0-exec = bgctl prev
-menu-1-1 = " > "
-menu-1-1-exec = bgctl next
-menu-1-2 = " × "
-menu-1-2-exec = bgctl pause
-menu-1-3 = " ~ "
-menu-1-3-exec = bgctl play
-
-menu-2-0 = " gui "
-menu-2-0-exec = flameshot gui -p ~/Pictures/screenshots
-menu-2-1 = " full "
-menu-2-1-exec = flameshot full -c -p ~/Pictures/screenshots
-
-menu-3-0 = " pictures "
-menu-3-0-exec = pcmanfm ~/Pictures/
-menu-3-1 = " downloads "
-menu-3-1-exec = pcmanfm ~/Downloads/
-menu-3-2 = " books "
-menu-3-2-exec = pcmanfm /media/storage/books/
-
-menu-4-0 = " top "
-menu-4-0-exec = kitty top
-menu-4-1 = " htop "
-menu-4-1-exec = kitty htop
-menu-4-2 = " bashtop "
-menu-4-2-exec = kitty bashtop
-menu-4-3 = " glances "
-menu-4-3-exec = kitty glances
-menu-4-4 = " vtop "
-menu-4-4-exec = kitty vtop -t gruvbox
-menu-4-5 = " bottom "
-menu-4-5-exec = kitty btm
-
-label-open = "•"
-label-close = "◦"
-label-separator = "%{T5}|%{T-}"
-format-padding = 1
-format-background = ${colors.background3}
-format-foreground = ${colors.foreground2}
 
 [module/memory]
 type = internal/memory
@@ -294,13 +241,13 @@ interval = 0.5
 [module/wifi-connection]
 type = internal/network
 format-connected = ▕<ramp-signal>▏ <label-connected>
-format-connected-background = ${colors.foreground2} 
-format-connected-foreground = ${colors.background}
+format-connected-background = ${colors.foreground3}
+format-connected-foreground = ${colors.background2}
 format-connected-padding = 1
 format-disconnected-background = ${colors.red}
 format-disconnected-foreground = ${colors.background}
 format-disconnected-padding = 1
-label-connected = "%{A3:notify-send %local_ip%:}%{A2:kitty nmtui:}%essid:4:12:...%%{A}%{A}"
+label-connected = "%{A3:notify-send %local_ip%:}%{A2:kitty nmtui:}%essid:4:8:…%%{A}%{A}"
 label-disconnected = "%{T4}Ξ%{T-} OFF"
 interface = wlo1
 interval = 1.0
@@ -317,7 +264,7 @@ ramp-signal-7 = █
 type = custom/script
 interval = 1
 format-padding = 1
-format-background = ${colors.red}
+format-background = ${colors.foreground2}
 format-foreground = ${colors.background}
 format-font = 4
 exec = ~/.config/polybar/scripts/wifi
@@ -378,11 +325,11 @@ label-full = "▕█▏FULL"
 
 [module/cava-viz]
 type = custom/script
-exec = ~/.config/polybar/scripts/cava-viz -f 24 -b 12 -e fbf1c7,ebdbb2,d5c4a1,bdae93 -c stereo
+exec = ~/.config/polybar/scripts/cava-viz -f 24 -b 12 -e 665c54,7c6f64,3c3836,282828 -c average
 tail = true
 label-font = 7
 label-foreground = ${colors.background5}
-format-background = ${colors.background2}
+format-background = ${colors.foreground3}
 format-padding = 1
 ;W₁ W₀ B₁ B₀ Aʳ
 [module/sct]
@@ -394,8 +341,8 @@ scroll-up = xsct -d 250
 scroll-down = xsct -d -250
 format-padding = 1
 format-prefix = %{T4}Cᵗ %{T-}
-format-background = ${colors.background3}
-format-foreground = ${colors.foreground4}
+format-background = ${colors.background5}
+format-foreground = ${colors.background}
 
 [module/net-usage]
 type = custom/script
@@ -440,15 +387,23 @@ exec = uptime --pretty | sed 's/up //' | sed 's/\ years\?,/y/' | sed 's/\ weeks\
 label = %{T4}Uᵗ%{T-} %output%
 interval = 30
 format-padding = 1
-format-background = ${colors.background2}
-format-foreground = ${colors.background5}
+format-background = ${colors.background4}
+format-foreground = ${colors.foreground3}
+
+[module/bluetooth-connection]
+type = custom/script
+exec = echo "bruh"
+format-background = ${colors.foreground1}
+format-foreground = ${colors.background2}
+format-padding = 1
+label = %output%
 
 [module/bluetooth-status]
 type = custom/script
 exec = ~/.config/polybar/scripts/bluetooth
 format-padding = 1
 format-font = 4
-format-background = ${colors.green}
+format-background = ${colors.foreground0}
 format-foreground = ${colors.background}
 interval = 1
 click-left = ~/.config/polybar/scripts/bluetooth --toggle
@@ -458,10 +413,10 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 interval = 2
-format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat><icon-repeatone><icon-random><icon-consume> <bar-progress> <label-time> <label-song>
+format-online = <icon-prev> <toggle> <icon-next> %{T8}[%{T-}<icon-repeat><icon-repeatone><icon-random><icon-consume>%{T8}]%{T-} <bar-progress> <label-song>
 format-online-background = ${colors.background2}
 format-online-foreground = ${colors.foreground2}
-label-song = %album-artist:1:20:…%·%title:1:20:…%
+label-song = %album-artist:1:20:…% · %title:1:20:…%
 label-time = %elapsed%/%total%
 format-offline = <label-offline>
 label-offline = "(~_~;)"
@@ -479,7 +434,7 @@ icon-single = %{T8}Sⁱ%{T-}
 icon-consume = %{T8}Cᵒ%{T-}
 toggle-on-foreground = ${colors.foreground2}
 toggle-off-foreground = ${colors.background3}
-bar-progress-width = 20
+bar-progress-width = 15
 bar-progress-indicator = %{T4}●%{T-}
 bar-progress-fill = %{T4}━%{T-}
 bar-progress-empty = %{T4}╌%{T-}

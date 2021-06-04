@@ -5,7 +5,8 @@ function splash
 end
 
 function fish_greeting
-    chucky
+    set me (whoami)
+    echo -e "\e[2;37mhello there, \e[1m$me\e[0m\e[2;37m.\e[0m"
 end
 
 
@@ -56,7 +57,6 @@ alias x 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
 alias doom "~/.doom-emacs/bin/doom"
-abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
 abbr -a mine 'padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
 
 function pacs
@@ -144,5 +144,8 @@ abbr -a nf "neofetch"
 abbr -a ytf "youtube-dl -F"
 abbr -a ytd "youtube-dl"
 abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis-shift -M -t 0.5"
+abbr -a mp "ncmpcpp"
+abbr -a et "emacsclient -t -a 'vim'"
+abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'

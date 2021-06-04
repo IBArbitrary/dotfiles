@@ -11,12 +11,16 @@ main_window_color = "default"
 
 user_interface = "alternative"
 
+[visualizer]
+visualizer_output_name = toggle_visualizer
+
 [header]
 header_visibility = "no"
 header_window_color = "default"
 state_line_color = "black"
 
 [statusbar]
+connected_message_on_startup = no
 progressbar_look = "━●╍"
 progressbar_color = "black"
 statusbar_visibility = "no"

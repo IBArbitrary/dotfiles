@@ -14,8 +14,8 @@
 
 
 # terminal emulator
-super + Return
-	kitty
+super +{_,shift + }Return
+	{kitty, bspc rule -a \* -o state=floating && kitty}
 
 # program launcher
 super + @space
@@ -162,17 +162,28 @@ super + shift + q
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
+super + shift + n
+	bspc rule -a \* -o state=floating && kitty ncmpcpp
+
+super + shift + m
+	mpd
+
 super + alt + c
 	pick-colour-picker
 
 super + ctrl + c
 	xboard
 
+
+
 super + alt + e
 	rofimoji
 
 super + alt + p
 	rofi-rbw
+
+super + alt + m
+	~/bin/monitors
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
