@@ -71,6 +71,7 @@ gcc
 gettext
 gimp
 git
+gitui
 gnuchess
 go
 gotop
@@ -156,6 +157,7 @@ pkgconf
 playerctl
 polybar
 poppler
+powershell
 powertop
 pulseaudio
 pulseaudio-alsa

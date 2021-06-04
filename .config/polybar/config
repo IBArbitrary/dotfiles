@@ -168,7 +168,8 @@ type = custom/script
 interval = 600
 exec = ~/.config/polybar/scripts/updates
 click-left = ~/.config/polybar/scripts/updates --show-updates
-click-middle = "kitty sudo pacman -Syu; yay"
+click-middle = "kitty sudo pacman -Syu"
+click-right = "kitty yay"
 format-padding = 1
 format-prefix = %{T4}Uᵖ %{T-}
 format-background = ${colors.yellow}
@@ -180,8 +181,8 @@ interval = 1
 exec = ~/.config/polybar/scripts/gpu
 format-prefix = %{T4}Gᵖ %{T-}
 format-padding = 1
-format-background = ${colors.orange}
-format-foreground = ${colors.background}
+format-background = ${colors.background2}
+format-foreground = ${colors.background5}
 click-left = ~/.config/polybar/scripts/optimus
 
 [module/cpu]
@@ -189,8 +190,8 @@ type = internal/cpu
 interval = 0.5
 format = <label>
 format-prefix = "%{T4}Cᵖ%{T-} "
-format-background = ${colors.background2}
-format-foreground = ${colors.background5}
+format-background = ${colors.background3}
+format-foreground = ${colors.foreground3}
 format-padding = 1
 label = %percentage:3:3%%
 
@@ -250,8 +251,8 @@ format-foreground = ${colors.foreground2}
 [module/memory]
 type = internal/memory
 label = %{A2:#apps.open.4:}%{T4}Mᵉ%{T-} %percentage_used:3:3%% (%gb_used%)%{A}
-format-background = ${colors.background3}
-format-foreground = ${colors.foreground3}
+format-background = ${colors.background4}
+format-foreground = ${colors.foreground2}
 interval = 1
 format-padding = 1
 
@@ -259,8 +260,8 @@ format-padding = 1
 type = internal/fs
 mount-0 = /
 label-mounted = %{A2:kitty ncdu / --exclude storage:}%{A1:notify-send "root\: %used% of %total%" :}%{T4}Rᵒ%{T-} %percentage_used:3:3%%%{A}%{A}
-format-mounted-background = ${colors.background4}
-format-mounted-foreground = ${colors.foreground2}
+format-mounted-background = ${colors.background5}
+format-mounted-foreground = ${colors.background}
 format-mounted-padding = 2
 fixed-values = true
 interval = 30
@@ -268,8 +269,8 @@ interval = 30
 [module/disk-storage]
 type = internal/fs
 label-mounted = %{A2:kitty ncdu /media/storage:}%{A1:notify-send "storage\: %used% of %total%" :}%{T4}Sᵗ%{T-} %percentage_used:3:3%%%{A}%{A}
-format-mounted-background = ${colors.background5}
-format-mounted-foreground = ${colors.background2}
+format-mounted-background = ${colors.foreground3}
+format-mounted-foreground = ${colors.background}
 format-mounted-padding = 2
 fixed-values = true
 interval = 30
@@ -280,7 +281,7 @@ type = internal/temperature
 label = "%{T4}Tᵉ%{T-} %temperature-c:3:3%C"
 warn-temperature = 75
 label-warn = ${self.label}
-format-background = ${colors.foreground3}
+format-background = ${colors.foreground1}
 format-foreground = ${colors.background}
 format-padding = 1
 label-warn-background = ${colors.red}
@@ -413,7 +414,7 @@ type = custom/text
 content = "ஃ"
 content-background = ${colors.foreground0}
 content-foreground = ${colors.background}
-click-middle = rofi -show p -modi p:rofi-power-menu -width 20 -lines 6
+click-middle = rofi -show p -modi p:rofi-power-menu -width 20 -lines 6 -location 1 -yoffset 18
 content-padding = 1
 
 [module/decoration-left]

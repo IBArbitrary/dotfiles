@@ -104,15 +104,15 @@
      id="template">
     <sodipodi:namedview
        id="base"
-       pagecolor="#ffffff"
-       pageopacity="0.0"
+       pagecolor="#505050"
+       pageopacity="0"
        pagecheckerboard="0"
-       bordercolor="#666666"
-       borderopacity="1.0"
+       bordercolor="#eeeeee"
+       borderopacity="1"
        objecttolerance="10.0"
        gridtolerance="10.0"
        guidetolerance="10.0"
-       pageshadow="2"
+       pageshadow="0"
        inkscape:pageopacity="0.0"
        inkscape:pageshadow="2"
        inkscape:window-width="640"
@@ -316,7 +316,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -928,6 +928,14 @@
     <group
        id="defaultwindowsize"
        value="2" />
+    <group
+       id="boot"
+       canvas="dark"
+       enabled="0">
+      <group
+         id="shown"
+         ver1.1="1" />
+    </group>
   </group>
   <group
      id="extensions" />
@@ -1049,7 +1057,7 @@
      defaultGtkTheme="gruvbox-dark-gtk"
      darkTheme="1"
      preferDarkTheme="1"
-     symbolicIcons="1">
+     symbolicIcons="0">
     <group
        id="gruvbox-dark-icons-gtk"
        symbolicBaseColor="3182334975"

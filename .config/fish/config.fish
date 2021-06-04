@@ -102,7 +102,14 @@ function zt
     tabbed -c -r 2 zathura -e id $argv & disown
 end
 
-export EDITOR='emacsclient --create-frame --alternate-editor=""'
+function cf
+    cd ~/.config
+    set config_dir (fd -t d -H | fzf)
+    cd $config_dir
+end
+
+export VISUAL='emacsclient -c -a ""'
+export EDITOR='emacsclient -t -a "vim"'
 export TERM='xterm-kitty'
 export BORG_REPO='/media/storage/backup/arch/'
 export BORG_PASSCOMMAND="gpg --decrypt $HOME/.borg-passphrase.gpg"
