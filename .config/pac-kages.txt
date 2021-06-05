@@ -51,6 +51,7 @@ dos2unix
 dunst
 dwarffortress
 emacs
+exa
 exif
 expac
 fakeroot
@@ -153,7 +154,7 @@ pcmanfm-gtk3
 perl-image-exiftool
 picard
 pick-colour-picker
-picom-tryone-git
+picom-ibhagwan-git
 pipes.sh
 pkgconf
 playerctl
@@ -198,7 +199,6 @@ sudo
 sxhkd
 syncthing
 terminus-font
-termite
 texinfo
 texlive-bibtexextra
 texlive-core

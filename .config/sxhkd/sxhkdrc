@@ -19,7 +19,10 @@ super +{_,shift + }Return
 
 # program launcher
 super + @space
-	rofi -show run
+	dmenu_run
+
+super + shift + @space
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -180,10 +183,13 @@ super + alt + e
 	rofimoji
 
 super + alt + p
-	rofi-rbw
+	passmenu -i -p "password: "
 
 super + alt + m
 	~/bin/monitors
+
+super + alt + b
+	bspc rule -a \* -o state=floating && kitty book
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
