@@ -118,9 +118,9 @@ nnoremap <leader>tt :tabnew<Space>
 
 " airline settings
 
-let g:airline_theme='gruvbox'
 let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_termcolors = 256
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type = 1

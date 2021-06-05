@@ -33,9 +33,9 @@ bitwarden-cli
 blender
 bluetooth-headset-battery-level-git
 bluez-utils
-borg
 bottom
 bspwm
+cargo-cache
 cbonsai
 chntpw
 cmake
@@ -133,6 +133,7 @@ ntfs-3g
 nvidia
 nvidia-prime
 nvidia-settings
+obs-studio
 okular
 optimus-manager
 optimus-manager-qt
@@ -187,6 +188,7 @@ rofi
 rofi-rbw
 rofimoji
 rpm-tools
+rsync
 rust
 ryzenadj-git
 sbcl
