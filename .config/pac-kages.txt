@@ -144,6 +144,9 @@ pacmixer
 pamixer
 papirus-icon-theme
 pass
+pass-import
+passff-host
+pastel
 patch
 pavucontrol
 pcmanfm-gtk3

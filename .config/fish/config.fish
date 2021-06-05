@@ -14,7 +14,7 @@ end
 function reload
 	clear
 	source ~/.config/fish/config.fish
-	splash
+	clear;neofetch
 end
 
 abbr -a r reload
