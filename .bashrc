@@ -19,6 +19,8 @@ alias ll='ls -l'
 alias cls='clear'
 alias c='clear'
 alias r='source ~/.bashrc'
+alias q='exit'
+alias :q='exit'
 
 timer_now () {
     date +%s%N
