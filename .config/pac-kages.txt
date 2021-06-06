@@ -60,6 +60,7 @@ feh
 fftw
 figlet
 file
+filezilla
 findutils
 firefox
 fish
@@ -83,6 +84,7 @@ gruvbox-dark-icons-gtk
 gtk-engine-murrine
 gtk-engines
 gucharmap
+gvfs
 gvim
 gzip
 highlight

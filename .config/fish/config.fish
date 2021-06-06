@@ -149,9 +149,9 @@ abbr -a et "emacsclient -t -a 'vim'"
 abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
 abbr -a pgp 'pass git push origin master'
 abbr -a mci 'sudo make clean install'
-abbr -a ls 'exa -x'
-abbr -a lsa 'exa -x -a'
-abbr -a lsd 'exa -x -D -a'
+abbr -a ls 'exa'
+abbr -a lsa 'exa -a'
+abbr -a lsd 'exa -D -a'
 abbr -a la 'exa --long -a --git --sort=type'
 abbr -a ll 'exa --long --git --sort=type'
 
