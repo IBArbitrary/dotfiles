@@ -41,6 +41,7 @@ chntpw
 cmake
 code
 cowsay
+croc
 cronie
 dconf-editor
 dfhack

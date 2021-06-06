@@ -147,7 +147,8 @@ abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis
 abbr -a mp "ncmpcpp"
 abbr -a et "emacsclient -t -a 'vim'"
 abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
-abbr -a pgp 'pass git push origin master'
+abbr -a pgpush 'pass git push origin master'
+abbr -a pgpull 'pass git pull origin master'
 abbr -a mci 'sudo make clean install'
 abbr -a ls 'exa'
 abbr -a lsa 'exa -a'
