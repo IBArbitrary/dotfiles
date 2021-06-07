@@ -28,6 +28,7 @@ super + shift + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+
 #
 # bspwm hotkeys
 #
@@ -97,6 +98,15 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + shift + ctrl + {1-9,0}
+	bspc {node -d} '^{1-9,10}' -f
+
+super + shift + {Left,Right}
+	bspc node -d {prev,next}
+
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} -f
 
 #
 # preselect

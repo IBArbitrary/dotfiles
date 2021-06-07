@@ -21,6 +21,7 @@ alias c='clear'
 alias r='source ~/.bashrc'
 alias q='exit'
 alias :q='exit'
+alias f='fish'
 
 timer_now () {
     date +%s%N

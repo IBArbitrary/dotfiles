@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="449.011"
-         height="385.858" />
+         width="496.343"
+         height="515.268" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -538,7 +538,8 @@
     <group
        id="toolbox" />
     <group
-       id="fillstroke" />
+       id="fillstroke"
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -576,7 +577,8 @@
        append_extension="1"
        path="">
       <group
-         id="exportarea" />
+         id="exportarea"
+         value="drawing" />
       <group
          id="defaultxdpi" />
     </group>
@@ -936,12 +938,16 @@
          id="shown"
          ver1.1="1" />
     </group>
+    <group
+       id="font"
+       unitType="2"
+       scaleLineHeightFromFontSIze="1" />
   </group>
   <group
      id="extensions" />
   <group
      id="desktop"
-     style="">
+     style="fill:#ffffff;-inkscape-font-specification:'Arial Black, Normal';font-family:'Arial Black';font-size:27.62874031px">
     <group
        width="1892"
        height="1012"

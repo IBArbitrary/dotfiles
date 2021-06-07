@@ -28,8 +28,6 @@ bc
 bdf-unifont
 binutils
 bison
-bitwarden
-bitwarden-cli
 blender
 bluetooth-headset-battery-level-git
 bluez-utils
@@ -124,6 +122,7 @@ neofetch
 nerd-fonts-source-code-pro
 network-manager-applet
 networkmanager
+networkmanager-dmenu-git
 newsboat
 ninja
 nitrogen
@@ -178,17 +177,16 @@ python2
 python2-pip
 qalculate-gtk
 qbittorrent
+qpdf
 qrencode
 qt5-styleplugins
 qutebrowser
 radeontop
 ranger
-rbw
 refind
 rhash
 ripgrep
 rofi
-rofi-rbw
 rofimoji
 rpm-tools
 rsync
@@ -200,6 +198,7 @@ screenkey
 scrot
 sed
 smartmontools
+subversion
 sudo
 sxhkd
 syncthing
@@ -225,6 +224,7 @@ toilet
 toilet-fonts
 tree
 ttf-font-awesome
+ttf-ms-fonts
 ttf-proggy-clean
 ttf-tamil
 ttf-ubraille
