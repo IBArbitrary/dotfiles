@@ -394,11 +394,11 @@ format-foreground = ${colors.foreground3}
 type = custom/script
 exec = ~/.config/polybar/scripts/bluetoothctl
 click-left = ~/.config/polybar/scripts/bluetoothctl --toggle
-interval = 1
+tail = true
 format-background = ${colors.foreground1}
 format-foreground = ${colors.background2}
 format-padding = 1
-label = %output:4:10:…%
+label = %output:4:8:…%
 
 [module/bluetooth-status]
 type = custom/script

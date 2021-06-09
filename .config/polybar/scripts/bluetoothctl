@@ -7,23 +7,14 @@ bluetooth_print() {
 
         for device in $devices_paired; do
             device_info=$(bluetoothctl info "$device")
-            battery=$(bluetooth-headset-battery-level "$device" | grep -Po "is\s\K(\d+)(?=%)" | xargs printf "%3d" $1)
-            if [ $battery -lt 25 ]; then
-                battery="▕▂▏"
-            elif [ $battery -gt 25 ] && [ $battery -lt 50 ]; then
-                battery="▕▄▏"
-            elif [ $battery -gt 50 ] && [ $battery -lt 75 ]; then
-                battery="▕▆▏"
-            elif [ $battery -gt 75 ]; then
-                battery="▕█▏"
-            fi
+
             if echo "$device_info" | grep -q "Connected: yes"; then
                 device_alias=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
 
                 if [ $counter -gt 0 ]; then
-                    printf ", %s%s" "$battery" "$device_alias"
+                    printf ", %s" "$device_alias"
                 else
-                    printf "%s%s" "$battery" "$device_alias"
+                    printf "%s" "$device_alias"
                 fi
 
                 counter=$((counter + 1))
