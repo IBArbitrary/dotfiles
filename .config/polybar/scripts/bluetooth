@@ -1,28 +1,39 @@
 #! /usr/bin/env bash
 
 status=$(systemctl is-active 'bluetooth.service')
-
-#if [ "$stat" = "active" ]; then
-#    status="on"
-#elif [ "$stat" = "inactive" ]; then
-#    status="off"
-#fi
+power=$(bluetoothctl show | grep -Po 'Powered: \K(\D+)')
 
 case "$1" in
+    --toggle-service)
+        if [ "$status" = "inactive" ]; then
+            sudo systemctl start bluetooth.service;
+            notify-send "Bluetooth" "Turned on Bluetooth service."
+        elif [ "$status" = "active" ]; then
+            sudo systemctl stop bluetooth.service;
+            notify-send "Bluetooth" "Turned off Bluetooth service."
+        fi
+        ;;
     --toggle)
         if [ "$status" = "inactive" ]; then
             sudo systemctl start bluetooth.service;
-            notify-send "Turned on Bluetooth service."
-        elif [ "$status" = "active" ]; then
-            sudo systemctl stop bluetooth.service;
-            notify-send "Turned off Bluetooth service."
+        fi
+        if bluetoothctl show | grep -q "Powered: no"; then
+            bluetoothctl power on >> /dev/null
+            notify-send "Bluetoothctl" "Powered on bluetooth adapter."
+        elif bluetoothctl show | grep -q "Powered: yes"; then
+            bluetoothctl power off >> /dev/null
+            notify-send "Bluetoothctl" "Powered off bluetooth adapter."
         fi
         ;;
     *)
-        if [ "$status" = "inactive" ]; then
-            echo "B₀"
+        if [ "$status" = "inactive" ] ; then
+            echo " B₀"
         elif [ "$status" = "active" ]; then
-            echo "B₁"
+            if [ "$power" = "no" ]; then
+                echo "⁰B₁"
+            else
+                echo "¹B₁"
+            fi
         fi
         ;;
 esac

@@ -392,11 +392,13 @@ format-foreground = ${colors.foreground3}
 
 [module/bluetooth-connection]
 type = custom/script
-exec = echo "bruh"
+exec = ~/.config/polybar/scripts/bluetoothctl
+click-left = ~/.config/polybar/scripts/bluetoothctl --toggle
+interval = 1
 format-background = ${colors.foreground1}
 format-foreground = ${colors.background2}
 format-padding = 1
-label = %output%
+label = %output:4:10:…%
 
 [module/bluetooth-status]
 type = custom/script
@@ -406,7 +408,9 @@ format-font = 4
 format-background = ${colors.foreground0}
 format-foreground = ${colors.background}
 interval = 1
-click-left = ~/.config/polybar/scripts/bluetooth --toggle
+click-left = ~/.config/polybar/scripts/bluetooth --toggle-service
+click-right = ~/.config/polybar/scripts/bluetooth --toggle
+click-middle = ~/.config/polybar/scripts/bluetoothctl --toggle
 
 [module/mpd]
 type = internal/mpd
