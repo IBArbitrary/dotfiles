@@ -1,7 +1,6 @@
 #! /usr/bin/env bash
 
 status=$(systemctl is-active 'bluetooth.service')
-power=$(bluetoothctl show | grep -Po 'Powered: \K(\D+)')
 
 case "$1" in
     --toggle-service)
@@ -27,8 +26,9 @@ case "$1" in
         ;;
     *)
         if [ "$status" = "inactive" ] ; then
-            echo " B₀"
+            echo "⁰B₀"
         elif [ "$status" = "active" ]; then
+            power=$(bluetoothctl show | grep -Po 'Powered: \K(\D+)')
             if [ "$power" = "no" ]; then
                 echo "⁰B₁"
             else
