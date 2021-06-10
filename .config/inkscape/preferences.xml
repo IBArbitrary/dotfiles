@@ -396,7 +396,8 @@
     <eventcontext
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
-       selcue="1" />
+       selcue="1"
+       curvature="0" />
     <eventcontext
        id="paintbucket"
        style="fill:#a0a0a0;stroke:none;"
@@ -578,7 +579,7 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="selection" />
       <group
          id="defaultxdpi" />
     </group>
@@ -602,12 +603,13 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/"
+       path="/home/rajeshkumar/temp/"
        ask="1"
        ask_svg="1"
        link="embed"
        scale="auto"
-       forcexdpi="0" />
+       forcexdpi="0"
+       import_mode_svg="include" />
     <group
        id="debug"
        redirect="0" />
@@ -944,7 +946,8 @@
        scaleLineHeightFromFontSIze="1" />
   </group>
   <group
-     id="extensions" />
+     id="extensions"
+     org.inkscape.input.svg.scale="auto" />
   <group
      id="desktop"
      style="fill:#ffffff;-inkscape-font-specification:'Arial Black, Normal';font-family:'Arial Black';font-size:27.62874031px">

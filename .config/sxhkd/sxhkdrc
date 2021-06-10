@@ -172,7 +172,7 @@ super + shift + q
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
-super + shift + n
+super + shift + p
 	bspc rule -a \* -o state=floating && kitty ncmpcpp
 
 super + shift + m
