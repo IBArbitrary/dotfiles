@@ -149,6 +149,7 @@ pamixer
 papirus-icon-theme
 pass
 pass-import
+pass-otp
 passff-host
 pastel
 patch
@@ -303,6 +304,7 @@ youtube-dl
 zathura
 zathura-djvu
 zathura-pdf-mupdf
+zbar
 zenmonitor
 zotero
 zscroll-git
