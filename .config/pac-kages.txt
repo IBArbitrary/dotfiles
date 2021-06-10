@@ -36,6 +36,7 @@ bspwm
 cargo-cache
 cbonsai
 chntpw
+clipmenu
 cmake
 code
 cowsay

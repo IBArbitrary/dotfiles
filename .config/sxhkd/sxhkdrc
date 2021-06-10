@@ -195,8 +195,8 @@ super + alt + p
 super + alt + m
 	~/bin/monitors
 
-super + alt + b
-	bspc rule -a \* -o state=floating && kitty book
+super + alt + Print
+	clipmenu -l 0 -i
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
