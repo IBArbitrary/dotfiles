@@ -47,5 +47,7 @@ export QT_QPA_PLATFORMTHEME=gtk2
 # Keyboard Layout
 setxkbmap en &
 
+systemctl --user import-environment DISPLAY
+systemctl --user start clipmenud.service
 # Starting WM
 exec bspwm

@@ -178,7 +178,7 @@ super + shift + p
 super + shift + m
 	mpd
 
-super + alt + c
+super + alt + p
 	pick-colour-picker
 
 super + ctrl + c
@@ -195,7 +195,7 @@ super + alt + p
 super + alt + m
 	~/bin/monitors
 
-super + alt + Print
+super + alt + c
 	clipmenu -l 0 -i
 
 super + Print
