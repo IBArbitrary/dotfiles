@@ -178,7 +178,7 @@ super + shift + p
 super + shift + m
 	mpd
 
-super + alt + p
+super + ctrl + p
 	pick-colour-picker
 
 super + ctrl + c
