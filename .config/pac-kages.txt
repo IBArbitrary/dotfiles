@@ -225,6 +225,7 @@ toilet
 toilet-fonts
 tree
 ttf-font-awesome
+ttf-juliamono
 ttf-ms-fonts
 ttf-proggy-clean
 ttf-tamil
