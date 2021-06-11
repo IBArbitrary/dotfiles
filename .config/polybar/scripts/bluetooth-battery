@@ -12,7 +12,11 @@ then
             percent=$(bluetooth-headset-battery-level $connected \
                 | grep -Po 'is\s\K(\d+)(?=%)' \
                 | xargs printf "%3d" $1)
+        else
+            percent=$(echo "500" | xargs printf "%3d" $1)
         fi
+    else
+        percent=$(echo "500" | xargs printf "%3d" $1)
     fi
 else
     percent=$(echo "500" | xargs printf "%3d" $1)
