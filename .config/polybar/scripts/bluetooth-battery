@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+service=$(systemctl is-active bluetooth.service)
+if [ "$service" = "active" ];
+then
+    power=$(bluetoothctl show | grep -q "Powered: yes")
+    if $power;
+    then
+        connected=$(bluetoothctl info | grep "Device" | cut -d " " -f2)
+        if [ $connected ];
+        then
+            percent=$(bluetooth-headset-battery-level $connected \
+                | grep -Po 'is\s\K(\d+)(?=%)' \
+                | xargs printf "%3d" $1)
+        fi
+    fi
+else
+    percent=$(echo "500" | xargs printf "%3d" $1)
+fi
+if [ "$percent" != "500" ];
+then
+    bars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+    n_bars=${#bars[@]}
+    bar_index=$((percent * (n_bars + 0) / 100))
+    p_bar=${bars[$bar_index]}
+    echo "▕$p_bar▏"
+else
+    echo ""
+fi

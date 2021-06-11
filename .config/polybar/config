@@ -58,7 +58,7 @@ wm-restack = bspwm
 inherit = bar/base
 fix-center = true
 modules-left = arch bspwm net-speed net-usage decoration-left
-modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status bluetooth-connection bluetooth-status
+modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status bluetooth-battery bluetooth-connection bluetooth-status
 modules-center = title
 tray-position = right
 tray-detached = false
@@ -389,6 +389,15 @@ interval = 30
 format-padding = 1
 format-background = ${colors.background4}
 format-foreground = ${colors.foreground3}
+
+[module/bluetooth-battery]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth-battery
+format = <label>
+label = " %output%"
+format-padding = 0.5
+format-background = ${colors.foreground1}
+format-foreground = ${colors.background2}
 
 [module/bluetooth-connection]
 type = custom/script
