@@ -1,3 +1,5 @@
+# 
+
  ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗ 
  ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝ 
  ██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗ 
@@ -18,7 +20,7 @@
 ![](./.dotshots/firefox.png)
 
 ### hacking, amirite? (`unimatrix` + internet stats using `vnstatrc`)
-![](./.dotshots/unimatrix-and-vnstatrc.png)
+![](./.dotshots/unimatrix-and-vnstat.png)
 
 ### ansi is life <sup>i have no idea what's going on</sup> (`cbonsai`, `doom-emacs` and `dwarf-fortress`)
 ![](./.dotshots/cbonsai-doom-and-dwarf.png)
