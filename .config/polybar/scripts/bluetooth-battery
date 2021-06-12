@@ -25,7 +25,7 @@ if [ "$percent" != "500" ];
 then
     bars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
     n_bars=${#bars[@]}
-    bar_index=$((percent * (n_bars + 0) / 100))
+    bar_index=$((percent * (n_bars - 1) / 100))
     p_bar=${bars[$bar_index]}
     echo "▕$p_bar▏"
 else
