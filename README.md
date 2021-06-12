@@ -1,5 +1,3 @@
-# dotfiles <sub>IBArbitrary</sub>
-
 ## gruvbox-themed rice with maximum usability (opinionated).
 
 ### niche'd `neofetch`, and ~~ncmpp~~ ~~ncmcp~~ `ncmpcpp`
