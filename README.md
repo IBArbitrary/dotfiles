@@ -1,31 +1,32 @@
- ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
- ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
- ██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗
- ██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║
- ██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
- ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
- o┳━┓┳━┓┳━┓┳━┓o┏┓┓┳━┓┳━┓┳━┓┓ ┳
- ┃┃━┃┃━┫┃┳┛┃━┃┃ ┃ ┃┳┛┃━┫┃┳┛┗┏┛
- ┇┇━┛┛ ┇┇┗┛┇━┛┇ ┇ ┇┗┛┛ ┇┇┗┛ ┇ 
+ ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗ 
+ ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝ 
+ ██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗ 
+ ██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║ 
+ ██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║ 
+ ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝ 
+
+ o┳━┓┳━┓┳━┓┳━┓o┏┓┓┳━┓┳━┓┳━┓┓ ┳ 
+ ┃┃━┃┃━┫┃┳┛┃━┃┃ ┃ ┃┳┛┃━┫┃┳┛┗┏┛ 
+ ┇┇━┛┛ ┇┇┗┛┇━┛┇ ┇ ┇┗┛┛ ┇┇┗┛ ┇  
 
 ## gruvbox-themed rice with maximum usability (opinionated).
 
-### niche'd fetch, and ~~ncmpp~~ ~~ncmcp~~ `ncmpcpp`
+### niche'd `neofetch`, and ~~ncmpp~~ ~~ncmcp~~ `ncmpcpp`
 ![](./.dotshots/fetch-and-ncmpcpp.png)
 
-### firefox start-page using tabliss
+### firefox start-page using `tabliss`
 ![](./.dotshots/firefox.png)
 
-### hacking, amirite? (plus internet stats using `vnstatrc`)
+### hacking, amirite? (`unimatrix` + internet stats using `vnstatrc`)
 ![](./.dotshots/unimatrix-and-vnstatrc.png)
 
-### ansi games, always a treat for the eyes <sup>i have no idea what's going on</sup>
+### ansi is life <sup>i have no idea what's going on</sup> (`cbonsai`, `doom-emacs` and `dwarf-fortress`)
 ![](./.dotshots/cbonsai-doom-and-dwarf.png)
 
-### my papes and paper
+### my papes (`sxiv`) and paper (`zathura`)
 ![](./.dotshots/sxiv-and-zathura.png)
 
-### open source ftw
+### open source ftw (`blender`)
 ![](./.dotshots/blender.png)
 
 
