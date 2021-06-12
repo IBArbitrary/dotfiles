@@ -36,6 +36,7 @@ bspwm
 cargo-cache
 cbonsai
 chntpw
+clinfo
 clipmenu
 cmake
 code
@@ -173,6 +174,7 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 python
 python-autobgch
+python-beautifulsoup4
 python-pip
 python-pyalsa
 python2
@@ -192,6 +194,8 @@ rofi
 rofimoji
 rpm-tools
 rsync
+ruby-nokogiri
+ruby-open_uri_redirections
 rust
 ryzenadj-git
 sbcl
