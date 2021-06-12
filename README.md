@@ -1,13 +1,21 @@
  ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
+ 
  ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
+ 
  ██║  ██║██║   ██║   ██║   █████╗  ██║██║     █████╗  ███████╗
+ 
  ██║  ██║██║   ██║   ██║   ██╔══╝  ██║██║     ██╔══╝  ╚════██║
+ 
  ██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
+ 
  ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
 
  o┳━┓┳━┓┳━┓┳━┓o┏┓┓┳━┓┳━┓┳━┓┓ ┳
+ 
  ┃┃━┃┃━┫┃┳┛┃━┃┃ ┃ ┃┳┛┃━┫┃┳┛┗┏┛
+ 
  ┇┇━┛┛ ┇┇┗┛┇━┛┇ ┇ ┇┗┛┛ ┇┇┗┛ ┇ 
+ 
 
 ## gruvbox-themed rice with maximum usability (opinionated).
 
@@ -15,19 +23,19 @@
 ![](./.dotshots/fetch-and-ncmpcpp.png)
 
 ### firefox start-page using tabliss
-![](./dotshots/firefox.png)
+![](./.dotshots/firefox.png)
 
 ### hacking, amirite? (plus internet stats using `vnstatrc`)
-![](./dotshots/unimatrix-and-vnstatrc.png)
+![](./.dotshots/unimatrix-and-vnstatrc.png)
 
 ### ansi games, always a treat for the eyes <sup>i have no idea what's going on</sup>
-![](./dotshots/cbonsai-doom-and-dwarf.png)
+![](./.dotshots/cbonsai-doom-and-dwarf.png)
 
 ### my papes and paper
-![](./dotshots/sxiv-and-zathura.png)
+![](./.dotshots/sxiv-and-zathura.png)
 
 ### open source ftw
-![](./dotshots/blender.png)
+![](./.dotshots/blender.png)
 
 
 
