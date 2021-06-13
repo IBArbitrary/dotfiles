@@ -184,6 +184,11 @@ super + ctrl + p
 super + ctrl + c
 	xboard
 
+super + shift + equal
+	~/bin/bar-toggle show
+
+super + shift + minus
+	~/bin/bar-toggle hide
 
 
 super + alt + e

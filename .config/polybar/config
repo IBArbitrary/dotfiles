@@ -30,7 +30,7 @@ aqua        = #8ec07c
 orange      = #fe8019
 
 [bar/base]
-enable-ipc = false
+enable-ipc = true
 
 font-0=Source Code Pro:style=Medium:pixelsize=8.5;2
 font-1=SauceCodePro Nerd Font Mono:style=Regular:pixelsize=12:antialias=true;4
