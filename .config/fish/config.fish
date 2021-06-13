@@ -21,11 +21,8 @@ abbr -a r reload
 
 #========== FZF ================================= 
 
-# setting default command to be 'fd'
 export FZF_DEFAULT_COMMAND="fd -t f"
-# setting theme and some options
 export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=sharp --prompt="# " --pointer=">" --marker="+"'
-# setting defaults for changing directories
 export FZF_ALT_C_OPTS="--height=50% --black --preview 'tree -C {} | head -200' --header='Choose directory to change to.'"
 export FZF_ALT_C_COMMAND="fd -t d -H"
 export FZF_CTRL_T_COMMAND="fd -H"
@@ -111,8 +108,7 @@ end
 export VISUAL='emacsclient -c -a ""'
 export EDITOR='emacsclient -t -a "vim"'
 export TERM='xterm-kitty'
-export BORG_REPO='/media/storage/backup/arch/'
-export BORG_PASSCOMMAND="gpg --decrypt $HOME/.borg-passphrase.gpg"
+export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
@@ -156,5 +152,5 @@ abbr -a lsd 'exa -D -a'
 abbr -a la 'exa --long -a --git --sort=type'
 abbr -a ll 'exa --long --git --sort=type'
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
-
+abbr -a yt 'ytfzf --subt -tf --preview-side=right'
 alias zathurat 'tabbed -c -r 2 zathura -e id'

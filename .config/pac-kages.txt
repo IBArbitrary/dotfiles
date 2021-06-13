@@ -238,6 +238,7 @@ ttf-tamil
 ttf-ubraille
 tty-clock
 ttyplot
+ueberzug
 vi
 vlc
 vnstat
@@ -308,6 +309,7 @@ xsct
 yad
 yay
 youtube-dl
+ytfzf
 zathura
 zathura-djvu
 zathura-pdf-mupdf
