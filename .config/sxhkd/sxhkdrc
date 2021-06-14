@@ -184,12 +184,11 @@ super + ctrl + p
 super + ctrl + c
 	xboard
 
-super + shift + equal
-	~/bin/bar-toggle show
+super + equal
+	~/bin/bar-toggle
 
-super + shift + minus
-	~/bin/bar-toggle hide
-
+super + minus
+	~/bin/gap-toggle
 
 super + alt + e
 	rofimoji

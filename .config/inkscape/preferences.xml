@@ -579,7 +579,7 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi" />
     </group>
@@ -599,7 +599,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="" />
+       path="/media/storage/projects/design/self-portrait-poly/" />
     <group
        id="import"
        enable_preview="1"
@@ -1062,7 +1062,7 @@
      menuIcons_canvas="0"
      menuIcons_layers="0"
      menuIcons_objects="0"
-     defaultPreferDarkTheme="0"
+     defaultPreferDarkTheme="1"
      defaultGtkTheme="gruvbox-dark-gtk"
      darkTheme="1"
      preferDarkTheme="1"

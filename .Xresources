@@ -33,3 +33,9 @@
 Sxiv.font: Source Code Pro:size=10
 Sxiv.foreground: #ebdbb2
 Sxiv.background: #282828
+
+XTerm*eightBitInput: false
+
+XTerm*modifyCursorKeys: 1
+
+XTerm*modifyFunctionKeys: 1

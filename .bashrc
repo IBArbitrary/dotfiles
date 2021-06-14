@@ -119,7 +119,7 @@ __prompt_command() {
     PS1+="${faint}${grey}\D{}${none}"
     # prompt line
     PS1+="\n"
-    # if last exit code 1 red prompt else green prompt
+    #if last exit code 1 red prompt else green prompt
     if [ $EXIT != 0 ]; then
         PS1+="${red}${prompt}${none}"        # Add red if exit code non 0
     else

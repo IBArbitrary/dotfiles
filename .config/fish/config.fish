@@ -109,6 +109,7 @@ export VISUAL='emacsclient -c -a ""'
 export EDITOR='emacsclient -t -a "vim"'
 export TERM='xterm-kitty'
 export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
+export BAR_VISIBLE=1
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
@@ -153,4 +154,6 @@ abbr -a la 'exa --long -a --git --sort=type'
 abbr -a ll 'exa --long --git --sort=type'
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
 abbr -a yt 'ytfzf --subt -tf --preview-side=right'
+abbr -a xo 'xdg-open'
+
 alias zathurat 'tabbed -c -r 2 zathura -e id'
