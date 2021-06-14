@@ -155,5 +155,6 @@ abbr -a ll 'exa --long --git --sort=type'
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
 abbr -a yt 'ytfzf --subt -tf --preview-side=right'
 abbr -a xo 'xdg-open'
+abbr -a fm 'pcmanfm & disown'
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'

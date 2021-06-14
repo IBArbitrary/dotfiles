@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="496.343"
-         height="515.268" />
+         width="420"
+         height="253" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -599,7 +599,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/design/self-portrait-poly/" />
+       path="/home/rajeshkumar/temp/" />
     <group
        id="import"
        enable_preview="1"
@@ -947,10 +947,11 @@
   </group>
   <group
      id="extensions"
-     org.inkscape.input.svg.scale="auto" />
+     org.inkscape.input.svg.scale="auto"
+     org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Arial Black, Normal';font-family:'Arial Black';font-size:27.62874031px">
+     style="fill:#000000;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:37.33330154px;stroke-width:1.75748031">
     <group
        width="1892"
        height="1012"
@@ -1074,4 +1075,7 @@
        symbolicWarningColor="4222649087"
        symbolicErrorColor="4220560127" />
   </group>
+  <group
+     id="live_effects"
+     flattening="0" />
 </inkscape>
