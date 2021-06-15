@@ -27,6 +27,7 @@ bat
 bbswitch
 bc
 bdf-unifont
+beautysh
 binutils
 bison
 blender
@@ -101,6 +102,7 @@ inxi
 ipython
 java8-openjfx
 jq
+js-beautify
 kitty
 krita
 libexif
@@ -116,6 +118,7 @@ lxappearance-gtk3
 m4
 maim
 make
+marked
 mpc
 mpd
 mpv
@@ -178,8 +181,13 @@ pulseaudio-equalizer
 python
 python-autobgch
 python-beautifulsoup4
+python-isort
+python-nose
+python-nose2
 python-pip
+python-pipenv
 python-pyalsa
+python-pytest
 python2
 python2-pip
 qalculate-gtk
@@ -208,6 +216,7 @@ scrot
 sed
 shellcheck
 smartmontools
+stylelint
 subversion
 sudo
 sxhkd

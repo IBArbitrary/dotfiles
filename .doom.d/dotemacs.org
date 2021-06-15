@@ -1,6 +1,6 @@
-#+title: dotemacs
-#+author: rajeshkumar k
-#+property: header-args :tangle test.el
+#+title:dotemacs
+#+author:rajeshkumar k
+#+property: header-args :tangle config.el
 
 * act I - /prologue/
 ** author details
@@ -121,7 +121,9 @@ tweaks for heading colors and bullets
                                                :italic t)
                            (setq org-superstar-headline-bullets-list
                                  '("■" "◆" "●"))))
-(setq org-superstar-cycle-headline-bullets nil)
+(setq org-superstar-cycle-headline-bullets nil
+      org-startup-indented nil
+      org-adapt-indentation nil)
 #+end_src
 
 org-latex settings for quality-of-life
@@ -159,6 +161,13 @@ setting /zathura/ as default viewer
 #+begin_src elisp
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 #+end_src
+** indent-guides
+#+begin_src elisp
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(set-face-background 'highlight-indent-guides-odd-face "#504945")
+(set-face-background 'highlight-indent-guides-even-face "#3c3836")
+#+end_src
+
 
 * act III - epilogue
 ** make doom fast again

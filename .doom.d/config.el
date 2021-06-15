@@ -1,75 +1,136 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-
-
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets.
 (setq user-full-name "Rajeshkumar K"
       user-mail-address "k.rajeshkumar.1411@gmail.com")
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
-;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq-default
+ delete-by-moving-to-trash t
+ tab-width 4
+ uniquify-buffer-name-style 'forward
+ window-combination-resize t
+ x-stretch-cursor t)
+
+(setq undo-limit 80000000
+      evil-want-fine-undo t
+      auto-save-default t
+      inhibit-compacting-font-caches t
+      truncate-string-ellipsis "…")
+
+(delete-selection-mode 1)
+(display-time-mode 1)
+(unless (equal "Battery status not available"
+               (battery))
+  (display-battery-mode 1))
+
+(setq display-line-numbers-type 'relative)
+
+(defun doom-modeline-cond-buf-encoding ()
+  (setq-local doom-modeling-buffer-encoding
+              (unless (or (eq buffer-file-coding-system 'utf-8-unix)
+                          (eq buffer-file-coding-system 'utf-8)))))
+(add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
 
 (setq doom-font (font-spec :family "Source Code Pro" :size 16)
       doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
-      doom-big-font (font-spec :family "Source Code Pro" :size 24))
+      doom-big-font (font-spec :familiy "Source Code Pro" :size 24))
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
+
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
+(setq doom-theme 'doom-gruvbox)
+
+(use-package keyfreq
+  :config
+  (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1))
+
 (after! org
-  (setq org-directory "~/org/"
-        org-agenda-files '("~/org/agenda.org")
+  (setq org-directory "/media/storage/documents/org"
+        org-agenda-files '("/media/storage/documents/org/agenda.org")
         org-ellipsis " [+]"
         org-log-done 'time
         org-hide-emphasis-markers t
         org-hide-leading-stars t
+        org-superstar-leading-bullet ?\s
         org-indent-mode-turns-on-hiding-stars nil
-        org-indent-mode 0
         org-tags-column -80))
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
+(add-hook 'org-mode-hook (lambda ()
+                           (setq org-hidden-keywords '(title author))
+                           (set-face-attribute 'org-level-8 nil
+                                               :weight 'bold
+                                               :inherit 'default)
+                           (set-face-attribute 'org-level-7 nil
+                                               :inherit 'org-level-8)
+                           (set-face-attribute 'org-level-6 nil
+                                               :inherit 'org-level-8)
+                           (set-face-attribute 'org-level-5 nil
+                                               :inherit 'org-level-8)
+                           (set-face-attribute 'org-level-4 nil
+                                               :inherit 'org-level-8)
+                           (set-face-attribute 'org-level-3 nil
+                                               :inherit 'org-level-8
+                                               :foreground "#b8bb26")
+                           (set-face-attribute 'org-level-2 nil
+                                               :inherit 'org-level-8
+                                               :foreground "#fe8019")
+                           (set-face-attribute 'org-level-1 nil
+                                               :inherit 'org-level-8
+                                               :foreground "#fabd2f")
+                           (setq org-cycle-level-faces nil)
+                           (setq org-n-level-faces 3)
+                           (set-face-attribute 'org-document-title nil
+                                               :foreground "#fb4934"
+                                               :weight 'bold)
+                           (set-face-attribute 'org-document-info nil
+                                               :foreground "#83a598"
+                                               :italic t)
+                           (setq org-superstar-headline-bullets-list
+                                 '("■" "◆" "●"))))
+(setq org-superstar-cycle-headline-bullets nil
+      org-startup-indented nil
+      org-adapt-indentation nil)
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
+(add-hook 'org-mode-hook 'org-fragtog-mode)
+(setq my-org-latex-preview-scale 1.0)
+(defun org-latex-preview-advice (orig-func &rest args)
+  (let ((old-val (copy-tree org-format-latex-options)))
+    (setq org-format-latex-options
+          (plist-put org-format-latex-options
+                     :scale
+                     (* my-org-latex-preview-scale
+                        (expt
+                         text-scale-mode-step text-scale-mode-amount))))
+    (apply orig-func args)
+    (setq org-format-latex-options old-val)))
+(advice-add 'org-latex-preview :around #'org-latex-preview-advice)
 
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type 'relative)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (org-bullets-mode 1)
+            (org-superstar-mode 1)
+            ))
 
+(setq deft-directory "/media/storage/documents/org"
+      deft-extension '("org" "txt" "md")
+      deft-recursive t)
 
-;; Here are some additional functions/macros that could help you configure Doom:
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
+(setq TeX-view-program-selection '((output-pdf "zathura")))
+
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(set-face-background 'highlight-indent-guides-odd-face "#504945")
+(set-face-background 'highlight-indent-guides-even-face "#3c3836")
+
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (if (and (stringp buffer-file-name)
+                     (string-match "/home/rajeshkumar/.doom.d/dotemacs.org"
+                                   buffer-file-name))
+                (add-hook 'after-save-hook #'org-babel-tangle
+                          :append :local))))
