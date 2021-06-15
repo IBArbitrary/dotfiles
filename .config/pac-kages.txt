@@ -113,6 +113,7 @@ lightcord-git
 linux
 linux-firmware
 linux-headers
+llvm
 lolcat
 lsof
 lxappearance-gtk3

@@ -92,8 +92,8 @@
                            (setq org-superstar-headline-bullets-list
                                  '("■" "◆" "●"))))
 (setq org-superstar-cycle-headline-bullets nil
-      org-startup-indented nil
-      org-adapt-indentation nil)
+      org-startup-indented 0
+      org-adapt-indentation 0)
 
 (add-hook 'org-mode-hook 'org-fragtog-mode)
 (setq my-org-latex-preview-scale 1.0)
@@ -121,9 +121,11 @@
 
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?│)
+;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;(setq highlight-indent-guides-method 'character)
+;(setq highlight-indent-guides-character ?│)
+;(setq highlight-indent-guides-auto-enabled 'nil)
+;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 

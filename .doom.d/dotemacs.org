@@ -122,8 +122,8 @@ tweaks for heading colors and bullets
                            (setq org-superstar-headline-bullets-list
                                  '("■" "◆" "●"))))
 (setq org-superstar-cycle-headline-bullets nil
-      org-startup-indented nil
-      org-adapt-indentation nil)
+      org-startup-indented 0
+      org-adapt-indentation 0)
 #+end_src
 
 org-latex settings for quality-of-life
@@ -163,9 +163,11 @@ setting /zathura/ as default viewer
 #+end_src
 ** indent-guides
 #+begin_src elisp
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?│)
+;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;(setq highlight-indent-guides-method 'character)
+;(setq highlight-indent-guides-character ?│)
+;(setq highlight-indent-guides-auto-enabled 'nil)
+;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
 #+end_src
 
 

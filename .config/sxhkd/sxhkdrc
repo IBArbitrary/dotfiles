@@ -29,9 +29,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 
-#
 # bspwm hotkeys
-#
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -180,11 +178,14 @@ super + ctrl + p
 super + ctrl + c
 	xboard
 
-super + equal
-	~/bin/bar-toggle
+super + shift + backslash
+	~/bin/wm-config-toggles bar
 
-super + minus
-	~/bin/gap-toggle
+super + shift + bracketright
+	~/bin/wm-config-toggles gap
+
+super + shift + bracketleft
+	~/bin/wm-config-toggles border
 
 super + alt + e
 	rofimoji
@@ -197,6 +198,12 @@ super + alt + m
 
 super + alt + c
 	clipmenu -l 0 -i
+
+super + alt + b
+	~/bin/alt-book stagger
+
+super + alt + shift + b
+	~/bin/alt-book all
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
