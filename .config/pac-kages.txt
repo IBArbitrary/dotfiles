@@ -92,6 +92,7 @@ gvfs
 gvim
 gzip
 highlight
+hlint
 htop
 imagemagick
 imagemagick-doc
@@ -174,6 +175,7 @@ polybar
 poppler
 powershell
 powertop
+prettier
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -181,12 +183,14 @@ pulseaudio-equalizer
 python
 python-autobgch
 python-beautifulsoup4
+python-black
 python-isort
 python-nose
 python-nose2
 python-pip
 python-pipenv
 python-pyalsa
+python-pyflakes
 python-pytest
 python2
 python2-pip
@@ -205,6 +209,7 @@ rofi
 rofimoji
 rpm-tools
 rsync
+rtags
 ruby-nokogiri
 ruby-open_uri_redirections
 rust
@@ -215,6 +220,7 @@ screenkey
 scrot
 sed
 shellcheck
+shfmt
 smartmontools
 stylelint
 subversion

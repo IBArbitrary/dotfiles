@@ -164,8 +164,8 @@ setting /zathura/ as default viewer
 ** indent-guides
 #+begin_src elisp
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(set-face-background 'highlight-indent-guides-odd-face "#504945")
-(set-face-background 'highlight-indent-guides-even-face "#3c3836")
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-character ?│)
 #+end_src
 
 

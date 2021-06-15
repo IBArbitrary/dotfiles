@@ -122,8 +122,8 @@
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(set-face-background 'highlight-indent-guides-odd-face "#504945")
-(set-face-background 'highlight-indent-guides-even-face "#3c3836")
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-character ?│)
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
