@@ -1,7 +1,7 @@
 function splash
-	set -l splash (find ~/.config/fish/scripts/color-scripts/ -type f | shuf -n 1)
-	$splash
-	set -e splash
+    set -l splash (find ~/.config/fish/scripts/color-scripts/ -type f | shuf -n 1)
+    $splash
+    set -e splash
 end
 
 function fish_greeting
@@ -12,9 +12,9 @@ end
 
 # reloading fish config
 function reload
-	clear
-	source ~/.config/fish/config.fish
-	clear;neofetch
+    clear
+    source ~/.config/fish/config.fish
+    clear;neofetch
 end
 
 abbr -a r reload
@@ -50,7 +50,7 @@ end
 alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # x-server + prime-switch
-alias x 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
+alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
 alias doom "~/.doom-emacs/bin/doom"

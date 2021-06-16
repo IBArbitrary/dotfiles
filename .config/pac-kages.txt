@@ -14,7 +14,8 @@ adobe-source-han-serif-otc-fonts
 adobe-source-han-serif-tw-fonts
 alsa-utils
 amd-ucode
-amdgpu-fan
+amdgpu-pro-libgl
+amf-amdgpu-pro
 atool
 atop
 auto-cpufreq
@@ -225,6 +226,7 @@ sed
 shellcheck
 shfmt
 smartmontools
+stress
 stylelint
 subversion
 sudo
@@ -263,6 +265,7 @@ ueberzug
 vi
 vlc
 vnstat
+vulkan-amdgpu-pro
 w3m
 wget
 which
