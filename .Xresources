@@ -33,6 +33,8 @@
 Sxiv.font: Source Code Pro:size=10
 Sxiv.foreground: #ebdbb2
 Sxiv.background: #282828
+Sxiv.markedColor: #fb4934
+Sxiv.selectionColor: #fabd2f
 
 XTerm*eightBitInput: false
 
