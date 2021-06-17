@@ -19,7 +19,7 @@ super +{_,shift + }Return
 
 # program launcher
 super + @space
-	dmenu_run
+	dmenu_run -F
 
 super + shift + @space
 	rofi -show drun
