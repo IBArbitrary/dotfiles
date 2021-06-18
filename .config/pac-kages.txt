@@ -35,6 +35,7 @@ blender
 bluetooth-headset-battery-level-git
 bluez-utils
 bottom
+breeze-default-cursor-theme
 bspwm
 cabal-install
 cargo-cache
@@ -177,7 +178,6 @@ playerctl
 polybar
 poppler
 powershell
-powertop
 prettier
 pulseaudio
 pulseaudio-alsa
@@ -250,7 +250,6 @@ texstudio
 tidy
 timg
 tk
-tlp
 tmux
 toilet
 toilet-fonts
