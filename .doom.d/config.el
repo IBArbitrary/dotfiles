@@ -127,6 +127,10 @@
 ;(setq highlight-indent-guides-auto-enabled 'nil)
 ;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
 
+(require 'lsp-python-ms)
+(setq lsp-python-ms-auto-install-server t)
+(add-hook 'python-mode-hook #'lsp)
+
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 (add-hook 'org-mode-hook

@@ -178,7 +178,6 @@ pkgconf
 playerctl
 polybar
 poppler
-powershell
 prettier
 pulseaudio
 pulseaudio-alsa
@@ -218,6 +217,7 @@ rtags
 ruby-nokogiri
 ruby-open_uri_redirections
 rust
+rust-analyzer
 rust-racer
 ryzenadj-git
 sbcl

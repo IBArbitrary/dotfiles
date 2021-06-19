@@ -169,7 +169,13 @@ setting /zathura/ as default viewer
 ;(setq highlight-indent-guides-auto-enabled 'nil)
 ;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
 #+end_src
-
+** lsp
+setting microsoft's python language server for lsp
+#+begin_src elisp
+(require 'lsp-python-ms)
+(setq lsp-python-ms-auto-install-server t)
+(add-hook 'python-mode-hook #'lsp)
+#+end_src
 
 * act III - epilogue
 ** make doom fast again
