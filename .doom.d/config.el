@@ -96,7 +96,7 @@
       org-adapt-indentation 0)
 
 (add-hook 'org-mode-hook 'org-fragtog-mode)
-(setq my-org-latex-preview-scale 1.0)
+(setq my-org-latex-preview-scale 1.5)
 (defun org-latex-preview-advice (orig-func &rest args)
   (let ((old-val (copy-tree org-format-latex-options)))
     (setq org-format-latex-options

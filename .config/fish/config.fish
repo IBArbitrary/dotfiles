@@ -14,7 +14,8 @@ end
 function reload
     clear
     source ~/.config/fish/config.fish
-    clear;neofetch
+    clear
+    neofetch
 end
 
 abbr -a r reload
@@ -31,19 +32,19 @@ export FZF_CTRL_R_OPTS="--height=50% --black --header='Choose command from histo
 
 # powershell habit
 function cls
-	command clear
+    command clear
 end
 
 abbr -a c clear
 
 # vtop gruvbox theme
 function vtop
-	command vtop -t gruvbox
+    command vtop -t gruvbox
 end
 
 # wallpaper-slideshow
 function wp-ss
-	bgchd -dir ~/Pictures/wallpapers/ -bcknd feh -intv 10m -rpl
+    bgchd -dir ~/Pictures/wallpapers/ -bcknd feh -intv 10m -rpl
 end
 
 # dotfiles alias for bare git repo
@@ -57,43 +58,43 @@ alias doom "~/.doom-emacs/bin/doom"
 abbr -a mine 'padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
 
 function pacs
-	pacman -Slq | fzf --prompt 'pacman> ' \
-	   --header 'Install packages.
+    pacman -Slq | fzf --prompt 'pacman> ' \
+        --header 'Install packages.
 <c-p>: pacman, <c-a>: aur' \
-	   --bind 'ctrl-p:change-prompt(pacman> )+reload(pacman -Slq)' \
-	   --bind 'ctrl-a:change-prompt(aur> )+reload(yay -Slq)' \
-	   --multi --black --height=80% --preview 'yay -Si {1}' \
-       --preview-window bottom | xargs -ro yay -S
-    pacman -Qqe > ~/.config/pac-kages.txt
+        --bind 'ctrl-p:change-prompt(pacman> )+reload(pacman -Slq)' \
+        --bind 'ctrl-a:change-prompt(aur> )+reload(yay -Slq)' \
+        --multi --black --height=80% --preview 'yay -Si {1}' \
+        --preview-window bottom | xargs -ro yay -S
+    pacman -Qqe >~/.config/pac-kages.txt
 end
-	
+
 function pacr
-	pacman -Qq | fzf --prompt 'all> ' \
-	   --header='Remove packages.
+    pacman -Qq | fzf --prompt 'all> ' \
+        --header='Remove packages.
 <c-a>: all, <c-e>: explicit, <c-y>: aur-explicit' \
-	   --bind 'ctrl-a:change-prompt(all> )+reload(pacman -Qq)' \
-	   --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe)' \
-	   --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
-	   --multi --black --height=80% --preview 'yay -Si {1}' \
-       --preview-window bottom | xargs -ro sudo pacman -Rsn
-    pacman -Qqe > ~/.config/pac-kages.txt
+        --bind 'ctrl-a:change-prompt(all> )+reload(pacman -Qq)' \
+        --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe)' \
+        --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
+        --multi --black --height=80% --preview 'yay -Si {1}' \
+        --preview-window bottom | xargs -ro sudo pacman -Rsn
+    pacman -Qqe >~/.config/pac-kages.txt
 end
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 
 # file-opener function. might come in handy.
 function fzfr
-	fzf -m | xargs -d'\n' -r $argv;
+    fzf -m | xargs -d'\n' -r $argv
 end
 
 # checking install history of pacman
 abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
 
 # check updates
-abbr -a cu "checkupdates"
+abbr -a cu checkupdates
 abbr -a syu "sudo pacman -Syu"
 # quit vim syntax
-abbr -a :q "exit"
+abbr -a :q exit
 
 function zt
     tabbed -c -r 2 zathura -e id $argv & disown
@@ -113,19 +114,21 @@ export BAR_VISIBLE=1
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"
-abbr -a g "git"
+abbr -a g git
 abbr -a da "dots add -u"
-abbr -a dc "dots commit -m"
+abbr -a dc "dots commit"
+abbr -a dcm "dots commit -m"
 abbr -a dp "dots push origin master"
 abbr -a ds "dots status"
 abbr -a ga "git add ."
 abbr -a gc "git commit"
+abbr -a gcm "git commit -m"
 abbr -a gp "git push origin master"
 abbr -a gs "git status"
 abbr -a pi "sudo pip3 install"
 abbr -a pu "sudo pip3 uninstall"
 abbr -a pi2 "sudo pip install"
-abbr -a q "exit"
+abbr -a q exit
 abbr -a st "cd /media/storage/"
 abbr -a pc "sudo pacman -Sc"
 abbr -a yc "yay -Sc"
@@ -137,24 +140,24 @@ abbr -a sstop "sudo systemctl stop"
 abbr -a sstat "sudo systemctl status"
 abbr -a senab "sudo systemctl enable"
 abbr -a sdesb "sudo systemctl disable"
-abbr -a nf "neofetch"
+abbr -a nf neofetch
 abbr -a ytf "youtube-dl -F"
-abbr -a ytd "youtube-dl"
+abbr -a ytd youtube-dl
 abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis-shift -M -t 0.5"
-abbr -a mp "ncmpcpp"
+abbr -a mp ncmpcpp
 abbr -a et "emacsclient -t -a 'vim'"
 abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
 abbr -a pgpush 'pass git push origin master'
 abbr -a pgpull 'pass git pull origin master'
 abbr -a mci 'sudo make clean install'
-abbr -a ls 'exa'
+abbr -a ls exa
 abbr -a lsa 'exa -a'
 abbr -a lsd 'exa -D -a'
 abbr -a la 'exa --long -a --git --sort=type'
 abbr -a ll 'exa --long --git --sort=type'
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
 abbr -a yt 'ytfzf --subt -tf --preview-side=right'
-abbr -a xo 'xdg-open'
+abbr -a xo xdg-open
 abbr -a fm 'pcmanfm & disown'
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'

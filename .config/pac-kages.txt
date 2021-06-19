@@ -46,7 +46,6 @@ clifm
 clinfo
 clipmenu
 cmake
-code
 cowsay
 croc
 cronie
@@ -78,6 +77,12 @@ fortune-mod
 fruit
 gawk
 gcc
+gedit-cut-line
+gedit-duplicate-line
+gedit-menubar
+gedit-plugins
+gedit-scroll-past
+gedit-trailsave
 gettext
 gimp
 git
@@ -142,6 +147,7 @@ nitrogen
 nkf
 nm-connection-editor
 nodejs
+notepadqq
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -188,6 +194,7 @@ python-autobgch
 python-beautifulsoup4
 python-black
 python-isort
+python-matplotlib
 python-nose
 python-nose2
 python-pip
