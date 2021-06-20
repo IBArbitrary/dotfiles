@@ -172,6 +172,9 @@ super + shift + p
 super + shift + m
 	mpd
 
+super + shift + n
+	kitty newsboat
+
 super + ctrl + p
 	pick-colour-picker
 

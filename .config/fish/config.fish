@@ -1,3 +1,14 @@
+# color customisations
+set -U fish_color_command brgreen
+set -U fish_color_cwd brgreen
+set -U fish_color_cwd_root brred
+set -U fish_color_error brred
+set -U fish_color_escape bryellow
+set -U fish_color_operator brblue
+set -U fish_color_quote bryellow
+set -U fish_color_redirection brcyan
+set -U fish_color_status brred
+
 function splash
     set -l splash (find ~/.config/fish/scripts/color-scripts/ -type f | shuf -n 1)
     $splash
@@ -150,11 +161,6 @@ abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
 abbr -a pgpush 'pass git push origin master'
 abbr -a pgpull 'pass git pull origin master'
 abbr -a mci 'sudo make clean install'
-abbr -a ls exa
-abbr -a lsa 'exa -a'
-abbr -a lsd 'exa -D -a'
-abbr -a la 'exa --long -a --git --sort=type'
-abbr -a ll 'exa --long --git --sort=type'
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
 abbr -a yt 'ytfzf --subt -tf --preview-side=right'
 abbr -a xo xdg-open

@@ -16,6 +16,7 @@ alsa-utils
 amd-ucode
 amdgpu-pro-libgl
 amf-amdgpu-pro
+android-udev
 atool
 atop
 auto-cpufreq
@@ -60,7 +61,6 @@ dos2unix
 dunst
 dwarffortress
 emacs
-exa
 exif
 expac
 fakeroot
@@ -100,6 +100,7 @@ gtk-engine-murrine
 gtk-engines
 gucharmap
 gvfs
+gvfs-mtp
 gvim
 gzip
 hexchat

@@ -4,7 +4,7 @@ mpd_port = "6600"
 mpd_music_dir = "/media/storage/music"
 
 [global]
-colors_enabled = "yes"
+colors_enabled = "no"
 
 enable_window_title = "yes"
 main_window_color = "default"
@@ -21,10 +21,10 @@ state_line_color = "black"
 
 [statusbar]
 connected_message_on_startup = no
-progressbar_look = "━●╍"
+progressbar_look = "━● "
 progressbar_color = "black"
-statusbar_visibility = "no"
-statusbar_color = "blue"
+statusbar_visibility = "yes"
+statusbar_color = "default"
 song_status_format = "{{%a{ - %t}}|{ - %f}{ - %b{ (%y)}}}"
 
 [library]
