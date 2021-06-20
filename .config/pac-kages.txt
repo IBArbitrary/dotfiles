@@ -34,6 +34,7 @@ bison
 blender
 bluetooth-headset-battery-level-git
 bluez-utils
+boost
 bottom
 bpython
 breeze-default-cursor-theme
@@ -46,6 +47,7 @@ clifm
 clinfo
 clipmenu
 cmake
+cmake-language-server
 cowsay
 croc
 cronie
@@ -273,7 +275,6 @@ tty-clock
 ttyplot
 ueberzug
 vi
-vlc
 vnstat
 vulkan-amdgpu-pro
 w3m
