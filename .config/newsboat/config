@@ -1,0 +1,87 @@
+auto-reload yes
+browser firefox
+# macro y set browser "mpv %u"; open-in-browser ; set browser "firefox %u"
+cleanup-on-quit yes
+download-path "/home/c0b4l7/Videos/Podcasts"
+feed-sort-order title-dec
+max-downloads 4
+max-items 10000
+notify-always yes
+notify-format "Newsboat: %n unread articles within %f unread feeds"
+notify-program notify-send
+notify-xterm yes
+notify-screen yes
+player mpv
+refresh-on-startup yes
+reload-time 20
+reload-threads 2
+show-read-articles yes
+show-read-feeds yes
+
+
+# binds ----------------------------------------------------------------
+
+bind-key \ reload-all
+bind-key "RIGHT" select-tag
+bind-key "SPACE" open
+bind-key j next
+bind-key k prev
+bind-key J next-feed
+bind-key K prev-feed
+bind-key j down article
+bind-key k up article
+bind-key J next article
+bind-key K prev article
+
+# hide articles matching: ---------------------------------------------
+
+ignore-article "*" "title =~ \"Sponsor\""
+ignore-article "*" "title =~ \"Advertisement\""
+ignore-mode "display"
+
+
+# formatting and colorization ------------------------------------------
+
+articlelist-format "%4i %f %D  %t"
+feedlist-format     "%4i %n %11u %t"
+
+# highlight feedlist    "^  *[0-9]+  *N  "                    magenta  default
+# highlight articlelist "^  *[0-9]+  *N  "                    magenta  default
+
+# highlight article     "(^Feed:.*|^Title:.*|^Author:.*)"     red      default
+# highlight article     "(^Link:.*|^Date:.*)"                 white    default
+# highlight article     "^Podcast Download URL:.*"            cyan     default
+# highlight article     "^Links:"                             magenta  black    underline
+# highlight article     "https?://[^ ]+"                      green    default
+# highlight article     "^(Title):.*$"                        blue     default
+# highlight article     "\\[[0-9][0-9]*\\]"                   magenta  default  bold
+# highlight article     "\\[image\\ [0-9]+\\]"                green    default  bold
+# highlight article     "\\[embedded flash: [0-9][0-9]*\\]"   green    default  bold
+# highlight article     ":.*\\(link\\)$"                      cyan     default
+# highlight article     ":.*\\(image\\)$"                     blue     default
+# highlight article     ":.*\\(embedded flash\\)$"            magenta  default
+
+# color background                                            default   default
+# color listnormal                                            default   default
+# color listfocus                                             magenta   default
+# color info                                                  blue      black
+# color article                                               default   default
+# color listnormal_unread                                     white     default
+# color listfocus_unread                                      color255  cyan
+
+# colors
+color background          color239     default
+color listnormal          white     default
+color listnormal_unread   color15    default
+color listfocus           black     color15
+color listfocus_unread    black     color15 bold
+color info                color239    black
+color article             color15     default
+
+# highlights
+highlight article "^(Feed|Link|Date|Author|Title):.*$" color8 default
+highlight article "^(Title):.*$" color7 default bold
+highlight article "https?://[^ ]+" color9 default underline
+highlight article "\\[[0-9]+\\]" color9 default bold
+highlight article "\\[image\\ [0-9]+\\]" color9 default bold
+highlight feedlist "^─.*$" yellow black bold
