@@ -98,6 +98,10 @@ function fzfr
     fzf -m | xargs -d'\n' -r $argv
 end
 
+function rmn
+    find . -type f -not -name "$argv" | xargs rm
+end
+
 # checking install history of pacman
 abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
 

@@ -241,6 +241,7 @@ shfmt
 smartmontools
 stress
 stylelint
+subliminal
 subversion
 sudo
 sxhkd
