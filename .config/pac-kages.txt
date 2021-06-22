@@ -92,6 +92,7 @@ gnuchess
 go
 gotop
 gparted
+gpg-tui
 grep
 groff
 gruvbox-dark-gtk
@@ -147,7 +148,6 @@ networkmanager
 networkmanager-dmenu-git
 newsboat
 ninja
-nitrogen
 nkf
 nm-connection-editor
 nodejs
@@ -288,7 +288,6 @@ xclip
 xcursor-themes
 xcursor-we10xos
 xdg-user-dirs
-xdiskusage
 xdotool
 xf86-input-wacom
 xf86-video-amdgpu
