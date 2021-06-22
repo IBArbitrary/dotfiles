@@ -92,7 +92,6 @@ gnuchess
 go
 gotop
 gparted
-gpg-tui
 grep
 groff
 gruvbox-dark-gtk
