@@ -60,12 +60,16 @@ end
 
 # dotfiles alias for bare git repo
 alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias la 'ls -a'
+alias lA 'ls -A'
+alias lla 'ls -la'
+alias llA 'ls -lA'
 
 # x-server + prime-switch
 alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
-alias doom "~/.doom-emacs/bin/doom"
+alias doom "~/packages/doom-emacs/bin/doom"
 abbr -a mine 'padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
 
 function pacs
