@@ -275,6 +275,9 @@ tty-clock
 ttyplot
 ueberzug
 vi
+virtualbox
+virtualbox-guest-iso
+virtualbox-host-modules-arch
 vnstat
 vulkan-amdgpu-pro
 w3m
