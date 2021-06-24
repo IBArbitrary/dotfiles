@@ -1,8 +1,9 @@
 #+title:dotemacs
 #+author:rajeshkumar k
 #+property: header-args :tangle config.el
+#+startup: overview
 
-* act I - /prologue/
+* act I - prologue
 ** author details
 #+begin_src elisp
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
@@ -34,6 +35,37 @@
 (setq display-line-numbers-type 'relative)
 #+end_src
 
+better split mechanism: splits to right or down, and prompts for buffer
+#+begin_src elisp
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+(defadvice! prompt-for-buffer (&rest _)
+  :after 'evil-window-split 'evil-window-vsplit
+  (+ivy/switch-buffer))
+(setq +ivy-buffer-preview t)
+#+end_src
+
+better window navigations
+#+begin_src elisp
+(map! :map evil-window-map
+      "SPC" #'rotate-layout
+      ;; Navigation
+      "<left>"     #'evil-window-left
+      "<down>"     #'evil-window-down
+      "<up>"       #'evil-window-up
+      "<right>"    #'evil-window-right
+      ;; Swapping windows
+      "C-<left>"       #'+evil/window-move-left
+      "C-<down>"       #'+evil/window-move-down
+      "C-<up>"         #'+evil/window-move-up
+      "C-<right>"      #'+evil/window-move-right)
+#+end_src
+
+all-the-icons colors
+#+begin_src elisp
+(setq all-the-icons-color-icons t)
+#+end_src
+
 ** modeline
 hides file encoding in status line unless it is something other than
 ~UTF-8~ or ~UTF-8-UNIX~
@@ -43,6 +75,15 @@ hides file encoding in status line unless it is something other than
               (unless (or (eq buffer-file-coding-system 'utf-8-unix)
                           (eq buffer-file-coding-system 'utf-8)))))
 (add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
+#+end_src
+
+decrease the bulkness
+#+begin_src elisp
+(setq doom-modeline-height 1)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+(setq doom-modeline-buffer-modification-icon t)
 #+end_src
 
 ** fonts and theme
@@ -83,7 +124,8 @@ searched far and wide, tried various things, but nothing beats /source code pro/
         org-hide-emphasis-markers t
         org-hide-leading-stars t
         org-superstar-leading-bullet ?\s
-        org-indent-mode-turns-on-hiding-stars nil
+        org-startup-indented nil
+        org-adapt-indentation nil
         org-tags-column -80))
 #+end_src
 
@@ -121,9 +163,7 @@ tweaks for heading colors and bullets
                                                :italic t)
                            (setq org-superstar-headline-bullets-list
                                  '("■" "◆" "●"))))
-(setq org-superstar-cycle-headline-bullets nil
-      org-startup-indented 0
-      org-adapt-indentation 0)
+(setq org-superstar-cycle-headline-bullets nil)
 #+end_src
 
 org-latex settings for quality-of-life
@@ -161,20 +201,60 @@ setting /zathura/ as default viewer
 #+begin_src elisp
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 #+end_src
-** indent-guides
-#+begin_src elisp
-;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;(setq highlight-indent-guides-method 'character)
-;(setq highlight-indent-guides-character ?│)
-;(setq highlight-indent-guides-auto-enabled 'nil)
-;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
-#+end_src
+
 ** lsp
-setting microsoft's python language server for lsp
+setting microsoft's python language server for python-lsp
 #+begin_src elisp
 (require 'lsp-python-ms)
 (setq lsp-python-ms-auto-install-server t)
 (add-hook 'python-mode-hook #'lsp)
+#+end_src
+
+** elfeed
+add elfeed links
+#+begin_src elisp
+(setq elfeed-feeds
+      '(
+        ("https://astrobites.org/feed/" astronomy science astrophysics)
+        ("https://generativeartistry.com/index.xml" generative-art creative-coding)
+        ))
+#+end_src
+** dashboard
+emacs logo as splash image
+#+begin_src elisp
+(setq fancy-splash-image (concat doom-private-dir "splash-images/emacs-e.svg"))
+#+end_src
+
+simplify the dashboard
+#+begin_src elisp
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
+(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
+#+end_src
+
+ascii banner for terminal mode
+#+begin_src elisp
+(defun doom-dashboard-draw-ascii-emacs-banner-fn ()
+  (let* ((banner
+
+          '("  ▄▄▄   ▄▄▄▄▄   ▄▄▄    ▄▄▄    ▄▄▄  "
+            " █▀  █  █ █ █  ▀   █  █▀  ▀  █   ▀ "
+            " █▀▀▀▀  █ █ █  ▄▀▀▀█  █       ▀▀▀▄ "
+            " ▀█▄▄▀  █ █ █  ▀▄▄▀█  ▀█▄▄▀  ▀▄▄▄▀ "))
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat
+                 line (make-string (max 0 (- longest-line (length line)))
+                                   32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+
+(unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
+  (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
 #+end_src
 
 * act III - epilogue
@@ -189,7 +269,7 @@ automatically tangles code on save only when it is dotemacs.org
 (add-hook 'org-mode-hook
           (lambda ()
             (if (and (stringp buffer-file-name)
-                     (string-match "/home/rajeshkumar/.doom.d/dotemacs.org"
+                     (string-match "/home/rajeshkumar/.config/doom/dotemacs.org"
                                    buffer-file-name))
                 (add-hook 'after-save-hook #'org-babel-tangle
                           :append :local))))

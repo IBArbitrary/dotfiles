@@ -23,11 +23,39 @@
 
 (setq display-line-numbers-type 'relative)
 
+(setq evil-vsplit-window-right t
+      evil-split-window-below t)
+(defadvice! prompt-for-buffer (&rest _)
+  :after 'evil-window-split 'evil-window-vsplit
+  (+ivy/switch-buffer))
+(setq +ivy-buffer-preview t)
+
+(map! :map evil-window-map
+      "SPC" #'rotate-layout
+      ;; Navigation
+      "<left>"     #'evil-window-left
+      "<down>"     #'evil-window-down
+      "<up>"       #'evil-window-up
+      "<right>"    #'evil-window-right
+      ;; Swapping windows
+      "C-<left>"       #'+evil/window-move-left
+      "C-<down>"       #'+evil/window-move-down
+      "C-<up>"         #'+evil/window-move-up
+      "C-<right>"      #'+evil/window-move-right)
+
+(setq all-the-icons-color-icons t)
+
 (defun doom-modeline-cond-buf-encoding ()
   (setq-local doom-modeling-buffer-encoding
               (unless (or (eq buffer-file-coding-system 'utf-8-unix)
                           (eq buffer-file-coding-system 'utf-8)))))
 (add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
+
+(setq doom-modeline-height 1)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
+(setq doom-modeline-buffer-state-icon t)
+(setq doom-modeline-buffer-modification-icon t)
 
 (setq doom-font (font-spec :family "Source Code Pro" :size 16)
       doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
@@ -56,7 +84,8 @@
         org-hide-emphasis-markers t
         org-hide-leading-stars t
         org-superstar-leading-bullet ?\s
-        org-indent-mode-turns-on-hiding-stars nil
+        org-startup-indented nil
+        org-adapt-indentation nil
         org-tags-column -80))
 
 (add-hook 'org-mode-hook (lambda ()
@@ -91,9 +120,7 @@
                                                :italic t)
                            (setq org-superstar-headline-bullets-list
                                  '("■" "◆" "●"))))
-(setq org-superstar-cycle-headline-bullets nil
-      org-startup-indented 0
-      org-adapt-indentation 0)
+(setq org-superstar-cycle-headline-bullets nil)
 
 (add-hook 'org-mode-hook 'org-fragtog-mode)
 (setq my-org-latex-preview-scale 1.5)
@@ -121,22 +148,50 @@
 
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 
-;(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;(setq highlight-indent-guides-method 'character)
-;(setq highlight-indent-guides-character ?│)
-;(setq highlight-indent-guides-auto-enabled 'nil)
-;(set-face-foreground 'highlight-indent-guides-character-face "#3c3836")
-
 (require 'lsp-python-ms)
 (setq lsp-python-ms-auto-install-server t)
 (add-hook 'python-mode-hook #'lsp)
+
+(setq elfeed-feeds
+      '(
+        ("https://astrobites.org/feed/" astronomy science astrophysics)
+        ("https://generativeartistry.com/index.xml" generative-art creative-coding)
+        ))
+
+(setq fancy-splash-image (concat doom-private-dir "splash-images/emacs-e.svg"))
+
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(add-hook! '+doom-dashboard-mode-hook (hide-mode-line-mode 1) (hl-line-mode -1))
+(setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
+
+(defun doom-dashboard-draw-ascii-emacs-banner-fn ()
+  (let* ((banner
+
+          '("  ▄▄▄   ▄▄▄▄▄   ▄▄▄    ▄▄▄    ▄▄▄  "
+            " █▀  █  █ █ █  ▀   █  █▀  ▀  █   ▀ "
+            " █▀▀▀▀  █ █ █  ▄▀▀▀█  █       ▀▀▀▄ "
+            " ▀█▄▄▀  █ █ █  ▀▄▄▀█  ▀█▄▄▀  ▀▄▄▄▀ "))
+         (longest-line (apply #'max (mapcar #'length banner))))
+    (put-text-property
+     (point)
+     (dolist (line banner (point))
+       (insert (+doom-dashboard--center
+                +doom-dashboard--width
+                (concat
+                 line (make-string (max 0 (- longest-line (length line)))
+                                   32)))
+               "\n"))
+     'face 'doom-dashboard-banner)))
+
+(unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
+  (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 (add-hook 'org-mode-hook
           (lambda ()
             (if (and (stringp buffer-file-name)
-                     (string-match "/home/rajeshkumar/.doom.d/dotemacs.org"
+                     (string-match "/home/rajeshkumar/.config/doom/dotemacs.org"
                                    buffer-file-name))
                 (add-hook 'after-save-hook #'org-babel-tangle
                           :append :local))))
