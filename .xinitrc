@@ -50,4 +50,5 @@ setxkbmap en &
 systemctl --user import-environment DISPLAY
 systemctl --user start clipmenud.service
 # Starting WM
+xset r rate 200 40
 exec bspwm

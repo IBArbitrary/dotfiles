@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="420"
-         height="253" />
+         width="399.067"
+         height="508.984" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -547,7 +547,8 @@
        id="textandfont" />
     <group
        id="transformation"
-       applyseparately="0" />
+       applyseparately="0"
+       rotateCounterClockwise="1" />
     <group
        id="align" />
     <group
@@ -579,7 +580,7 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="selection" />
       <group
          id="defaultxdpi" />
     </group>
@@ -599,7 +600,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/" />
+       path="/home/rajeshkumar/.config/doom/splash-images/" />
     <group
        id="import"
        enable_preview="1"
@@ -607,7 +608,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeQuality"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -948,10 +949,14 @@
   <group
      id="extensions"
      org.inkscape.input.svg.scale="auto"
-     org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality" />
+     org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
+     org.inkscape.effect.filter.Lighting.amplitude="0.693024"
+     org.inkscape.effect.filter.Lighting.__live_effect__="0"
+     org.inkscape.effect.filter.Lighting.exponent="1.51891"
+     org.inkscape.effect.filter.Lighting.offset="0.0754766" />
   <group
      id="desktop"
-     style="fill:#000000;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:37.33330154px;stroke-width:1.75748031">
+     style="fill:#a89984;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:37.33330154px;stroke-width:1.75748031">
     <group
        width="1892"
        height="1012"

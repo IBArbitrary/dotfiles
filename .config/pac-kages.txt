@@ -52,6 +52,7 @@ cmake-language-server
 cowsay
 croc
 cronie
+czkawka-git
 dconf-editor
 dfhack
 dict-gcide
@@ -157,6 +158,7 @@ ntfs-3g
 nvidia
 nvidia-prime
 nvidia-settings
+nyxt
 obs-studio
 optimus-manager
 optimus-manager-qt
@@ -267,6 +269,7 @@ toilet
 toilet-fonts
 tree
 ttf-font-awesome
+ttf-google-sans
 ttf-ms-fonts
 ttf-proggy-clean
 ttf-tamil
