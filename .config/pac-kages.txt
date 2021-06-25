@@ -17,6 +17,7 @@ amd-ucode
 amdgpu-pro-libgl
 amf-amdgpu-pro
 android-udev
+aspell-en
 atool
 atop
 auto-cpufreq
@@ -120,6 +121,7 @@ jq
 js-beautify
 kitty
 krita
+languagetool
 libexif
 libreoffice-fresh
 libtool
@@ -227,7 +229,6 @@ rpm-tools
 rsync
 rtags
 ruby-nokogiri
-ruby-open_uri_redirections
 rust
 rust-analyzer
 rust-racer
