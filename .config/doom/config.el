@@ -152,12 +152,6 @@
 (setq lsp-python-ms-auto-install-server t)
 (add-hook 'python-mode-hook #'lsp)
 
-(setq elfeed-feeds
-      '(
-        ("https://astrobites.org/feed/" astronomy science astrophysics)
-        ("https://generativeartistry.com/index.xml" generative-art creative-coding)
-        ))
-
 (setq fancy-splash-image (concat doom-private-dir "splash-images/emacs-e.svg"))
 
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
@@ -185,6 +179,25 @@
 
 (unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
   (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
+
+(use-package! keycast
+  :commands keycast-mode
+  :config
+  (define-minor-mode keycast-mode
+    "Show current command and its key binding in the mode line."
+    :global t
+    (if keycast-mode
+        (progn
+          (add-hook 'pre-command-hook 'keycast--update t)
+          (add-to-list 'global-mode-string '("" mode-line-keycast " ")))
+      (remove-hook 'pre-command-hook 'keycast--update)
+      (setq global-mode-string (remove '("" mode-line-keycast " ") global-mode-string))))
+  (custom-set-faces!
+    '(keycast-command :inherit doom-modeline-debug
+                      :height 0.9)
+    '(keycast-key :inherit custom-modified
+                  :height 1.1
+                  :weight bold)))
 
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
