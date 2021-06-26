@@ -203,10 +203,10 @@ super + alt + c
 	clipmenu -l 0 -i
 
 super + alt + b
-	~/bin/alt-book stagger
+	~/bin/alt-book all
 
 super + alt + shift + b
-	~/bin/alt-book all
+	~/bin/alt-book stagger
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
