@@ -191,8 +191,8 @@ org-latex settings for quality-of-life
 
 ** deft
 #+begin_src elisp
-(setq deft-directory "/media/storage/documents/org"
-      deft-extension '("org" "txt" "md")
+(setq deft-directory "/media/storage/documents/org/"
+      deft-extensions '("org" "txt" "md")
       deft-recursive t)
 #+end_src
 

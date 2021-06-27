@@ -580,7 +580,7 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="custom" />
       <group
          id="defaultxdpi" />
     </group>

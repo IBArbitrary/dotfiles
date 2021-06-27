@@ -123,13 +123,15 @@ kitty
 krita
 languagetool
 libexif
+libinput-gestures
 libreoffice-fresh
 libtool
-lightcord-git
+lightcord-bin
 linux
 linux-firmware
 linux-headers
 llvm
+lmms
 lolcat
 lsof
 lxappearance-gtk3
@@ -191,6 +193,7 @@ pkgconf
 playerctl
 polybar
 poppler
+portmidi
 prettier
 pulseaudio
 pulseaudio-alsa
@@ -289,6 +292,7 @@ wget
 which
 wireless_tools
 wpa_supplicant
+write_stylus
 xboard
 xclip
 xcursor-themes

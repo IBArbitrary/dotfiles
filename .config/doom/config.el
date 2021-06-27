@@ -142,8 +142,8 @@
             (org-superstar-mode 1)
             ))
 
-(setq deft-directory "/media/storage/documents/org"
-      deft-extension '("org" "txt" "md")
+(setq deft-directory "/media/storage/documents/org/"
+      deft-extensions '("org" "txt" "md")
       deft-recursive t)
 
 (setq TeX-view-program-selection '((output-pdf "zathura")))
