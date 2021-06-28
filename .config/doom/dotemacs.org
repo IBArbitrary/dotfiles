@@ -269,6 +269,12 @@ ascii banner for terminal mode
                   :height 1.1
                   :weight bold)))
 #+end_src
+** grammar
+disable all modes by default, use when necessary
+#+begin_src elisp
+(setq writegood-mode nil)
+(setq spell-fu-mode 0)
+#+end_src
 
 * act III - epilogue
 ** make doom fast again

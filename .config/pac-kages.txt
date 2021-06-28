@@ -132,6 +132,7 @@ linux-firmware
 linux-headers
 llvm
 lmms
+lmms-orgmaker-samples
 lolcat
 lsof
 lxappearance-gtk3
@@ -251,6 +252,7 @@ subversion
 sudo
 sxhkd
 syncthing
+taptempo
 terminus-font
 texinfo
 texlive-bibtexextra
@@ -352,6 +354,7 @@ xorg-xwininfo
 xorg-xwud
 xplr
 xsct
+xxiivv-orca-git
 yad
 yay
 youtube-dl

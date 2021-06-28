@@ -70,6 +70,7 @@ alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
 alias doom "~/packages/doom-emacs/bin/doom"
+alias orca xxiivv-orca
 abbr -a mine 'padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
 
 function pacs

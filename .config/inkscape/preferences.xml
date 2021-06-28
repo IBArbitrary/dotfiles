@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="399.067"
-         height="508.984" />
+         width="763.634"
+         height="899.567" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -956,7 +956,7 @@
      org.inkscape.effect.filter.Lighting.offset="0.0754766" />
   <group
      id="desktop"
-     style="fill:#a89984;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:37.33330154px;stroke-width:1.75748031">
+     style="fill:#a89984;-inkscape-font-specification:'Playfair Display, @wght=700';font-family:'Playfair Display';font-size:59.56016541px;stroke-width:1.75748031;font-variation-settings:'wght' 700">
     <group
        width="1892"
        height="1012"

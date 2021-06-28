@@ -199,6 +199,9 @@
                   :height 1.1
                   :weight bold)))
 
+(setq writegood-mode nil)
+(setq spell-fu-mode 0)
+
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 (add-hook 'org-mode-hook
