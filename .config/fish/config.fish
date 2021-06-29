@@ -131,6 +131,7 @@ export EDITOR='emacsclient -t -a "vim"'
 export TERM='xterm-kitty'
 export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
 export BAR_VISIBLE=1
+export PATH="$PATH:$HOME/.rvm/bin"
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nu "vnstat -d"

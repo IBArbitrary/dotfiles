@@ -232,6 +232,7 @@ rofimoji
 rpm-tools
 rsync
 rtags
+ruby-bundler
 ruby-nokogiri
 rust
 rust-analyzer

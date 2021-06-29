@@ -135,3 +135,6 @@ export VISUAL='emacsclient --create-frame --alternate-editor=""'
 export EDITOR='emacsclient --create-frame --alternate-editor=""'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -600,7 +600,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/.config/doom/splash-images/" />
+       path="/media/storage/projects/blender/2.92/summer-school/renders/" />
     <group
        id="import"
        enable_preview="1"
@@ -956,7 +956,7 @@
      org.inkscape.effect.filter.Lighting.offset="0.0754766" />
   <group
      id="desktop"
-     style="fill:#a89984;-inkscape-font-specification:'Playfair Display, @wght=700';font-family:'Playfair Display';font-size:59.56016541px;stroke-width:1.75748031;font-variation-settings:'wght' 700">
+     style="fill:#ffffff;-inkscape-font-specification:'Fira Sans, Normal';font-family:'Fira Sans';font-size:89.57068634px;stroke-width:1.75748031">
     <group
        width="1892"
        height="1012"
