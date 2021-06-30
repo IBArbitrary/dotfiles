@@ -271,6 +271,7 @@ texstudio
 tidy
 timg
 tk
+tldr
 tmux
 toilet
 toilet-fonts
