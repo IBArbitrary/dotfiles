@@ -247,6 +247,7 @@ scrot
 sed
 shellcheck
 shfmt
+slides
 smartmontools
 stress
 stylelint

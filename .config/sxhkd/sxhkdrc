@@ -56,11 +56,11 @@ super + y
 #
 
 # set the window state
-super + {shift + t,s,f}
-	bspc node -t {pseudo_tiled,floating,fullscreen}
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-super + {a,shift + a,ctrl + a,ctrl + shift + a,g,shift + g,e,t}
-	bsp-layout set {tall,rtall,wide,rwide,rgrid,grid,even,tiled}
+super + {a,shift + a,ctrl + a,ctrl + shift + a,g,shift + g,e}
+	bsp-layout set {tall,rtall,wide,rwide,rgrid,grid,even}
 
 # set the node flags
 super + ctrl + {m,x,y,z}

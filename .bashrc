@@ -23,15 +23,15 @@ alias q='exit'
 alias :q='exit'
 alias f='fish'
 
-timer_now () {
+timer_now() {
     date +%s%N
 }
 
-timer_start () {
+timer_start() {
     timer_start=${timer_start:-$(timer_now)}
 }
 
-timer_stop () {
+timer_stop() {
     local delta_us=$((($(timer_now) - $timer_start) / 1000))
     local us=$((delta_us % 1000))
     local ms=$(((delta_us / 1000) % 1000))
@@ -39,17 +39,23 @@ timer_stop () {
     local m=$(((delta_us / 60000000) % 60))
     local h=$((delta_us / 3600000000))
     # Goal: always show around 3 digits of accuracy
-    if ((h > 0)); then timer_show=${h}h${m}m
-    elif ((m > 0)); then timer_show=${m}m${s}s
-    elif ((s >= 10)); then timer_show=${s}.$((ms / 100))s
-    elif ((s > 0)); then timer_show=${s}.$(printf %03d $ms)s
-    elif ((ms >= 100)); then timer_show=${ms}ms
-    elif ((ms > 0)); then timer_show=${ms}.$((us / 100))ms
-    else timer_show=${us}us
+    if ( (h >0)); then
+        timer_show=${h}h${m}m
+    elif ( (m >0)); then
+        timer_show=${m}m${s}s
+    elif ( (s >= 10)); then
+        timer_show=${s}.$((ms / 100))s
+    elif ( (s >0)); then
+        timer_show=${s}.$(printf %03d $ms)s
+    elif ( (ms >= 100)); then
+        timer_show=${ms}ms
+    elif ( (ms >0)); then
+        timer_show=${ms}.$((us / 100))ms
+    else
+        timer_show=${us}us
     fi
     unset timer_start
 }
-
 
 __prompt_command() {
     local EXIT="$?"
@@ -81,24 +87,21 @@ __prompt_command() {
     local exitlength=$(expr ${#EXIT} + 1)
     local longenough=$(echo $lasttime | grep -P '\d\.\d+s')
 
-    if [ $EXIT = 0 ];
-    then
-        if [ $longenough ];
-        then
+    if [ $EXIT = 0 ]; then
+        if [ $longenough ]; then
             local padlength=$(expr $columns - $rlength - $llength - $lasttimelength - 0)
         else
             local padlength=$(expr $columns - $rlength - $llength - 0)
         fi
     else
-        if [ $longenough ];
-        then
+        if [ $longenough ]; then
             local padlength=$(expr $columns - $rlength - $llength - $exitlength - $lasttimelength - 0)
         else
             local padlength=$(expr $columns - $rlength - $llength - $exitlength - 0)
         fi
     fi
 
-    local pad=$(seq -s· $padlength|tr -d '[:digit:]')
+    local pad=$(seq -s· $padlength | tr -d '[:digit:]')
 
     # line separation between prompts
     PS1+="\n"
@@ -106,13 +109,11 @@ __prompt_command() {
     PS1+="${bold}${teal}\w${none} "
     # seperation between cwd and time
     PS1+="${faint}${grey}${pad}${none} "
-    if [ $EXIT != 0 ];
-    then
+    if [ $EXIT != 0 ]; then
         PS1+="${bold}${red}${EXIT}${none} "
     fi
     # last command run-time
-    if [ $longenough ];
-    then
+    if [ $longenough ]; then
         PS1+="${italic}${faint}${grey}${lasttime}${none} "
     fi
     # time
@@ -121,14 +122,14 @@ __prompt_command() {
     PS1+="\n"
     #if last exit code 1 red prompt else green prompt
     if [ $EXIT != 0 ]; then
-        PS1+="${red}${prompt}${none}"        # Add red if exit code non 0
+        PS1+="${red}${prompt}${none}" # Add red if exit code non 0
     else
         PS1+="${green}${prompt}${none}"
     fi
 }
 
 trap 'timer_start' DEBUG
-PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+PROMPT_COMMAND=__prompt_command # Function to generate PS1 after CMDs
 
 # For setting default text editor
 export VISUAL='emacsclient --create-frame --alternate-editor=""'
@@ -138,3 +139,4 @@ export EDITOR='emacsclient --create-frame --alternate-editor=""'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+eval 'dircolors ~/.dircolors' >/dev/null

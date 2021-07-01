@@ -178,3 +178,4 @@ abbr -a fm 'pcmanfm & disown'
 abbr -a sub 'subliminal download -l en'
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
+eval 'dircolors ~/.dircolors' >/dev/null
