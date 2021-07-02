@@ -142,6 +142,7 @@ m4
 maim
 make
 marked
+mindforger
 mpc
 mpd
 mpv
@@ -198,6 +199,8 @@ polybar
 poppler
 portmidi
 prettier
+processing
+processing-examples
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -218,6 +221,7 @@ python-pytest
 python-spotdl
 python2
 python2-pip
+python2-processing
 qalculate-gtk
 qbittorrent
 qpdf
@@ -303,7 +307,6 @@ write_stylus
 xboard
 xclip
 xcursor-themes
-xcursor-we10xos
 xdg-user-dirs
 xdotool
 xf86-input-wacom
