@@ -60,10 +60,11 @@ end
 
 # dotfiles alias for bare git repo
 alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias la 'ls -a'
-alias lA 'ls -A'
-alias lla 'ls -la'
-alias llA 'ls -lA'
+alias la 'ls -ah --group-directories-first'
+alias lA 'ls -Ah --group-directories-first'
+alias ll 'ls -oh'
+alias lla 'ls -oah'
+alias llA 'ls -oAh'
 
 # x-server + prime-switch
 alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
