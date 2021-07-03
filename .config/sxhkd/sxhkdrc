@@ -15,7 +15,7 @@
 
 # terminal emulator
 super +{_,shift + }Return
-	{kitty, bspc rule -a \* -o state=floating && kitty}
+	{kitty, bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty}
 
 # program launcher
 super + @space
