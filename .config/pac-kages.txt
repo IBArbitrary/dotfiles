@@ -137,12 +137,10 @@ lmms
 lmms-orgmaker-samples
 lolcat
 lsof
-lxappearance-gtk3
 m4
 maim
 make
 marked
-mindforger
 mpc
 mpd
 mpv
