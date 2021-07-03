@@ -51,12 +51,6 @@
                           (eq buffer-file-coding-system 'utf-8)))))
 (add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
 
-(setq doom-modeline-height 1)
-(setq doom-modeline-major-mode-icon t)
-(setq doom-modeline-major-mode-color-icon t)
-(setq doom-modeline-buffer-state-icon t)
-(setq doom-modeline-buffer-modification-icon t)
-
 (setq doom-font (font-spec :family "Source Code Pro" :size 16)
       doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
       doom-big-font (font-spec :familiy "Source Code Pro" :size 24))
@@ -179,25 +173,6 @@
 
 (unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
   (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
-
-(use-package! keycast
-  :commands keycast-mode
-  :config
-  (define-minor-mode keycast-mode
-    "Show current command and its key binding in the mode line."
-    :global t
-    (if keycast-mode
-        (progn
-          (add-hook 'pre-command-hook 'keycast--update t)
-          (add-to-list 'global-mode-string '("" mode-line-keycast " ")))
-      (remove-hook 'pre-command-hook 'keycast--update)
-      (setq global-mode-string (remove '("" mode-line-keycast " ") global-mode-string))))
-  (custom-set-faces!
-    '(keycast-command :inherit doom-modeline-debug
-                      :height 0.9)
-    '(keycast-key :inherit custom-modified
-                  :height 1.1
-                  :weight bold)))
 
 (setq writegood-mode nil)
 (setq spell-fu-mode 0)
