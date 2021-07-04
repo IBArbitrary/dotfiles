@@ -369,5 +369,6 @@ zathura-djvu
 zathura-pdf-mupdf
 zbar
 zenmonitor
+zip
 zotero
 zscroll-git

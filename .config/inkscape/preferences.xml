@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="763.634"
-         height="899.567" />
+         width="759.033"
+         height="759.033" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -166,7 +166,9 @@
          style="fill:red;"
          end="0"
          start="0"
-         usecurrent="1" />
+         usecurrent="1"
+         rx="302.076"
+         ry="302.076" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -316,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -522,7 +524,7 @@
   </group>
   <group
      id="colorselector"
-     page="0" />
+     page="4" />
   <group
      id="embedded">
     <group
@@ -550,7 +552,8 @@
        applyseparately="0"
        rotateCounterClockwise="1" />
     <group
-       id="align" />
+       id="align"
+       align-to="4" />
     <group
        id="xml"
        h="500"
@@ -580,13 +583,13 @@
        path="">
       <group
          id="exportarea"
-         value="custom" />
+         value="selection" />
       <group
          id="defaultxdpi" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
        path=""
@@ -600,7 +603,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/summer-school/renders/" />
+       path="/home/rajeshkumar/temp/" />
     <group
        id="import"
        enable_preview="1"
@@ -608,7 +611,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeQuality"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -953,10 +956,11 @@
      org.inkscape.effect.filter.Lighting.amplitude="0.693024"
      org.inkscape.effect.filter.Lighting.__live_effect__="0"
      org.inkscape.effect.filter.Lighting.exponent="1.51891"
-     org.inkscape.effect.filter.Lighting.offset="0.0754766" />
+     org.inkscape.effect.filter.Lighting.offset="0.0754766"
+     org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Fira Sans, Normal';font-family:'Fira Sans';font-size:89.57068634px;stroke-width:1.75748031">
+     style="fill:#333533;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:1.24;stroke-miterlimit:10">
     <group
        width="1892"
        height="1012"
