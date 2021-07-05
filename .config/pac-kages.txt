@@ -27,7 +27,6 @@ azpainterb
 base
 bashtop
 bat
-bbswitch
 bc
 bdf-unifont
 beautysh
@@ -125,7 +124,6 @@ kitty
 krita
 languagetool
 libexif
-libinput-gestures
 libreoffice-fresh
 libtool
 lightcord-bin
@@ -306,6 +304,7 @@ xclip
 xcursor-themes
 xdg-user-dirs
 xdotool
+xf86-input-synaptics
 xf86-input-wacom
 xf86-video-amdgpu
 xf86-video-vesa
