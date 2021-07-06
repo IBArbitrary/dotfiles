@@ -139,6 +139,7 @@ m4
 maim
 make
 marked
+mlocate
 mpc
 mpd
 mpv
