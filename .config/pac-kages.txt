@@ -20,6 +20,7 @@ android-udev
 aspell-en
 atool
 atop
+audio-recorder
 auto-cpufreq
 autoconf
 automake
@@ -120,6 +121,9 @@ ipython
 java8-openjfx
 jq
 js-beautify
+jupyter
+jupyterlab
+jupyterlab-widgets
 kitty
 krita
 languagetool
