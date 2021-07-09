@@ -165,7 +165,7 @@ abbr -a sdesb "sudo systemctl disable"
 abbr -a nf neofetch
 abbr -a ytf "youtube-dl -F"
 abbr -a ytd youtube-dl
-abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis-shift -M -t 0.5"
+abbr -a sk "screenkey --bg-color '#282828' --font-color '#a89984' -s small --vis-shift -t 0.5"
 abbr -a mp ncmpcpp
 abbr -a et "emacsclient -t -a 'vim'"
 abbr -a e 'emacsclient --create-frame --alternate-editor="" &'

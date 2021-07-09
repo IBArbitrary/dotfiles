@@ -17,6 +17,7 @@ amd-ucode
 amdgpu-pro-libgl
 amf-amdgpu-pro
 android-udev
+ascii-rain-git
 aspell-en
 atool
 atop
@@ -92,6 +93,7 @@ gedit-trailsave
 gettext
 gimp
 git
+github-cli
 gnuchess
 go
 gotop
@@ -210,6 +212,7 @@ python
 python-autobgch
 python-beautifulsoup4
 python-black
+python-cbeams-git
 python-isort
 python-matplotlib
 python-nose
