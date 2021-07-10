@@ -181,6 +181,7 @@ pacman
 pacman-contrib
 pacmixer
 pamixer
+pandoc
 papirus-icon-theme
 paprefs
 pass
