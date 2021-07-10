@@ -217,6 +217,7 @@ python-isort
 python-matplotlib
 python-nose
 python-nose2
+python-pandas
 python-pip
 python-pipenv
 python-pyalsa
