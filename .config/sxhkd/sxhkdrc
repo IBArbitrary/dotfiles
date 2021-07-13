@@ -158,6 +158,9 @@ XF86AudioNext
 super + shift + b
 	firefox
 
+super + ctrl + shift + p
+	firefox --private-window
+
 super + shift + f
 	pcmanfm
 

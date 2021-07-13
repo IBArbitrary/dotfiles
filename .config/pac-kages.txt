@@ -257,6 +257,7 @@ scrot
 sed
 shellcheck
 shfmt
+slack-term
 smartmontools
 stress
 stylelint
