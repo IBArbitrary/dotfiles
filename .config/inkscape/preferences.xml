@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="759.033"
-         height="759.033" />
+         width="1200"
+         height="960" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -583,9 +583,10 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
-         id="defaultxdpi" />
+         id="defaultxdpi"
+         value="300" />
     </group>
     <group
        id="save_as"
@@ -611,7 +612,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeQuality"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -957,10 +958,11 @@
      org.inkscape.effect.filter.Lighting.__live_effect__="0"
      org.inkscape.effect.filter.Lighting.exponent="1.51891"
      org.inkscape.effect.filter.Lighting.offset="0.0754766"
-     org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5" />
+     org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
+     org.inkscape.raster.jpg_output.tab="about" />
   <group
      id="desktop"
-     style="fill:#333533;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:1.24;stroke-miterlimit:10">
+     style="fill:#ffffff;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:1.24;stroke-miterlimit:10">
     <group
        width="1892"
        height="1012"

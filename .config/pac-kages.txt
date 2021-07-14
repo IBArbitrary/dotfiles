@@ -215,6 +215,7 @@ python-beautifulsoup4
 python-black
 python-cbeams-git
 python-isort
+python-lxml
 python-matplotlib
 python-nose
 python-nose2
