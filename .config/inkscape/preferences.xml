@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="1200"
-         height="960" />
+         width="213.449"
+         height="357.111" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -318,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -583,10 +583,10 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="selection" />
       <group
          id="defaultxdpi"
-         value="300" />
+         value="96" />
     </group>
     <group
        id="save_as"
@@ -612,7 +612,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeQuality"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -962,7 +962,7 @@
      org.inkscape.raster.jpg_output.tab="about" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:1.24;stroke-miterlimit:10">
+     style="fill:#000000;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:2.89133858;fill-opacity:0.4000988">
     <group
        width="1892"
        height="1012"

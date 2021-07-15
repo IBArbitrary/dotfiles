@@ -225,6 +225,7 @@ python-pipenv
 python-pyalsa
 python-pyflakes
 python-pytest
+python-scipy
 python-spotdl
 python2
 python2-pip

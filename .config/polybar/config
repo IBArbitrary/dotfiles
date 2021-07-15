@@ -183,7 +183,7 @@ format-prefix = %{T4}Gᵖ %{T-}
 format-padding = 1
 format-background = ${colors.background2}
 format-foreground = ${colors.background5}
-click-left = ~/.config/polybar/scripts/optimus
+click-middle = ~/.config/polybar/scripts/optimus
 
 [module/cpu]
 type = internal/cpu
