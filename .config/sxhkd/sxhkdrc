@@ -56,11 +56,11 @@ super + y
 #
 
 # set the window state
-super + {shift + t,s,f}
-	bspc node -t {pseudo_tiled,floating,fullscreen}
+super + {t,shift + ctrl + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-super + {t}
-	bsp-layout set {tiled}
+super + shift + t
+	bsp-layout set tiled
 
 # different layouts using bsp-layout
 super + {a,shift + a,ctrl + a,ctrl + shift + a,g,shift + g,e}

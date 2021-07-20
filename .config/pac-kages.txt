@@ -129,6 +129,9 @@ jupyterlab-widgets
 kitty
 krita
 languagetool
+lib32-libudev0-shim
+lib32-nvidia-utils
+lib32-opencl-nvidia
 libexif
 libreoffice-fresh
 libtool
@@ -169,7 +172,6 @@ ntfs-3g
 nvidia
 nvidia-prime
 nvidia-settings
-nyxt
 obs-studio
 optimus-manager
 optimus-manager-qt
@@ -192,6 +194,7 @@ pastel
 patch
 pavucontrol
 pcmanfm-gtk3
+pdftk
 perl-image-exiftool
 picard
 pick-colour-picker
@@ -203,6 +206,7 @@ polybar
 poppler
 portmidi
 prettier
+primus
 processing
 processing-examples
 pulseaudio
@@ -261,6 +265,7 @@ shellcheck
 shfmt
 slack-term
 smartmontools
+steam
 stress
 stylelint
 subliminal
