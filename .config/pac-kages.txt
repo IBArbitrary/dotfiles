@@ -44,6 +44,7 @@ breeze-default-cursor-theme
 breezex-cursor-theme
 bsp-layout
 bspwm
+bumblebee
 cabal-install
 cargo-cache
 cbonsai
@@ -206,6 +207,7 @@ polybar
 poppler
 portmidi
 prettier
+primus
 processing
 processing-examples
 pulseaudio
