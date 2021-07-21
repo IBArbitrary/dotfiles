@@ -206,7 +206,6 @@ polybar
 poppler
 portmidi
 prettier
-primus
 processing
 processing-examples
 pulseaudio
