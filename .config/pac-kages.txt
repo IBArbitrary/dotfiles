@@ -219,6 +219,8 @@ python-autobgch
 python-beautifulsoup4
 python-black
 python-cbeams-git
+python-cookiecutter
+python-ipympl
 python-isort
 python-lxml
 python-matplotlib
@@ -377,6 +379,7 @@ xorg-xwininfo
 xorg-xwud
 xpdf
 xplr
+xscreensaver
 xsct
 xxiivv-orca-git
 yad
