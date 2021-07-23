@@ -91,6 +91,7 @@ gedit-menubar
 gedit-plugins
 gedit-scroll-past
 gedit-trailsave
+gestures
 gettext
 gimp
 git
@@ -152,6 +153,7 @@ marked
 mlocate
 mpc
 mpd
+mplayer
 mpv
 ncdu
 ncftp
@@ -195,6 +197,7 @@ pastel
 patch
 pavucontrol
 pcmanfm-gtk3
+pdfgrep
 pdftk
 perl-image-exiftool
 picard
@@ -300,6 +303,7 @@ tmux
 toilet
 toilet-fonts
 tree
+tt
 ttf-font-awesome
 ttf-google-sans
 ttf-ms-fonts
@@ -308,6 +312,7 @@ ttf-tamil
 ttf-ubraille
 tty-clock
 ttyplot
+tuir
 ueberzug
 vi
 virtualbox
