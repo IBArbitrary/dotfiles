@@ -48,7 +48,18 @@ export QT_QPA_PLATFORMTHEME=gtk2
 setxkbmap en &
 
 systemctl --user import-environment DISPLAY
+
+# clipboard service
 systemctl --user start clipmenud.service
-# Starting WM
+
+# setting mouse to be faast
 xset r rate 200 40
+
+# screensaver
+xscreensaver &
+
+# compositor
+picom -b &
+
+# Starting WM
 exec bspwm
