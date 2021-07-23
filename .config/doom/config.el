@@ -70,9 +70,10 @@
   (keyfreq-mode 1)
   (keyfreq-autosave-mode 1))
 
+(setq org-directory "/media/storage/documents/org")
+(setq org-noter-notes-search-path '("/media/storage/documents/org/noter"))
 (after! org
-  (setq org-directory "/media/storage/documents/org"
-        org-agenda-files '("/media/storage/documents/org/agenda.org")
+  (setq org-agenda-files '("/media/storage/documents/org/agenda.org")
         org-ellipsis " [+]"
         org-log-done 'time
         org-hide-emphasis-markers t
@@ -128,7 +129,7 @@
                          text-scale-mode-step text-scale-mode-amount))))
     (apply orig-func args)
     (setq org-format-latex-options old-val)))
-(advice-add 'org-latex-preview :around #'org-latex-preview-advice)
+(advice-add 'org-latex-preview :around #'org-latex-preview-advice )
 
 (add-hook 'org-mode-hook
           (lambda ()
