@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="213.449"
-         height="357.111" />
+         width="581.886"
+         height="581.886" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -167,7 +167,7 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="302.076"
+         rx="1141.7"
          ry="302.076" />
       <eventcontext
          id="star"
@@ -583,10 +583,10 @@
        path="">
       <group
          id="exportarea"
-         value="custom" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="96" />
+         value="178.179" />
     </group>
     <group
        id="save_as"
@@ -977,7 +977,7 @@
      org.inkscape.raster.jpg_output.tab="about" />
   <group
      id="desktop"
-     style="fill:#000000;-inkscape-font-specification:'Playfair Display, Normal';font-family:'Playfair Display';font-size:14.99816036px;stroke-width:2.89133858;fill-opacity:0.4000988">
+     style="fill:#ebdbb2;-inkscape-font-specification:'ProggyTinyTT, Normal';font-family:ProggyTinyTT;font-size:600px;stroke-width:2.89133858">
     <group
        width="1892"
        height="1012"
