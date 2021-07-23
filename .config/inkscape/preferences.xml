@@ -571,7 +571,7 @@
     <group
        id="preferences"
        state="1"
-       page="2" />
+       page="50" />
     <group
        id="gradienteditor" />
     <group
@@ -583,7 +583,7 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="custom" />
       <group
          id="defaultxdpi"
          value="96" />
@@ -621,7 +621,8 @@
     <group
        id="clonetiler" />
     <group
-       id="gridtiler" />
+       id="gridtiler"
+       SpacingType="20" />
     <group
        id="extension-error"
        show-on-startup="0" />
@@ -630,7 +631,12 @@
     <group
        id="messages" />
     <group
-       id="swatches" />
+       id="swatches"
+       panel_size="1"
+       panel_ratio="100"
+       panel_mode="1"
+       panel_wrap="0"
+       panel_border="0" />
     <group
        id="iconpreview" />
     <group
@@ -655,6 +661,9 @@
        id="colorpickerwindow" />
     <group
        id="undo-history" />
+    <group
+       id="selectors"
+       panedpos="579" />
   </group>
   <group
      id="printing">
@@ -794,11 +803,11 @@
     <group
        id="dock"
        cancenterdock="1"
-       dockbarstyle="2"
-       switcherstyle="2" />
+       dockbarstyle="0"
+       switcherstyle="1" />
     <group
        id="dialogsskiptaskbar"
-       value="1" />
+       value="0" />
     <group
        id="arenatilescachesize"
        value="8192" />
@@ -940,7 +949,7 @@
     <group
        id="boot"
        canvas="dark"
-       enabled="0">
+       enabled="1">
       <group
          id="shown"
          ver1.1="1" />
@@ -949,6 +958,12 @@
        id="font"
        unitType="2"
        scaleLineHeightFromFontSIze="1" />
+    <group
+       id="savedialogposition"
+       value="1" />
+    <group
+       id="notebooklabels"
+       value="1" />
   </group>
   <group
      id="extensions"
