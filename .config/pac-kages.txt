@@ -91,7 +91,6 @@ gedit-menubar
 gedit-plugins
 gedit-scroll-past
 gedit-trailsave
-gestures
 gettext
 gimp
 git
