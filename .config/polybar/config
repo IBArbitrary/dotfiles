@@ -11,23 +11,23 @@
 ;┇┇━┛┛ ┇┇┗┛┇━┛┇ ┇ ┇┗┛┛ ┇┇┗┛ ┇
 ;--------------------------------------------------------
 [colors]
-background  = #282828
-background2 = #3c3836
-background3 = #504945
-background4 = #665c54
-background5 = #928374
-foreground0 = #fbf1c7
-foreground1 = #ebdbb2
-foreground2 = #d5c4a1
-foreground3 = #bdae93
-foreground4 = #a89984
-red         = #fb4934
-yellow      = #fabd2f
-green       = #b8bb26
-blue        = #83a598
-purple      = #d3869b
-aqua        = #8ec07c
-orange      = #fe8019
+background  = #FF282828
+background2 = #FF3c3836
+background3 = #FF504945
+background4 = #FF665c54
+background5 = #FF928374
+foreground0 = #FFfbf1c7
+foreground1 = #FFebdbb2
+foreground2 = #FFd5c4a1
+foreground3 = #FFbdae93
+foreground4 = #FFa89984
+red         = #FFfb4934
+yellow      = #FFfabd2f
+green       = #FFb8bb26
+blue        = #FF83a598
+purple      = #FFd3869b
+aqua        = #FF8ec07c
+orange      = #FFfe8019
 
 [bar/base]
 enable-ipc = true

@@ -177,6 +177,10 @@ abbr -a yt 'ytfzf --subt -tf --preview-side=right'
 abbr -a xo xdg-open
 abbr -a fm 'pcmanfm & disown'
 abbr -a sub 'subliminal download -l en'
+abbr -a ser 'cd /media/storage/series/'
+abbr -a mov 'cd /media/storage/movies/'
+abbr -a proj 'cd /media/storage/projects/'
+
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
 eval 'dircolors ~/.dircolors' >/dev/null
