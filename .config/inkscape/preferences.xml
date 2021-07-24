@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="581.886"
-         height="581.886" />
+         width="504.422"
+         height="504.422" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -977,7 +977,7 @@
      org.inkscape.raster.jpg_output.tab="about" />
   <group
      id="desktop"
-     style="fill:#ebdbb2;-inkscape-font-specification:'ProggyTinyTT, Normal';font-family:ProggyTinyTT;font-size:600px;stroke-width:2.89133858">
+     style="fill:#928374;-inkscape-font-specification:'Fira Sans, Normal';font-family:'Fira Sans';font-size:541.67010498px;stroke-width:2.89133858">
     <group
        width="1892"
        height="1012"
