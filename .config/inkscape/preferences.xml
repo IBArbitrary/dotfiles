@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="504.422"
-         height="504.422" />
+         width="473.404"
+         height="473.404" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -167,7 +167,7 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="1141.7"
+         rx="4315.09"
          ry="302.076" />
       <eventcontext
          id="star"
@@ -542,7 +542,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -583,10 +583,10 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="drawing" />
       <group
          id="defaultxdpi"
-         value="178.179" />
+         value="75.0269" />
     </group>
     <group
        id="save_as"
@@ -604,15 +604,15 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/" />
+       path="/home/rajeshkumar/pictures/screenshots/" />
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/"
+       path="/home/rajeshkumar/pictures/screenshots/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeQuality"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -977,7 +977,7 @@
      org.inkscape.raster.jpg_output.tab="about" />
   <group
      id="desktop"
-     style="fill:#928374;-inkscape-font-specification:'Fira Sans, Normal';font-family:'Fira Sans';font-size:541.67010498px;stroke-width:2.89133858">
+     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:4.24440945;stroke:#000000">
     <group
        width="1892"
        height="1012"

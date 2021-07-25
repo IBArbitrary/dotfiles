@@ -85,6 +85,7 @@ fortune-mod
 fruit
 gawk
 gcc
+geckodriver
 gedit-cut-line
 gedit-duplicate-line
 gedit-menubar
