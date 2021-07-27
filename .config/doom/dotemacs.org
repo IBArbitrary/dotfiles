@@ -24,7 +24,8 @@
       evil-want-fine-undo t
       auto-save-default t
       inhibit-compacting-font-caches t
-      truncate-string-ellipsis "…")
+      truncate-string-ellipsis "…"
+      mouse-autoselect-window t)
 
 (delete-selection-mode 1)
 (display-time-mode 1)
@@ -154,7 +155,13 @@ tweaks for heading colors and bullets
                                                :foreground "#83a598"
                                                :italic t)
                            (setq org-superstar-headline-bullets-list
-                                 '("■" "◆" "●"))))
+                                 '("■" "◆" "●"))
+                           (set-face-attribute 'org-drawer nil
+                                               :inherit 'default
+                                               :foreground "#504945")
+                           (set-face-attribute 'org-special-keyword nil
+                                               :inherit 'default
+                                               :foreground "#665c54")))
 (setq org-superstar-cycle-headline-bullets nil)
 #+end_src
 
@@ -183,9 +190,31 @@ org-latex settings for quality-of-life
 
 ** deft
 #+begin_src elisp
-(setq deft-directory "/media/storage/documents/org/"
+(setq deft-directory "/media/storage/documents/org"
       deft-extensions '("org" "txt" "md")
       deft-recursive t)
+#+end_src
+
+** helm-bibtex
+#+begin_src elisp
+(after! org-ref
+  (setq
+   bibtex-completion-bibliography "/media/storage/documents/zotero/library.bib"
+   bibtex-completion-pdf-field "file"
+   )
+  )
+#+end_src
+
+** org-noter
+#+begin_src elisp
+(use-package org-noter
+  :after (:any org pdf-view)
+  :config
+  (setq
+   org-noter-always-create-frame nil
+   org-noter-hide-other nil
+   )
+  )
 #+end_src
 
 ** latex

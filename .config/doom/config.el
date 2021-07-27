@@ -13,7 +13,8 @@
       evil-want-fine-undo t
       auto-save-default t
       inhibit-compacting-font-caches t
-      truncate-string-ellipsis "…")
+      truncate-string-ellipsis "…"
+      mouse-autoselect-window t)
 
 (delete-selection-mode 1)
 (display-time-mode 1)
@@ -114,7 +115,13 @@
                                                :foreground "#83a598"
                                                :italic t)
                            (setq org-superstar-headline-bullets-list
-                                 '("■" "◆" "●"))))
+                                 '("■" "◆" "●"))
+                           (set-face-attribute 'org-drawer nil
+                                               :inherit 'default
+                                               :foreground "#504945")
+                           (set-face-attribute 'org-special-keyword nil
+                                               :inherit 'default
+                                               :foreground "#665c54")))
 (setq org-superstar-cycle-headline-bullets nil)
 
 (add-hook 'org-mode-hook 'org-fragtog-mode)
@@ -137,9 +144,25 @@
             (org-superstar-mode 1)
             ))
 
-(setq deft-directory "/media/storage/documents/org/"
+(setq deft-directory "/media/storage/documents/org"
       deft-extensions '("org" "txt" "md")
       deft-recursive t)
+
+(after! org-ref
+  (setq
+   bibtex-completion-bibliography "/media/storage/documents/zotero/library.bib"
+   bibtex-completion-pdf-field "file"
+   )
+  )
+
+(use-package org-noter
+  :after (:any org pdf-view)
+  :config
+  (setq
+   org-noter-always-create-frame nil
+   org-noter-hide-other nil
+   )
+  )
 
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 
