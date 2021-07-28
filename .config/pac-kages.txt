@@ -205,7 +205,6 @@ pick-colour-picker
 picom-ibhagwan-git
 pipes.sh
 pkgconf
-playerctl
 polybar
 poppler
 portmidi
@@ -217,6 +216,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-equalizer
+pulseaudio-equalizer-ladspa
 python
 python-autobgch
 python-beautifulsoup4
