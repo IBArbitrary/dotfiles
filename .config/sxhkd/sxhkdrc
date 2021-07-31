@@ -179,6 +179,12 @@ super + shift + q
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
+super + ctrl + e
+	bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
+
+super + ctrl + shift + e
+	bspc rule -a \* -o state=floating center=true && doom everywhere
+
 super + shift + p
 	bspc rule -a \* -o state=floating && kitty ncmpcpp
 

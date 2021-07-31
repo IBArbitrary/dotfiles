@@ -36,6 +36,10 @@ binutils
 bison
 blender
 bluetooth-headset-battery-level-git
+bluez
+bluez-libs
+bluez-plugins
+bluez-tools
 bluez-utils
 boost
 bottom
@@ -281,6 +285,7 @@ sxhkd
 syncthing
 taptempo
 teams
+tenacity-git
 terminus-font
 texinfo
 texlive-bibtexextra

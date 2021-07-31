@@ -206,7 +206,7 @@ format-padding = 1
 [module/disk-root]
 type = internal/fs
 mount-0 = /
-label-mounted = %{A2:kitty ncdu / --exclude storage:}%{A1:notify-send "root\: %used% of %total%" :}%{T4}Rᵒ%{T-} %percentage_used:3:3%%%{A}%{A}
+label-mounted = %{A2:kitty ncdu / --exclude storage:}%{A1:notify-send "root\: %used% of %total% (%free% free)" :}%{T4}Rᵒ%{T-} %percentage_used:3:3%%%{A}%{A}
 format-mounted-background = ${colors.background5}
 format-mounted-foreground = ${colors.background}
 format-mounted-padding = 1
@@ -215,7 +215,7 @@ interval = 30
 
 [module/disk-storage]
 type = internal/fs
-label-mounted = %{A2:kitty ncdu /media/storage:}%{A1:notify-send "storage\: %used% of %total%" :}%{T4}Sᵗ%{T-} %percentage_used:3:3%%%{A}%{A}
+label-mounted = %{A2:kitty ncdu /media/storage:}%{A1:notify-send "storage\: %used% of %total% (%free% free)" :}%{T4}Sᵗ%{T-} %percentage_used:3:3%%%{A}%{A}
 format-mounted-background = ${colors.foreground3}
 format-mounted-foreground = ${colors.background}
 format-mounted-padding = 1
