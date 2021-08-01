@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="752.058"
-         height="1064.02" />
+         width="215.471"
+         height="84.8943" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -328,7 +328,8 @@
        show_sample_in_list="1"
        use_svg2="1"
        style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;"
-       selcue="1" />
+       selcue="1"
+       align_mode="2" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -344,8 +345,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="0"
-       y="0"
+       x="699.751"
+       y="81.1634"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -583,10 +584,10 @@
        path="">
       <group
          id="exportarea"
-         value="custom" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="75.0269" />
+         value="300" />
     </group>
     <group
        id="save_as"
@@ -604,11 +605,11 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/pictures/screenshots/" />
+       path="/media/storage/projects/design/swacchta-pakhwada-2021/" />
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/pictures/screenshots/"
+       path="/media/storage/projects/design/swacchta-pakhwada-2021/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -977,10 +978,62 @@
      org.inkscape.effect.filter.Lighting.exponent="1.51891"
      org.inkscape.effect.filter.Lighting.offset="0.0754766"
      org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
-     org.inkscape.raster.jpg_output.tab="about" />
+     org.inkscape.raster.jpg_output.tab="about"
+     org.evilmad.text.hershey.fontface="HersheySans1"
+     org.evilmad.text.hershey.action="sample"
+     org.evilmad.text.hershey.tab="render"
+     org.inkscape.effect.filter.Duochrome.swap="none"
+     org.inkscape.effect.filter.Duochrome.fluo="1.20737"
+     org.inkscape.replace_font.scope="entire_document"
+     org.inkscape.replace_font.action="find_replace"
+     org.inkscape.effect.filter.Roughen.type="fractalNoise"
+     org.inkscape.effect.filter.Roughen.__live_effect__="0"
+     org.inkscape.effect.filter.Roughen.variation="308"
+     org.inkscape.effect.filter.Roughen.intensity="5.73445"
+     org.inkscape.effect.filter.Roughen.hfreq="0.1"
+     org.inkscape.effect.filter.Roughen.vfreq="3.39514"
+     org.inkscape.effect.filter.NoiseFill.type="fractalNoise"
+     org.inkscape.effect.filter.NoiseFill.__live_effect__="0"
+     org.inkscape.effect.filter.NoiseFill.erosion="2.41738"
+     org.inkscape.effect.filter.NoiseFill.hfreq="10"
+     org.inkscape.effect.filter.NoiseFill.vfreq="10"
+     org.inkscape.effect.filter.NoiseFill.tab="optionstab"
+     org.inkscape.effect.filter.NoiseFill.complexity="1"
+     org.inkscape.effect.filter.NoiseFill.variation="143"
+     org.inkscape.effect.filter.NoiseFill.dilat="11.606"
+     org.inkscape.effect.filter.Outline.type="over"
+     org.inkscape.effect.filter.Outline.position="inside"
+     org.inkscape.effect.filter.Outline.__live_effect__="0"
+     org.inkscape.effect.filter.Outline.width1="0.01"
+     org.inkscape.effect.filter.Bump.lightType="specular"
+     org.inkscape.effect.filter.Bump.lightSource="distant"
+     org.inkscape.effect.filter.Bump.blend="normal"
+     org.inkscape.effect.filter.Bump.__live_effect__="0"
+     org.inkscape.effect.filter.Bump.simplifyBump="4.64293"
+     org.inkscape.effect.filter.Blur.__live_effect__="0"
+     org.inkscape.effect.filter.Blur.hblur="1.74"
+     org.inkscape.effect.filter.Blur.vblur="0.01"
+     org.inkscape.effect.filter.FeltFeather.type="in"
+     org.inkscape.effect.filter.FeltFeather.stroke="atop"
+     org.inkscape.effect.filter.FeltFeather.turbulence="fractalNoise"
+     org.inkscape.effect.filter.FeltFeather.__live_effect__="0"
+     org.inkscape.effect.filter.FeltFeather.erosion="0"
+     org.inkscape.effect.filter.FeltFeather.dilat="15.0512"
+     org.inkscape.effect.filter.FeltFeather.intensity="3.45827"
+     org.inkscape.effect.filter.Blend.source="BackgroundImage"
+     org.inkscape.effect.filter.Blend.mode="multiply"
+     org.inkscape.effect.filter.Blend.__live_effect__="0"
+     org.inkscape.effect.filter.Roughen.complexity="5"
+     org.inkscape.effect.filter.ColorDropShadow.type="outer"
+     org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
+     org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
+     org.inkscape.effect.filter.ColorDropShadow.yoffset="0"
+     org.inkscape.effect.filter.ColorDropShadow.blur="1"
+     org.inkscape.effect.filter.ColorDropShadow.tab="optionstab"
+     org.inkscape.effect.filter.ColorDropShadow.objcolor="0" />
   <group
      id="desktop"
-     style="fill:#aaaaaa;-inkscape-font-specification:'Fira Sans, Italic';font-family:'Fira Sans';font-size:97.38237762px;stroke-width:4.24440945;font-style:italic">
+     style="fill:#000000;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:72px;stroke-width:1.26992126;text-anchor:end;text-align:end;line-height:0.85">
     <group
        width="1892"
        height="1012"
