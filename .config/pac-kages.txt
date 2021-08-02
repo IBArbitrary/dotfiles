@@ -50,7 +50,6 @@ bsp-layout
 bspwm
 bumblebee
 cabal-install
-calcurse
 cargo-cache
 cbonsai
 chntpw
