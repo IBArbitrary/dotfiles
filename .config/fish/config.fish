@@ -180,7 +180,10 @@ abbr -a sub 'subliminal download -l en'
 abbr -a ser 'cd /media/storage/series/'
 abbr -a mov 'cd /media/storage/movies/'
 abbr -a proj 'cd /media/storage/projects/'
+abbr -a docs 'cd /media/storage/documents/'
+abbr -a bks 'cd /media/storage/books/'
 abbr -a cam 'mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
+abbr -a mans "man -k . | cut -d "-" -f1 | fzf | cut -d " " -f1 | xargs -r man"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
 eval 'dircolors ~/.dircolors' >/dev/null

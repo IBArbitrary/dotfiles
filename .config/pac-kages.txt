@@ -17,6 +17,7 @@ amd-ucode
 amdgpu-pro-libgl
 amf-amdgpu-pro
 android-udev
+arch-wiki-man
 ascii-rain-git
 aspell-en
 atool
@@ -64,6 +65,7 @@ cronie
 czkawka-git
 dconf-editor
 dfhack
+dialog
 dict-gcide
 dict-moby-thesaurus
 dictd
@@ -214,8 +216,6 @@ poppler
 portmidi
 prettier
 primus
-processing
-processing-examples
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -243,7 +243,6 @@ python-scipy
 python-spotdl
 python2
 python2-pip
-python2-processing
 qalculate-gtk
 qbittorrent
 qpdf

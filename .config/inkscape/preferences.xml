@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="215.471"
-         height="84.8943" />
+         width="924.611"
+         height="924.611" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -381,7 +381,9 @@
        selcue="1" />
     <eventcontext
        id="mesh"
-       selcue="1" />
+       selcue="1"
+       edit_fill="1"
+       edit_stroke="0" />
     <eventcontext
        id="zoom"
        selcue="1"
@@ -584,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="drawing" />
       <group
          id="defaultxdpi"
-         value="300" />
+         value="127.043" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
        path="/media/storage/projects/design/swacchta-pakhwada-2021"
@@ -605,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/design/swacchta-pakhwada-2021/" />
+       path="/home/rajeshkumar/temp/" />
     <group
        id="import"
        enable_preview="1"
@@ -613,7 +615,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeQuality"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1028,12 +1030,13 @@
      org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
      org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
      org.inkscape.effect.filter.ColorDropShadow.yoffset="0"
-     org.inkscape.effect.filter.ColorDropShadow.blur="1"
+     org.inkscape.effect.filter.ColorDropShadow.blur="15"
      org.inkscape.effect.filter.ColorDropShadow.tab="optionstab"
-     org.inkscape.effect.filter.ColorDropShadow.objcolor="0" />
+     org.inkscape.effect.filter.ColorDropShadow.objcolor="0"
+     org.inkscape.effect.filter.ColorDropShadow.color="183" />
   <group
      id="desktop"
-     style="fill:#000000;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:72px;stroke-width:1.26992126;text-anchor:end;text-align:end;line-height:0.85">
+     style="fill:#dbdb2a;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:72px;stroke-width:1.26992126;text-anchor:end;text-align:end;line-height:0.85">
     <group
        width="1892"
        height="1012"
