@@ -135,7 +135,7 @@ export BAR_VISIBLE=1
 export PATH="$PATH:$HOME/.rvm/bin"
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
-abbr -a nu "vnstat -d"
+abbr -a nus "vnstat -d"
 abbr -a g git
 abbr -a da "dots add -u"
 abbr -a dc "dots commit"

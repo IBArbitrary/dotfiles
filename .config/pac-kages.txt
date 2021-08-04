@@ -62,6 +62,7 @@ cmake-language-server
 cowsay
 croc
 cronie
+csview
 czkawka-git
 dconf-editor
 dfhack
@@ -274,6 +275,7 @@ shellcheck
 shfmt
 slack-term
 smartmontools
+so
 steam
 stress
 stylelint
