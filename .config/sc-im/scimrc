@@ -22,6 +22,8 @@ color "type=MODE fg=black3 bg=black"
 
 color "type=CELL_SELECTION bold=1 fg=black bg=white2"
 color "type=CELL_SELECTION_SC fg=black bg=white"
+color "type=GRID_ODD fg=white bg=black"
+color "type=GRID_EVEN fg=white bg=black"
 
 color "type=CELL_ID fg=white bg=black"
 color "type=CELL_FORMAT italic=1 fg=white4 bg=black"

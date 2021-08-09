@@ -184,6 +184,7 @@ abbr -a docs 'cd /media/storage/documents/'
 abbr -a bks 'cd /media/storage/books/'
 abbr -a cam 'mpv av://v4l2:/dev/video0 --profile=low-latency --untimed'
 abbr -a mans "man -k . | cut -d "-" -f1 | fzf | cut -d " " -f1 | xargs -r man"
+abbr -a hor "cd /media/storage/horizon/"
 
 alias zathurat 'tabbed -c -r 2 zathura -e id'
 eval 'dircolors ~/.dircolors' >/dev/null

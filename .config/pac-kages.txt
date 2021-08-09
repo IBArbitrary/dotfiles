@@ -60,7 +60,6 @@ clipmenu
 cmake
 cmake-language-server
 cowsay
-croc
 cronie
 csview
 czkawka-git
@@ -92,6 +91,7 @@ fortune-mod
 fruit
 gawk
 gcc
+gcc-fortran
 geckodriver
 gedit-cut-line
 gedit-duplicate-line
@@ -179,7 +179,6 @@ notepadqq
 noto-fonts-emoji
 npm
 ntfs-3g
-nushell
 nvidia
 nvidia-prime
 nvidia-settings
@@ -275,9 +274,7 @@ scrot
 sed
 shellcheck
 shfmt
-slack-term
 smartmontools
-so
 steam
 stress
 stylelint

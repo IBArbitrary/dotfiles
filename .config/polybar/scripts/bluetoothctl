@@ -57,6 +57,6 @@ case "$1" in
         bluetooth_toggle
         ;;
     *)
-        bluetooth_print
+        bluetooth_print | head -n1
         ;;
 esac
