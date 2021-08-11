@@ -100,6 +100,7 @@ gedit-plugins
 gedit-scroll-past
 gedit-trailsave
 gettext
+gifsicle
 gimp
 git
 github-cli
@@ -127,6 +128,7 @@ imagemagick-doc
 imlib2
 iniparser
 inkscape
+inter-font
 inxi
 ipython
 java8-openjfx
@@ -183,8 +185,14 @@ nvidia
 nvidia-prime
 nvidia-settings
 obs-studio
+opencv
+opencv-samples
 optimus-manager
 optimus-manager-qt
+otf-archivo
+otf-archivo-black
+otf-archivo-narrow
+otf-ibm-plex
 otf2bdf
 p7zip
 p7zip-gui
@@ -234,6 +242,7 @@ python-lxml
 python-matplotlib
 python-nose
 python-nose2
+python-opencv
 python-pandas
 python-pip
 python-pipenv
@@ -312,6 +321,7 @@ tt
 ttf-font-awesome
 ttf-google-sans
 ttf-ms-fonts
+ttf-poppins
 ttf-proggy-clean
 ttf-tamil
 ttf-ubraille
