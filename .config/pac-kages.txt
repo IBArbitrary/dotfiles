@@ -159,6 +159,7 @@ m4
 maim
 make
 marked
+min
 mlocate
 mpc
 mpd

@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="73.6788"
-         height="410.85" />
+         width="4081.89"
+         height="4081.89" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -318,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -556,7 +556,7 @@
        rotateCounterClockwise="1" />
     <group
        id="align"
-       align-to="4" />
+       align-to="1" />
     <group
        id="xml"
        h="500"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/design/swacchta-pakhwada-2021/"
+       path="/home/rajeshkumar/temp/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeSpeed"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -974,7 +974,7 @@
   <group
      id="extensions"
      org.inkscape.input.svg.scale="auto"
-     org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
+     org.inkscape.input.gdkpixbuf.png.scale="optimizeSpeed"
      org.inkscape.effect.filter.Lighting.amplitude="0.693024"
      org.inkscape.effect.filter.Lighting.__live_effect__="0"
      org.inkscape.effect.filter.Lighting.exponent="1.51891"
@@ -990,8 +990,8 @@
      org.inkscape.replace_font.action="find_replace"
      org.inkscape.effect.filter.Roughen.type="fractalNoise"
      org.inkscape.effect.filter.Roughen.__live_effect__="0"
-     org.inkscape.effect.filter.Roughen.variation="360"
-     org.inkscape.effect.filter.Roughen.intensity="50"
+     org.inkscape.effect.filter.Roughen.variation="1"
+     org.inkscape.effect.filter.Roughen.intensity="12.602"
      org.inkscape.effect.filter.Roughen.hfreq="0.1"
      org.inkscape.effect.filter.Roughen.vfreq="1000"
      org.inkscape.effect.filter.NoiseFill.type="fractalNoise"
@@ -1076,10 +1076,13 @@
      org.inkscape.effect.filter.Invert.opacify="0"
      org.inkscape.effect.filter.Invert.lightness="1"
      org.inkscape.effect.filter.Invert.transparency="0"
-     org.inkscape.effect.filter.Invert.hue="0" />
+     org.inkscape.effect.filter.Invert.hue="0"
+     org.inkscape.effect.filter.LightnessContrast.__live_effect__="0"
+     org.inkscape.effect.filter.LightnessContrast.lightness="0"
+     org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
   <group
      id="desktop"
-     style="fill:#ff6600;-inkscape-font-specification:'Inter, Heavy';font-family:Inter;font-size:146.73146057px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;font-weight:900">
+     style="fill:#f2f2f2;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;opacity:0.1643276">
     <group
        width="1892"
        height="1012"
