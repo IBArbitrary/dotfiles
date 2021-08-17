@@ -213,8 +213,8 @@ super + shift + bracketright
 super + shift + bracketleft
 	~/bin/wm-config-toggles border
 
-super + alt + e
-	rofimoji
+super + alt + e ; {c,e}
+	{dmenu-unicode, dmenu-unicode arg}
 
 super + alt + p
 	passmenu -i -p "password: "

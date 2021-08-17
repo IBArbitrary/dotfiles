@@ -123,6 +123,7 @@ hexchat
 highlight
 hlint
 htop
+imagej
 imagemagick
 imagemagick-doc
 imlib2
@@ -159,7 +160,6 @@ m4
 maim
 make
 marked
-min
 mlocate
 mpc
 mpd
@@ -266,7 +266,6 @@ refind
 rhash
 ripgrep
 rofi
-rofimoji
 rpm-tools
 rsync
 rtags
@@ -295,7 +294,6 @@ sxhkd
 syncthing
 taptempo
 teams
-tenacity-git
 terminus-font
 texinfo
 texlive-bibtexextra
