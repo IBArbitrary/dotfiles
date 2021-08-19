@@ -271,7 +271,6 @@ rsync
 rtags
 ruby-bundler
 ruby-nokogiri
-rust
 rust-analyzer
 rust-racer
 ryzenadj-git
