@@ -14,8 +14,6 @@ adobe-source-han-serif-otc-fonts
 adobe-source-han-serif-tw-fonts
 alsa-utils
 amd-ucode
-amdgpu-pro-libgl
-amf-amdgpu-pro
 android-udev
 arch-wiki-man
 ascii-rain-git
@@ -138,6 +136,7 @@ js-beautify
 jupyter
 jupyterlab
 jupyterlab-widgets
+jwildfire
 kitty
 krita
 languagetool
@@ -332,7 +331,6 @@ virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules-arch
 vnstat
-vulkan-amdgpu-pro
 w3m
 wget
 which

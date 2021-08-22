@@ -180,6 +180,9 @@ super + shift + s ; {g,s}
 super + shift + q
 	qalculate-gtk
 
+super + shift + d
+	  lightcord
+
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
