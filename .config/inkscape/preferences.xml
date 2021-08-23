@@ -106,8 +106,8 @@
        id="base"
        pagecolor="#505050"
        pageopacity="0"
-       pagecheckerboard="0"
-       bordercolor="#eeeeee"
+       pagecheckerboard="1"
+       bordercolor="#ffffff"
        borderopacity="1"
        objecttolerance="10.0"
        gridtolerance="10.0"
@@ -130,7 +130,7 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="4081.89"
+         width="15427.6"
          height="4081.89" />
       <eventcontext
          id="3dbox"
@@ -574,7 +574,7 @@
     <group
        id="preferences"
        state="1"
-       page="4" />
+       page="1" />
     <group
        id="gradienteditor" />
     <group
@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="custom" />
+         value="selection" />
       <group
          id="defaultxdpi"
-         value="96" />
+         value="364.62" />
     </group>
     <group
        id="save_as"
@@ -607,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/" />
+       path="/media/storage/projects/blender/2.92/one-ring/assets/" />
     <group
        id="import"
        enable_preview="1"
@@ -680,7 +680,9 @@
   </group>
   <group
      id="options"
-     onimport="0">
+     onimport="0"
+     dpifixbackup="1"
+     dpiupdatemethod="0">
     <group
        id="renderingcache"
        size="512" />
@@ -830,7 +832,7 @@
        value="0" />
     <group
        id="selcue"
-       value="2" />
+       value="0" />
     <group
        id="transform"
        stroke="1"
@@ -954,7 +956,7 @@
        value="2" />
     <group
        id="boot"
-       canvas="dark"
+       canvas="dark-check"
        enabled="1">
       <group
          id="shown"
@@ -1084,10 +1086,10 @@
      id="desktop"
      style="fill:#f2f2f2;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;opacity:0.1643276">
     <group
-       width="1892"
-       height="1012"
-       x="10"
-       y="30"
+       width="1920"
+       height="1044"
+       x="0"
+       y="18"
        maximized="1"
        fullscreen="0"
        id="geometry" />

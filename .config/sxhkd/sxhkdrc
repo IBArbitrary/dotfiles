@@ -183,6 +183,9 @@ super + shift + q
 super + shift + d
 	  lightcord
 
+super + shift + o ; {b,s}
+	  {prime-run blender & disown,steam}
+
 super + shift + e
 	emacsclient --create-frame --alternate-editor=""
 
