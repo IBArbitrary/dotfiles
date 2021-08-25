@@ -240,6 +240,7 @@ python-ipympl
 python-isort
 python-lxml
 python-matplotlib
+python-networkx
 python-nose
 python-nose2
 python-opencv
@@ -313,6 +314,7 @@ tldr
 tmux
 toilet
 toilet-fonts
+tor-browser
 tree
 tt
 ttf-font-awesome
