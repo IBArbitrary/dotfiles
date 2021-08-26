@@ -276,6 +276,7 @@ rust-racer
 ryzenadj-git
 sbcl
 sc-im
+scdoc
 scientifica-bdf
 screenkey
 scrot
