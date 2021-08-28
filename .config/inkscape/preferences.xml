@@ -318,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -589,7 +589,7 @@
          value="selection" />
       <group
          id="defaultxdpi"
-         value="364.62" />
+         value="96" />
     </group>
     <group
        id="save_as"
@@ -607,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/one-ring/assets/" />
+       path="/media/storage/horizon/designs/space-missions/pioneer0/" />
     <group
        id="import"
        enable_preview="1"

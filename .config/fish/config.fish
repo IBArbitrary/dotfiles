@@ -1,13 +1,13 @@
 # color customisations
-set -U fish_color_command brgreen
-set -U fish_color_cwd brgreen
-set -U fish_color_cwd_root brred
-set -U fish_color_error brred
-set -U fish_color_escape bryellow
-set -U fish_color_operator brblue
-set -U fish_color_quote bryellow
-set -U fish_color_redirection brcyan
-set -U fish_color_status brred
+# set -U fish_color_command brgreen
+# set -U fish_color_cwd brgreen
+# set -U fish_color_cwd_root brred
+# set -U fish_color_error brred
+# set -U fish_color_escape bryellow
+# set -U fish_color_operator brblue
+# set -U fish_color_quote bryellow
+# set -U fish_color_redirection brcyan
+# set -U fish_color_status brred
 
 function splash
     set -l splash (find ~/.config/fish/scripts/color-scripts/ -type f | shuf -n 1)

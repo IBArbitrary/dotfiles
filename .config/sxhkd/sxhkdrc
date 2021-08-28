@@ -167,6 +167,9 @@ super + ctrl + shift + p
 super + shift + f
 	pcmanfm
 
+super + ctrl + f
+	  bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true  && pcmanfm
+
 super + shift + z
 	zotero
 
