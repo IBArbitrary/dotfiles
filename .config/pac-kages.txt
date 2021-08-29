@@ -14,6 +14,8 @@ adobe-source-han-serif-otc-fonts
 adobe-source-han-serif-tw-fonts
 alsa-utils
 amd-ucode
+amdgpu-pro-libgl
+amf-amdgpu-pro
 android-udev
 arch-wiki-man
 ascii-rain-git
@@ -34,6 +36,7 @@ beautysh
 binutils
 bison
 blender
+blender-3.0-bin
 bluetooth-headset-battery-level-git
 bluez
 bluez-libs
@@ -52,7 +55,6 @@ cabal-install
 cargo-cache
 cbonsai
 chntpw
-clifm
 clinfo
 clipmenu
 cmake
@@ -140,9 +142,11 @@ jwildfire
 kitty
 krita
 languagetool
+lib32-amdgpu-pro-libgl
 lib32-libudev0-shim
 lib32-nvidia-utils
 lib32-opencl-nvidia
+lib32-vulkan-amdgpu-pro
 libexif
 libreoffice-fresh
 libtool
@@ -334,6 +338,7 @@ virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules-arch
 vnstat
+vulkan-amdgpu-pro
 w3m
 wget
 which
@@ -397,7 +402,6 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xpdf
-xplr
 xscreensaver
 xsct
 xxiivv-orca-git
