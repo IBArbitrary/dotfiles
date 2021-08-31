@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="15427.6"
-         height="4081.89" />
+         width="704.224"
+         height="631.882" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -318,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -1084,7 +1084,7 @@
      org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
   <group
      id="desktop"
-     style="fill:#f2f2f2;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;opacity:0.1643276">
+     style="fill:#ffffff;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;opacity:0.1643276">
     <group
        width="1920"
        height="1044"

@@ -73,6 +73,7 @@ dos2unix
 dunst
 dwarffortress
 emacs
+epr-git
 exif
 expac
 fakeroot
@@ -297,7 +298,6 @@ sudo
 sxhkd
 syncthing
 taptempo
-teams
 terminus-font
 texinfo
 texlive-bibtexextra
