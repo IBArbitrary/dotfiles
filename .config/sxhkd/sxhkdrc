@@ -54,6 +54,12 @@ super + y
 #
 # state/flags
 #
+super + ctrl + t; {h,j,k,l}
+	  tabc add $(bspc query -N -n focused) $(bspc query -N -n {west,south,north,east})
+
+super + ctrl + t; r
+	  tabc remove-child $(bspc query -N -n focused)
+
 
 # set the window state
 super + {t,shift + ctrl + t,s,f}

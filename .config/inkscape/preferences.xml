@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="704.224"
-         height="631.882" />
+         width="785.6"
+         height="785.6" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -318,7 +318,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -345,8 +345,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="699.751"
-       y="81.1634"
+       x="947.102"
+       y="399.685"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -556,7 +556,7 @@
        rotateCounterClockwise="1" />
     <group
        id="align"
-       align-to="1" />
+       align-to="5" />
     <group
        id="xml"
        h="500"
@@ -586,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="page" />
       <group
          id="defaultxdpi"
          value="96" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
        path="/media/storage/projects/design/swacchta-pakhwada-2021"
@@ -607,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/horizon/designs/space-missions/pioneer0/" />
+       path="/home/rajeshkumar/downloads/" />
     <group
        id="import"
        enable_preview="1"
@@ -615,7 +615,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeSpeed"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1032,10 +1032,10 @@
      org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
      org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
      org.inkscape.effect.filter.ColorDropShadow.yoffset="0"
-     org.inkscape.effect.filter.ColorDropShadow.blur="15"
+     org.inkscape.effect.filter.ColorDropShadow.blur="40"
      org.inkscape.effect.filter.ColorDropShadow.tab="optionstab"
      org.inkscape.effect.filter.ColorDropShadow.objcolor="0"
-     org.inkscape.effect.filter.ColorDropShadow.color="183"
+     org.inkscape.effect.filter.ColorDropShadow.color="4123745463"
      org.inkscape.filter.number_nodes.__live_effect__="0"
      ru.cnc-club.filter.gcodetools_graffiti_orientation.unit="G21 (All units in mm)"
      ru.cnc-club.filter.gcodetools_graffiti_orientation.postprocessor=" "
@@ -1084,7 +1084,7 @@
      org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;opacity:0.1643276">
+     style="fill:#63a3c4;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;stroke:#63a3c4">
     <group
        width="1920"
        height="1044"
