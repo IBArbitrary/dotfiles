@@ -59,6 +59,8 @@ clinfo
 clipmenu
 cmake
 cmake-language-server
+conky
+conky-manager
 cowsay
 cronie
 csview
@@ -264,6 +266,7 @@ qbittorrent
 qpdf
 qrencode
 qt5-styleplugins
+qucs
 qutebrowser
 radeontop
 ranger
