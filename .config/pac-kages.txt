@@ -405,7 +405,6 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xpdf
-xscreensaver
 xsct
 xxiivv-orca-git
 yad
