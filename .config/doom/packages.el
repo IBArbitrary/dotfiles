@@ -16,6 +16,7 @@
 (package! ix)
 (package! rotate)
 (package! helm-bibtex)
+(package! ebuku)
 
 
 ;; To install a package directly from a remote git repo, you must specify a
