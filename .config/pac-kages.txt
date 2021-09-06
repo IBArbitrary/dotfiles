@@ -50,6 +50,8 @@ breeze-default-cursor-theme
 breezex-cursor-theme
 bsp-layout
 bspwm
+buku
+bukubrow
 bumblebee
 cabal-install
 cargo-cache
@@ -419,4 +421,5 @@ zbar
 zenmonitor
 zip
 zotero
+zoxide
 zscroll-git
