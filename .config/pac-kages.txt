@@ -74,6 +74,7 @@ dict-gcide
 dict-moby-thesaurus
 dictd
 dos2unix
+downgrade
 dunst
 dwarffortress
 emacs
@@ -186,6 +187,7 @@ ninja
 nkf
 nm-connection-editor
 nodejs
+nodejs-http-server
 notepadqq
 noto-fonts-emoji
 npm

@@ -237,7 +237,7 @@ super + alt + e ; {c,e}
 super + alt + p
 	passmenu -i -p "password: "
 
-super + alt + m
+super + alt + shift + m
 	~/bin/monitors
 
 super + alt + c
@@ -248,6 +248,15 @@ super + alt + b
 
 super + alt + shift + b
 	~/bin/alt-book stagger
+
+super + alt + m
+	  ~/bin/alt-movies
+
+super + alt + s
+	  ~/bin/alt-series stagger
+
+super + alt + shift + s
+	  ~/bin/alt-series all
 
 super + Print
 	flameshot full -p ~/pictures/screenshots/ -c
