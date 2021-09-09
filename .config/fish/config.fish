@@ -66,6 +66,9 @@ alias lA 'ls -Ah --group-directories-first'
 alias ll 'ls -oh'
 alias lla 'ls -oah'
 alias llA 'ls -oAh'
+alias lc 'ls | wc -l'
+alias lca 'la | wc -l'
+alias lcA 'lA | wc -l'
 
 # x-server + prime-switch
 alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
