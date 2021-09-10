@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="179.025"
-         height="209.047" />
+         width="4081.89"
+         height="4081.89" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -586,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="96" />
+         value="25.4" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.pdf.cairorenderer"
+       default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
        path="/media/storage/projects/design/swacchta-pakhwada-2021"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/"
+       path="/media/storage/projects/blender/2.92/quotes/bilbo/sit-beside-the-fire-and-think/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeSpeed"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1084,7 +1084,7 @@
      org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Terminal Grotesque, Normal';font-family:'Terminal Grotesque';font-size:293.33333333px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill">
+     style="fill:#241f1c;-inkscape-font-specification:'Asket Extended, Normal';font-family:'Asket Extended';font-size:193.69799805px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;fill-opacity:0.75">
     <group
        width="1920"
        height="1044"
