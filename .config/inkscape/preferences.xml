@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="4081.89"
-         height="4081.89" />
+         width="1435.98"
+         height="1140.47" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -527,7 +527,7 @@
   </group>
   <group
      id="colorselector"
-     page="4" />
+     page="2" />
   <group
      id="embedded">
     <group
@@ -586,7 +586,7 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="selection" />
       <group
          id="defaultxdpi"
          value="25.4" />
@@ -596,7 +596,7 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/media/storage/projects/design/swacchta-pakhwada-2021"
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs19/renders"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -607,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads/" />
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs19/renders/" />
     <group
        id="import"
        enable_preview="1"
@@ -615,7 +615,7 @@
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeSpeed"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1084,7 +1084,7 @@
      org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
   <group
      id="desktop"
-     style="fill:#241f1c;-inkscape-font-specification:'Asket Extended, Normal';font-family:'Asket Extended';font-size:193.69799805px;stroke-width:15.11811024;text-anchor:end;text-align:end;line-height:0.85;paint-order:stroke markers fill;fill-opacity:0.75">
+     style="fill:#426f6f;-inkscape-font-specification:'Major Mono Display, Normal';font-family:'Major Mono Display';font-size:190.43373108px;stroke-width:4.7608431;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);-inkscape-stroke:none;stop-color:#000000">
     <group
        width="1920"
        height="1044"

@@ -340,6 +340,7 @@ tty-clock
 ttyplot
 tuir
 ueberzug
+umoria
 vi
 virtualbox
 virtualbox-guest-iso
