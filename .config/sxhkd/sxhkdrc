@@ -13,43 +13,44 @@
 # wm independent hotkeys
 
 
-# terminal emulator
+#== terminal emulator (kitty)
 super +{_,shift + }Return
-	{kitty, bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty -o font_size=11}
+	  {kitty, bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty -o font_size=11}
 
-# program launcher
+#== launcher (dmenu)
 super + @space
-	dmenu_run -F
+	  dmenu_run -F
 
+#== launcher (rofi)
 super + shift + @space
-	rofi -show drun
+	  rofi -show drun
 
-# make sxhkd reload its configuration files:
+#== reload sxkhd config
 super + Escape
-	pkill -USR1 -x sxhkd
+	  pkill -USR1 -x sxhkd
 
 
-# bspwm hotkeys
+#-- bspwm
 
-# quit/restart bspwm
+#== quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	  bspc {quit,wm -r}
 
-# close and kill
+#== close and kill window
 super + {_,shift + }w
-	bspc node -{c,k}
+	  bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+#== alt tiled/monocle
 super + m
-	bspc desktop -l next
+	  bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+	  bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
 #super + g
-#	bspc node -s biggest.window
+#	  bspc node -s biggest.window
 
 #
 # state/flags
@@ -63,18 +64,18 @@ super + ctrl + t; r
 
 # set the window state
 super + {t,shift + ctrl + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 super + shift + t
-	bsp-layout set tiled
+	  bsp-layout set tiled
 
 # different layouts using bsp-layout
 super + {a,shift + a,ctrl + a,ctrl + shift + a,g,shift + g,e}
-	bsp-layout set {tall,rtall,wide,rwide,rgrid,grid,even}
+	  bsp-layout set {tall,rtall,wide,rwide,rgrid,grid,even}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+	  bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
@@ -82,45 +83,45 @@ super + ctrl + {m,x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+	  bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+	  bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+	  bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+	  bspc desktop -f {prev,next}.local
 
 super + ctrl + {Left,Right}
-	bspc desktop -f {prev,next}.local
+	  bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last
+	  bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+	  bspc wm -h off; \
+	  bspc node {older,newer} -f; \
+	  bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	  bspc {desktop -f,node -d} '^{1-9,10}'
 
 super + shift + ctrl + {1-9,0}
-	bspc {node -d} '^{1-9,10}' -f
+	  bspc {node -d} '^{1-9,10}' -f
 
 super + shift + {Left,Right}
-	bspc node -d {prev,next}
+	  bspc node -d {prev,next}
 
 super + ctrl + shift + {Left,Right}
-	bspc node -d {prev,next} -f
+	  bspc node -d {prev,next} -f
 
 #
 # preselect
@@ -128,19 +129,19 @@ super + ctrl + shift + {Left,Right}
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+	  bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+	  bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
-	bspc node -p cancel
+	  bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+	  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -148,24 +149,24 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	~/bin/bspwm-resize {west,south,north,east}
+	  ~/bin/bspwm-resize {west,south,north,east}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	bspc node -v {-40 0,0 40,0 -40,40 0}
+	  bspc node -v {-40 0,0 40,0 -40,40 0}
 
 # mpc hotkeys
 XF86AudioPrev
-	mpc prev
+	  mpc prev
 
 XF86AudioPlay
-	mpc toggle
+	  mpc toggle
 
 XF86AudioNext
-	mpc next
+	  mpc next
 
 super + shift + b
-	firefox
+	  firefox
 
 super + ctrl + shift + b
 	  librewolf
@@ -174,26 +175,26 @@ super + ctrl + b
 	  buku-dmenu
 
 super + ctrl + shift + p
-	firefox --private-window
+	  firefox --private-window
 
 super + shift + f
-	pcmanfm
+	  pcmanfm
 
 super + ctrl + f
 	  bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true  && pcmanfm
 
 super + shift + z
-	zotero
+	  zotero
 
 # super + shift + s
-# 	flameshot gui
+# 	  flameshot gui
 
 super + shift + s ; {g,s}
 	  {flameshot gui,maim -s | xclip -selection c -t image/png}
 
 
 super + shift + q
-	qalculate-gtk
+	  qalculate-gtk
 
 super + shift + d
 	  lightcord
@@ -202,58 +203,58 @@ super + shift + o ; {b,b+3,s}
 	  {prime-run blender & disown, prime-run blender-3.0 & disown,steam}
 
 super + shift + e
-	emacsclient --create-frame --alternate-editor=""
+	  emacsclient --create-frame --alternate-editor=""
 
 super + ctrl + e
-	bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
+	  bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
 
 super + ctrl + shift + e
-	bspc rule -a \* -o state=floating center=true && doom everywhere
+	  bspc rule -a \* -o state=floating center=true && doom everywhere
 
 super + shift + p
-	bspc rule -a \* -o state=floating && kitty ncmpcpp
+	  bspc rule -a \* -o state=floating && kitty ncmpcpp
 
 super + shift + alt + p
 	  mpdmenu -p
 
 super + shift + m
-	mpd
+	  mpd
 
 super + shift + n
-	kitty newsboat
+	  kitty newsboat
 
 super + ctrl + p
-	pick-colour-picker
+	  pick-colour-picker
 
 super + ctrl + c
-	xboard
+	  xboard
 
 super + shift + backslash
-	~/bin/wm-config-toggles bar
+	  ~/bin/wm-config-toggles bar
 
 super + shift + bracketright
-	~/bin/wm-config-toggles gap
+	  ~/bin/wm-config-toggles gap
 
 super + shift + bracketleft
-	~/bin/wm-config-toggles border
+	  ~/bin/wm-config-toggles border
 
 super + alt + e ; {c,e}
-	{dmenu-unicode, dmenu-unicode arg}
+	  {dmenu-unicode, dmenu-unicode arg}
 
 super + alt + p
-	passmenu -i -p "password: "
+	  passmenu -i -p "password: "
 
 super + alt + shift + m
-	~/bin/monitors
+	  ~/bin/monitors
 
 super + alt + c
-	clipmenu -l 0 -i
+	  clipmenu -l 0 -i
 
 super + alt + b
-	~/bin/alt-book all
+	  ~/bin/alt-book all
 
 super + alt + shift + b
-	~/bin/alt-book stagger
+	  ~/bin/alt-book stagger
 
 super + alt + m
 	  ~/bin/alt-movies
@@ -265,22 +266,22 @@ super + alt + shift + s
 	  ~/bin/alt-series all
 
 super + Print
-	flameshot full -p ~/pictures/screenshots/ -c
+	  flameshot full -p ~/pictures/screenshots/ -c
 
 XF86MonBrightnessDown
-	xbacklight -10
+	  xbacklight -10
 
 XF86MonBrightnessUp
-	xbacklight +10
+	  xbacklight +10
 
 XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
+	  pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -10%	
+	  pactl set-sink-volume @DEFAULT_SINK@ -10%
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +10%	
+	  pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 super + shift {Prior, Next, Pause, Insert}
-	bgctl {prev, next, pause, play}
+	  bgctl {prev, next, pause, play}
