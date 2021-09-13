@@ -155,6 +155,7 @@ lib32-opencl-nvidia
 lib32-vulkan-amdgpu-pro
 libexif
 libreoffice-fresh
+librewolf-bin
 libtool
 lightcord-bin
 linux
