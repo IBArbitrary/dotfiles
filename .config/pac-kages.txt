@@ -271,7 +271,6 @@ qbittorrent
 qpdf
 qrencode
 qt5-styleplugins
-qucs
 qutebrowser
 radeontop
 ranger
