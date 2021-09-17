@@ -166,6 +166,7 @@ lmms-orgmaker-samples
 lolcat
 lsof
 m4
+magicavoxel
 maim
 make
 marked

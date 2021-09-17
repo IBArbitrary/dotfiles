@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="1435.98"
-         height="1140.47" />
+         width="507.528"
+         height="573.996" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -329,7 +329,7 @@
        use_svg2="1"
        style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;"
        selcue="1"
-       align_mode="2" />
+       align_mode="3" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi"
-         value="25.4" />
+         value="103.99" />
     </group>
     <group
        id="save_as"
@@ -987,15 +987,15 @@
      org.evilmad.text.hershey.action="sample"
      org.evilmad.text.hershey.tab="render"
      org.inkscape.effect.filter.Duochrome.swap="none"
-     org.inkscape.effect.filter.Duochrome.fluo="1.20737"
+     org.inkscape.effect.filter.Duochrome.fluo="0.0670074"
      org.inkscape.replace_font.scope="entire_document"
      org.inkscape.replace_font.action="find_replace"
      org.inkscape.effect.filter.Roughen.type="fractalNoise"
      org.inkscape.effect.filter.Roughen.__live_effect__="0"
-     org.inkscape.effect.filter.Roughen.variation="1"
-     org.inkscape.effect.filter.Roughen.intensity="12.602"
+     org.inkscape.effect.filter.Roughen.variation="4"
+     org.inkscape.effect.filter.Roughen.intensity="2.47847"
      org.inkscape.effect.filter.Roughen.hfreq="0.1"
-     org.inkscape.effect.filter.Roughen.vfreq="1000"
+     org.inkscape.effect.filter.Roughen.vfreq="49.9438"
      org.inkscape.effect.filter.NoiseFill.type="fractalNoise"
      org.inkscape.effect.filter.NoiseFill.__live_effect__="0"
      org.inkscape.effect.filter.NoiseFill.erosion="28.127"
@@ -1081,10 +1081,30 @@
      org.inkscape.effect.filter.Invert.hue="0"
      org.inkscape.effect.filter.LightnessContrast.__live_effect__="0"
      org.inkscape.effect.filter.LightnessContrast.lightness="0"
-     org.inkscape.effect.filter.LightnessContrast.contrast="-21.57" />
+     org.inkscape.effect.filter.LightnessContrast.contrast="-21.57"
+     org.inkscape.effect.filter.Duochrome.__live_effect__="0"
+     org.inkscape.effect.filter.Duochrome.tab="co11tab"
+     org.inkscape.effect.filter.Quadritone.blend1="normal"
+     org.inkscape.effect.filter.Quadritone.blend2="normal"
+     org.inkscape.effect.filter.Quadritone.__live_effect__="0"
+     org.inkscape.effect.filter.Quadritone.dist="326"
+     org.inkscape.effect.filter.Quadritone.colors="185"
+     org.inkscape.effect.filter.Quadritone.sat="0.702112"
+     org.inkscape.color.randomize.__live_effect__="0"
+     org.inkscape.color.randomize.opacity_range="35"
+     org.inkscape.color.randomize.lightness_range="19"
+     org.inkscape.color.randomize.saturation_range="42"
+     org.inkscape.color.randomize.hue_range="29"
+     org.inkscape.effect.filter.Tritone.type="normal"
+     org.inkscape.effect.filter.Tritone.globalblend="lighten"
+     org.inkscape.effect.filter.Tritone.glowblend="normal"
+     org.inkscape.effect.filter.Tritone.__live_effect__="0"
+     org.inkscape.effect.filter.Tritone.llight="1.35942"
+     org.inkscape.effect.filter.ColorShift.__live_effect__="0"
+     org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:#426f6f;-inkscape-font-specification:'Major Mono Display, Normal';font-family:'Major Mono Display';font-size:190.43373108px;stroke-width:4.7608431;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);-inkscape-stroke:none;stop-color:#000000">
+     style="fill:#17280b;-inkscape-font-specification:'pix PixelFJVerdana12pt, Normal';font-family:'pix PixelFJVerdana12pt';font-size:30.66666667px;stroke-width:4.7608431;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);-inkscape-stroke:none;stop-color:#000000;text-align:justify">
     <group
        width="1920"
        height="1044"
