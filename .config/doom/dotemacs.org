@@ -138,7 +138,8 @@ tweaks for heading colors and bullets
                            (set-face-attribute 'org-level-5 nil
                                                :inherit 'org-level-8)
                            (set-face-attribute 'org-level-4 nil
-                                               :inherit 'org-level-8)
+                                               :inherit 'org-level-8
+                                               :foreground "#d3869b")
                            (set-face-attribute 'org-level-3 nil
                                                :inherit 'org-level-8
                                                :foreground "#b8bb26")
