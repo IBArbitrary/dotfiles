@@ -128,7 +128,6 @@ hexchat
 highlight
 hlint
 htop
-imagej
 imagemagick
 imagemagick-doc
 imlib2
@@ -351,6 +350,9 @@ vulkan-amdgpu-pro
 w3m
 wget
 which
+wine-mono
+wine-staging
+winetricks
 wireless_tools
 wpa_supplicant
 write_stylus
