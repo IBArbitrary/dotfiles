@@ -165,7 +165,7 @@ label-empty-foreground = ${colors.background3}
 
 [module/updates]
 type = custom/script
-interval = 600
+interval = 1800
 exec = ~/.config/polybar/scripts/updates
 click-left = ~/.config/polybar/scripts/updates --show-updates
 click-middle = "kitty sudo pacman -Syu"
