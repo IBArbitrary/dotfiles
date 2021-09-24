@@ -36,7 +36,6 @@ binutils
 bison
 blender
 blender-3.0-bin
-bluetooth-headset-battery-level-git
 bluez
 bluez-libs
 bluez-plugins
