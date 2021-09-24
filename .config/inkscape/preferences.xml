@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="507.528"
-         height="573.996" />
+         width="2906.67"
+         height="511.436" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -589,14 +589,14 @@
          value="drawing" />
       <group
          id="defaultxdpi"
-         value="103.99" />
+         value="27.18" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.png.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs19/renders"
+       path="/home/rajeshkumar/downloads"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -607,11 +607,11 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs19/renders/" />
+       path="/home/rajeshkumar/downloads/" />
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/quotes/bilbo/sit-beside-the-fire-and-think/"
+       path="/home/rajeshkumar/downloads/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -960,7 +960,8 @@
        enabled="1">
       <group
          id="shown"
-         ver1.1="1" />
+         ver1.1="1"
+         ver1.1.1="1" />
     </group>
     <group
        id="font"
@@ -1104,7 +1105,7 @@
      org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:#17280b;-inkscape-font-specification:'pix PixelFJVerdana12pt, Normal';font-family:'pix PixelFJVerdana12pt';font-size:30.66666667px;stroke-width:4.7608431;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);-inkscape-stroke:none;stop-color:#000000;text-align:justify">
+     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:26.252;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#000000">
     <group
        width="1920"
        height="1044"

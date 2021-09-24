@@ -305,6 +305,9 @@ sxhkd
 syncthing
 taptempo
 terminus-font
+tesseract
+tesseract-data-eng
+tesseract-data-tam
 texinfo
 texlive-bibtexextra
 texlive-core
