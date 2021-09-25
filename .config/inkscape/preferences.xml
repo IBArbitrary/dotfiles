@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="2906.67"
-         height="511.436" />
+         width="810.536"
+         height="353.699" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -586,7 +586,7 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="selection" />
       <group
          id="defaultxdpi"
          value="27.18" />
@@ -596,7 +596,7 @@
        default="org.inkscape.output.png.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads"
+       path="/home/rajeshkumar/temp/shaastra-juniors"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads/"
+       path="/home/rajeshkumar/temp/shaastra-juniors/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeSpeed"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1105,7 +1105,7 @@
      org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:26.252;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#000000">
+     style="fill:#ffffff;-inkscape-font-specification:'Archivo SemiExpanded, Heavy Semi-Expanded';font-family:'Archivo SemiExpanded';font-size:39.99987411px;stroke-width:26.252;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;font-weight:900;font-stretch:semi-expanded;fill-opacity:0.00827543">
     <group
        width="1920"
        height="1044"
