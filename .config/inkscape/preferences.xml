@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="810.536"
-         height="353.699" />
+         width="800.226"
+         height="579.215" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -545,7 +545,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -586,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="27.18" />
+         value="50" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.png.inkscape"
+       default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
        path="/home/rajeshkumar/temp/shaastra-juniors"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/shaastra-juniors/"
+       path="/media/storage/projects/blender/2.92/academics/ph5060-lab/motion-tracking/renders/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeSpeed"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1105,7 +1105,7 @@
      org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Archivo SemiExpanded, Heavy Semi-Expanded';font-family:'Archivo SemiExpanded';font-size:39.99987411px;stroke-width:26.252;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;font-weight:900;font-stretch:semi-expanded;fill-opacity:0.00827543">
+     style="fill:none;-inkscape-font-specification:'FreeSans, Normal';font-family:FreeSans;font-size:39.99987411px;stroke-width:7.55905512;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#000000">
     <group
        width="1920"
        height="1044"

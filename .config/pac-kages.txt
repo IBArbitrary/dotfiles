@@ -200,7 +200,6 @@ opencv
 opencv-samples
 optimus-manager
 optimus-manager-qt
-osp-tracker
 otf-archivo
 otf-archivo-black
 otf-archivo-narrow
