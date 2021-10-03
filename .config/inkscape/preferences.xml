@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="800.226"
-         height="579.215" />
+         width="37.7358"
+         height="33.948" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -545,7 +545,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="selection" />
       <group
          id="defaultxdpi"
-         value="50" />
+         value="100" />
     </group>
     <group
        id="save_as"
@@ -611,7 +611,7 @@
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/academics/ph5060-lab/motion-tracking/renders/"
+       path="/media/storage/documents/academia/semester-03/ph2050_physics-lab-03/michelson-interferometer/report/images/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -1105,7 +1105,7 @@
      org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:none;-inkscape-font-specification:'FreeSans, Normal';font-family:FreeSans;font-size:39.99987411px;stroke-width:7.55905512;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#000000">
+     style="fill:#ffffff;-inkscape-font-specification:'CMU Serif, Normal';font-family:'CMU Serif';font-size:39.99987411px;stroke-width:1.88976378;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;fill-opacity:0.99657393">
     <group
        width="1920"
        height="1044"

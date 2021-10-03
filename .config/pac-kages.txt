@@ -331,6 +331,7 @@ toilet-fonts
 tor-browser
 tree
 tt
+ttf-cmu-serif
 ttf-font-awesome
 ttf-google-sans
 ttf-ms-fonts
