@@ -17,6 +17,7 @@ amdgpu-pro-libgl
 amf-amdgpu-pro
 android-udev
 arch-wiki-man
+armorpaint-git
 ascii-rain-git
 aspell-en
 atool
@@ -168,6 +169,7 @@ magicavoxel
 maim
 make
 marked
+material-maker-bin
 mit-scheme
 mlocate
 mpc

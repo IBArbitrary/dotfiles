@@ -586,7 +586,7 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi"
          value="100" />
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/documents/academia/semester-03/ph2050_physics-lab-03/michelson-interferometer/report/images/"
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs29/renders/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeSpeed"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1105,7 +1105,7 @@
      org.inkscape.effect.filter.ColorShift.sat="1" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'CMU Serif, Normal';font-family:'CMU Serif';font-size:39.99987411px;stroke-width:1.88976378;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;fill-opacity:0.99657393">
+     style="fill:#ffffff;-inkscape-font-specification:'IBM Plex Mono, Ultra-Light Italic';font-family:'IBM Plex Mono';font-size:325.550354px;stroke-width:1.88976378;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;font-weight:200;font-style:italic">
     <group
        width="1920"
        height="1044"
