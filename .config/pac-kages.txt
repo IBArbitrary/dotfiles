@@ -339,6 +339,7 @@ ttf-google-sans
 ttf-ms-fonts
 ttf-poppins
 ttf-proggy-clean
+ttf-roboto-mono
 ttf-tamil
 ttf-ubraille
 tty-clock
