@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="37.7358"
-         height="33.948" />
+         width="72.4258"
+         height="62.5915" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -527,7 +527,7 @@
   </group>
   <group
      id="colorselector"
-     page="2" />
+     page="4" />
   <group
      id="embedded">
     <group
@@ -556,7 +556,7 @@
        rotateCounterClockwise="1" />
     <group
        id="align"
-       align-to="5" />
+       align-to="4" />
     <group
        id="xml"
        h="500"
@@ -586,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="100" />
+         value="38.83" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.svg.inkscape"
+       default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
        path="/home/rajeshkumar/temp/shaastra-juniors"
@@ -607,11 +607,11 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads/" />
+       path="/home/rajeshkumar/temp/" />
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs29/renders/"
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs30/renders/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -993,19 +993,19 @@
      org.inkscape.replace_font.action="find_replace"
      org.inkscape.effect.filter.Roughen.type="fractalNoise"
      org.inkscape.effect.filter.Roughen.__live_effect__="0"
-     org.inkscape.effect.filter.Roughen.variation="4"
-     org.inkscape.effect.filter.Roughen.intensity="2.47847"
+     org.inkscape.effect.filter.Roughen.variation="78"
+     org.inkscape.effect.filter.Roughen.intensity="2.05842"
      org.inkscape.effect.filter.Roughen.hfreq="0.1"
-     org.inkscape.effect.filter.Roughen.vfreq="49.9438"
+     org.inkscape.effect.filter.Roughen.vfreq="404.285"
      org.inkscape.effect.filter.NoiseFill.type="fractalNoise"
      org.inkscape.effect.filter.NoiseFill.__live_effect__="0"
-     org.inkscape.effect.filter.NoiseFill.erosion="28.127"
-     org.inkscape.effect.filter.NoiseFill.hfreq="8743"
-     org.inkscape.effect.filter.NoiseFill.vfreq="0.01"
+     org.inkscape.effect.filter.NoiseFill.erosion="8.69504"
+     org.inkscape.effect.filter.NoiseFill.hfreq="695.395"
+     org.inkscape.effect.filter.NoiseFill.vfreq="5277.51"
      org.inkscape.effect.filter.NoiseFill.tab="optionstab"
-     org.inkscape.effect.filter.NoiseFill.complexity="5"
-     org.inkscape.effect.filter.NoiseFill.variation="360"
-     org.inkscape.effect.filter.NoiseFill.dilat="50"
+     org.inkscape.effect.filter.NoiseFill.complexity="2"
+     org.inkscape.effect.filter.NoiseFill.variation="148"
+     org.inkscape.effect.filter.NoiseFill.dilat="38.6636"
      org.inkscape.effect.filter.Outline.type="over"
      org.inkscape.effect.filter.Outline.position="inside"
      org.inkscape.effect.filter.Outline.__live_effect__="0"
@@ -1033,7 +1033,7 @@
      org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
      org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
      org.inkscape.effect.filter.ColorDropShadow.yoffset="0"
-     org.inkscape.effect.filter.ColorDropShadow.blur="40"
+     org.inkscape.effect.filter.ColorDropShadow.blur="35"
      org.inkscape.effect.filter.ColorDropShadow.tab="optionstab"
      org.inkscape.effect.filter.ColorDropShadow.objcolor="0"
      org.inkscape.effect.filter.ColorDropShadow.color="4123745463"
@@ -1045,12 +1045,12 @@
      org.inkscape.effect.filter.InkBlot.stroke="in"
      org.inkscape.effect.filter.InkBlot.__live_effect__="0"
      org.inkscape.effect.filter.InkBlot.blend="0.01"
-     org.inkscape.effect.filter.InkBlot.variation="100"
+     org.inkscape.effect.filter.InkBlot.variation="34"
      org.inkscape.effect.filter.InkBlot.complexity="5"
      org.inkscape.effect.filter.InkBlot.freq="100"
-     org.inkscape.effect.filter.InkBlot.displacement="100"
-     org.inkscape.effect.filter.InkBlot.vblur="10"
-     org.inkscape.effect.filter.InkBlot.hblur="10"
+     org.inkscape.effect.filter.InkBlot.displacement="5.68463"
+     org.inkscape.effect.filter.InkBlot.vblur="0.01"
+     org.inkscape.effect.filter.InkBlot.hblur="0.0634443"
      org.inkscape.effect.filter.InkBlot.k1="0.268771"
      org.inkscape.effect.filter.InkBlot.k2="5.02254"
      org.inkscape.effect.filter.InkBlot.k3="3.31967"
@@ -1070,8 +1070,8 @@
      org.inkscape.effect.filter.ImageBlur.__live_effect__="0"
      org.inkscape.effect.filter.ImageBlur.hblur="38.573"
      org.inkscape.effect.filter.ImageBlur.erosion="64.5429"
-     org.inkscape.effect.filter.NoiseFill.color="4284875007"
-     org.inkscape.effect.filter.NoiseFill.inverted="1"
+     org.inkscape.effect.filter.NoiseFill.color="4284874752"
+     org.inkscape.effect.filter.NoiseFill.inverted="0"
      org.inkscape.effect.filter.crosssmooth.type="in"
      org.inkscape.effect.filter.crosssmooth.__live_effect__="0"
      org.inkscape.effect.filter.Invert.channels="0"
@@ -1102,10 +1102,12 @@
      org.inkscape.effect.filter.Tritone.__live_effect__="0"
      org.inkscape.effect.filter.Tritone.llight="1.35942"
      org.inkscape.effect.filter.ColorShift.__live_effect__="0"
-     org.inkscape.effect.filter.ColorShift.sat="1" />
+     org.inkscape.effect.filter.ColorShift.sat="1"
+     org.inkscape.effect.filter.FeltFeather.hblur="0.641261"
+     org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'IBM Plex Mono, Ultra-Light Italic';font-family:'IBM Plex Mono';font-size:325.550354px;stroke-width:1.88976378;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;font-weight:200;font-style:italic">
+     style="fill:#d19a7e;-inkscape-font-specification:'Fanda Sans, Normal';font-family:'Fanda Sans';font-size:212.40945435px;stroke-width:25.40220472;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#81c6e3">
     <group
        width="1920"
        height="1044"
