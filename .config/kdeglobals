@@ -1,3 +1,12 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry
+
+[Colors:View]
+BackgroundNormal=60,56,54
+
+[KDE]
+ShowDeleteCommand=false
+
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
@@ -16,5 +25,9 @@ Sort directories first=true
 Sort reversed=false
 Speedbar Width=200
 View Style=DetailTree
-[Colors:View]
-BackgroundNormal=60,56,54
+
+[KShortcutsDialog Settings]
+Dialog Size=658,480
+
+[PreviewSettings]
+MaximumRemoteSize=0

@@ -178,7 +178,7 @@ super + ctrl + shift + p
 	  firefox --private-window
 
 super + shift + f
-	  pcmanfm
+	  dolphin
 
 super + ctrl + f
 	  bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true  && pcmanfm
