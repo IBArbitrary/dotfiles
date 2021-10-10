@@ -72,6 +72,7 @@ dialog
 dict-gcide
 dict-moby-thesaurus
 dictd
+dolphin
 dos2unix
 downgrade
 dunst
@@ -143,7 +144,9 @@ jupyter
 jupyterlab
 jupyterlab-widgets
 jwildfire
+kdenlive
 kitty
+konsole
 krita
 languagetool
 lib32-amdgpu-pro-libgl
