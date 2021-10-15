@@ -527,7 +527,7 @@
   </group>
   <group
      id="colorselector"
-     page="4" />
+     page="1" />
   <group
      id="embedded">
     <group
@@ -589,7 +589,7 @@
          value="page" />
       <group
          id="defaultxdpi"
-         value="38.83" />
+         value="63.41" />
     </group>
     <group
        id="save_as"
@@ -607,15 +607,15 @@
     <group
        id="open"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/" />
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs31/renders/" />
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs30/renders/"
+       path="/home/rajeshkumar/temp/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeSpeed"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#d19a7e;-inkscape-font-specification:'Fanda Sans, Normal';font-family:'Fanda Sans';font-size:212.40945435px;stroke-width:25.40220472;line-height:0.75;paint-order:stroke markers fill;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;stroke:#81c6e3">
+     style="fill:#ffffff;-inkscape-font-specification:'Arial, Bold';font-family:Arial;font-size:32.16131973px;stroke-width:3.40157485;line-height:0.75;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;opacity:0.04848816;stroke-dasharray:27.2125988, 13.6062994;stroke-dashoffset:5.10235929;stroke-linecap:round;stroke-linejoin:round;font-weight:bold">
     <group
        width="1920"
        height="1044"

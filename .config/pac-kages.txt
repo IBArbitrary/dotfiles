@@ -37,6 +37,7 @@ binutils
 bison
 blender
 blender-3.0-bin
+blockbench
 bluez
 bluez-libs
 bluez-plugins
