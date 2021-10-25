@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="72.4258"
-         height="62.5915" />
+         width="818.241"
+         height="819.423" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -329,7 +329,7 @@
        use_svg2="1"
        style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;"
        selcue="1"
-       align_mode="3" />
+       align_mode="1" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -345,8 +345,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="947.102"
-       y="399.685"
+       x="1116.61"
+       y="-159.65"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="drawing" />
       <group
          id="defaultxdpi"
-         value="63.41" />
+         value="96.76" />
     </group>
     <group
        id="save_as"
@@ -607,11 +607,11 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs31/renders/" />
+       path="/home/rajeshkumar/downloads/" />
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/temp/"
+       path="/home/rajeshkumar/downloads/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -988,7 +988,7 @@
      org.evilmad.text.hershey.action="sample"
      org.evilmad.text.hershey.tab="render"
      org.inkscape.effect.filter.Duochrome.swap="none"
-     org.inkscape.effect.filter.Duochrome.fluo="0.0670074"
+     org.inkscape.effect.filter.Duochrome.fluo="2"
      org.inkscape.replace_font.scope="entire_document"
      org.inkscape.replace_font.action="find_replace"
      org.inkscape.effect.filter.Roughen.type="fractalNoise"
@@ -1076,7 +1076,7 @@
      org.inkscape.effect.filter.crosssmooth.__live_effect__="0"
      org.inkscape.effect.filter.Invert.channels="0"
      org.inkscape.effect.filter.Invert.__live_effect__="0"
-     org.inkscape.effect.filter.Invert.opacify="0"
+     org.inkscape.effect.filter.Invert.opacify="0.633719"
      org.inkscape.effect.filter.Invert.lightness="1"
      org.inkscape.effect.filter.Invert.transparency="0"
      org.inkscape.effect.filter.Invert.hue="0"
@@ -1084,7 +1084,7 @@
      org.inkscape.effect.filter.LightnessContrast.lightness="0"
      org.inkscape.effect.filter.LightnessContrast.contrast="-21.57"
      org.inkscape.effect.filter.Duochrome.__live_effect__="0"
-     org.inkscape.effect.filter.Duochrome.tab="co11tab"
+     org.inkscape.effect.filter.Duochrome.tab="optionstab"
      org.inkscape.effect.filter.Quadritone.blend1="normal"
      org.inkscape.effect.filter.Quadritone.blend2="normal"
      org.inkscape.effect.filter.Quadritone.__live_effect__="0"
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Arial, Bold';font-family:Arial;font-size:32.16131973px;stroke-width:3.40157485;line-height:0.75;text-decoration-color:#000000;letter-spacing:-17.18545338px;white-space:pre;shape-inside:url(#rect5164);stop-color:#000000;text-align:justify;opacity:0.04848816;stroke-dasharray:27.2125988, 13.6062994;stroke-dashoffset:5.10235929;stroke-linecap:round;stroke-linejoin:round;font-weight:bold">
+     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:7.55905512;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center">
     <group
        width="1920"
        height="1044"
