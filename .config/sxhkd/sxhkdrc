@@ -186,6 +186,9 @@ super + ctrl + f
 super + shift + z
 	  zotero
 
+super + alt + z
+	zotbib-rofi
+
 # super + shift + s
 # 	  flameshot gui
 
