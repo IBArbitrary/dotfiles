@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="96.76" />
+         value="72" />
     </group>
     <group
        id="save_as"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads/"
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs34/renders/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="auto"
+       scale="optimizeSpeed"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:7.55905512;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center">
+     style="fill:#ffffff;-inkscape-font-specification:'Inter, Heavy Italic';font-family:Inter;font-size:136.39331055px;stroke-width:7.55905512;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center;font-style:italic;font-weight:900">
     <group
        width="1920"
        height="1044"

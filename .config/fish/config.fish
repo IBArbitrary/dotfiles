@@ -77,6 +77,12 @@ alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 alias doom "~/packages/doom-emacs/bin/doom"
 alias orca xxiivv-orca
 alias b "buku --suggest"
+
+# identify key id
+function idkey
+    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+end
+
 abbr -a mine 'prime-run padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
 
 function pacs
