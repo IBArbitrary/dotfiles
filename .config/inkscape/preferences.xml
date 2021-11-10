@@ -167,8 +167,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="389.472"
-         ry="386.673" />
+         rx="720"
+         ry="720" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -527,7 +527,7 @@
   </group>
   <group
      id="colorselector"
-     page="1" />
+     page="2" />
   <group
      id="embedded">
     <group
@@ -611,7 +611,7 @@
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs34/renders/"
+       path="/media/storage/projects/blender/2.92/abstract-stuff/abs36/renders/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -994,9 +994,9 @@
      org.inkscape.effect.filter.Roughen.type="fractalNoise"
      org.inkscape.effect.filter.Roughen.__live_effect__="0"
      org.inkscape.effect.filter.Roughen.variation="78"
-     org.inkscape.effect.filter.Roughen.intensity="2.05842"
-     org.inkscape.effect.filter.Roughen.hfreq="0.1"
-     org.inkscape.effect.filter.Roughen.vfreq="404.285"
+     org.inkscape.effect.filter.Roughen.intensity="50"
+     org.inkscape.effect.filter.Roughen.hfreq="1000"
+     org.inkscape.effect.filter.Roughen.vfreq="1000"
      org.inkscape.effect.filter.NoiseFill.type="fractalNoise"
      org.inkscape.effect.filter.NoiseFill.__live_effect__="0"
      org.inkscape.effect.filter.NoiseFill.erosion="8.69504"
@@ -1028,7 +1028,7 @@
      org.inkscape.effect.filter.Blend.source="BackgroundImage"
      org.inkscape.effect.filter.Blend.mode="multiply"
      org.inkscape.effect.filter.Blend.__live_effect__="0"
-     org.inkscape.effect.filter.Roughen.complexity="1"
+     org.inkscape.effect.filter.Roughen.complexity="2"
      org.inkscape.effect.filter.ColorDropShadow.type="outer"
      org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
      org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Inter, Heavy Italic';font-family:Inter;font-size:136.39331055px;stroke-width:7.55905512;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center;font-style:italic;font-weight:900">
+     style="fill:none;-inkscape-font-specification:'Atlantis Headline, Normal';font-family:'Atlantis Headline';font-size:148.12756348px;stroke-width:75.59055118;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center;stroke:#05ff00;opacity:0.11570068">
     <group
        width="1920"
        height="1044"
