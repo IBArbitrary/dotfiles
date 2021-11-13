@@ -53,6 +53,7 @@ buku
 bukubrow
 bumblebee
 cabal-install
+calibre
 cargo-cache
 cbonsai
 chntpw
@@ -172,7 +173,6 @@ magicavoxel
 maim
 make
 marked
-material-maker-bin
 mit-scheme
 mlocate
 mpc
