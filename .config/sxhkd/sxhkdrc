@@ -218,7 +218,7 @@ super + shift + m
 	  mpd
 
 super + shift + n
-	  kitty newsboat
+	  bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty newsboat
 
 super + ctrl + p
 	  pick-colour-picker

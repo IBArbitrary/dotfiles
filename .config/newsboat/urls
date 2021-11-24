@@ -1,6 +1,15 @@
-https://generativeartistry.com/index.xml "~generative-artistry" generative-art art creative-coding
-https://astrobites.org/feed/ astronomy physics science
-https://hacks.mozilla.org/feed/ "~mozilla-hacks" web
-https://jeremykun.com/feed/ "~math-∩-programming" mathematics programming
-https://iopscience.iop.org/journal/rss/0951-7715 "~nonlinearlity" journal physics mathematics non-linear
-https://omny.fm/shows/future-of-coding/playlists/podcast.rss "~future-of-coding" coding podcast
+Generative generative
+https://generativeartistry.com/index.xml "~generative-artistry"
+Science science
+https://astrobites.org/feed/ science
+Tech
+https://hacks.mozilla.org/feed/ "~mozilla-hacks" tech
+https://omny.fm/shows/future-of-coding/playlists/podcast.rss "~future-of-coding" tech
+Mathematics math
+https://jeremykun.com/feed/ "~math-∩-programming" math
+https://iopscience.iop.org/journal/rss/0951-7715 "~nonlinearlity" math
+Comics comics
+https://xkcd.com/atom.xml "~xkcd" comics
+https://www.smbc-comics.com/comic/rss "~Saturday Morning Breakfast Cereal" comics
+https://feeds.feedburner.com/Explosm "~Cyanide & Happiness" comics
+https://www.penny-arcade.com/feed "~Penny Arcade" comics

@@ -2,7 +2,7 @@ auto-reload yes
 browser firefox
 # macro y set browser "mpv %u"; open-in-browser ; set browser "firefox %u"
 cleanup-on-quit yes
-download-path "/home/c0b4l7/Videos/Podcasts"
+download-path "/home/rajeshkumar/videos/podcasts"
 feed-sort-order title-dec
 max-downloads 4
 max-items 10000
@@ -42,8 +42,12 @@ ignore-mode "display"
 
 # formatting and colorization ------------------------------------------
 
-articlelist-format "%4i %f %D  %t"
-feedlist-format     "%4i %n %11u %t"
+#articlelist-format "%4i %f %D  %t"
+articlelist-format " %2i  %t"
+#feedlist-format     "%4i %n %11u %t"
+# feedlist format and colours
+# feedlist-format "%?l?├────╼ %t &├──%t?"
+feedlist-format "%?l?┃%4i %n %8u %t &┣━━━━ ■ %t?"
 
 # highlight feedlist    "^  *[0-9]+  *N  "                    magenta  default
 # highlight articlelist "^  *[0-9]+  *N  "                    magenta  default
@@ -72,13 +76,21 @@ feedlist-format     "%4i %n %11u %t"
 # colors
 color background          color239     default
 color listnormal          white     default
-color listnormal_unread   color15    default
-color listfocus           black     color15
-color listfocus_unread    black     color15 bold
-color info                color239    black
+color listnormal_unread   color7    default
+color listfocus           color15     color236
+color listfocus_unread    color15     color236 bold
+color info                color7    black bold
 color article             color15     default
 
 # highlights
+
+highlight feedlist "[┃┃]" color9 default bold
+highlight feedlist "┣━.*" color9 default bold
+highlight feedlist "■" color15 default
+# article format and colours
+#articlelist-format "%?T? │ %2i %f  %t?"
+articlelist-format " %2i  %t"
+
 highlight article "^(Feed|Link|Date|Author|Title):.*$" color8 default
 highlight article "^(Title):.*$" color7 default bold
 highlight article "https?://[^ ]+" color9 default underline

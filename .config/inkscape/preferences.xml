@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="818.241"
-         height="819.423" />
+         width="815.634"
+         height="594.533" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -167,7 +167,7 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="720"
+         rx="2721.26"
          ry="720" />
       <eventcontext
          id="star"
@@ -545,7 +545,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -589,7 +589,7 @@
          value="page" />
       <group
          id="defaultxdpi"
-         value="72" />
+         value="188.32" />
     </group>
     <group
        id="save_as"
@@ -611,11 +611,11 @@
     <group
        id="import"
        enable_preview="1"
-       path="/media/storage/projects/blender/2.92/abstract-stuff/abs36/renders/"
+       path="/home/rajeshkumar/temp/"
        ask="1"
        ask_svg="1"
        link="embed"
-       scale="optimizeSpeed"
+       scale="auto"
        forcexdpi="0"
        import_mode_svg="include" />
     <group
@@ -1033,10 +1033,10 @@
      org.inkscape.effect.filter.ColorDropShadow.__live_effect__="0"
      org.inkscape.effect.filter.ColorDropShadow.xoffset="0"
      org.inkscape.effect.filter.ColorDropShadow.yoffset="0"
-     org.inkscape.effect.filter.ColorDropShadow.blur="35"
+     org.inkscape.effect.filter.ColorDropShadow.blur="1"
      org.inkscape.effect.filter.ColorDropShadow.tab="optionstab"
      org.inkscape.effect.filter.ColorDropShadow.objcolor="0"
-     org.inkscape.effect.filter.ColorDropShadow.color="4123745463"
+     org.inkscape.effect.filter.ColorDropShadow.color="255"
      org.inkscape.filter.number_nodes.__live_effect__="0"
      ru.cnc-club.filter.gcodetools_graffiti_orientation.unit="G21 (All units in mm)"
      ru.cnc-club.filter.gcodetools_graffiti_orientation.postprocessor=" "
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:none;-inkscape-font-specification:'Atlantis Headline, Normal';font-family:'Atlantis Headline';font-size:148.12756348px;stroke-width:75.59055118;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center;stroke:#05ff00;opacity:0.11570068">
+     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:1.37952756;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center;stroke:#000100">
     <group
        width="1920"
        height="1044"

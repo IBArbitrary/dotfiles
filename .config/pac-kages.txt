@@ -1,16 +1,5 @@
 acpi
 acpi_call
-adobe-source-han-sans-cn-fonts
-adobe-source-han-sans-hk-fonts
-adobe-source-han-sans-jp-fonts
-adobe-source-han-sans-kr-fonts
-adobe-source-han-sans-otc-fonts
-adobe-source-han-sans-tw-fonts
-adobe-source-han-serif-cn-fonts
-adobe-source-han-serif-jp-fonts
-adobe-source-han-serif-kr-fonts
-adobe-source-han-serif-otc-fonts
-adobe-source-han-serif-tw-fonts
 alsa-utils
 amd-ucode
 amdgpu-pro-libgl
@@ -65,7 +54,6 @@ conky
 conky-manager
 cowsay
 cronie
-csview
 czkawka-git
 dconf-editor
 dfhack
@@ -258,6 +246,7 @@ python-isort
 python-lxml
 python-matplotlib
 python-networkx
+python-nltk
 python-nose
 python-nose2
 python-opencv
@@ -304,7 +293,6 @@ smartmontools
 steam
 stress
 stylelint
-subliminal
 subversion
 sudo
 sxhkd
