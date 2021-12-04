@@ -161,6 +161,7 @@ magicavoxel
 maim
 make
 marked
+mesa-utils
 mit-scheme
 mlocate
 mpc
@@ -205,7 +206,7 @@ pacman
 pacman-contrib
 pacmixer
 pamixer
-pandoc
+pandoc-bin
 papirus-icon-theme
 paprefs
 pass
@@ -265,7 +266,6 @@ qbittorrent
 qpdf
 qrencode
 qt5-styleplugins
-qutebrowser
 radeontop
 ranger
 refind
@@ -287,9 +287,11 @@ scientifica-bdf
 screenkey
 scrot
 sed
-shellcheck
+shellcheck-bin
 shfmt
 smartmontools
+spicetify-cli
+spotify
 steam
 stress
 stylelint
@@ -322,7 +324,6 @@ tldr
 tmux
 toilet
 toilet-fonts
-tor-browser
 tree
 tt
 ttf-cmu-serif
