@@ -171,6 +171,9 @@ super + ctrl + b
 super + ctrl + shift + p
 	  firefox --private-window
 
+super + ctrl + shift + alt + p
+	librewolf --private-window
+
 super + shift + f
 	  dolphin
 
