@@ -175,7 +175,6 @@ neofetch
 nerd-fonts-source-code-pro
 network-manager-applet
 networkmanager
-networkmanager-dmenu-git
 newsboat
 ninja
 nkf
