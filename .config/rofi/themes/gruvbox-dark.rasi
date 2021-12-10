@@ -32,7 +32,7 @@
     background:                  @gruvbox-dark-bg0;
     background-color:            @background;
     foreground:                  @gruvbox-dark-fg1;
-    border-color:                @background;
+    border-color:                @gruvbox-dark-fg1;
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
@@ -60,3 +60,11 @@
 
 @import "gruvbox-common.rasi"
 
+window {
+    border: 2;
+    border-radius: 15;
+}
+
+listview {
+    scrollbar: false;
+}
