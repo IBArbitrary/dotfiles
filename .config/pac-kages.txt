@@ -22,7 +22,6 @@ beautysh
 binutils
 bison
 blender
-blockbench
 bluez
 bluez-libs
 bluez-plugins
@@ -246,7 +245,6 @@ python-pytest
 python-scipy
 python-spotdl
 python2
-python2-pip
 qalculate-gtk
 qbittorrent
 qpdf

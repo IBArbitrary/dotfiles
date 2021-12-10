@@ -142,6 +142,9 @@ export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
 export BAR_VISIBLE=1
 export PATH="$PATH:$HOME/.rvm/bin"
 export SXHKD_SHELL='sh'
+export GOPATH="$HOME/.go"
+export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nus "vnstat -d"
