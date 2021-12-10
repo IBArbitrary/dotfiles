@@ -6,8 +6,6 @@ amdgpu-pro-libgl
 amf-amdgpu-pro
 android-udev
 arch-wiki-man
-armorpaint-git
-ascii-rain-git
 aspell-en
 atool
 audio-recorder
@@ -41,7 +39,6 @@ bukubrow
 bumblebee
 cabal-install
 calibre
-cargo-cache
 cbonsai
 chntpw
 clinfo
@@ -66,7 +63,6 @@ dunst
 dwarffortress
 edir
 emacs
-epr-git
 exif
 expac
 fakeroot
@@ -158,7 +154,6 @@ maim
 make
 marked
 mesa-utils
-mit-scheme
 mlocate
 mpc
 mpd
@@ -173,7 +168,6 @@ network-manager-applet
 networkmanager
 newsboat
 ninja
-nkf
 nm-connection-editor
 nodejs
 nodejs-http-server
@@ -192,7 +186,6 @@ otf-archivo
 otf-archivo-black
 otf-archivo-narrow
 otf-ibm-plex
-otf2bdf
 p7zip
 p7zip-gui
 pacgraph
@@ -204,7 +197,6 @@ pandoc-bin
 papirus-icon-theme
 paprefs
 pass
-pass-import
 pass-otp
 passff-host
 pastel
@@ -277,7 +269,6 @@ ryzenadj-git
 sbcl
 sc-im
 scdoc
-scientifica-bdf
 screenkey
 scrot
 sed
@@ -287,7 +278,6 @@ smartmontools
 spicetify-cli
 spotify
 steam
-stress
 stylelint
 subversion
 sudo
@@ -312,7 +302,6 @@ texlive-publishers
 texlive-science
 texstudio
 tidy
-timg
 tk
 tldr
 tmux
@@ -332,7 +321,6 @@ ttf-ubraille
 tty-clock
 ttyplot
 tuir
-ueberzug
 umoria
 vi
 virtualbox
@@ -405,7 +393,6 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xpdf
 xsct
 xxiivv-orca-git
 yad
