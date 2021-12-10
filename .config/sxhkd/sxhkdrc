@@ -95,8 +95,8 @@ super + ctrl + {Left,Right}
 	  bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
-	  bspc {node,desktop} -f last
+super + Tab
+	  bspc desktop -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -288,3 +288,12 @@ super + shift {Prior, Next, Pause, Insert}
 
 ctrl + alt + Delete
      rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str "window \{width: 15%; padding:10px;\} listview \{lines: 6;\}"
+
+super + grave
+	dunstctl history-pop
+
+ctrl + space
+     dunstctl close
+
+ctrl + shift + space
+     dunstctl close-all
