@@ -59,7 +59,7 @@ xset r rate 200 40
 xscreensaver &
 
 # compositor
-picom -b &
+picom --round-borders 1 -b &
 
 # Starting WM
 exec bspwm
