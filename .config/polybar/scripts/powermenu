@@ -1,0 +1,1 @@
+rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str 'window {width: 15%; padding:10px;} listview {lines: 6;}' -location 1 -yoffset 28 -xoffset 10
