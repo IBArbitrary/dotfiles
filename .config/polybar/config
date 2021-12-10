@@ -361,8 +361,8 @@ type = custom/text
 content = "ஃ"
 content-background = ${colors.foreground0}
 content-foreground = ${colors.background}
-;click-middle = rofi -show p -modi p:rofi-power-menu -width 20 -lines 6 -location 1 -yoffset 18
 click-middle = ~/.config/polybar/scripts/powermenu
+click-left = rofi -show drun -theme w11-appmenu
 content-padding = 1
 
 [module/decoration-left]

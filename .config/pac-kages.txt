@@ -10,7 +10,6 @@ armorpaint-git
 ascii-rain-git
 aspell-en
 atool
-atop
 audio-recorder
 auto-cpufreq
 autoconf
@@ -32,7 +31,6 @@ bluez-plugins
 bluez-tools
 bluez-utils
 boost
-bottom
 bpython
 breeze-default-cursor-theme
 breezex-cursor-theme
@@ -102,7 +100,6 @@ git
 github-cli
 gnuchess
 go
-gotop
 gparted
 grep
 groff
@@ -135,7 +132,6 @@ jupyterlab
 jupyterlab-widgets
 kdenlive
 kitty
-konsole
 krita
 languagetool
 lib32-amdgpu-pro-libgl
@@ -181,7 +177,6 @@ nkf
 nm-connection-editor
 nodejs
 nodejs-http-server
-notepadqq
 noto-fonts-emoji
 npm
 ntfs-3g

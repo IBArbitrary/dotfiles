@@ -1,0 +1,93 @@
+@import "gruvbox-dark.rasi"
+
+configuration {
+    show-icons: true;
+    display-drun: "Search";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    location: 1;
+}
+
+* {
+    font: "Source Code Pro 10";
+    background: @gruvbox-dark-bg0;
+}
+
+window {
+    width: 40%;
+    x-offset: 10;
+    y-offset: 28;
+}
+
+listview {
+    columns: 5;
+    lines: 5;
+    spacing: 4px;
+    dynamic: true;
+    layout: vertical;
+    padding: 10px 0px 0px 0px;
+}
+
+prompt {
+    enabled: true;
+}
+
+textbox-prompt-color {
+    expand: false;
+    str: "sike";
+    padding: 10px 0px 10px 12px;
+}
+
+entry {
+    expand: true;
+    horizontal-align: 0;
+    placeholder: "Type application name...";
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 10px;
+    padding: 10px;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+}
+
+element-icon {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    size: 60px;
+    border: 0px;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    margin: 0px;
+}
+
+
+element normal.urgent,
+element alternate.urgent,
+element selected.urgent {
+    background-color:               @gruvbox-dark-bg0;
+    text-color:                     @gruvbox-dark-fg1;
+}
+
+element normal.active,
+element alternate.active,
+element selected.active {
+    background-color:               @gruvbox-dark-bg0;
+    text-color:                     @gruvbox-dark-fg1;
+}
+
+element selected {
+    background-color:               @gruvbox-dark-bg0;
+    text-color:                     @gruvbox-dark-fg1;
+    border:                  		1px;
+    border-radius:                  15px;
+    border-color:                  	@gruvbox-dark-bg2;
+}

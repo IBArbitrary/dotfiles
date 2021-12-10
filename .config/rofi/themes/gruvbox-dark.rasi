@@ -14,11 +14,13 @@
 * {
     /* Theme settings */
     highlight: bold italic;
-    scrollbar: true;
+    scrollbar: false;
 
     /* Gruvbox dark colors */
     gruvbox-dark-bg0:          #282828;
     gruvbox-dark-bg0-soft:     #32302f;
+    gruvbox-dark-bg1:          #3c3836;
+    gruvbox-dark-bg2:          #504945;
     gruvbox-dark-bg3:          #665c54;
     gruvbox-dark-fg0:          #fbf1c7;
     gruvbox-dark-fg1:          #ebdbb2;
@@ -38,9 +40,9 @@
 
     normal-background:           @background;
     normal-foreground:           @foreground;
-    alternate-normal-background: @gruvbox-dark-bg0-soft;
+    alternate-normal-background: @normal-background;
     alternate-normal-foreground: @foreground;
-    selected-normal-background:  @gruvbox-dark-bg3;
+    selected-normal-background:  @gruvbox-dark-bg1;
     selected-normal-foreground:  @gruvbox-dark-fg0;
 
     active-background:           @gruvbox-dark-yellow-dark;
@@ -63,8 +65,4 @@
 window {
     border: 2;
     border-radius: 15;
-}
-
-listview {
-    scrollbar: false;
 }

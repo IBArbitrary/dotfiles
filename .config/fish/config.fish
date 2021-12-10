@@ -49,11 +49,6 @@ end
 
 abbr -a c clear
 
-# vtop gruvbox theme
-function vtop
-    command vtop -t gruvbox
-end
-
 # wallpaper-slideshow
 function wp-ss
     bgchd -dir ~/Pictures/wallpapers/ -bcknd feh -intv 10m -rpl
@@ -83,7 +78,9 @@ function idkey
     xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 end
 
-abbr -a mine 'prime-run padsp java -jar ~/packages/tlauncher/TLauncher-2.75.jar'
+function idwin
+    xprop | grep WM_CLASS
+end
 
 function pacs
     pacman -Slq | fzf --prompt 'pacman> ' \

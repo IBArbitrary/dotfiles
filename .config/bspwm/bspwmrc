@@ -45,6 +45,7 @@ bspc rule -a Pick-colour-picker state=floating
 bspc rule -a Xboard state=floating
 bspc rule -a Pulseaudio-equalizer-gtk state=floating
 bspc rule -a PureRef state=floating
+bspc rule -a UltimMC state=floating
 
 bspc config focus_follows_pointer true
 

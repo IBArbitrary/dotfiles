@@ -23,7 +23,7 @@ super + @space
 
 #== launcher (rofi)
 super + shift + @space
-	  rofi -show drun
+	  rofi -show drun -theme w11-appmenu
 
 #== reload sxkhd config
 super + Escape
