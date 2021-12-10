@@ -408,4 +408,3 @@ zenmonitor
 zip
 zotero
 zoxide
-zscroll-git
