@@ -110,6 +110,13 @@ end
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 
+function vobsub-embed
+    ffmpeg -i $argv[1] -i $argv[2] -i $argv[3] \
+        -map 0:v -map 0:a -c copy -map 1 -c:s:1 dvd_subtitle -metadata:s:s:1 \
+        language=eng $argv[4]
+end
+
+
 # file-opener function. might come in handy.
 function fzfr
     fzf -m | xargs -d'\n' -r $argv
