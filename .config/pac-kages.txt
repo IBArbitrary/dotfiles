@@ -300,6 +300,7 @@ texlive-publishers
 texlive-science
 texstudio
 tidy
+timg
 tk
 tldr
 tmux

@@ -64,5 +64,5 @@
 
 window {
     border: 2;
-    border-radius: 15;
+    border-radius: 10;
 }

@@ -70,8 +70,11 @@ alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 
 # doom-emacs
 alias doom "~/packages/doom-emacs/bin/doom"
+
 alias orca xxiivv-orca
 alias b "buku --suggest"
+alias zat zathura
+alias zar zaread
 
 # identify key id
 function idkey
