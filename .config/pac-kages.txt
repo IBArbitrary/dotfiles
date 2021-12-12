@@ -19,6 +19,7 @@ bat
 bc
 bdf-unifont
 beautysh
+betterdiscord-installer
 binutils
 bison
 blender
@@ -55,6 +56,7 @@ dialog
 dict-gcide
 dict-moby-thesaurus
 dictd
+discord
 dolphin
 dos2unix
 downgrade
@@ -138,7 +140,6 @@ libexif
 libreoffice-fresh
 librewolf-bin
 libtool
-lightcord-bin
 linux
 linux-firmware
 linux-headers
