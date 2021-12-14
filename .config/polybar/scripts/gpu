@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
-mode=$(optimus-manager --print-mode | cut -d " " -f5)
+mode=$(optimus-manager --print-mode |
+    grep -Po "(?<=Current GPU mode : )(.*)")
 
 case $mode in
     integrated)
@@ -12,12 +13,11 @@ case $mode in
         mode="nvi"
         ;;
 esac
-
 test=$(glxinfo | grep -oP "video memory: \K(\d+)(?=\sMB)")
 totM=$(echo $test | cut -d " " -f1)
 freM=$(echo $test | cut -d " " -f2)
-useM=`expr $totM - $freM`
-((perc= useM * 100 / totM))
+useM=$(expr $totM - $freM)
+perc=$(echo "$useM * 100 / $totM" | bc)
 useM=$(echo $useM | numfmt --to si --from-unit=M --format "%f")
 totM=$(echo $totM | numfmt --to si --from-unit=M --format "%f")
 printf "%s%% (%sB / %sB) [%s]" $perc $useM $totM $mode
