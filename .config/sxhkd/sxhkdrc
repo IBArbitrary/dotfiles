@@ -292,8 +292,5 @@ ctrl + alt + Delete
 super + grave
 	dunstctl history-pop
 
-ctrl + space
-     dunstctl close
-
 ctrl + shift + space
      dunstctl close-all
