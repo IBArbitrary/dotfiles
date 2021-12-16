@@ -226,7 +226,7 @@ mount-0 = /media/storage
 [module/temperature]
 type = internal/temperature
 label = "%{T4}Tᵉ%{T-} %temperature-c:3:3%C"
-warn-temperature = 75
+warn-temperature = 80
 label-warn = ${self.label}
 format-background = ${colors.foreground1}
 format-foreground = ${colors.background}
