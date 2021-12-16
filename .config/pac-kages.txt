@@ -222,6 +222,7 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-equalizer-ladspa
 pureref
+pyright
 python
 python-autobgch
 python-beautifulsoup4
