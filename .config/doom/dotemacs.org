@@ -226,14 +226,6 @@ setting /zathura/ as default viewer
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 #+end_src
 
-** lsp
-setting microsoft's python language server for python-lsp
-#+begin_src elisp
-(require 'lsp-python-ms)
-(setq lsp-python-ms-auto-install-server t)
-(add-hook 'python-mode-hook #'lsp)
-#+end_src
-
 ** dashboard
 emacs logo as splash image
 #+begin_src elisp

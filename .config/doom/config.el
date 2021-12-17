@@ -169,10 +169,6 @@
 
 (setq TeX-view-program-selection '((output-pdf "zathura")))
 
-(require 'lsp-python-ms)
-(setq lsp-python-ms-auto-install-server t)
-(add-hook 'python-mode-hook #'lsp)
-
 (setq fancy-splash-image (concat doom-private-dir "splash-images/emacs-e.svg"))
 
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
