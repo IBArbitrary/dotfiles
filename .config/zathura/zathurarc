@@ -42,6 +42,28 @@ set recolor-lightcolor          "#282828" #00
 set recolor-darkcolor           "#ebdbb2" #06
 set recolor                     "true"
 
+# multiple recolor schemes
+
+# gruvbox-light
+map <F1> focus_inputbar ":set recolor-lightcolor \#ebdbb2"
+map <F2> focus_inputbar ":set recolor-darkcolor \#282828"
+map ! feedkeys "<F1><Return><F2><Return>"
+
+# gruvbox-dark
+map <F3> focus_inputbar ":set recolor-lightcolor \#282828"
+map <F4> focus_inputbar ":set recolor-darkcolor \#ebdbb2"
+map @ feedkeys "<F3><Return><F4><Return>"
+
+# black and white
+map <F6> focus_inputbar ":set recolor-lightcolor \#000000"
+map <F7> focus_inputbar ":set recolor-darkcolor \#FFFFFF"
+map \# feedkeys "<F6><Return><F7><Return>"
+
+# original
+map <F8> focus_inputbar ":set recolor-lightcolor \#FFFFFF"
+map <F9> focus_inputbar ":set recolor-darkcolor \#000000"
+map $ feedkeys "<F8><Return><F9><Return>"
+
 # setting recolor-keep true will keep any color your pdf has.
 # if it is false, it'll just be black and white
 set recolor-keephue "true"
