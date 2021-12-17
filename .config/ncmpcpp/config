@@ -4,7 +4,7 @@ mpd_port = "6600"
 mpd_music_dir = "/media/storage/music"
 
 [global]
-colors_enabled = "no"
+colors_enabled = "yes"
 
 enable_window_title = "yes"
 main_window_color = "default"
