@@ -62,7 +62,6 @@ dos2unix
 downgrade
 dunst
 dwarffortress
-edir
 emacs
 exif
 expac
@@ -119,7 +118,6 @@ imlib2
 iniparser
 inkscape
 inter-font
-inxi
 ipython
 java8-openjfx
 jq
@@ -321,6 +319,7 @@ ttf-ubraille
 tty-clock
 ttyplot
 tuir
+ueberzug
 umoria
 vi
 virtualbox

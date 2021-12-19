@@ -51,7 +51,7 @@ abbr -a c clear
 
 # wallpaper-slideshow
 function wp-ss
-    bgchd -dir ~/Pictures/wallpapers/ -bcknd feh -intv 10m -rpl
+    bgchd -dir /media/storage/pictures/wallpapers/ -bcknd feh -intv 10m -rpl
 end
 
 # dotfiles alias for bare git repo
