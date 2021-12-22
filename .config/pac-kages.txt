@@ -13,10 +13,12 @@ auto-cpufreq
 autoconf
 automake
 azpainterb
+baobab
 base
 bashtop
 bat
 bc
+bcprov
 bdf-unifont
 beautysh
 betterdiscord-installer
@@ -119,6 +121,7 @@ iniparser
 inkscape
 inter-font
 ipython
+java-commons-lang
 java8-openjfx
 jq
 js-beautify

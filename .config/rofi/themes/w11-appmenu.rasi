@@ -5,7 +5,7 @@ configuration {
     display-drun: "Search";
     drun-display-format: "{icon} {name}";
     disable-history: false;
-    location: 1;
+    location: 0;
 }
 
 * {

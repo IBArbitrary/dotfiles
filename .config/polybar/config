@@ -362,7 +362,7 @@ content = "ஃ"
 content-background = ${colors.foreground0}
 content-foreground = ${colors.background}
 click-middle = ~/.config/polybar/scripts/powermenu
-click-left = rofi -show drun -theme w11-appmenu
+;click-left = rofi -show drun -theme w11-appmenu
 content-padding = 1
 
 [module/decoration-left]
