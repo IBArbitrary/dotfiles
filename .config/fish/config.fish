@@ -126,6 +126,16 @@ function rmn
     find . -type f -not -name "$argv" | xargs rm
 end
 
+# dir comparer
+function bu-compdir
+    if test -z $argv[3]
+        diff -q $argv[1] $argv[2] | grep -Po "(?<=Only in $argv[1]: )(.*)"
+    else if test -n $argv[3]
+        diff -q $argv[1] $argv[2] | grep -Po "(?<=Only in $argv[2]: )(.*)"
+    end
+end
+
+
 # checking install history of pacman
 abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
 

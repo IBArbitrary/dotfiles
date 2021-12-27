@@ -164,7 +164,6 @@ ncdu
 ncftp
 ncmpcpp
 neofetch
-nerd-fonts-source-code-pro
 network-manager-applet
 networkmanager
 newsboat
@@ -303,6 +302,7 @@ texlive-publishers
 texlive-science
 texstudio
 tidy
+timeshift
 timg
 tk
 tldr
