@@ -607,7 +607,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="/media/storage/books/mathematics/algebra-and-number-theory/" />
+       path="/home/rajeshkumar/temp/" />
     <group
        id="import"
        enable_preview="1"
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#0a0c0d;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;stroke-width:1.37952756;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center">
+     style="fill:#ffffff;-inkscape-font-specification:'plastique kingdom, Normal';font-family:'plastique kingdom';font-size:40px;stroke-width:1.37952756;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center">
     <group
        width="1920"
        height="1044"
