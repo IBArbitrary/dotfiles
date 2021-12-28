@@ -277,7 +277,6 @@ shfmt
 smartmontools
 spicetify-cli
 spotify
-steam
 stylelint
 subversion
 sudo
