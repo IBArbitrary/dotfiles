@@ -185,7 +185,7 @@
        style="fill:none;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
       <eventcontext
          id="pencil"
-         tolerance="4.0"
+         tolerance="40"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="0"
@@ -586,14 +586,14 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi"
          value="222.66" />
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.pdf.cairorenderer"
+       default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
        path="/media/storage/books/mathematics/algebra-and-number-theory"
@@ -1107,7 +1107,7 @@
      org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'plastique kingdom, Normal';font-family:'plastique kingdom';font-size:40px;stroke-width:1.37952756;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;paint-order:stroke markers fill;text-anchor:middle;text-align:center">
+     style="fill:#1a1a1a;-inkscape-font-specification:'Calibration Gothic NBP Latin, Normal';font-family:'Calibration Gothic NBP Latin';font-size:40px;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;text-anchor:middle;text-align:center;stroke-width:4;stroke-dasharray:2, 2;stroke-dashoffset:1.99999995;stroke-linejoin:bevel;stroke:#f8ff71;fill-opacity:0.96701676">
     <group
        width="1920"
        height="1044"
