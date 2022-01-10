@@ -32,14 +32,12 @@ bluez-tools
 bluez-utils
 boost
 bpython
-breeze-default-cursor-theme
 breezex-cursor-theme
 bsp-layout
 bspwm
 buku
 bukubrow
 bumblebee
-cabal-install
 calibre
 cbonsai
 chntpw
@@ -47,9 +45,6 @@ clinfo
 clipmenu
 cmake
 cmake-language-server
-conky
-conky-manager
-cowsay
 cronie
 czkawka-git
 dconf-editor
@@ -60,7 +55,6 @@ dict-moby-thesaurus
 dictd
 discord
 dolphin
-dos2unix
 downgrade
 dunst
 dwarffortress
@@ -112,7 +106,6 @@ gvim
 gzip
 hexchat
 highlight
-hlint
 htop
 imagemagick
 imagemagick-doc
@@ -147,13 +140,12 @@ linux-headers
 llvm
 lmms
 lmms-orgmaker-samples
-lolcat
 lsof
 m4
-magicavoxel
 maim
 make
 marked
+mediainfo
 mesa-utils
 mlocate
 mpc
@@ -161,7 +153,6 @@ mpd
 mplayer
 mpv
 ncdu
-ncftp
 ncmpcpp
 neofetch
 network-manager-applet
@@ -227,7 +218,6 @@ python
 python-autobgch
 python-beautifulsoup4
 python-black
-python-cbeams-git
 python-cookiecutter
 python-ipympl
 python-isort
@@ -301,14 +291,12 @@ texlive-publishers
 texlive-science
 texstudio
 tidy
-timeshift
 timg
 tk
 tldr
 toilet
 toilet-fonts
 tree
-tt
 ttf-cmu-serif
 ttf-font-awesome
 ttf-google-sans

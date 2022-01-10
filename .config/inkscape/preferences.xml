@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="365.143"
-         height="215.115" />
+         width="1715.1"
+         height="1350.66" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -589,7 +589,7 @@
          value="drawing" />
       <group
          id="defaultxdpi"
-         value="222.66" />
+         value="75" />
     </group>
     <group
        id="save_as"
@@ -611,7 +611,7 @@
     <group
        id="import"
        enable_preview="1"
-       path="/home/rajeshkumar/downloads/"
+       path="/home/rajeshkumar/temp/"
        ask="1"
        ask_svg="1"
        link="embed"
@@ -1081,8 +1081,8 @@
      org.inkscape.effect.filter.Invert.transparency="0"
      org.inkscape.effect.filter.Invert.hue="0"
      org.inkscape.effect.filter.LightnessContrast.__live_effect__="0"
-     org.inkscape.effect.filter.LightnessContrast.lightness="0"
-     org.inkscape.effect.filter.LightnessContrast.contrast="-21.57"
+     org.inkscape.effect.filter.LightnessContrast.lightness="-100"
+     org.inkscape.effect.filter.LightnessContrast.contrast="100"
      org.inkscape.effect.filter.Duochrome.__live_effect__="0"
      org.inkscape.effect.filter.Duochrome.tab="optionstab"
      org.inkscape.effect.filter.Quadritone.blend1="normal"
@@ -1104,10 +1104,26 @@
      org.inkscape.effect.filter.ColorShift.__live_effect__="0"
      org.inkscape.effect.filter.ColorShift.sat="1"
      org.inkscape.effect.filter.FeltFeather.hblur="0.641261"
-     org.inkscape.effect.filter.FeltFeather.vblur="2.1028" />
+     org.inkscape.effect.filter.FeltFeather.vblur="2.1028"
+     org.inkscape.effect.filter.Brilliance.__live_effect__="0"
+     org.inkscape.effect.filter.Brilliance.lightness="-10"
+     org.inkscape.effect.filter.Brilliance.brightness="8.86092"
+     org.inkscape.effect.filter.Brilliance.sat="0"
+     org.inkscape.effect.filter.Brilliance.invert="0"
+     org.inkscape.effect.filter.Colorize.blend1="multiply"
+     org.inkscape.effect.filter.Colorize.blend2="screen"
+     org.inkscape.effect.filter.Greyscale.__live_effect__="0"
+     org.inkscape.effect.filter.Greyscale.red="9.15506"
+     org.inkscape.effect.filter.Greyscale.strength="-10"
+     org.inkscape.color.black_and_white.__live_effect__="0"
+     org.inkscape.color.black_and_white.threshold="169"
+     org.inkscape.color.hsl_adjust.__live_effect__="0"
+     org.inkscape.color.hsl_adjust.saturation="86"
+     org.inkscape.color.hsl_adjust.lightness="-96"
+     org.inkscape.color.hsl_adjust.hue="211" />
   <group
      id="desktop"
-     style="fill:#1a1a1a;-inkscape-font-specification:'Calibration Gothic NBP Latin, Normal';font-family:'Calibration Gothic NBP Latin';font-size:40px;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;text-anchor:middle;text-align:center;stroke-width:4;stroke-dasharray:2, 2;stroke-dashoffset:1.99999995;stroke-linejoin:bevel;stroke:#f8ff71;fill-opacity:0.96701676">
+     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;text-anchor:middle;text-align:center;stroke-width:1.75748031;stroke-dashoffset:1.79906278;stroke-linejoin:bevel;stroke:#000000;stroke-linecap:round">
     <group
        width="1920"
        height="1044"
