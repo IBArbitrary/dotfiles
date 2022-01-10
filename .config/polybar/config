@@ -62,7 +62,9 @@ modules-right = decoration-right date time pulseaudio backlight wifi-connection 
 modules-center = title
 tray-position = right
 tray-detached = false
-tray-maxsize = 9
+tray-maxsize = 16
+tray-padding = 2
+tray-background = ${colors.background1}
 
 [bar/bottom]
 inherit = bar/base

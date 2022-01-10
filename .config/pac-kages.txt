@@ -238,7 +238,7 @@ python-scipy
 python-spotdl
 python2
 qalculate-gtk
-qbittorrent
+qbittorrent-qt5
 qpdf
 qrencode
 qt5-styleplugins
