@@ -110,10 +110,18 @@ end
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 
+# embeds vobsub subtitle into video
 function vobsub-embed
     ffmpeg -i $argv[1] -i $argv[2] -i $argv[3] \
         -map 0:v -map 0:a -c copy -map 1 -c:s:1 dvd_subtitle -metadata:s:s:1 \
         language=eng $argv[4]
+end
+
+# get google drive images viewable link
+function gdrive-img-link
+    echo $argv[1] \
+        | grep -Po "(?<=drive.google.com/file/d/)(.*)(?=/view?.*)" \
+        | sed "s/^/https:\/\/drive.google.com\/uc?export=view\&id=/"
 end
 
 
