@@ -130,8 +130,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="1715.1"
-         height="1350.66" />
+         width="561.108"
+         height="481.78" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -586,10 +586,10 @@
        path="">
       <group
          id="exportarea"
-         value="drawing" />
+         value="page" />
       <group
          id="defaultxdpi"
-         value="75" />
+         value="25.4" />
     </group>
     <group
        id="save_as"
@@ -1123,7 +1123,7 @@
      org.inkscape.color.hsl_adjust.hue="211" />
   <group
      id="desktop"
-     style="fill:#ffffff;-inkscape-font-specification:'Impact, Normal';font-family:Impact;font-size:40px;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;text-anchor:middle;text-align:center;stroke-width:1.75748031;stroke-dashoffset:1.79906278;stroke-linejoin:bevel;stroke:#000000;stroke-linecap:round">
+     style="fill:#242424;-inkscape-font-specification:'Georgia, Bold';font-family:Georgia;font-size:5256.07568359px;line-height:1.2;text-decoration-color:#000000;letter-spacing:-10.0000268px;white-space:pre;shape-inside:url(#rect2306);stop-color:#000000;text-anchor:middle;text-align:center;stroke-width:56.69291339;stroke-dashoffset:1.79906278;stroke-linecap:round;font-weight:bold;stroke:#ffffff">
     <group
        width="1920"
        height="1044"

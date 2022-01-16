@@ -47,6 +47,7 @@ cmake
 cmake-language-server
 cronie
 czkawka-git
+dateutils
 dconf-editor
 dfhack
 dialog
