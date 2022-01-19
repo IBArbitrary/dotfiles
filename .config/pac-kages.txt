@@ -252,8 +252,6 @@ rofi
 rpm-tools
 rsync
 rtags
-ruby-bundler
-ruby-nokogiri
 rust-analyzer
 rust-racer
 ryzenadj-git
