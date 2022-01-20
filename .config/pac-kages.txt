@@ -91,7 +91,6 @@ gifsicle
 gimp
 git
 github-cli
-gnuchess
 go
 gparted
 grep
@@ -325,7 +324,6 @@ winetricks
 wireless_tools
 wpa_supplicant
 write_stylus
-xboard
 xclip
 xcursor-themes
 xdg-user-dirs
