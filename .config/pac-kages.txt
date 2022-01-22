@@ -380,6 +380,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xsct
+xtitle
 xxiivv-orca-git
 yad
 yay
