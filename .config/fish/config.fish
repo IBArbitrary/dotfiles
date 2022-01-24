@@ -85,6 +85,11 @@ function idwin
     xprop | grep WM_CLASS
 end
 
+function words
+    grep "^[a-z]\{$argv[1]\}\$" /usr/share/dict/words
+end
+
+
 function pacs
     pacman -Slq | fzf --prompt 'pacman> ' \
         --header 'Install packages.

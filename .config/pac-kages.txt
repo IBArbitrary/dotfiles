@@ -322,6 +322,7 @@ wine-mono
 wine-staging
 winetricks
 wireless_tools
+words
 wpa_supplicant
 write_stylus
 xclip
@@ -386,6 +387,7 @@ yad
 yay
 youtube-dl
 ytfzf
+ytmdl
 zaread-git
 zathura
 zathura-djvu
