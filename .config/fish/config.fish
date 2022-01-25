@@ -178,6 +178,10 @@ export SXHKD_SHELL='sh'
 export GOPATH="$HOME/.go"
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+# java app shenangians
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolKit
 
 abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a nus "vnstat -d"
