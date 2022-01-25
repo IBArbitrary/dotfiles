@@ -207,6 +207,7 @@ poppler
 portmidi
 prettier
 primus
+processing4
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
