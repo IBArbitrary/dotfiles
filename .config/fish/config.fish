@@ -89,6 +89,19 @@ function words
     grep "^[a-z]\{$argv[1]\}\$" /usr/share/dict/words
 end
 
+function mnt
+    sudo mount "/dev/$argv[1]" "/media/$argv[2]"
+end
+
+function umnt
+    sudo umount "/media/$argv[1]"
+end
+
+
+abbr -a mntu "mnt sda1 usb"
+abbr -a mnte "mnt sda1 external"
+abbr -a umntu "umnt usb"
+abbr -a umnte "umnt external"
 
 function pacs
     pacman -Slq | fzf --prompt 'pacman> ' \
