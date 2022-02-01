@@ -166,7 +166,7 @@ super + ctrl + shift + b
 	  librewolf
 
 super + ctrl + b
-	  buku-dmenu
+	  buku-rofi-menu
 
 super + ctrl + shift + p
 	  firefox --private-window
