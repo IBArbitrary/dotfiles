@@ -386,7 +386,7 @@ xsct
 xtitle
 xxiivv-orca-git
 yad
-yay
+yay-git
 youtube-dl
 ytfzf
 ytmdl
