@@ -35,7 +35,7 @@ zoxide init fish | source
 #========== FZF ================================= 
 
 export FZF_DEFAULT_COMMAND="fd -t f"
-export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=sharp --prompt="# " --pointer=">" --marker="+"'
+export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=rounded --prompt="# " --pointer=">" --marker="+"'
 export FZF_ALT_C_OPTS="--height=50% --black --preview 'tree -C {} | head -200' --header='Choose directory to change to.'"
 export FZF_ALT_C_COMMAND="fd -t d -H"
 export FZF_CTRL_T_COMMAND="fd -H"
@@ -75,6 +75,7 @@ alias orca xxiivv-orca
 alias b "buku --suggest"
 alias zat zathura
 alias zar zaread
+alias ssh "kitty +kitten ssh"
 
 # identify key id
 function idkey
