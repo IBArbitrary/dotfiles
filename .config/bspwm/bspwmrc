@@ -59,3 +59,6 @@ bgchd -dir /media/storage/pictures/wallpapers/ -intv 5m -bcknd feh -rpl
 
 # controlling players
 playerctld daemon
+
+# nm-applet
+nm-applet &

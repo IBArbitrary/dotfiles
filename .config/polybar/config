@@ -58,13 +58,13 @@ wm-restack = bspwm
 inherit = bar/base
 fix-center = true
 modules-left = arch bspwm net-speed net-usage decoration-left
-modules-right = decoration-right date time pulseaudio backlight wifi-connection wifi-status bluetooth-connection bluetooth-status
+modules-right = decoration-right date time pulseaudio backlight bluetooth-connection bluetooth-status wifi-connection wifi-status
 modules-center = title
 tray-position = right
 tray-detached = false
 tray-maxsize = 16
 tray-padding = 2
-tray-background = ${colors.background1}
+tray-background = ${colors.foreground0}
 
 [bar/bottom]
 inherit = bar/base
@@ -243,7 +243,7 @@ interval = 0.5
 [module/wifi-connection]
 type = internal/network
 format-connected = ▕<ramp-signal>▏ <label-connected>
-format-connected-background = ${colors.foreground3}
+format-connected-background = ${colors.foreground1}
 format-connected-foreground = ${colors.background2}
 format-connected-padding = 1
 format-disconnected-background = ${colors.red}
@@ -266,11 +266,34 @@ ramp-signal-7 = █
 type = custom/script
 interval = 1
 format-padding = 1
-format-background = ${colors.foreground2}
+format-background = ${colors.foreground0}
 format-foreground = ${colors.background}
 format-font = 4
 exec = ~/.config/polybar/scripts/wifi
-click-left = ~/.config/polybar/scripts/wifi --toggle
+click-middle = ~/.config/polybar/scripts/wifi --toggle
+
+
+[module/bluetooth-connection]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetoothctl
+click-left = ~/.config/polybar/scripts/bluetoothctl --toggle
+tail = true
+format-background = ${colors.foreground3}
+format-foreground = ${colors.background2}
+format-padding = 1
+label = %output:4:8:…%
+
+[module/bluetooth-status]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth
+format-padding = 1
+format-background = ${colors.foreground2}
+format-foreground = ${colors.background}
+format-font = 4
+interval = 1
+click-left = ~/.config/polybar/scripts/bluetooth --toggle-service
+click-right = ~/.config/polybar/scripts/bluetooth --toggle
+click-middle = ~/.config/polybar/scripts/bluetoothctl --toggle
 
 [module/net-speed]
 type = internal/network
@@ -392,29 +415,6 @@ interval = 30
 format-padding = 1
 format-background = ${colors.background4}
 format-foreground = ${colors.foreground3}
-
-
-[module/bluetooth-connection]
-type = custom/script
-exec = ~/.config/polybar/scripts/bluetoothctl
-click-left = ~/.config/polybar/scripts/bluetoothctl --toggle
-tail = true
-format-background = ${colors.foreground1}
-format-foreground = ${colors.background2}
-format-padding = 1
-label = %output:4:8:…%
-
-[module/bluetooth-status]
-type = custom/script
-exec = ~/.config/polybar/scripts/bluetooth
-format-padding = 1
-format-font = 4
-format-background = ${colors.foreground0}
-format-foreground = ${colors.background}
-interval = 1
-click-left = ~/.config/polybar/scripts/bluetooth --toggle-service
-click-right = ~/.config/polybar/scripts/bluetooth --toggle
-click-middle = ~/.config/polybar/scripts/bluetoothctl --toggle
 
 [module/mpd]
 type = internal/mpd
