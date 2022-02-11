@@ -289,7 +289,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
-texstudio
+texstudio-dark-git
 tidy
 timg
 tk

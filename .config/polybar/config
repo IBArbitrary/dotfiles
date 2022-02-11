@@ -57,7 +57,7 @@ wm-restack = bspwm
 [bar/top]
 inherit = bar/base
 fix-center = true
-modules-left = arch bspwm net-speed net-usage decoration-left
+modules-left = arch bspwm net-speed-wifi net-speed-eth net-usage decoration-left
 modules-right = decoration-right date time pulseaudio backlight bluetooth-connection bluetooth-status wifi-connection wifi-status
 modules-center = title
 tray-position = right
@@ -295,7 +295,7 @@ click-left = ~/.config/polybar/scripts/bluetooth --toggle-service
 click-right = ~/.config/polybar/scripts/bluetooth --toggle
 click-middle = ~/.config/polybar/scripts/bluetoothctl --toggle
 
-[module/net-speed]
+[module/net-speed-wifi]
 type = internal/network
 format-connected = <label-connected>
 format-connected-background = ${colors.background3}
@@ -305,6 +305,18 @@ format-connected-font = 1
 label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
 label-disconnected = ""
 interface = wlo1
+interval = 0.5
+
+[module/net-speed-eth]
+type = internal/network
+format-connected = <label-connected>
+format-connected-background = ${colors.background3}
+format-connected-foreground = ${colors.foreground4}
+format-connected-padding = 1
+format-connected-font = 1
+label-connected = "%downspeed:9% ↓ %upspeed:9% ↑"
+label-disconnected = ""
+interface = eno1
 interval = 0.5
 
 [module/battery]
