@@ -115,6 +115,7 @@ iniparser
 inkscape
 inter-font
 ipython
+iw
 java-commons-lang
 java8-openjfx
 jq
@@ -138,6 +139,7 @@ libtool
 linux
 linux-firmware
 linux-headers
+linux-wifi-hotspot
 llvm
 lmms
 lmms-orgmaker-samples

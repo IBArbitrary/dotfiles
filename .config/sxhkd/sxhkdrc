@@ -196,6 +196,9 @@ super + shift + s ; {g,s}
 super + shift + q
 	  qalculate-gtk
 
+super + shift + ctrl + h
+	wihotspot
+
 super + shift + d
 	  discord
 
