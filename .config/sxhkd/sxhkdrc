@@ -297,3 +297,6 @@ super + grave
 
 ctrl + shift + space
      dunstctl close-all
+
+super+ Delete
+	 env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
