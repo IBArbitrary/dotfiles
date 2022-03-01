@@ -11,7 +11,7 @@
 # ┇┇━┛┛ ┇┇┗┛┇━┛┇ ┇ ┇┗┛┛ ┇┇┗┛ ┇
 ################################################################################
 # default interface (leave empty for automatic selection)
-Interface "wlo1"
+#Interface 
 
 # location of the database directory
 DatabaseDir "/var/lib/vnstat"

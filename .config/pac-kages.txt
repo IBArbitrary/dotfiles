@@ -8,6 +8,7 @@ android-udev
 arch-wiki-man
 aspell-en
 atool
+audacious
 audio-recorder
 auto-cpufreq
 autoconf
@@ -108,6 +109,7 @@ gzip
 hexchat
 highlight
 htop
+imagej2
 imagemagick
 imagemagick-doc
 imlib2
@@ -385,6 +387,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xsct
+xsecurelock
 xtitle
 xxiivv-orca-git
 yad
