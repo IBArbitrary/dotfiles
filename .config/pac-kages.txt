@@ -165,8 +165,8 @@ networkmanager
 newsboat
 ninja
 nm-connection-editor
-nodejs
 nodejs-http-server
+nodejs-lts-fermium
 noto-fonts-emoji
 npm
 ntfs-3g
