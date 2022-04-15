@@ -1,16 +1,15 @@
-#!/bin/sh
+#!/usr/bin/env bash
 BORDER_SIZE=-2
 BAR_HEIGHT=20
 
 case "$1" in
     --left)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
-        then
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ]; then
             exit 0
         fi
 
         tempfile="/tmp/polybar.vnstat.left.png"
-        vnstati -c 15 -s -i wlo1 -ne --headertext "wifi usage summary" -L -o $tempfile
+        vnstati -c 15 -s -i wlo1+eno1 -ne --headertext "net usage summary" -L -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
@@ -41,17 +40,16 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="internet-stats" >/dev/null ;
+            --title="internet-stats" >/dev/null
         rm $tempfile
         ;;
     --middle)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
-        then
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ]; then
             exit 0
         fi
 
         tempfile="/tmp/polybar.vnstat.middle.png"
-        vnstati -hg -c 15 -i wlo1 -ne -L --headertext "hourly statistics" -o $tempfile
+        vnstati -hg -c 15 -i wlo1+eno1 -ne -L --headertext "hourly statistics" -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
@@ -82,17 +80,16 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="internet-stats" >/dev/null ;
+            --title="internet-stats" >/dev/null
         rm $tempfile
         ;;
     --right)
-        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ];
-        then
+        if [ "$(xdotool getwindowfocus getwindowname)" = "internet-stats" ]; then
             exit 0
         fi
 
         tempfile="/tmp/polybar.vnstat.right.png"
-        vnstati -m -c 15 -i wlo1 -ne -L --headertext "monthly statistics" -o $tempfile
+        vnstati -m -c 15 -i wlo1+eno1 -ne -L --headertext "monthly statistics" -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
@@ -123,17 +120,17 @@ case "$1" in
         yad --image $tempfile --no-buttons --borders=0 --close-on-unfocus \
             --width="$FEH_WIDTH" --height="$FEH_HEIGHT" \
             --posx="$pos_x" --posy="$pos_y" \
-            --title="internet-stats" >/dev/null ;
+            --title="internet-stats" >/dev/null
         rm $tempfile
         ;;
     *)
-        stats=$(vnstat -i wlo1 --json)
+        stats=$(vnstat -i wlo1+eno1 --json)
         down=$(echo $stats |
-                   jq ".interfaces[0].traffic.day[-1].rx" |
-                   numfmt --to si --format "%.2f")
+            jq ".interfaces[0].traffic.day[-1].rx" |
+            numfmt --to si --format "%.2f")
         up=$(echo $stats |
-                 jq ".interfaces[0].traffic.day[-1].tx" |
-                 numfmt --to si --format "%.2f")
+            jq ".interfaces[0].traffic.day[-1].tx" |
+            numfmt --to si --format "%.2f")
         down+="B"
         up+="B"
         echo "$down ↕ $up"
