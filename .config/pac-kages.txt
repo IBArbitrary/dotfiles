@@ -50,7 +50,6 @@ cronie
 czkawka-git
 dateutils
 dconf-editor
-dfhack
 dialog
 dict-gcide
 dict-moby-thesaurus
@@ -122,9 +121,8 @@ java-commons-lang
 java8-openjfx
 jq
 js-beautify
-jupyter
 jupyterlab
-jupyterlab-widgets
+jupyterthemes
 kdenlive
 kitty
 krita
@@ -212,13 +210,13 @@ poppler
 portmidi
 prettier
 primus
-processing4
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-equalizer-ladspa
 pureref
+pycharm-community-edition
 pyright
 python
 python-autobgch
@@ -226,6 +224,7 @@ python-beautifulsoup4
 python-black
 python-cookiecutter
 python-ipympl
+python-ipywidgets
 python-isort
 python-lxml
 python-matplotlib
