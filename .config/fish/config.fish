@@ -130,6 +130,10 @@ function zt
     tabbed -c -r 2 zathura -e id $argv & disown
 end
 
+function zat
+    zathura $argv[1] & disown
+end
+
 # quick cd to config dirs
 function cf
     cd ~/.config
@@ -210,6 +214,12 @@ abbr -a yc "yay -Sc"
 abbr -a yt 'ytfzf --subt -tf --preview-side=right'
 abbr -a ytd youtube-dl
 abbr -a ytf "youtube-dl -F"
+abbr -a syncall "rsync -avu /media/storage/books/ /media/external/books/;
+  rsync -avu /media/storage/music/ /media/external/music;
+  rsync -avu /media/storage/pictures/wallpapers/ /media/external/wallpapers/;
+  rsync -avu /media/storage/series/ /media/external/series/;
+  rsync -avu /media/storage/movies/ /media/external/movies/
+"
 
 # aliases
 alias b "buku --suggest"
@@ -227,8 +237,7 @@ alias orca xxiivv-orca
 alias ssh "kitty +kitten ssh"
 alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 alias zar zaread
-alias zat zathura
-alias zathurat 'tabbed -c -r 2 zathura -e id'
+alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection clipboard -i'
 
 # env var exports
 export AWT_TOOLKIT=MToolKit
