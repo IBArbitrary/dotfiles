@@ -238,6 +238,7 @@ alias ssh "kitty +kitten ssh"
 alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
 alias zar zaread
 alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection clipboard -i'
+alias pycharm 'pycharm nosplash'
 
 # env var exports
 export AWT_TOOLKIT=MToolKit
