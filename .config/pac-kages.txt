@@ -46,6 +46,8 @@ clinfo
 clipmenu
 cmake
 cmake-language-server
+code
+code-features
 cronie
 czkawka-git
 dateutils
@@ -312,6 +314,7 @@ ttf-ubraille
 tty-clock
 ttyplot
 tuir
+twine
 ueberzug
 umoria
 vi
