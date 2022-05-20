@@ -46,6 +46,7 @@ bspc rule -a Xboard state=floating
 bspc rule -a Pulseaudio-equalizer-gtk state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a UltimMC state=floating
+bspc rule -a scrcpy state=floating
 bspc rule -a 7zFM state=floating
 bspc rule -a Wihotspot-gui state=floating
 
