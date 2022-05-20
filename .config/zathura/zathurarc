@@ -79,7 +79,11 @@ map [fullscreen] k scroll up
 map [fullscreen] h navigate previous
 map [fullscreen] l navigate next
 map [fullscreen] <C-r> recolor
+map [fullscreen] r rotate
 map H feedkeys ":exec sh -c \"cat ~/.local/share/zathura/history | grep -Po '\[\K[^\]]*' | dmenu | xargs zathura\""
 
 set window-title-basename true
 set window-title-page true
+set synctex true
+set sandbox none
+set statusbar-page-percent true
