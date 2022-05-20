@@ -3,7 +3,6 @@ acpi_call
 alsa-utils
 amd-ucode
 amdgpu-pro-libgl
-amf-amdgpu-pro
 android-udev
 arch-wiki-man
 aspell-en
@@ -46,6 +45,7 @@ clinfo
 clipmenu
 cmake
 cmake-language-server
+cmu-sans-font-ttf
 code
 code-features
 cronie
@@ -94,6 +94,7 @@ gifsicle
 gimp
 git
 github-cli
+gnome-keyring
 go
 gparted
 grep
@@ -123,6 +124,7 @@ java-commons-lang
 java8-openjfx
 jq
 js-beautify
+julia
 jupyterlab
 jupyterthemes
 kdenlive
@@ -135,6 +137,7 @@ lib32-nvidia-utils
 lib32-opencl-nvidia
 lib32-vulkan-amdgpu-pro
 libexif
+librecad
 libreoffice-fresh
 librewolf-bin
 libtool
@@ -264,6 +267,7 @@ ryzenadj-git
 sbcl
 sc-im
 scdoc
+scrcpy
 screenkey
 scrot
 sed
@@ -289,6 +293,7 @@ texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-latexindent-meta
 texlive-music
 texlive-pictures
 texlive-pstricks
@@ -302,7 +307,11 @@ tldr
 toilet
 toilet-fonts
 tree
+ttf-cmu-bright
+ttf-cmu-concrete
+ttf-cmu-sans-serif
 ttf-cmu-serif
+ttf-cmu-typewriter
 ttf-font-awesome
 ttf-google-sans
 ttf-ms-fonts
@@ -323,6 +332,7 @@ virtualbox-guest-iso
 virtualbox-host-modules-arch
 vnstat
 vulkan-amdgpu-pro
+vulkan-radeon
 w3m
 wget
 which
@@ -404,5 +414,5 @@ zathura-pdf-mupdf
 zbar
 zenmonitor
 zip
-zotero
+zotero-bin
 zoxide
