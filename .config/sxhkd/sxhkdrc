@@ -186,12 +186,8 @@ super + shift + z
 super + alt + z
 	zotbib-rofi
 
-# super + shift + s
-# 	  flameshot gui
-
 super + shift + s ; {g,s}
 	  {flameshot gui,maim -s | xclip -selection c -t image/png}
-
 
 super + shift + q
 	  qalculate-gtk
@@ -202,8 +198,8 @@ super + shift + ctrl + h
 super + shift + d
 	  discord
 
-super + shift + o ; {b,b+3,s}
-	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify}
+super + shift + o ; {b,b+3,s,c,v,t}
+	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""
