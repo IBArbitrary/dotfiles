@@ -141,6 +141,7 @@ librecad
 libreoffice-fresh
 librewolf-bin
 libtool
+light
 linux
 linux-firmware
 linux-headers
@@ -370,7 +371,6 @@ xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
 xorg-xauth
-xorg-xbacklight
 xorg-xcmsdb
 xorg-xcursorgen
 xorg-xdpyinfo
