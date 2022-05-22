@@ -139,9 +139,8 @@ ramp-volume-5 = "▉"
 ramp-volume-6 = "█"
 
 [module/backlight]
-;type = custom/script
 type = internal/backlight
-format =%{A3:xbacklight -set 0:}%{A2:xbacklight -set 50:}%{A1:xbacklight -set 100:}%{T4}Bʳ%{T-}▕<ramp>▏<label>%{A}%{A}%{A}
+format =%{A3:light -S 0:}%{A2:light -S 50:}%{A1:light -S 100:}%{T4}Bʳ%{T-}▕<ramp>▏<label>%{A}%{A}%{A}
 card = amdgpu_bl0
 label = %percentage:3:3%%
 enable-scroll = true
@@ -154,9 +153,6 @@ ramp-1 = "░"
 ramp-2 = "▒"
 ramp-3 = "▓"
 ramp-4 = "█"
-click-left = xbacklight -set 100
-click-middle = xbacklight -set 50
-click-right = xbacklight -set 0
 
 [module/title]
 type = internal/xwindow
