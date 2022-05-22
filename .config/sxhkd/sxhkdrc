@@ -268,10 +268,10 @@ super + Print
 	  flameshot full -p ~/pictures/screenshots/ -c
 
 XF86MonBrightnessDown
-	  xbacklight -10
+	  light -U 10
 
 XF86MonBrightnessUp
-	  xbacklight +10
+	  light -A 10
 
 XF86AudioMute
 	  pactl set-sink-mute @DEFAULT_SINK@ toggle
