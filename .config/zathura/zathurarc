@@ -87,3 +87,4 @@ set window-title-page true
 set synctex true
 set sandbox none
 set statusbar-page-percent true
+set page-right-to-left false

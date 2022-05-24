@@ -414,5 +414,6 @@ zathura-pdf-mupdf
 zbar
 zenmonitor
 zip
+zoom
 zotero-bin
 zoxide

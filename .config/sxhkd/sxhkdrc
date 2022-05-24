@@ -249,6 +249,9 @@ super + alt + shift + m
 super + alt + c
 	  clipmenu -l 0 -i
 
+super + shift + alt + c
+	  cam
+
 super + alt + b
 	  ~/bin/alt-book all
 
