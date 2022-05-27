@@ -141,6 +141,11 @@ function cf
     cd $config_dir
 end
 
+# to caculate difference between given date and current date
+function howlong
+    datediff $argv[1] (date +"%Y-%m-%d") -f "%yy %mm %dd"
+end
+
 # miscellaneous commands
 zoxide init fish | source
 eval 'dircolors ~/.dircolors' >/dev/null
