@@ -93,7 +93,6 @@ gettext
 gifsicle
 gimp
 git
-github-cli
 gnome-keyring
 go
 gparted
@@ -277,7 +276,6 @@ shfmt
 smartmontools
 spicetify-cli
 spotify
-stylelint
 subversion
 sudo
 sxhkd
