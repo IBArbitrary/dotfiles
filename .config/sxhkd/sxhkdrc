@@ -84,7 +84,7 @@ super + {p,b,comma,period}
 	  bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+alt + Tab + {_,shift}
 	  bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -192,11 +192,8 @@ super + shift + q
 super + shift + ctrl + h
 	wihotspot
 
-super + shift + d
-	  discord
-
-super + shift + o ; {b,b+3,s,c,v,t,z,i,g}
-	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp}
+super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d}
+	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp,discord}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""
@@ -204,26 +201,17 @@ super + shift + e
 super + ctrl + e
 	  bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
 
-super + ctrl + shift + e
-	  bspc rule -a \* -o state=floating center=true && doom everywhere
-
 super + shift + p
 	  bspc rule -a \* -o state=floating && kitty ncmpcpp
 
 super + shift + alt + p
 	  mpdmenu -p
 
-super + shift + m
-	  mpd
-
 super + shift + n
 	  bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty newsboat
 
 super + ctrl + p
 	  pick-colour-picker
-
-super + ctrl + c
-	  xboard
 
 super + shift + backslash
 	  ~/bin/wm-config-toggles bar
@@ -239,9 +227,6 @@ super + alt + e ; {c,e}
 
 super + alt + p
 	  passmenu -i -p "password: "
-
-super + alt + shift + m
-	  ~/bin/monitors
 
 super + alt + c
 	  clipmenu -l 0 -i
@@ -294,5 +279,5 @@ super + grave
 ctrl + shift + space
      dunstctl close-all
 
-super+ Delete
+super + Delete
 	 env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
