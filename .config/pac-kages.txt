@@ -96,6 +96,7 @@ git
 gnome-keyring
 go
 gparted
+grabc
 grep
 groff
 gruvbox-dark-gtk
@@ -188,6 +189,7 @@ otf-ibm-plex
 p7zip
 p7zip-gui
 pacgraph
+pachist-git
 pacman
 pacman-contrib
 pacmixer
