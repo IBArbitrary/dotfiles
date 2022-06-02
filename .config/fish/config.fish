@@ -154,7 +154,7 @@ end
 
 # miscellaneous commands
 zoxide init fish | source
-eval 'dircolors ~/.dircolors' >/dev/null
+eval dircolors "$XDG_CONFIG_HOME/dircolors" >/dev/null
 gpgconf --launch gpg-agent
 
 # abbreviations
@@ -252,6 +252,8 @@ alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection 
 alias pycharm 'pycharm nosplash'
 alias svn "svn --config-dir \"$XDG_CONFIG_HOME/subversion\""
 alias yarn="yarn --use-yarnrc \"$XDG_CONFIG_HOME/yarn/config\""
+alias nvidia-setting="nvidia-settings --config=\"$XDG_CONFIG_HOME/nvidia/settings\""
+alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
 
 # XDG paths
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -274,6 +276,11 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
 export XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GEM_HOME="$XDG_DATA_HOME/gem"
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
+export GOPATH="$XDG_DATA_HOME/go"
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 export AWT_TOOLKIT=MToolKit
 export BAR_VISIBLE=1
@@ -284,10 +291,8 @@ export FZF_CTRL_R_OPTS="--height=50% --black --header='Choose command from histo
 export FZF_CTRL_T_COMMAND="fd -H"
 export FZF_CTRL_T_OPTS="--height=50% --black --header='Choose file/folder.'"
 export FZF_DEFAULT_COMMAND="fd -t f"
-export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=rounded --prompt="# " --pointer=">" --marker="+"'
-export GOPATH="$HOME/.go"
+export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=rounded --prompt="# " --pointer=" >" --marker="+"'
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
-export PATH="$PATH:$HOME/.rvm/bin"
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 export SXHKD_SHELL='sh'
 export TERM='xterm-kitty'
