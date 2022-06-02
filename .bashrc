@@ -140,3 +140,5 @@ export EDITOR='emacsclient --create-frame --alternate-editor=""'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 eval 'dircolors ~/.dircolors' >/dev/null
+
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.bash
