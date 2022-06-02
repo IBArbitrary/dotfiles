@@ -146,6 +146,12 @@ function howlong
     datediff $argv[1] (date +"%Y-%m-%d") -f "%yy %mm %dd"
 end
 
+# to make and change to dir
+function cdm
+    mkdir $argv[1]
+    cd $argv[1]
+end
+
 # miscellaneous commands
 zoxide init fish | source
 eval 'dircolors ~/.dircolors' >/dev/null
@@ -240,12 +246,35 @@ alias llA 'ls -oAh'
 alias lla 'ls -oah'
 alias orca xxiivv-orca
 alias ssh "kitty +kitten ssh"
-alias xx 'exec sh -c "startx; sudo /usr/bin/prime-switch"'
+alias xx 'exec sh -c "startx \"$XDG_CONFIG_HOME/X11/xinitrc\"; sudo /usr/bin/prime-switch"'
 alias zar zaread
 alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection clipboard -i'
 alias pycharm 'pycharm nosplash'
+alias svn "svn --config-dir \"$XDG_CONFIG_HOME/subversion\""
+alias yarn="yarn --use-yarnrc \"$XDG_CONFIG_HOME/yarn/config\""
 
-# env var exports
+# XDG paths
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export LESSHISTFILE=-
+
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME/mathematica"
+export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+export RUSTUP_HOOME="$XDG_DATA_HOME/rustup"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+export XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc"
+
 export AWT_TOOLKIT=MToolKit
 export BAR_VISIBLE=1
 export EDITOR='emacsclient -t -a "vim"'
