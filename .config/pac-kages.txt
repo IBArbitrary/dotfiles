@@ -230,6 +230,8 @@ python-autobgch
 python-beautifulsoup4
 python-black
 python-cookiecutter
+python-folium
+python-gpxpy
 python-ipympl
 python-ipywidgets
 python-isort
@@ -300,7 +302,6 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
-texstudio-dark-git
 tidy
 timg
 tk
