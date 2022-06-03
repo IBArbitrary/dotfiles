@@ -152,11 +152,6 @@ function cdm
     cd $argv[1]
 end
 
-# miscellaneous commands
-zoxide init fish | source
-eval dircolors "$XDG_CONFIG_HOME/dircolors" >/dev/null
-gpgconf --launch gpg-agent
-
 # abbreviations
 abbr -a :q exit
 abbr -a bks 'cd /media/storage/books/'
@@ -300,3 +295,9 @@ export VISUAL='emacsclient -c -a ""'
 export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+
+# miscellaneous commands
+zoxide init fish | source
+eval dircolors "$XDG_CONFIG_HOME/dircolors" >/dev/null
+gpgconf --launch gpg-agent
+
