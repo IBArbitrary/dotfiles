@@ -300,4 +300,3 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 zoxide init fish | source
 eval dircolors "$XDG_CONFIG_HOME/dircolors" >/dev/null
 gpgconf --launch gpg-agent
-
