@@ -184,7 +184,7 @@ super + alt + z
 	zotbib-rofi
 
 super + shift + s ; {g,s}
-	  {flameshot gui,maim -s | xclip -selection c -t image/png}
+	  {flameshot gui,maim -s -u | xclip -selection c -t image/png}
 
 super + shift + q
 	  qalculate-gtk
@@ -192,8 +192,8 @@ super + shift + q
 super + shift + ctrl + h
 	wihotspot
 
-super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d}
-	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp,discord}
+super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l}
+	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp,discord,lrcs}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""
@@ -281,3 +281,4 @@ ctrl + shift + space
 
 super + Delete
 	 env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
+
