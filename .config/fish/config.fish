@@ -141,6 +141,13 @@ function cf
     cd $config_dir
 end
 
+# command history with number of uses
+function ch
+    if test -z $argv[1]
+        history | awk '{print $1}' | sort | uniq -c | sort -nr | less
+    end
+end
+
 # to caculate difference between given date and current date
 function howlong
     datediff $argv[1] (date +"%Y-%m-%d") -f "%yy %mm %dd"
@@ -240,12 +247,16 @@ alias ll 'ls -oh'
 alias llA 'ls -oAh'
 alias lla 'ls -oah'
 alias orca xxiivv-orca
+alias rr ranger
 alias ssh "kitty +kitten ssh"
 alias xx 'exec sh -c "startx \"$XDG_CONFIG_HOME/X11/xinitrc\"; sudo /usr/bin/prime-switch"'
 alias zar zaread
 alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection clipboard -i'
 alias pycharm 'pycharm nosplash'
+alias s sxiv
+alias s. "sxiv ."
 alias svn "svn --config-dir \"$XDG_CONFIG_HOME/subversion\""
+alias v vim
 alias yarn="yarn --use-yarnrc \"$XDG_CONFIG_HOME/yarn/config\""
 alias nvidia-setting="nvidia-settings --config=\"$XDG_CONFIG_HOME/nvidia/settings\""
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
@@ -259,7 +270,6 @@ export LESSHISTFILE=-
 
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME/mathematica"
 export MPLAYER_HOME="$XDG_CONFIG_HOME/mplayer"
