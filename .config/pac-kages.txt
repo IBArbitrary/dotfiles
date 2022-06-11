@@ -111,6 +111,7 @@ gzip
 hexchat
 highlight
 htop
+hwinfo
 imagemagick
 imagemagick-doc
 imlib2
@@ -159,6 +160,7 @@ mesa-utils
 mlocate
 mpc
 mpd
+mpdris2
 mplayer
 mpv
 ncdu
@@ -265,6 +267,8 @@ rofi
 rpm-tools
 rsync
 rtags
+ruby-bundler
+ruby-webrick
 rust-analyzer
 rust-racer
 ryzenadj-git
