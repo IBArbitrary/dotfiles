@@ -282,6 +282,7 @@ sed
 shellcheck-bin
 shfmt
 smartmontools
+songrec
 spicetify-cli
 spotify
 subversion
