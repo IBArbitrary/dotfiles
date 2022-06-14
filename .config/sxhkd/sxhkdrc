@@ -84,8 +84,11 @@ super + {p,b,comma,period}
 	  bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-alt + Tab + {_,shift}
-	  bspc node -f {next,prev}.local.!hidden.window
+ctrl + alt + Tab + {_,shift}
+ 	  bspc node -f {next,prev}.local.!hidden.window
+
+alt + Tab
+    	  rofi -show window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -193,7 +196,7 @@ super + shift + ctrl + h
 	wihotspot
 
 super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l}
-	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp,discord,lrcs}
+	  {prime-run blender & disown, prime-run blender-3.0 & disown,spotify,rofi-code,virtualbox -style Fusion,texstudio,zotero,inkscape,gimp,discord,lrcs}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""

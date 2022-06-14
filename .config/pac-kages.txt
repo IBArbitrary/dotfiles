@@ -264,6 +264,7 @@ refind
 rhash
 ripgrep
 rofi
+rofi-code-git
 rpm-tools
 rsync
 rtags
