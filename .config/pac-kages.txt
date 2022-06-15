@@ -33,7 +33,6 @@ bluez-utils
 boost
 bpython
 breezex-cursor-theme
-bsp-layout
 bspwm
 buku
 bukubrow

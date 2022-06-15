@@ -60,13 +60,6 @@ super + y
 super + {t,shift + ctrl + t,s,f}
 	  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-super + shift + t
-	  bsp-layout set tiled
-
-# different layouts using bsp-layout
-super + {a,shift + a,ctrl + a,ctrl + shift + a,g,shift + g,e}
-	  bsp-layout set {tall,rtall,wide,rwide,rgrid,grid,even}
-
 # set the node flags
 super + ctrl + {m,x,y,z}
 	  bspc node -g {marked,locked,sticky,private}
@@ -274,7 +267,7 @@ super + shift {Prior, Next, Pause, Insert}
 	  bgctl {prev, next, pause, play}
 
 ctrl + alt + Delete
-     rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str "window \{width: 15%; padding:10px;\} listview \{lines: 6;\}"
+     rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str "window \{width: 15%; padding:10px;\} listview \{lines: 5;\}"
 
 super + grave
 	dunstctl history-pop
