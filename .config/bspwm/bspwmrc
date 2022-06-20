@@ -49,6 +49,7 @@ bspc rule -a UltimMC state=floating
 bspc rule -a scrcpy state=floating
 bspc rule -a 7zFM state=floating
 bspc rule -a Wihotspot-gui state=floating
+bspc rule -a Surf state=tiled
 
 bspc config focus_follows_pointer true
 
