@@ -157,7 +157,7 @@ ramp-4 = "█"
 [module/title]
 type = internal/xwindow
 label-maxlen = 70
-label = " %title%"
+label = "%title%"
 label-empty = "..."
 label-empty-foreground = ${colors.background3}
 
