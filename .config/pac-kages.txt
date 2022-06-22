@@ -58,7 +58,6 @@ dictd
 discord
 dolphin
 dolphin-plugins
-downgrade
 dunst
 dwarffortress
 emacs
@@ -284,6 +283,7 @@ smartmontools
 songrec
 spicetify-cli
 spotify
+spotify-adblock
 subversion
 sudo
 sxhkd
