@@ -186,7 +186,7 @@ super + shift + q
 super + shift + ctrl + h
 	wihotspot
 
-super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l}
+super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l,k}
 	  {prime-run blender & disown, \
 	  prime-run blender-3.0 & disown, \
 	  LD_PRELOAD=/usr/lib/spotify-adblock.so spotify, \
@@ -197,7 +197,12 @@ super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l}
 	  inkscape, \
 	  gimp, \
 	  discord, \
-	  lrcs}
+	  libreoffice, \
+	  krita}
+
+super + alt + o ; {c,l}
+	{cpicker, \
+	lrcs}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""
