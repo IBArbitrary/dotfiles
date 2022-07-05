@@ -350,6 +350,7 @@ words
 wpa_supplicant
 write_stylus
 xclip
+xcolor
 xcursor-themes
 xdg-user-dirs
 xdotool
