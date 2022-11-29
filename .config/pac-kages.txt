@@ -55,12 +55,12 @@ dialog
 dict-gcide
 dict-moby-thesaurus
 dictd
-discord
+discord-canary
 dolphin
 dolphin-plugins
 dunst
 dwarffortress
-emacs
+emacs-nativecomp
 exif
 expac
 fakeroot
@@ -92,6 +92,7 @@ gimp
 git
 gnome-keyring
 go
+google-chrome
 gparted
 grabc
 grep
@@ -121,7 +122,7 @@ java-commons-lang
 java8-openjfx
 jq
 js-beautify
-julia
+julia-bin
 jupyterlab
 jupyterthemes
 kdenlive
@@ -153,6 +154,8 @@ make
 marked
 mediainfo
 mesa-utils
+mgba-qt
+mgba-sdl
 mlocate
 mpc
 mpd
@@ -186,7 +189,6 @@ otf-archivo-black
 otf-archivo-narrow
 otf-ibm-plex
 p7zip
-p7zip-gui
 pacgraph
 pachist-git
 pacman
@@ -211,6 +213,7 @@ pick-colour-picker
 picom-ibhagwan-git
 pipes.sh
 pkgconf
+playerctl
 polybar
 poppler
 portmidi
@@ -289,6 +292,7 @@ sudo
 sxhkd
 syncthing
 taptempo
+teams
 terminus-font
 tesseract
 tesseract-data-eng

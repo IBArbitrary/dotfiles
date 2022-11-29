@@ -46,12 +46,6 @@
 
 (setq all-the-icons-color-icons t)
 
-(defun doom-modeline-cond-buf-encoding ()
-  (setq-local doom-modeling-buffer-encoding
-              (unless (or (eq buffer-file-coding-system 'utf-8-unix)
-                          (eq buffer-file-coding-system 'utf-8)))))
-(add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
-
 (setq doom-font (font-spec :family "Source Code Pro" :size 16)
       doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 16)
       doom-big-font (font-spec :familiy "Source Code Pro" :size 24))

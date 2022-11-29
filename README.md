@@ -1,6 +1,4 @@
-## gruvbox-themed rice with maximum usability (opinionated).
-
-have some cherry-picked eye-candies.
+## gruvbox-flavored rice with maximum (opinionated) usability.
 
 ### niche'd `neofetch`, and ~~ncmpp~~ ~~ncmcp~~ `ncmpcpp`
 

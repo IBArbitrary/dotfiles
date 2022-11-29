@@ -41,7 +41,7 @@
         +unicode
         +ascii
         +github)  ; 🙂
-       fill-column       ; a `fill-column' indicator
+       ;fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
        indent-guides     ; highlighted indent columns

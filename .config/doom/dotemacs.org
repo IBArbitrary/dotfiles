@@ -71,11 +71,11 @@ all-the-icons colors
 hides file encoding in status line unless it is something other than
 ~UTF-8~ or ~UTF-8-UNIX~
 #+begin_src elisp
-(defun doom-modeline-cond-buf-encoding ()
-  (setq-local doom-modeling-buffer-encoding
-              (unless (or (eq buffer-file-coding-system 'utf-8-unix)
-                          (eq buffer-file-coding-system 'utf-8)))))
-(add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
+#(defun doom-modeline-cond-buf-encoding ()
+#  (setq-local doom-modeling-buffer-encoding
+#              (unless (or (eq buffer-file-coding-system 'utf-8-unix)
+#                          (eq buffer-file-coding-system 'utf-8)))))
+#(add-hook 'after-change-major-mode-hook #'doom-modeline-cond-buf-encoding)
 #+end_src
 
 ** fonts and theme

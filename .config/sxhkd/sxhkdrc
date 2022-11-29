@@ -196,7 +196,7 @@ super + shift + o ; {b,b+3,s,c,v,t,z,i,g,d,l,k}
 	  zotero, \
 	  inkscape, \
 	  gimp, \
-	  discord, \
+	  discord-canary, \
 	  libreoffice, \
 	  krita}
 
@@ -276,6 +276,9 @@ XF86AudioLowerVolume
 
 XF86AudioRaiseVolume
 	  pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+shift + XF86AudioPause
+	playerctl -p spotify play-pause
 
 super + shift {Prior, Next, Pause, Insert}
 	  bgctl {prev, next, pause, play}
