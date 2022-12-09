@@ -147,6 +147,7 @@ llvm
 lmms
 lmms-orgmaker-samples
 lsof
+lxappearance
 lyrics-in-terminal
 m4
 maim
