@@ -5,6 +5,7 @@ amd-ucode
 amdgpu-pro-libgl
 android-udev
 arch-wiki-man
+asciidoc
 aspell-en
 atool
 audacious
@@ -22,6 +23,7 @@ bcprov
 bdf-unifont
 beautysh
 betterdiscord-installer
+bind
 binutils
 bison
 blender
@@ -37,16 +39,14 @@ bspwm
 buku
 bukubrow
 bumblebee
-calibre
 cbonsai
+chatgpt-shell-cli
 chntpw
 clinfo
 clipmenu
 cmake
 cmake-language-server
 cmu-sans-font-ttf
-code
-code-features
 cronie
 czkawka-git
 dateutils
@@ -58,6 +58,7 @@ dictd
 discord-canary
 dolphin
 dolphin-plugins
+ds9-bin
 dunst
 dwarffortress
 emacs-nativecomp
@@ -111,7 +112,6 @@ highlight
 htop
 hwinfo
 imagemagick
-imagemagick-doc
 imlib2
 iniparser
 inkscape
@@ -211,7 +211,7 @@ pdftk
 perl-image-exiftool
 picard
 pick-colour-picker
-picom-ibhagwan-git
+picom
 pipes.sh
 pkgconf
 playerctl
@@ -226,13 +226,13 @@ pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-equalizer-ladspa
 pureref
-pycharm-community-edition
 pyright
 python
 python-autobgch
 python-beautifulsoup4
 python-black
 python-cookiecutter
+python-ffmpeg
 python-folium
 python-gpxpy
 python-ipympl
@@ -251,8 +251,12 @@ python-pipenv
 python-pyalsa
 python-pyflakes
 python-pytest
+python-pytube
 python-scipy
+python-simber
 python-spotdl
+python-spotipy
+python-ytmusicapi
 python2
 qalculate-gtk
 qbittorrent-qt5
@@ -271,8 +275,8 @@ rsync
 rtags
 ruby-bundler
 ruby-webrick
-rust-analyzer
 rust-racer
+ryzen-controller-bin
 ryzenadj-git
 sbcl
 sc-im
@@ -293,7 +297,6 @@ sudo
 sxhkd
 syncthing
 taptempo
-teams
 terminus-font
 tesseract
 tesseract-data-eng
@@ -336,11 +339,11 @@ ttyplot
 tuir
 twine
 ueberzug
-umoria
 vi
 virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules-arch
+visual-studio-code-bin
 vnstat
 vulkan-amdgpu-pro
 vulkan-radeon
@@ -351,6 +354,7 @@ wine-mono
 wine-staging
 winetricks
 wireless_tools
+wmctrl
 words
 wpa_supplicant
 write_stylus
@@ -358,6 +362,7 @@ xclip
 xcolor
 xcursor-themes
 xdg-user-dirs
+xdo
 xdotool
 xf86-input-synaptics
 xf86-input-wacom
@@ -418,7 +423,6 @@ yay-git
 youtube-dl
 ytfzf
 ytmdl
-zaread-git
 zathura
 zathura-djvu
 zathura-pdf-mupdf
