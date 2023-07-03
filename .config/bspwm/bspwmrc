@@ -41,7 +41,6 @@ bspc rule -a Sxiv state=floating
 bspc rule -a mpv state=floating
 bspc rule -a Qalculate-gtk state=floating
 bspc rule -a Pick-colour-picker state=floating
-bspc rule -a Xboard state=floating
 bspc rule -a Pulseaudio-equalizer-gtk state=floating
 bspc rule -a PureRef state=floating
 bspc rule -a UltimMC state=floating
@@ -50,6 +49,8 @@ bspc rule -a 7zFM state=floating
 bspc rule -a Wihotspot-gui state=floating
 bspc rule -a Surf state=tiled
 bspc rule -a matplotlib state=floating
+bspc rule -a fontforge state=floating
+bspc rule -a Blueman-manager state=floating
 
 bspc config focus_follows_pointer true
 
@@ -58,13 +59,20 @@ bspc config normal_border_color \#3c3836
 bspc config focused_border_color \#d5c4a1
 
 # wallpaper slideshow
-bgchd -dir /media/storage/pictures/wallpapers/ -intv 5m -bcknd feh -rpl
+# bgchd -dir /media/storage/pictures/wallpapers/ -intv 5m -bcknd feh -rpl
+bgch init
+bgch_pid=$(ps aux | grep "bash $HOME/bin/bgch-dmn" | head -n 1 | cut -d " " -f 3)
+kill "$bgch_pid"
+bgch-dmn 600 &
 
 # picom
 picom --round-borders 1 -b
 
 # controlling players
 playerctld daemon
+
+# blueman-applet
+blueman-applet &
 
 # nm-applet
 nm-applet &

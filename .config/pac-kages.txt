@@ -1,5 +1,6 @@
 acpi
 acpi_call
+aisleriot
 alsa-utils
 amd-ucode
 amdgpu-pro-libgl
@@ -26,7 +27,9 @@ betterdiscord-installer
 bind
 binutils
 bison
+blas
 blender
+blueman
 bluez
 bluez-libs
 bluez-plugins
@@ -39,18 +42,21 @@ bspwm
 buku
 bukubrow
 bumblebee
+cava
 cbonsai
 chatgpt-shell-cli
 chntpw
 clinfo
 clipmenu
 cmake
+cmake-format
 cmake-language-server
 cmu-sans-font-ttf
 cronie
 czkawka-git
 dateutils
 dconf-editor
+dhcpcd
 dialog
 dict-gcide
 dict-moby-thesaurus
@@ -62,6 +68,7 @@ ds9-bin
 dunst
 dwarffortress
 emacs-nativecomp
+evince
 exif
 expac
 fakeroot
@@ -92,8 +99,11 @@ gifsicle
 gimp
 git
 gnome-keyring
+gnome-mines
+gnome-sudoku
 go
 google-chrome
+google-earth-pro
 gparted
 grabc
 grep
@@ -118,6 +128,7 @@ inkscape
 inter-font
 ipython
 iw
+iwd
 java-commons-lang
 java8-openjfx
 jq
@@ -127,6 +138,8 @@ jupyterlab
 jupyterthemes
 kdenlive
 kitty
+kmahjongg
+kpat
 krita
 languagetool
 lib32-amdgpu-pro-libgl
@@ -155,6 +168,7 @@ make
 marked
 mediainfo
 mesa-utils
+metis
 mgba-qt
 mgba-sdl
 mlocate
@@ -227,10 +241,11 @@ pulseaudio-equalizer
 pulseaudio-equalizer-ladspa
 pureref
 pyright
+pysolfc
 python
-python-autobgch
 python-beautifulsoup4
 python-black
+python-blessings
 python-cookiecutter
 python-ffmpeg
 python-folium
@@ -238,6 +253,7 @@ python-gpxpy
 python-ipympl
 python-ipywidgets
 python-isort
+python-jarowinkler
 python-lxml
 python-matplotlib
 python-networkx
@@ -279,6 +295,7 @@ rust-racer
 ryzen-controller-bin
 ryzenadj-git
 sbcl
+sbctl
 sc-im
 scdoc
 scrcpy
@@ -287,6 +304,7 @@ scrot
 sed
 shellcheck-bin
 shfmt
+sioyek
 smartmontools
 songrec
 spicetify-cli
@@ -302,18 +320,18 @@ tesseract
 tesseract-data-eng
 tesseract-data-tam
 texinfo
+texlive-basic
 texlive-bibtexextra
-texlive-core
 texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
 texlive-latexindent-meta
+texlive-mathscience
 texlive-music
 texlive-pictures
 texlive-pstricks
 texlive-publishers
-texlive-science
 tidy
 timg
 tk
@@ -331,6 +349,7 @@ ttf-google-sans
 ttf-ms-fonts
 ttf-poppins
 ttf-proggy-clean
+ttf-roboto
 ttf-roboto-mono
 ttf-tamil
 ttf-ubraille
@@ -339,6 +358,8 @@ ttyplot
 tuir
 twine
 ueberzug
+uget
+unetbootin
 vi
 virtualbox
 virtualbox-guest-iso
@@ -421,6 +442,7 @@ xxiivv-orca-git
 yad
 yay-git
 youtube-dl
+youtube-search-python
 ytfzf
 ytmdl
 zathura

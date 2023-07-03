@@ -337,7 +337,7 @@ ramp-capacity-6 =▇
 ramp-capacity-7 =█
 
 format-charging = ▕<animation-charging>▏<label-charging>
-format-charging-background = ${colors.foreground1}
+format-charging-background = ${colors.green}
 format-charging-foreground = ${colors.background}
 format-charging-padding = 1
 label-charging = "%percentage:3:3%% %{T5}|%{T-} %time%"

@@ -44,3 +44,14 @@ XTerm*modifyFunctionKeys: 1
 
 ! cursor theme
 Xcursor.theme: BreezeX-Dark
+
+! pmenu
+PMenu.activeBackground: #3c3836
+PMenu.activeForeground: #a89984
+PMenu.background: #282828
+PMenu.borderColor: #928374
+PMenu.borderWidth: 4
+PMenu.diameterWidth: 200
+PMenu.faceName: Source Code Pro
+PMenu.faceSize: 14
+PMenu.foreground: #ebdbb2

@@ -91,6 +91,9 @@ super + bracket{left,right}
 super + ctrl + {Left,Right}
 	  bspc desktop -f {prev,next}.local
 
+super + button{9,8}
+	  bspc desktop -f {prev,next}.local
+
 # focus the last node/desktop
 super + Tab
 	  bspc desktop -f last
@@ -111,7 +114,13 @@ super + shift + ctrl + {1-9,0}
 super + shift + {Left,Right}
 	  bspc node -d {prev,next}
 
+super + shift + button{9,8}
+	  bspc node -d {prev,next}
+
 super + ctrl + shift + {Left,Right}
+	  bspc node -d {prev,next} -f
+
+super + ctrl + shift + button{9,8}
 	  bspc node -d {prev,next} -f
 
 #
@@ -278,15 +287,15 @@ XF86AudioRaiseVolume
 
 shift + XF86AudioPause
 	playerctl -p spotify play-pause
-
+ffff
 shift + XF86AudioNext
 	playerctl -p spotify next
 
 shift + XF86AudioPrev
 	playerctl -p spotify previous
 
-super + shift {Prior, Next, Pause, Insert}
-	  bgctl {prev, next, pause, play}
+super + shift {Prior, Next}
+	bgch {prev, next}
 
 ctrl + alt + Delete
      rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str "window \{width: 15%; padding:10px;\} listview \{lines: 5;\}"
@@ -303,3 +312,6 @@ super + Delete
 # mouse stuff
 super + shift + button{1}
 	wmctrl -r :ACTIVE: -e "$(slop -f 0,%x,%y,%w,%h)"
+
+ctrl + button2
+	piemenu

@@ -217,7 +217,6 @@ abbr -a sstar "sudo systemctl start"
 abbr -a sstat "sudo systemctl status"
 abbr -a sstop "sudo systemctl stop"
 abbr -a st "cd /media/storage/"
-abbr -a sub 'subliminal download -l en'
 abbr -a syu "sudo pacman -Syu"
 abbr -a th "dict -d moby-thesaurus"
 abbr -a umnte "umnt external"
@@ -302,6 +301,7 @@ export FZF_CTRL_T_COMMAND="fd -H"
 export FZF_CTRL_T_OPTS="--height=50% --black --header='Choose file/folder.'"
 export FZF_DEFAULT_COMMAND="fd -t f"
 export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=rounded --prompt="# " --pointer=" >" --marker="+"'
+export ICONPATH="$HOME/.local/share/icons/Gruvbox-Plus-Dark"
 export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 export SXHKD_SHELL='sh'
