@@ -68,6 +68,7 @@ ds9-bin
 dunst
 dwarffortress
 emacs-nativecomp
+enscript
 evince
 exif
 expac
@@ -196,6 +197,7 @@ nvidia
 nvidia-prime
 nvidia-settings
 obs-studio
+onboard
 opencv
 opencv-samples
 optimus-manager

@@ -159,6 +159,14 @@ function cdm
     cd $argv[1]
 end
 
+# to export pdf files of programs
+function code2pdf
+    set name $(echo $argv[1] | cut -d "." -f1)
+    enscript -E -q -Z -p - -f Courier10 \
+        --line-numbers --highlight -M A4 $argv[1] \
+        | ps2pdf - "$name.pdf"
+end
+
 # abbreviations
 abbr -a :q exit
 abbr -a bks 'cd /media/storage/books/'
