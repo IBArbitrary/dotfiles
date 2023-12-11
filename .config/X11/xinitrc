@@ -55,6 +55,9 @@ systemctl --user import-environment DISPLAY
 # clipboard service
 systemctl --user start clipmenud.service
 
+# notification service
+systemctl restart --user dunst.service
+
 # setting mouse to be faast
 xset r rate 200 40
 

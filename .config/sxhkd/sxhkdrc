@@ -197,7 +197,7 @@ super + shift + ctrl + h
 
 super + shift + o ; {b,s,c,v,t,z,i,g,d,l,k}
 	  {prime-run blender & disown, \
-	  LD_PRELOAD=/usr/lib/spotify-adblock.so spotify, \
+	  spotify-launcher, \
 	  rofi-code, \
 	  virtualbox -style Fusion, \
 	  texstudio, \

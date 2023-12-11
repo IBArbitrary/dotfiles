@@ -1,5 +1,5 @@
 [$Version]
-update_info=filepicker.upd:filepicker-remove-old-previews-entry
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
 
 [Colors:View]
 BackgroundNormal=40,40,40
@@ -28,7 +28,7 @@ Speedbar Width=200
 View Style=DetailTree
 
 [KShortcutsDialog Settings]
-Dialog Size=658,480
+Dialog Size=666,480
 
 [PreviewSettings]
 MaximumRemoteSize=0

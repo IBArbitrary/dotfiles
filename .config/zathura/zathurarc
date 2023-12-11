@@ -81,7 +81,7 @@ map [fullscreen] l navigate next
 map [fullscreen] <C-r> recolor
 map [fullscreen] r rotate
 map H feedkeys ":exec sh -c \"cat ~/.local/share/zathura/history | grep -Po '\[\K[^\]]*' | dmenu | xargs zathura\""
-map E feedkeys ":exec evince $FILE -p $PAGE<Return>q"
+map E feedkeys ":exec okular $FILE -p $PAGE<Return>q"
 
 set window-title-basename true
 set window-title-page true

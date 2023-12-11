@@ -69,25 +69,27 @@ end
 
 # fzf aided package installer
 function pacs
+    clear
     pacman -Slq | fzf --prompt 'pacman> ' \
         --header 'Install packages.
 <c-p>: pacman, <c-a>: aur' \
         --bind 'ctrl-p:change-prompt(pacman> )+reload(pacman -Slq)' \
         --bind 'ctrl-a:change-prompt(aur> )+reload(yay -Slq)' \
-        --multi --black --height=80% --preview 'yay -Si {1}' \
+        --multi --black --height=100% --preview 'yay -Si {1}' \
         --preview-window bottom | xargs -ro yay -S
     pacman -Qqe >~/.config/pac-kages.txt
 end
 
 # fzf aided package uninstaller
 function pacr
+    clear
     pacman -Qq | fzf --prompt 'all> ' \
         --header='Remove packages.
 <c-a>: all, <c-e>: explicit, <c-y>: aur-explicit' \
         --bind 'ctrl-a:change-prompt(all> )+reload(pacman -Qq)' \
-        --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe)' \
-        --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm)' \
-        --multi --black --height=80% --preview 'yay -Si {1}' \
+        --bind 'ctrl-e:change-prompt(exp> )+reload(pacman -Qe -q)' \
+        --bind 'ctrl-y:change-prompt(aur> )+reload(pacman -Qm -q)' \
+        --multi --black --height=100% --preview 'yay -Si {1}' \
         --preview-window bottom | xargs -ro sudo pacman -Rsn
     pacman -Qqe >~/.config/pac-kages.txt
 end
@@ -226,6 +228,7 @@ abbr -a sstat "sudo systemctl status"
 abbr -a sstop "sudo systemctl stop"
 abbr -a st "cd /media/storage/"
 abbr -a syu "sudo pacman -Syu"
+abbr -a syyu "sudo pacman -Syyu"
 abbr -a th "dict -d moby-thesaurus"
 abbr -a umnte "umnt external"
 abbr -a umntu "umnt usb"
@@ -253,6 +256,7 @@ alias lca 'la | wc -l'
 alias ll 'ls -oh'
 alias llA 'ls -oAh'
 alias lla 'ls -oah'
+alias man batman
 alias orca xxiivv-orca
 alias rr ranger
 alias ssh "kitty +kitten ssh"
@@ -262,6 +266,7 @@ alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection 
 alias pycharm 'pycharm nosplash'
 alias s sxiv
 alias s. "sxiv ."
+alias spotify_f "google-chrome-stable --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf"
 alias svn "svn --config-dir \"$XDG_CONFIG_HOME/subversion\""
 alias v vim
 alias yarn="yarn --use-yarnrc \"$XDG_CONFIG_HOME/yarn/config\""
@@ -310,7 +315,8 @@ export FZF_CTRL_T_OPTS="--height=50% --black --header='Choose file/folder.'"
 export FZF_DEFAULT_COMMAND="fd -t f"
 export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934 --layout=reverse --border=rounded --prompt="# " --pointer=" >" --marker="+"'
 export ICONPATH="$HOME/.local/share/icons/Gruvbox-Plus-Dark"
-export MANPAGER="sh -c 'col -bx | bat -l man -p --paging always'"
+export MANPAGER="less -is"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 export SXHKD_SHELL='sh'
 export TERM='xterm-kitty'
