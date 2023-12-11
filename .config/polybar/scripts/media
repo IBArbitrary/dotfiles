@@ -14,6 +14,7 @@ strip() {
 title=$(meta_retrieve "title")
 artist=$(meta_retrieve "artist")
 player=$(meta_retrieve "playerName")
+status=$(meta_retrieve "status")
 
 clip() {
     local text="$1"
@@ -27,10 +28,16 @@ clip() {
     fi
 }
 
+if [ "$status" == "Paused" ]; then
+    sep="○"
+elif [ "$status" == "Playing" ]; then
+    sep="●"
+fi
+
 max_title_len=20
 max_artist_len=20
 
 # strip "${title:0:$max_title_len}"…
 # strip "${artist:0:$max_artist_len}"…
 
-echo "$(clip "$title" "$max_title_len")" • "$(clip "$artist" "$max_artist_len")" "[$player]"
+echo "$(clip "$title" "$max_title_len")" "$sep" "$(clip "$artist" "$max_artist_len")" "[$player]"

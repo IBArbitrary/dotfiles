@@ -164,7 +164,6 @@ lmms
 lmms-orgmaker-samples
 lsof
 lxappearance
-lyrics-in-terminal
 m4
 macchanger
 maim
@@ -233,7 +232,6 @@ pdfgrep
 pdftk
 perl-image-exiftool
 picard
-pick-colour-picker
 picom
 pipes.sh
 pkgconf

@@ -157,13 +157,13 @@ super + {Left,Down,Up,Right}
 
 # mpc hotkeys
 XF86AudioPrev
-	  mpc prev
+	  playerctl previous
 
 XF86AudioPlay
-	  mpc toggle
+	  playerctl play-pause
 
 XF86AudioNext
-	  mpc next
+	  playerctl next
 
 super + shift + b
 	  firefox
@@ -208,9 +208,8 @@ super + shift + o ; {b,s,c,v,t,z,i,g,d,l,k}
 	  libreoffice, \
 	  krita}
 
-super + alt + o ; {c,l}
-	{cpicker, \
-	lrcs}
+super + alt + o ; {c}
+	{cpicker}
 
 super + shift + e
 	  emacsclient --create-frame --alternate-editor=""
@@ -284,15 +283,6 @@ XF86AudioLowerVolume
 
 XF86AudioRaiseVolume
 	  pactl set-sink-volume @DEFAULT_SINK@ +10%
-
-shift + XF86AudioPause
-	playerctl -p spotify play-pause
-ffff
-shift + XF86AudioNext
-	playerctl -p spotify next
-
-shift + XF86AudioPrev
-	playerctl -p spotify previous
 
 super + shift {Prior, Next}
 	bgch {prev, next}
