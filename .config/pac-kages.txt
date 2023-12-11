@@ -178,6 +178,7 @@ mgba-sdl
 mlocate
 mpc
 mpd
+mpdevil
 mpdris2
 mplayer
 mpv
