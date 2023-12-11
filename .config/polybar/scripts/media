@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+meta_retrieve() {
+    playerctl metadata --format "{{ ${1} }}"
+}
+
+strip() {
+    while read -r line; do
+        echo "$line" | awk '{$line=$line};1'
+    done
+}
+
+
+title=$(meta_retrieve "title")
+artist=$(meta_retrieve "artist")
+player=$(meta_retrieve "playerName")
+
+clip() {
+    local text="$1"
+    local length="$2"
+    local len
+    len="${#1}"
+    if [ "$len" -le "$length" ]; then
+        echo "$1"
+    else
+        echo "${text:0:length}" | strip | sed 's/$/…/'
+    fi
+}
+
+max_title_len=20
+max_artist_len=20
+
+# strip "${title:0:$max_title_len}"…
+# strip "${artist:0:$max_artist_len}"…
+
+echo "$(clip "$title" "$max_title_len")" • "$(clip "$artist" "$max_artist_len")" "[$player]"
