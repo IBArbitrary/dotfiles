@@ -15,43 +15,49 @@
 
 #== terminal emulator (kitty)
 super +{_,shift + }Return
-	  {kitty,\
-	  bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty -o font_size=11}
+	{kitty,\
+	bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty -o font_size=11}
 
 #== launcher (dmenu)
 super + @space
-	  dmenu_run -F
+	dmenu_run -F
+
+shift + XF86Launch2
+	dmenu_run -F
+
+XF86Launch2
+	~/.config/rofi/scripts/launcher_t3
 
 #== launcher (rofi)
 super + shift + @space
-	  rofi -show drun -theme w11-appmenu
+	~/.config/rofi/scripts/launcher_t3
 
 #== reload sxkhd config
 super + Escape
-	  pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd
 
 
 #-- bspwm
 
 #== quit/restart bspwm
 super + alt + {q,r}
-	  bspc {quit,wm -r}
+	bspc {quit,wm -r}
 
 #== close and kill window
 super + {_,shift + }w
-	  bspc node -{c,k}
+	bspc node -{c,k}
 
 #== alt tiled/monocle
 super + m
-	  bspc desktop -l next
+	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
-	  bspc node newest.marked.local -n newest.!automatic.local
+	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
 #super + g
-#	  bspc node -s biggest.window
+#	bspc node -s biggest.window
 
 #
 # state/flags
@@ -59,11 +65,14 @@ super + y
 
 # set the window state
 super + {t,shift + ctrl + t,s,f}
-	  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	  bspc node -g {marked,locked,sticky,private}
+super + ctrl + {m,x,s,z,i}
+	bspc node -g {marked,locked,sticky,private,hidden}
+
+super + ctrl + shift + i
+	bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off
 
 #
 # focus/swap
@@ -71,57 +80,57 @@ super + ctrl + {m,x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-	  bspc node -{f,s} {west,south,north,east}
+	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
-	  bspc node -f @{parent,brother,first,second}
+	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 ctrl + alt + Tab + {_,shift}
- 	  bspc node -f {next,prev}.local.!hidden.window
+ 	bspc node -f {next,prev}.local.!hidden.window
 
 alt + Tab
-    	  rofi -show window
+    	rofi -show window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	  bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev,next}.local
 
 super + ctrl + {Left,Right}
-	  bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev,next}.local
 
 super + button{9,8}
-	  bspc desktop -f {prev,next}.local
+	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
 super + Tab
-	  bspc desktop -f last
+	bspc desktop -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
-	  bspc wm -h off; \
-	  bspc node {older,newer} -f; \
-	  bspc wm -h on
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	  bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 super + shift + ctrl + {1-9,0}
-	  bspc {node -d} '^{1-9,10}' -f
+	bspc {node -d} '^{1-9,10}' -f
 
 super + shift + {Left,Right}
-	  bspc node -d {prev,next}
+	bspc node -d {prev,next}
 
 super + shift + button{9,8}
-	  bspc node -d {prev,next}
+	bspc node -d {prev,next}
 
 super + ctrl + shift + {Left,Right}
-	  bspc node -d {prev,next} -f
+	bspc node -d {prev,next} -f
 
 super + ctrl + shift + button{9,8}
-	  bspc node -d {prev,next} -f
+	bspc node -d {prev,next} -f
 
 #
 # preselect
@@ -129,19 +138,19 @@ super + ctrl + shift + button{9,8}
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	  bspc node -p {west,south,north,east}
+	bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}
-	  bspc node -o 0.{1-9}
+	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
 super + ctrl + space
-	  bspc node -p cancel
+	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
-	  bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -149,159 +158,162 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	  ~/bin/bspwm-resize {west,south,north,east}
+	~/bin/bspwm-resize {west,south,north,east}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	  bspc node -v {-40 0,0 40,0 -40,40 0}
+	bspc node -v {-40 0,0 40,0 -40,40 0}
 
 # mpc hotkeys
 XF86AudioPrev
-	  playerctl previous
+	playerctl previous
 
 XF86AudioPlay
-	  playerctl play-pause
+	playerctl play-pause
 
 XF86AudioNext
-	  playerctl next
+	playerctl next
 
 super + shift + b
-	  firefox
+	firefox
 
 super + ctrl + shift + b
-	  tabbed surf -e
+	tabbed surf -e
 
 super + ctrl + b
-	  buku-rofi-menu
+	buku-rofi-menu
 
 super + ctrl + shift + p
-	  firefox --private-window
+	firefox --private-window
 
 super + shift + f
-	  dolphin
+	dolphin
 
 super + ctrl + f
-	  bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true  && pcmanfm
+	bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true  && pcmanfm
 
 super + alt + z
 	zotbib-rofi
 
 super + shift + s ; {g,s}
-	  {flameshot gui,maim -s -u | xclip -selection c -t image/png}
+	{flameshot gui,maim -s -u | xclip -selection c -t image/png}
 
-super + shift + q
-	  qalculate-gtk
+XF86Calculator
+	qalculate-gtk
 
-super + shift + ctrl + h
+
+super + shift + alt + h
 	wihotspot
 
 super + shift + o ; {b,s,c,v,t,z,i,g,d,l,k}
-	  {prime-run blender & disown, \
-	  spotify-launcher, \
-	  rofi-code, \
-	  virtualbox -style Fusion, \
-	  texstudio, \
-	  zotero, \
-	  inkscape, \
-	  gimp, \
-	  discord-canary, \
-	  libreoffice, \
-	  krita}
+	{prime-run blender & disown, \
+	spotify-launcher, \
+	rofi-code, \
+	virtualbox -style Fusion, \
+	texstudio, \
+	zotero, \
+	inkscape, \
+	gimp, \
+	discord-canary, \
+	libreoffice, \
+	krita}
 
 super + alt + o ; {c}
 	{cpicker}
 
 super + shift + e
-	  emacsclient --create-frame --alternate-editor=""
+#	emacsclient --create-frame --alternate-editor=""
+	emacs
 
 super + ctrl + e
-	  bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
+	bspc rule -a \* -o state=floating center=true && emacsclient --create-frame --alternate-editor=""
 
 super + shift + p
-	  bspc rule -a \* -o state=floating && kitty ncmpcpp
+	bspc rule -a \* -o state=floating && kitty ncmpcpp
 
 super + shift + alt + p
-	  mpdmenu -p
+	mpdmenu -p
 
 super + shift + n
-	  bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty newsboat
+	bspc rule -a \* -o state=floating rectangle=800x400+0+0 center=true && kitty newsboat
 
 super + ctrl + p
-	  pick-colour-picker
+	pick-colour-picker
 
 super + shift + backslash
-	  ~/bin/wm-config-toggles bar
+	~/bin/wm-config-toggles bar
 
 super + shift + bracketright
-	  ~/bin/wm-config-toggles gap
+	~/bin/wm-config-toggles gap
 
 super + shift + bracketleft
-	  ~/bin/wm-config-toggles border
+	~/bin/wm-config-toggles border
 
 super + alt + e ; {c,e}
-	  {dmenu-unicode, \
-	  dmenu-unicode arg}
+	{dmenu-unicode, \
+	dmenu-unicode arg}
 
 super + alt + p
-	  passmenu -i -p "password: "
+	passmenu -i -p "password: "
 
 super + alt + c
-	  clipmenu -l 0 -i
+	clipmenu -l 0 -i
 
 super + shift + alt + c
-	  cam
+	cam
 
 super + alt + b
-	  ~/bin/alt-book all
+	~/bin/alt-book all
 
 super + alt + shift + b
-	  ~/bin/alt-book stagger
+	~/bin/alt-book stagger
 
 super + alt + m
-	  ~/bin/alt-movies
+	~/bin/alt-movies
 
 super + alt + s
-	  ~/bin/alt-series stagger
+	~/bin/alt-series stagger
 
 super + alt + shift + s
-	  ~/bin/alt-series all
+	~/bin/alt-series all
 
 super + Print
-	  flameshot full -p ~/pictures/screenshots/ -c
+	flameshot full -p ~/pictures/screenshots/ -c
 
 XF86MonBrightnessDown
-	  light -U 10
+	light -U 10
 
 XF86MonBrightnessUp
-	  light -A 10
+	light -A 10
 
 XF86AudioMute
-	  pactl set-sink-mute @DEFAULT_SINK@ toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86AudioLowerVolume
-	  pactl set-sink-volume @DEFAULT_SINK@ -10%
+	pactl set-sink-volume @DEFAULT_SINK@ -10%
 
 XF86AudioRaiseVolume
-	  pactl set-sink-volume @DEFAULT_SINK@ +10%
+	pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 super + shift {Prior, Next}
 	bgch {prev, next}
 
 ctrl + alt + Delete
-     rofi -show power-menu -modi power-menu:rofi-power-menu -theme-str "window \{width: 15%; padding:10px;\} listview \{lines: 5;\}"
+     ~/.config/rofi/scripts/powermenu_t2
 
 super + grave
 	dunstctl history-pop
 
-ctrl + shift + space
+ctrl + shift + @space
      dunstctl close-all
 
 super + Delete
-	 env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
+	env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
 
-# mouse stuff
+# redraw window via mouse selection
 super + shift + button{1}
 	wmctrl -r :ACTIVE: -e "$(slop -f 0,%x,%y,%w,%h)"
 
+# launch piemenu
 ctrl + button2
 	piemenu

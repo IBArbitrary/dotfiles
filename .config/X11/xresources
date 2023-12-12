@@ -47,11 +47,11 @@ Xcursor.theme: BreezeX-Dark
 
 ! pmenu
 PMenu.activeBackground: #3c3836
-PMenu.activeForeground: #a89984
+PMenu.activeForeground: #ebdbb2
 PMenu.background: #282828
-PMenu.borderColor: #928374
-PMenu.borderWidth: 4
-PMenu.diameterWidth: 200
-PMenu.faceName: Source Code Pro
-PMenu.faceSize: 14
-PMenu.foreground: #ebdbb2
+PMenu.borderColor: #d5c4a1
+PMenu.borderWidth: 3
+PMenu.diameterWidth: 400
+PMenu.faceName: Iosevka Term
+PMenu.faceSize: 16
+PMenu.foreground: #d5c4a1

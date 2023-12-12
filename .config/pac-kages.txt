@@ -23,7 +23,6 @@ bat
 bc
 bcprov
 beautysh
-betterdiscord-installer
 bind
 binutils
 bison
@@ -62,7 +61,7 @@ dhcpcd
 dialog
 dict-moby-thesaurus
 dictd
-discord-canary
+discord
 dolphin
 dolphin-plugins
 dpkg
@@ -120,6 +119,7 @@ htop
 hwinfo
 imagemagick
 imlib2
+inetutils
 iniparser
 inkscape
 inter-font
@@ -175,6 +175,7 @@ mesa-utils
 mgba-qt
 mgba-sdl
 mlocate
+mousepad
 mpc
 mpd
 mpd-mpris
@@ -346,9 +347,11 @@ texstudio
 tidy
 timg
 tk
+tldr
 toilet
 toilet-fonts
 tree
+ttc-iosevka
 ttf-cmu-bright
 ttf-cmu-concrete
 ttf-cmu-sans-serif
@@ -390,6 +393,7 @@ wine-staging
 winetricks
 wireless_tools
 wmctrl
+wmutils-git
 wolframscript
 words
 wpa_supplicant

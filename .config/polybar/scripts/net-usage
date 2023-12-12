@@ -9,7 +9,7 @@ case "$1" in
         fi
 
         tempfile="/tmp/polybar.vnstat.left.png"
-        vnstati -c 15 -s -i wlo1+eno1 -ne --headertext "net usage summary" -L -o $tempfile
+        vnstati -c 15 -s -i wlan0+eno1 -ne --headertext "net usage summary" -L -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
