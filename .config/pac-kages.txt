@@ -183,6 +183,7 @@ mpdevil
 mpdris2
 mplayer
 mpv
+mpv-mpris
 nano
 ncdu
 ncmpcpp
