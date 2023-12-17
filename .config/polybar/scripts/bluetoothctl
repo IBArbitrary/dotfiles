@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
+
+ICON="/usr/share/icons/gruvbox-dark-icons-gtk/32x32/devices/bluetooth.svg"
+
 bluetooth_print() {
     if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
 
-        devices_paired=$(bluetoothctl paired-devices | grep Device | cut -d ' ' -f 2)
+        devices_paired=$(bluetoothctl devices Paired | grep Device | cut -d ' ' -f 2)
         counter=0
 
         for device in $devices_paired; do
@@ -17,7 +20,38 @@ bluetooth_print() {
                     printf "%s" "$device_alias"
                 fi
 
-                counter=$((counter + 1))
+                counter=$(( counter + 1 ))
+            else
+                echo ""
+            fi
+        done
+
+        printf '\n'
+    else
+        echo ""
+    fi
+}
+
+btest() {
+    if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then
+
+        devices_paired=$(bluetoothctl devices Paired | grep Device | cut -d ' ' -f 2)
+        counter=0
+
+        for device in $devices_paired; do
+            device_info=$(bluetoothctl info "$device")
+
+            if echo "$device_info" | grep -q "Connected: yes"; then
+                device_alias=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
+
+                if [ $counter -gt 0 ]; then
+                    printf ", %s" "$device_alias"
+                else
+                    notify-send -i "$ICON" \
+                        "Bluetooth" "Currently connected to $device_alias."
+                fi
+
+                counter=$(( counter + 1 ))
             else
                 echo ""
             fi
@@ -54,7 +88,7 @@ bluetooth_toggle() {
 
 case "$1" in
     --toggle)
-        bluetooth_toggle
+        btest
         ;;
     *)
         bluetooth_print | head -n1

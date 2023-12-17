@@ -53,6 +53,7 @@ bspc rule -a matplotlib state=floating
 bspc rule -a fontforge state=floating
 bspc rule -a Blueman-manager state=floating
 bspc rule -a Mousepad state=floating
+bspc rule -a purr-data state=floating
 
 bspc config focus_follows_pointer true
 
@@ -80,4 +81,7 @@ blueman-applet &
 nm-applet &
 
 # border-color script
-~/bin/border-colors
+~/bin/border-colors &
+
+# setting keyboard rate
+xset r rate 200 40

@@ -1,6 +1,8 @@
 acpi
 acpi_call
 aisleriot
+alsa-firmware
+alsa-oss
 alsa-utils
 amd-ucode
 amdgpu-pro-libgl
@@ -151,6 +153,7 @@ lib32-opencl-nvidia
 lib32-vulkan-amdgpu-pro
 libcurl-compat
 libexif
+libffado
 librecad
 libreoffice-fresh
 libtool
@@ -192,6 +195,7 @@ network-manager-applet
 networkmanager
 newsboat
 ninja
+njconnect
 nm-connection-editor
 nodejs-http-server
 nodejs-lts-fermium
@@ -249,7 +253,9 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-equalizer-ladspa
+pulseaudio-jack
 pureref
+purr-data
 pycp
 pyright
 pysolfc
@@ -287,6 +293,7 @@ python-ytmusicapi
 python2
 qalculate-gtk
 qbittorrent-enhanced-qt5
+qjackctl
 qpdf
 qrencode
 qt5-styleplugins
@@ -316,11 +323,9 @@ scrot
 sed
 shellcheck-bin
 shfmt
-signal-desktop
 sioyek
 smartmontools
 songrec
-sox
 spotify-launcher
 subversion
 sudo
@@ -366,7 +371,11 @@ ttf-proggy-clean
 ttf-roboto
 ttf-roboto-mono
 ttf-tamil
+ttf-tengwar-annatar
+ttf-tengwar-formal-csur
+ttf-tengwar-telcontar
 ttf-ubraille
+tts-tengwar-sindarin
 tty-clock
 ttyplot
 tuir

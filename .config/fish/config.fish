@@ -207,7 +207,7 @@ abbr -a mov 'cd /media/storage/movies/'
 abbr -a mp ncmpcpp
 abbr -a nf neofetch
 abbr -a nus "vnstat -d"
-abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf"
+abbr -a pach "expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort -r | fzf -m | grep -Po '(?<=\t)(.*)'"
 abbr -a pc "sudo pacman -Sc"
 abbr -a pg 'pacgraph -b "#282828" -l "#665c54" -t "#b8bb26" -d "#a89984" -p 5 40 -e -s --disable-palette -f (date +%s)'
 abbr -a pgpull 'pass git pull origin master'
