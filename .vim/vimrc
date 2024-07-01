@@ -23,7 +23,7 @@ set go-=L " disable left scroll bar
 set t_Co=256
 set termguicolors
 set cursorline
-syntax on
+syntax enable
 set colorcolumn=80
 
 " mouse options
@@ -58,8 +58,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
-
+Plug 'preservim/nerdcommenter'
+Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
+Plug 'eggbean/resize-font.gvim'
 call plug#end()
 "---------------------------------------------------
 
@@ -69,7 +71,9 @@ call plug#end()
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 inoremap jk <Esc>
-nnoremap ,, :noh<CR>
+map ,, :noh<CR>
+noremap j gj
+noremap k gk
 
 " Startify
 nnoremap <C-\> :Startify<CR>
@@ -127,6 +131,9 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#excludes = ['branches', 'index']
 let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+" vimtex settings
+let g:vimtex_view_method = 'zathura'
 
 " disabling bell
 set noerrorbells visualbell t_vb=
