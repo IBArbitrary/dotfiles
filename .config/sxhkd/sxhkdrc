@@ -30,13 +30,25 @@ super + {_,shift + }w
 super + m
 	bspc desktop -l next
 
+#== rotate orientation of windows
+super + r
+	bspc node @parent --rotate 90
+
 #== send newest marked node to the preselected node
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-#== set the window to {tiled,pseudo-tiled,floating,fullscreen} state
-super + {t,shift + ctrl + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+#== set the window to {tiled,pseudo-tiled,floating} state
+super + {t,shift + ctrl + t,s}
+	bspc node -t {tiled,pseudo_tiled,floating}
+
+#== toggle fullscreen
+super + f
+	bspc node --state ~fullscreen
+
+#== send focused window into preselction
+super + shift + t
+	bspc node -n last.\!automatic -t tiled
 
 #== flag node as {marked,locked,sticky,private,hidden}
 super + ctrl + {m,x,s,z,i}
@@ -54,12 +66,8 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
-#== focus the {parent,brother,first,second} node for path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
 #== focus the {next,previous} window in the current desktop
-ctrl + alt + {_,shift} + Tab
+alt + {_,shift} + Tab
  	bspc node -f {next,prev}.local.!hidden.window
 
 #== focus the {next,previous} desktop in the current monitor
@@ -150,6 +158,21 @@ super + shift + bracketleft
 super + shift + button1
 	wmctrl -r :ACTIVE: -e "$(slop -f 0,%x,%y,%w,%h)"
 
+#== add to tabbed container
+ctrl + alt + {Left,Down,Up,Right}
+    tabc attach $(bspc query -N -n) {$(bspc query -N -n west),$(bspc query -N -n south),$(bspc query -N -n north),$(bspc query -N -n east)}
+
+#== create/remove from tabbed container
+super + z 
+    id=$(bspc query -N -n); \
+    [[ "$(tabc printclass $id)" == "tabbed" ]] \
+    && tabc detach $id \
+    || tabc create $id 
+
+#== toggle autoattach in tabbed container
+super + shift + z 
+    tabc autoattach $(bspc query -N -n) 
+
 #-- system
 
 #== play/pause media
@@ -184,6 +207,10 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
 	light -A 10
 
+#== lock keyboard and mouse
+super + shift + @Delete
+	xtrlock -f
+
 #== change to {prev,next} wallpaper
 super + shift + {Prior,Next}
 	bgch {prev, next}
@@ -205,15 +232,15 @@ ctrl + shift + @space
 	dunstctl close-all
 
 #== lock screen
-super + Delete
-	env XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_PASSWORD_PROMPT=hidden XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=0 XSECURELOCK_SHOW_USERNAME=0  xsecurelock
+super + @Delete
+	env XSECURELOCK_COMPOSITE_OBSCURER=1 XSECURELOCK_PASSWORD_PROMPT=time_hex XSECURELOCK_SHOW_DATETIME=1 XSECURELOCK_SHOW_HOSTNAME=1 XSECURELOCK_SHOW_USERNAME=1  XSECURELOCK_BLANK_DPMS_STATE=off xsecurelock
 
 #== {flameshot gui screenshot,screen snipping}
 super + shift + s ; {g,s}
 	{flameshot gui,maim -s -u | xclip -selection c -t image/png}
 
 #== show rofi windows selection
-alt + Tab
+ctrl + alt + Tab
 	rofi -show window
 
 #== show sxhkd helper
@@ -289,7 +316,6 @@ super + shift + alt + h
 #== {blender,spotify,vs code,virtualbox,texstudio,zotero,inkscape,gimp,discord,libreoffice,krita}
 super + shift + o ; {b,s,c,v,t,z,i,g,d,l,k}
 	{prime-run blender & disown, spotify-launcher, rofi-code, virtualbox -style Fusion, texstudio, zotero, inkscape, gimp, discord, libreoffice, krita}
-
 
 #== emacs
 super + shift + e

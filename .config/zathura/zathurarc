@@ -17,6 +17,11 @@ set default-fg                  "#ebdbb2" #01
 set statusbar-fg                "#282828" #04
 set statusbar-bg                "#d5c4a1" #01
 
+set index-active-bg				"#b8bb26"
+set index-active-fg				"#282828"
+set index-bg					"#3c3836"
+set index-fg					"#ebdbb2"
+
 set inputbar-bg                 "#282828" #00 currently not used
 set inputbar-fg                 "#ebdbb2" #02
 
@@ -26,8 +31,9 @@ set notification-error-fg       "#cc241d" #00
 set notification-warning-bg     "#282828" #08
 set notification-warning-fg     "#d79921" #00
 
-set highlight-color             "#d5c4a1" #0A
-set highlight-active-color      "#ebdbb2" #0D
+set highlight-color             "rgba(251,73,52,0.75)" #0A
+set highlight-active-color      "rgba(184,187,38,0.5)" #0A
+set highlight-fg				"#282828"
 
 set completion-highlight-fg     "#4e4e4e" #02
 set completion-highlight-bg     "#87afaf" #0C
@@ -41,6 +47,8 @@ set notification-fg             "#282828" #00
 set recolor-lightcolor          "#282828" #00
 set recolor-darkcolor           "#ebdbb2" #06
 set recolor                     "true"
+
+set guioptions					"sv"
 
 # multiple recolor schemes
 
@@ -81,7 +89,8 @@ map [fullscreen] l navigate next
 map [fullscreen] <C-r> recolor
 map [fullscreen] r rotate
 map H feedkeys ":exec sh -c \"cat ~/.local/share/zathura/history | grep -Po '\[\K[^\]]*' | dmenu | xargs zathura\""
-map E feedkeys ":exec okular $FILE -p $PAGE<Return>q"
+map F feedkeys ":exec firefox $FILE<Return>q"
+map E feedkeys ":exec sioyek $FILE --page $PAGE<Return>q"
 
 set window-title-basename true
 set window-title-page true

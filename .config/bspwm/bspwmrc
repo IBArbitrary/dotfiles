@@ -54,8 +54,11 @@ bspc rule -a fontforge state=floating
 bspc rule -a Blueman-manager state=floating
 bspc rule -a Mousepad state=floating
 bspc rule -a purr-data state=floating
+bspc rule -a VisualBoyAdvance-M state=floating
+bspc rule -a Protonvpn-app state=floating
 
 bspc config focus_follows_pointer true
+bspc config pointer_motion_interval 5
 
 bspc config active_border_color \#3c3836
 bspc config normal_border_color \#3c3836

@@ -55,3 +55,10 @@ PMenu.diameterWidth: 400
 PMenu.faceName: Iosevka Term
 PMenu.faceSize: 16
 PMenu.foreground: #d5c4a1
+
+! Xft
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault

@@ -1,9 +1,8 @@
 #!/bin/sh
 
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
-
-/usr/bin/prime-offload
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
+# xrandr --auto
+# /usr/bin/prime-offload
 
 userresources=$XDG_CONFIG_HOME/X11/xresources
 usermodmap=$HOME/.Xmodmap

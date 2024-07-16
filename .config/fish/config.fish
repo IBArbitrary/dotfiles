@@ -184,9 +184,9 @@ abbr -a di "dict -d gcide"
 abbr -a docs 'cd /media/storage/documents/'
 abbr -a dp "dots push"
 abbr -a ds "dots status"
-abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
-abbr -a et "emacsclient -t -a 'vim'"
-abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
+# abbr -a e 'emacsclient --create-frame --alternate-editor="" &'
+# abbr -a et "emacsclient -t -a 'vim'"
+# abbr -a fc "emacsclient --create-frame --alternate-editor="" ~/.config/fish/config.fish &"
 abbr -a fm 'pcmanfm & disown'
 abbr -a g git
 abbr -a ga "git add"
@@ -246,7 +246,7 @@ abbr -a syncall "rsync -avu /media/storage/books/ /media/external/books/;
 
 # aliases
 alias b "buku --suggest"
-alias doom "~/packages/doom-emacs/bin/doom"
+# alias doom "~/packages/doom-emacs/bin/doom"
 alias dots '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lA 'ls -Ah --group-directories-first'
 alias la 'ls -ah --group-directories-first'
@@ -260,7 +260,8 @@ alias man batman
 alias orca xxiivv-orca
 alias rr ranger
 alias ssh "kitty +kitten ssh"
-alias xx 'exec sh -c "startx \"$XDG_CONFIG_HOME/X11/xinitrc\"; sudo /usr/bin/prime-switch"'
+# alias xx 'exec sh -c "startx \"$XDG_CONFIG_HOME/X11/xinitrc\"; sudo /usr/bin/prime-switch"'
+alias xx 'exec sh -c "startx \"$XDG_CONFIG_HOME/X11/xinitrc\""'
 alias zar zaread
 alias fillcol 'xclip -selection clipboard -o | fold -w 78 -s | xclip -selection clipboard -i'
 alias pycharm 'pycharm nosplash'
@@ -306,7 +307,7 @@ export XSERVERRC="$XDG_CONFIG_HOME/X11/xserverrc"
 
 export AWT_TOOLKIT=MToolKit
 export BAR_VISIBLE=1
-export EDITOR='emacsclient -t -a "vim"'
+export EDITOR='vim'
 export FZF_ALT_C_COMMAND="fd -t d -H"
 export FZF_ALT_C_OPTS="--height=50% --black --preview 'tree -C {} | head -200' --header='Choose directory to change to.'"
 export FZF_CTRL_R_OPTS="--height=50% --black --header='Choose command from history.' --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
@@ -320,12 +321,15 @@ export MANPAGER="less -is"
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 export SXHKD_SHELL='sh'
 export TERM='xterm-kitty'
-export VISUAL='emacsclient -c -a ""'
+export VISUAL='vim'
 export YTFZF_ENABLE_FZF_DEFAULT_OPTS=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
+export QT_QPA_PLATFORMTHEME='qt5ct'
 
 # miscellaneous commands
 zoxide init fish | source
 eval dircolors "$XDG_CONFIG_HOME/dircolors" >/dev/null
 gpgconf --launch gpg-agent
+
+fish_add_path /home/rajeshkumar/.spicetify
