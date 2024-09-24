@@ -315,11 +315,11 @@ super + shift + alt + h
 
 #== {blender,spotify,vs code,virtualbox,texstudio,zotero,inkscape,gimp,discord,libreoffice,krita}
 super + shift + o ; {b,s,c,v,t,z,i,g,d,l,k}
-	{prime-run blender & disown, spotify-launcher, rofi-code, virtualbox -style Fusion, texstudio, zotero, inkscape, gimp, discord, libreoffice, krita}
+	{prime-run blender & disown, spotify-launcher, rofi-code, virtualbox, texstudio, zotero, inkscape, gimp, discord, libreoffice, krita}
 
 #== emacs
 super + shift + e
-	emacsclient --create-frame --alternate-editor=""
+	gvim
 
 #== emacs (floating)
 super + ctrl + e

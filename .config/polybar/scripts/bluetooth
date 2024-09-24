@@ -26,13 +26,13 @@ case "$1" in
         ;;
     *)
         if [ "$status" = "inactive" ] ; then
-            echo "⁰B₀"
+            echo "󰂲"
         elif [ "$status" = "active" ]; then
             power=$(bluetoothctl show | grep -Po 'Powered: \K(\D+)')
             if [ "$power" = "no" ]; then
-                echo "⁰B₁"
+                echo ""
             else
-                echo "¹B₁"
+                echo "󰂱"
             fi
         fi
         ;;

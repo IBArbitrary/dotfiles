@@ -29,9 +29,9 @@ clip() {
 }
 
 if [ "$status" == "Paused" ]; then
-    sep="○"
+    sep=""
 elif [ "$status" == "Playing" ]; then
-    sep="●"
+    sep=""
 fi
 
 max_title_len=25
@@ -40,4 +40,4 @@ max_artist_len=20
 # strip "${title:0:$max_title_len}"…
 # strip "${artist:0:$max_artist_len}"…
 
-echo "$(clip "$title" "$max_title_len")" "$sep" "$(clip "$artist" "$max_artist_len")" "[$player]"
+echo "󰝚 $(clip "$title" "$max_title_len")" "$sep" "$(clip "$artist" "$max_artist_len")" "[$player]"

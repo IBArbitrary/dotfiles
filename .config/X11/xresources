@@ -30,7 +30,7 @@
 
 ! Sxiv
 
-Sxiv.font: Source Code Pro:size=10
+Sxiv.font: Roboto Mono:size=10
 Sxiv.foreground: #928374
 Sxiv.background: #282828
 Sxiv.markedColor: #fb4934

@@ -4,6 +4,10 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 [Colors:View]
 BackgroundNormal=40,40,40
 
+[DirSelect Dialog]
+DirSelectDialog Size=880,583
+History Items[$e]=file:///media/storage/os-images
+
 [KDE]
 ShowDeleteCommand=false
 

@@ -1,23 +1,16 @@
 #! /usr/bin/env bash
-mode=$(optimus-manager --print-mode |
-    grep -Po "(?<=Current GPU mode : )(.*)")
 
-case $mode in
-    integrated)
-        mode="int"
-        ;;
-    hybrid)
-        mode="hyb"
-        ;;
-    nvidia)
-        mode="nvi"
-        ;;
-esac
-test=$(glxinfo | grep -oP "video memory: \K(\d+)(?=\sMB)")
-totM=$(echo $test | cut -d " " -f1)
-freM=$(echo $test | cut -d " " -f2)
-useM=$(expr $totM - $freM)
-perc=$(echo "$useM * 100 / $totM" | bc)
-useM=$(echo $useM | numfmt --to si --from-unit=M --format "%f")
-totM=$(echo $totM | numfmt --to si --from-unit=M --format "%f")
-printf "%s%% (%sB / %sB) [%s]" $perc $useM $totM $mode
+igpu=$(glxinfo | grep -oP "video memory: \K(\d+)(?=\sMB)")
+itotM=$(echo $igpu | cut -d " " -f1)
+ifreM=$(echo $igpu | cut -d " " -f2)
+iuseM=$(expr $itotM - $ifreM)
+iperc=$(echo "$iuseM * 100 / $itotM" | bc)
+iuseM=$(echo $iuseM | numfmt --to si --from-unit=M --format "%f")
+itotM=$(echo $itotM | numfmt --to si --from-unit=M --format "%f")
+# printf "iGᵖ %s%% (%sB / %sB)" $iperc $iuseM $itotM
+
+dtotM=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits)
+duseM=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits)
+dperc=$(echo "$duseM * 100 / $dtotM" | bc)
+
+printf "RY: %s%%  NV: %s%%" $iperc $dperc

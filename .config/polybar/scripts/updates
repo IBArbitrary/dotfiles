@@ -42,7 +42,7 @@ case "$1" in
     *)
         if [ "$nupdates" -gt 0 ];
         then
-            echo "$updates_archᵖ·$updates_aurᵃ"
+            echo "P:$updates_archᵖ %{T2}%{T-} A:$updates_aurᵃ"
         else
             echo "(0 ‿ 0)"
         fi

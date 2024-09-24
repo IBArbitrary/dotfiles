@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 BORDER_SIZE=-2
-BAR_HEIGHT=20
+BAR_HEIGHT=30
 
 case "$1" in
     --left)
@@ -49,7 +49,7 @@ case "$1" in
         fi
 
         tempfile="/tmp/polybar.vnstat.middle.png"
-        vnstati -hg -c 15 -i wlo1+eno1 -ne -L --headertext "hourly statistics" -o $tempfile
+        vnstati -hg -c 15 -i wlan0+eno1 -ne -L --headertext "hourly statistics" -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
@@ -89,7 +89,7 @@ case "$1" in
         fi
 
         tempfile="/tmp/polybar.vnstat.right.png"
-        vnstati -m -c 15 -i wlo1+eno1 -ne -L --headertext "monthly statistics" -o $tempfile
+        vnstati -m -c 15 -i wlan0+eno1 -ne -L --headertext "monthly statistics" -o $tempfile
 
         imgdim=$(identify $tempfile | grep -Po 'PNG\s\K(\d+x\d+)')
         FEH_WIDTH=$(echo $imgdim | cut -d "x" -f1)
@@ -124,7 +124,7 @@ case "$1" in
         rm $tempfile
         ;;
     *)
-        stats=$(vnstat -i wlo1+eno1 --json)
+        stats=$(vnstat -i wlan0+eno1 --json)
         down=$(echo $stats |
             jq ".interfaces[0].traffic.day[-1].rx" |
             numfmt --to si --format "%.2f")
@@ -133,6 +133,6 @@ case "$1" in
             numfmt --to si --format "%.2f")
         down+="B"
         up+="B"
-        echo "$down ↕ $up"
+        echo "$down  $up"
         ;;
 esac

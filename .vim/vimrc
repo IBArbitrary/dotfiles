@@ -62,6 +62,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'lervag/vimtex'
 Plug 'sheerun/vim-polyglot'
 Plug 'eggbean/resize-font.gvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 "---------------------------------------------------
 
@@ -106,9 +109,9 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " split controls
-map <leader>hh :sp<Space>
-map <leader>vv :vsp<Space>
-map <leader>ww :new<Space>
+map <leader>hh :sp<CR>
+map <leader>vv :vsp<CR>
+map <leader>ww :new<CR>
 
 " tabs
 nnoremap <leader>tj :tabnext<CR>
@@ -140,3 +143,6 @@ set noerrorbells visualbell t_vb=
 if has('autocmd')
 	autocmd GUIEnter * set visualbell t_vb=
 endif
+
+" pasting stuff
+set pastetoggle=<F2>

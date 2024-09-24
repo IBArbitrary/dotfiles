@@ -20,12 +20,12 @@ case "$1" in
 		;;
 	*)
 		if [ "$status" = "off" ]; then
-			echo "⁰W₀"
+			echo "󰖪"
 		elif [ "$status" = "on" ]; then
 			if nmcli | grep -q "$INT: connected"; then
-				echo "¹W₁"
+				echo "󱚻"
 			else
-				echo "⁰W₁"
+				echo "󰖩"
 			fi
 		fi
 		;;
