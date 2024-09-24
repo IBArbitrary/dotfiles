@@ -343,6 +343,7 @@ reflector
 rhash
 ripgrep
 ripgrep-all
+rmlint
 rnote
 rofi
 rofi-code-git
