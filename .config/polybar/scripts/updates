@@ -44,7 +44,7 @@ case "$1" in
         then
             echo "P:$updates_archᵖ %{T2}%{T-} A:$updates_aurᵃ"
         else
-            echo "(0 ‿ 0)"
+            echo "\o/"
         fi
         ;;
 esac

@@ -63,6 +63,9 @@ bspc rule -a Protonvpn-app state=floating
 bspc rule -a pavucontrol state=floating
 bspc rule -a GLWindow state=floating
 bspc rule -a *:*:ImageView state=floating
+bspc rule -a Zotero:Alert state=floating
+bspc rule -a org.gnome.clocks state=floating
+bspc rule -a zenity state=floating
 
 
 bspc config focus_follows_pointer true

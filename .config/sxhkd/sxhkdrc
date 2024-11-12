@@ -285,11 +285,11 @@ super + ctrl + shift + b
 super + ctrl + b
 	buku-rofi-menu
 
-#== dolphin file manager
+#== main file manager
 super + shift + f
-	dolphin
+	thunar
 
-#== pcmanfm file manager (floating)
+#== alt file manager (floating)
 super + ctrl + f
 	bspc rule -a \* -o state=floating rectangle=1000x600+0+0 center=true && pcmanfm
 

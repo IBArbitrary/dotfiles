@@ -42,6 +42,8 @@ blender
 blueman
 bluez
 bluez-libs
+bluez-mesh
+bluez-obex
 bluez-tools
 bluez-utils
 boost
@@ -74,8 +76,6 @@ dialog
 dict-moby-thesaurus
 dictd
 discord
-dolphin
-dolphin-plugins
 dpkg
 dua-cli
 dunst
@@ -84,6 +84,7 @@ dzen2
 easyeffects
 emacs-nativecomp
 enscript
+etcher-bin
 evtest
 exfat-utils
 exif
@@ -113,6 +114,7 @@ gifsicle
 gimp
 git
 glances
+gnome-clocks
 gnome-keyring
 gnome-mines
 gnome-sudoku
@@ -152,7 +154,6 @@ iwd
 java-commons-lang
 jdk17-temurin
 jdownloader2
-jetbrains-toolbox
 jq
 juliaup
 jupyterlab
@@ -160,6 +161,7 @@ jupyterthemes
 kalarm
 kdeconnect
 kdenlive
+kio-admin
 kitty
 kmahjongg
 konsole
@@ -184,6 +186,9 @@ linux
 linux-firmware
 linux-firmware-qlogic
 linux-headers
+linux-lts
+linux-lts-docs
+linux-lts-headers
 linux-wifi-hotspot
 llvm
 lmms
@@ -229,11 +234,12 @@ notion-app-enhanced
 noto-fonts-emoji
 npm
 ntfs-3g
-nvidia
+nvidia-dkms
 nvidia-prime
 nvtop
 obs-studio
 obsidian-bin
+ocrmypdf
 onboard
 opencv
 opencv-samples
@@ -376,6 +382,7 @@ subversion
 sudo
 sxhkd
 syncthing
+syncthing-gtk
 sysmontask
 taptempo
 terminus-font
@@ -399,6 +406,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texstudio
+thunar
 tidy
 timg-git
 tk
@@ -434,7 +442,6 @@ twine
 ueberzug
 ufw
 uget
-unetbootin
 upd72020x-fw
 vbam-wx
 vi
