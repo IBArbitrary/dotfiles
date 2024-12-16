@@ -216,6 +216,7 @@ mpdris2
 mplayer
 mpv
 mpv-mpris
+mtools
 mupdf
 nano
 ncdu
