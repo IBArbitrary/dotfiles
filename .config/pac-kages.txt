@@ -1,3 +1,4 @@
+7zip
 acpi
 acpi_call
 aic94xx-firmware
@@ -8,6 +9,7 @@ alsa-utils
 amd-ucode
 amdgpu-pro-libgl
 android-udev
+arandr
 arch-wiki-man
 arch4edu-keyring
 archlinux-xdg-menu
@@ -25,6 +27,7 @@ autoconf
 automake
 azpainterb
 baobab
+barrier
 base
 base-devel
 bashtop
@@ -35,6 +38,7 @@ beautysh
 betterbird-bin
 bind
 binutils
+binwalk
 bison
 blas
 blas64
@@ -63,7 +67,7 @@ cmake-format
 cmst
 cmu-sans-font-ttf
 conky
-conky-manager
+conky-manager2
 connman
 cronie
 cuda
@@ -248,7 +252,6 @@ otf-archivo
 otf-archivo-black
 otf-archivo-narrow
 otf-ibm-plex
-p7zip
 pacgraph
 pachist-git
 pacman
@@ -445,6 +448,7 @@ ufw
 uget
 upd72020x-fw
 vbam-wx
+ventoy-bin
 vi
 virtualbox
 virtualbox-guest-iso
