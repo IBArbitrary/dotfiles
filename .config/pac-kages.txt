@@ -25,6 +25,7 @@ auto-cpufreq
 autoadb-git
 autoconf
 automake
+autossh
 azpainterb
 baobab
 barrier
@@ -59,6 +60,7 @@ buku
 bukubrow
 calf
 cbonsai
+cheese
 chntpw
 clinfo
 clipmenu
@@ -70,7 +72,6 @@ conky
 conky-manager2
 connman
 cronie
-cuda
 czkawka-git
 dateutils
 dconf-editor
@@ -86,10 +87,11 @@ dunst
 dwarffortress
 dzen2
 easyeffects
-emacs-nativecomp
+emacs
 enscript
 etcher-bin
 evtest
+execstack
 exfat-utils
 exif
 expac
@@ -234,7 +236,6 @@ ninja
 njconnect
 nm-connection-editor
 nodejs-http-server
-nodejs-lts-iron
 notion-app-enhanced
 noto-fonts-emoji
 npm
@@ -245,6 +246,7 @@ nvtop
 obs-studio
 obsidian-bin
 ocrmypdf
+okular
 onboard
 opencv
 opencv-samples
@@ -325,7 +327,6 @@ python-pyalsa
 python-pydocstyle
 python-pyflakes
 python-pytest
-python-pytorch-opt-cuda
 python-pytube
 python-rtree
 python-scikit-learn
@@ -333,7 +334,6 @@ python-scipy
 python-simber
 python-spotipy
 python-sympy
-python-torchvision-cuda
 python-ytmusicapi
 python2
 qalculate-gtk

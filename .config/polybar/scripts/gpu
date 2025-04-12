@@ -14,3 +14,4 @@ duseM=$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits)
 dperc=$(echo "$duseM * 100 / $dtotM" | bc)
 
 printf "RY: %s%%  NV: %s%%" $iperc $dperc
+# printf "RY: %s%%  NV: ---" $iperc 
